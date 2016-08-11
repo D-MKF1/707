@@ -9,7 +9,7 @@
  <sim n="0">
   <description>Boeing 707</description>
   <author>Lake of Constance Hangar [Original from Innis Cunningham]</author>
-  <status>2.2.4</status>
+  <status>2.2.5</status>
   <flight-model>jsb</flight-model>
   <aero>707</aero>
   <virtual-cockpit archive="y">true</virtual-cockpit>

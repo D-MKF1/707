@@ -9,9 +9,9 @@
  <path>cockpit.ac</path>
  
 	<!-- needed for tutorials -->
-	<model>
-		<path>Models/Aircraft/marker.xml</path>
-	</model>
+    <model>
+        <path>Aircraft/Generic/marker.xml</path>
+    </model>
 
 	<animation>
 		<object-name>LightVolume1</object-name>

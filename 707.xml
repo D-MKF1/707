@@ -13,7 +13,7 @@
  <fileheader>
   <author>M.Kraus :: Lake of Constance Hangar</author>
   <filecreationdate>2014-02-24</filecreationdate>
-  <version>2.2.4</version>
+  <version>2.2.5</version>
   <description>Boeing 707 with Rolls Royce Conway RCo12/MK508 engines or Pratt and Whitney JT4</description>
  </fileheader>
 
@@ -430,7 +430,7 @@
 
         <aerosurface_scale name="Elevator Control">
             <input>fcs/pitch-trim-sum</input>
-            <gain>0.007</gain>
+            <gain>0.003</gain>
             <range>
                 <min>-15</min>
                 <max>15</max>
@@ -460,7 +460,7 @@
 
         <aerosurface_scale name="Left Aileron Control">
             <input>fcs/roll-trim-sum</input>
-            <gain>0.006</gain>
+            <gain>0.004</gain>
             <range>
                 <min>-20</min>
                 <max>20</max>
@@ -478,7 +478,7 @@
 
         <aerosurface_scale name="Right Aileron Control">
             <input>fcs/roll-trim-sum</input>
-            <gain>0.006</gain>
+            <gain>0.004</gain>
             <range>
                 <min>-20</min>
                 <max>20</max>
@@ -508,7 +508,7 @@
 
         <aerosurface_scale name="Rudder Control">
             <input>fcs/rudder-command-sum</input>
-            <gain>0.007</gain>
+            <gain>0.006</gain>
             <range>
                 <min>-30</min>
                 <max>30</max>
