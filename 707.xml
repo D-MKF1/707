@@ -430,7 +430,7 @@
 
         <aerosurface_scale name="Elevator Control">
             <input>fcs/pitch-trim-sum</input>
-            <gain>0.003</gain>
+            <gain>0.0045</gain>
             <range>
                 <min>-15</min>
                 <max>15</max>
@@ -460,7 +460,7 @@
 
         <aerosurface_scale name="Left Aileron Control">
             <input>fcs/roll-trim-sum</input>
-            <gain>0.004</gain>
+            <gain>0.005</gain>
             <range>
                 <min>-20</min>
                 <max>20</max>
@@ -478,7 +478,7 @@
 
         <aerosurface_scale name="Right Aileron Control">
             <input>fcs/roll-trim-sum</input>
-            <gain>0.004</gain>
+            <gain>0.005</gain>
             <range>
                 <min>-20</min>
                 <max>20</max>
