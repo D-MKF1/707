@@ -965,8 +965,8 @@ var crossfeed_action = func {
 				var mNeu = tfM1.getValue() + tfR1.getValue();
 	    	var rNeu = 0;
 		}	
-		interpolate("/consumables/fuel/tank[6]/level-lbs", rNeu, 7);
-	  	interpolate("/consumables/fuel/tank[5]/level-lbs", mNeu, 7);
+		interpolate("/consumables/fuel/tank[6]/level-lbs", rNeu, 4);
+	  	interpolate("/consumables/fuel/tank[5]/level-lbs", mNeu, 4);
 	}
 	
 	if(pow > 20 and v1.getBoolValue() and vp1.getBoolValue() and tfM1.getValue() < 100 and !refuelAction){
@@ -999,17 +999,17 @@ var crossfeed_action = func {
 		
 		if(bog > 50){ 
 			bog -= 10;
-			var m1Neu = tfM1.getValue() - (eng1pph/3600 * 7) + 10; 
-			var m2Neu = (p2) ? bog*p2 - (eng2pph/3600 * 7) : tfM2.getValue() - (eng2pph/3600 * 7);
+			var m1Neu = tfM1.getValue() - (eng1pph/3600 * 4) + 10; 
+			var m2Neu = (p2) ? bog*p2 - (eng2pph/3600 * 4) : tfM2.getValue() - (eng2pph/3600 * 4);
 			var cNeu  = (pC) ? bog*pC : tfC.getValue();
-			var m3Neu = (p3) ? bog*p3 - (eng3pph/3600 * 7) : tfM3.getValue() - (eng3pph/3600 * 7);
-			var m4Neu = (p4) ? bog*p4 - (eng4pph/3600 * 7) : tfM4.getValue() - (eng4pph/3600 * 7);
+			var m3Neu = (p3) ? bog*p3 - (eng3pph/3600 * 4) : tfM3.getValue() - (eng3pph/3600 * 4);
+			var m4Neu = (p4) ? bog*p4 - (eng4pph/3600 * 4) : tfM4.getValue() - (eng4pph/3600 * 4);
 			
-			interpolate("/consumables/fuel/tank[5]/level-lbs", m1Neu, 7);
-	  		interpolate("/consumables/fuel/tank[4]/level-lbs", m2Neu, 7);		
-	  		interpolate("/consumables/fuel/tank[3]/level-lbs", cNeu, 7);
-	  		interpolate("/consumables/fuel/tank[2]/level-lbs", m3Neu, 7);
-	  		interpolate("/consumables/fuel/tank[1]/level-lbs", m4Neu, 7);
+			interpolate("/consumables/fuel/tank[5]/level-lbs", m1Neu, 4);
+	  		interpolate("/consumables/fuel/tank[4]/level-lbs", m2Neu, 4);		
+	  		interpolate("/consumables/fuel/tank[3]/level-lbs", cNeu, 4);
+	  		interpolate("/consumables/fuel/tank[2]/level-lbs", m3Neu, 4);
+	  		interpolate("/consumables/fuel/tank[1]/level-lbs", m4Neu, 4);
 		}
 	}
 
@@ -1043,17 +1043,17 @@ var crossfeed_action = func {
 		
 		if(bog > 50){ 
 			bog -= 10;
-			var m1Neu = (p1) ? bog*p1 - (eng1pph/3600 * 7) : tfM1.getValue() - (eng1pph/3600 * 7);
-			var m2Neu = tfM2.getValue() - (eng2pph/3600 * 7) + 10;
+			var m1Neu = (p1) ? bog*p1 - (eng1pph/3600 * 4) : tfM1.getValue() - (eng1pph/3600 * 4);
+			var m2Neu = tfM2.getValue() - (eng2pph/3600 * 4) + 10;
 			var cNeu  = (pC) ? bog*pC : tfC.getValue();
-			var m3Neu = (p3) ? bog*p3 - (eng3pph/3600 * 7) : tfM3.getValue() - (eng3pph/3600 * 7);
-			var m4Neu = (p4) ? bog*p4 - (eng4pph/3600 * 7) : tfM4.getValue() - (eng4pph/3600 * 7);
+			var m3Neu = (p3) ? bog*p3 - (eng3pph/3600 * 4) : tfM3.getValue() - (eng3pph/3600 * 4);
+			var m4Neu = (p4) ? bog*p4 - (eng4pph/3600 * 4) : tfM4.getValue() - (eng4pph/3600 * 4);
 			
-			interpolate("/consumables/fuel/tank[5]/level-lbs", m1Neu, 7);
-	  		interpolate("/consumables/fuel/tank[4]/level-lbs", m2Neu, 7);		
-	  		interpolate("/consumables/fuel/tank[3]/level-lbs", cNeu, 7);
-	  		interpolate("/consumables/fuel/tank[2]/level-lbs", m3Neu, 7);
-	  		interpolate("/consumables/fuel/tank[1]/level-lbs", m4Neu, 7);
+			interpolate("/consumables/fuel/tank[5]/level-lbs", m1Neu, 4);
+	  		interpolate("/consumables/fuel/tank[4]/level-lbs", m2Neu, 4);		
+	  		interpolate("/consumables/fuel/tank[3]/level-lbs", cNeu, 4);
+	  		interpolate("/consumables/fuel/tank[2]/level-lbs", m3Neu, 4);
+	  		interpolate("/consumables/fuel/tank[1]/level-lbs", m4Neu, 4);
 		}
 	}
 
@@ -1087,17 +1087,17 @@ var crossfeed_action = func {
 		
 		if(bog > 50){ 
 			bog -= 10;
-			var m1Neu = (p1) ? bog*p1 - (eng1pph/3600 * 7) : tfM1.getValue() - (eng1pph/3600 * 7);
-			var m2Neu = (p2) ? bog*p2 - (eng2pph/3600 * 7) : tfM2.getValue() - (eng2pph/3600 * 7);
+			var m1Neu = (p1) ? bog*p1 - (eng1pph/3600 * 4) : tfM1.getValue() - (eng1pph/3600 * 4);
+			var m2Neu = (p2) ? bog*p2 - (eng2pph/3600 * 4) : tfM2.getValue() - (eng2pph/3600 * 4);
 			var cNeu  = (pC) ? bog*pC : tfC.getValue();
-			var m3Neu = tfM3.getValue() - (eng3pph/3600 * 7) + 10;
-			var m4Neu = (p4) ? bog*p4 - (eng4pph/3600 * 7) : tfM4.getValue() - (eng4pph/3600 * 7);
+			var m3Neu = tfM3.getValue() - (eng3pph/3600 * 4) + 10;
+			var m4Neu = (p4) ? bog*p4 - (eng4pph/3600 * 4) : tfM4.getValue() - (eng4pph/3600 * 4);
 			
-			interpolate("/consumables/fuel/tank[5]/level-lbs", m1Neu, 7);
-	  		interpolate("/consumables/fuel/tank[4]/level-lbs", m2Neu, 7);		
-	  		interpolate("/consumables/fuel/tank[3]/level-lbs", cNeu, 7);
-	  		interpolate("/consumables/fuel/tank[2]/level-lbs", m3Neu, 7);
-	  		interpolate("/consumables/fuel/tank[1]/level-lbs", m4Neu, 7);
+			interpolate("/consumables/fuel/tank[5]/level-lbs", m1Neu, 4);
+	  		interpolate("/consumables/fuel/tank[4]/level-lbs", m2Neu, 4);		
+	  		interpolate("/consumables/fuel/tank[3]/level-lbs", cNeu, 4);
+	  		interpolate("/consumables/fuel/tank[2]/level-lbs", m3Neu, 4);
+	  		interpolate("/consumables/fuel/tank[1]/level-lbs", m4Neu, 4);
 		}
 	}
 
@@ -1131,17 +1131,17 @@ var crossfeed_action = func {
 		
 		if(bog > 50){ 
 			bog -= 10;
-			var m1Neu = (p1) ? bog*p1 - (eng1pph/3600 * 7) : tfM1.getValue() - (eng1pph/3600 * 7);
-			var m2Neu = (p2) ? bog*p2 - (eng2pph/3600 * 7) : tfM2.getValue() - (eng2pph/3600 * 7);
+			var m1Neu = (p1) ? bog*p1 - (eng1pph/3600 * 4) : tfM1.getValue() - (eng1pph/3600 * 4);
+			var m2Neu = (p2) ? bog*p2 - (eng2pph/3600 * 4) : tfM2.getValue() - (eng2pph/3600 * 4);
 			var cNeu  = (pC) ? bog*pC : tfC.getValue();
-			var m3Neu = (p3) ? bog*p3 - (eng3pph/3600 * 7) : tfM3.getValue() - (eng3pph/3600 * 7);
-			var m4Neu = tfM4.getValue() - (eng4pph/3600 * 7) + 10;
+			var m3Neu = (p3) ? bog*p3 - (eng3pph/3600 * 4) : tfM3.getValue() - (eng3pph/3600 * 4);
+			var m4Neu = tfM4.getValue() - (eng4pph/3600 * 4) + 10;
 			
-			interpolate("/consumables/fuel/tank[5]/level-lbs", m1Neu, 7);
-	  		interpolate("/consumables/fuel/tank[4]/level-lbs", m2Neu, 7);		
-	  		interpolate("/consumables/fuel/tank[3]/level-lbs", cNeu, 7);
-	  		interpolate("/consumables/fuel/tank[2]/level-lbs", m3Neu, 7);
-	  		interpolate("/consumables/fuel/tank[1]/level-lbs", m4Neu, 7);
+			interpolate("/consumables/fuel/tank[5]/level-lbs", m1Neu, 4);
+	  		interpolate("/consumables/fuel/tank[4]/level-lbs", m2Neu, 4);		
+	  		interpolate("/consumables/fuel/tank[3]/level-lbs", cNeu, 4);
+	  		interpolate("/consumables/fuel/tank[2]/level-lbs", m3Neu, 4);
+	  		interpolate("/consumables/fuel/tank[1]/level-lbs", m4Neu, 4);
 		}
 	}
 
@@ -1159,8 +1159,8 @@ var crossfeed_action = func {
 				var mNeu = tfM4.getValue() + tfR4.getValue();
 	    	var rNeu = 0;
 		}	
-		interpolate("/consumables/fuel/tank[0]/level-lbs", rNeu, 7);
-	    interpolate("/consumables/fuel/tank[1]/level-lbs", mNeu, 7);
+		interpolate("/consumables/fuel/tank[0]/level-lbs", rNeu, 4);
+	    interpolate("/consumables/fuel/tank[1]/level-lbs", mNeu, 4);
 	}
 	
 		
@@ -1195,7 +1195,7 @@ var crossfeed_action = func {
 	  	settimer(func{ setprop("/b707/fuel/quantity-test",0) }, 0);			
 	}
 
-	settimer( crossfeed_action, 7);
+	settimer( crossfeed_action, 4);
 }
 
 ################################ FUEL DUMP ANIMATION ####################################
@@ -1292,7 +1292,7 @@ var dump_loop_r = func{
 
 ############  Start up the loops ################
 settimer( func { engines_alive(); } , 6);
-settimer( func { crossfeed_action(); } , 7);
+settimer( func { crossfeed_action(); } , 4);
 
 ############################################# external fuel service action ###########################################
 var fuel_truck = props.globals.getNode("b707/ground-service/fuel-truck/state");
