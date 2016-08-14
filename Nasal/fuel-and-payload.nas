@@ -934,30 +934,57 @@ setlistener("/b707/oil/oil-test", func(pos){
 
 ############################################# CROSSFEED ANIMATION ##############################
 
+var crossfeed_control_valves = func(tanknr, bp1state, bp2state){
+
+		var fq = getprop("/consumables/fuel/tank["~tanknr~"]/level-lbs") or 0;
+		var fln = getprop("/consumables/fuel/tank["~tanknr~"]/level-norm") or 0;
+
+		# boost pumps decide to take or get fuel
+		if(bp1state or bp2state){
+					
+			if(fq > 50){
+				#print("Tank Nr."~tanknr~" kann "~fq~"lbs geben.");
+				return 2;
+			}else{
+				#print("Tank Nr."~tanknr~" ist leer. WARNUNG: Das Risiko der Ueberhitzung der Pumpen besteht!");
+				return 0;				
+			}
+			
+		}else{
+		
+			# is there space for fuel
+			if(fln < 1){
+			
+				#print("Tank Nr."~tanknr~" kann aufnehmen.");
+				return 1;
+				
+			}else{
+				#print("Tank Nr."~tanknr~" ist voll!");
+				return 0;				
+			}		
+		}
+	
+}
+
+
 var crossfeed_action = func {
 
-  # which engine is selected?
-  # Pratt and Whitney TJ4 or Conway RCo10
-  var tj4 = getprop("sim/multiplay/generic/int[8]") or 0;
-  var refuelAction = getprop("/b707/ground-service/fuel-truck/connect") or 0;
-    var eng1pph = getprop("/engines/engine[0]/fuel-flow_pph") or 0;
-    var eng2pph = getprop("/engines/engine[1]/fuel-flow_pph") or 0;
-    var eng3pph = getprop("/engines/engine[2]/fuel-flow_pph") or 0;
-    var eng4pph = getprop("/engines/engine[3]/fuel-flow_pph") or 0;
+	#screen.log.write("AIRCRAFT IS GROUNDET! Only Fuel-Test-System 2016-08-14!", 1, 0, 0);
+
+    var refuelAction = getprop("/b707/ground-service/fuel-truck/connect") or 0;
 
 	var pow = getprop("/b707/ess-bus") or 0;
 	var diff = 0;
-	var bog = 0;
-	var runit = 0;
-	
 
+	###### drain reserve Tanks to Main Tank 1 and 4 by grafity
+	
 	if(pow > 20 and v0.getBoolValue() and vp0.getBoolValue() and tfR1.getValue() and !refuelAction){
 	  # R1 flow into M1
 	  diff = 15564 - tfM1.getValue(); #15564 is the capaticy of the Main Tank 1 and 4
 	  
 	  if(tfR1.getValue() >= 50 and diff >= 50){
 	  		var mNeu = tfM1.getValue() + 50;
-				var rNeu = tfR1.getValue() - 50;
+			var rNeu = tfR1.getValue() - 50;
 		}elsif(tfR1.getValue() >= 50 and diff <= 50){
 				var mNeu = tfM1.getValue() + diff;
 	    	var rNeu = tfR1.getValue() - diff;
@@ -969,184 +996,8 @@ var crossfeed_action = func {
 	  	interpolate("/consumables/fuel/tank[5]/level-lbs", mNeu, 4);
 	}
 	
-	if(pow > 20 and v1.getBoolValue() and vp1.getBoolValue() and tfM1.getValue() < 100 and !refuelAction){
-		# M1 ask the other tanks
-		bog = 0;    
-		# Center Tank will only deliver, if his boost pumps on
-		var pC = 0;
-		if(bp4.getValue() or bp5.getValue()){
-			bog += tfC.getValue();
-			var pC = (tfC.getValue() > 0) ? tfC.getValue()/bog : 0;
-		}
-		# Tank 2 will only deliver, if its boost pumps on and crossfeed valve is open
-		var p2 = 0;
-		if((bp2.getValue() or bp3.getValue()) and v2.getValue() and vp2.getValue()){
-			bog += tfM2.getValue();
-			var p2 = (tfM2.getValue() > 0) ? tfM2.getValue()/bog : 0;
-		}
-		# Tank 3 will only deliver, if its boost pumps on and crossfeed valve is open
-		var p3 = 0;
-		if((bp6.getValue() or bp7.getValue()) and v3.getValue() and vp3.getValue()){
-			bog += tfM3.getValue();
-			var p3 = (tfM3.getValue() > 0) ? tfM3.getValue()/bog : 0;
-		}
-		# Tank 4 will only deliver, if its boost pumps on and crossfeed valve is open
-		var p4 = 0;
-		if((bp8.getValue() or bp9.getValue()) and v4.getValue() and vp4.getValue()){
-			bog += tfM4.getValue();
-			var p4 = (tfM4.getValue() > 0) ? tfM4.getValue()/bog : 0;
-		}
-		
-		if(bog > 50){ 
-			bog -= 10;
-			var m1Neu = tfM1.getValue() - (eng1pph/3600 * 4) + 10; 
-			var m2Neu = (p2) ? bog*p2 - (eng2pph/3600 * 4) : tfM2.getValue() - (eng2pph/3600 * 4);
-			var cNeu  = (pC) ? bog*pC : tfC.getValue();
-			var m3Neu = (p3) ? bog*p3 - (eng3pph/3600 * 4) : tfM3.getValue() - (eng3pph/3600 * 4);
-			var m4Neu = (p4) ? bog*p4 - (eng4pph/3600 * 4) : tfM4.getValue() - (eng4pph/3600 * 4);
-			
-			interpolate("/consumables/fuel/tank[5]/level-lbs", m1Neu, 4);
-	  		interpolate("/consumables/fuel/tank[4]/level-lbs", m2Neu, 4);		
-	  		interpolate("/consumables/fuel/tank[3]/level-lbs", cNeu, 4);
-	  		interpolate("/consumables/fuel/tank[2]/level-lbs", m3Neu, 4);
-	  		interpolate("/consumables/fuel/tank[1]/level-lbs", m4Neu, 4);
-		}
-	}
-
-	if(pow > 20 and v2.getBoolValue() and vp2.getBoolValue() and tfM2.getValue() < 100 and !refuelAction){
-		# M2 ask the other tanks
-		bog = 0;         
-		# Center Tank will only deliver, if his boost pumps on
-		var pC = 0;
-		if(bp4.getValue() or bp5.getValue()){
-			bog += tfC.getValue();
-			var pC = (tfC.getValue() > 0) ? tfC.getValue()/bog : 0;
-		}
-		# Tank 1 will only deliver, if its boost pumps on and crossfeed valve is open
-		var p1 = 0;
-		if((bp0.getValue() or bp1.getValue()) and v1.getValue() and vp1.getValue()){
-			bog += tfM1.getValue();
-			var p1 = (tfM1.getValue() > 0) ? tfM1.getValue()/bog : 0;
-		}
-		# Tank 3 will only deliver, if its boost pumps on and crossfeed valve is open
-		var p3 = 0;
-		if((bp6.getValue() or bp7.getValue()) and v3.getValue() and vp3.getValue()){
-			bog += tfM3.getValue();
-			var p3 = (tfM3.getValue() > 0) ? tfM3.getValue()/bog : 0;
-		}
-		# Tank 4 will only deliver, if its boost pumps on and crossfeed valve is open
-		var p4 = 0;
-		if((bp8.getValue() or bp9.getValue()) and v4.getValue() and vp4.getValue()){
-			bog += tfM4.getValue();
-			var p4 = (tfM4.getValue() > 0) ? tfM4.getValue()/bog : 0;
-		}
-		
-		if(bog > 50){ 
-			bog -= 10;
-			var m1Neu = (p1) ? bog*p1 - (eng1pph/3600 * 4) : tfM1.getValue() - (eng1pph/3600 * 4);
-			var m2Neu = tfM2.getValue() - (eng2pph/3600 * 4) + 10;
-			var cNeu  = (pC) ? bog*pC : tfC.getValue();
-			var m3Neu = (p3) ? bog*p3 - (eng3pph/3600 * 4) : tfM3.getValue() - (eng3pph/3600 * 4);
-			var m4Neu = (p4) ? bog*p4 - (eng4pph/3600 * 4) : tfM4.getValue() - (eng4pph/3600 * 4);
-			
-			interpolate("/consumables/fuel/tank[5]/level-lbs", m1Neu, 4);
-	  		interpolate("/consumables/fuel/tank[4]/level-lbs", m2Neu, 4);		
-	  		interpolate("/consumables/fuel/tank[3]/level-lbs", cNeu, 4);
-	  		interpolate("/consumables/fuel/tank[2]/level-lbs", m3Neu, 4);
-	  		interpolate("/consumables/fuel/tank[1]/level-lbs", m4Neu, 4);
-		}
-	}
-
-	if(pow > 20 and v3.getBoolValue() and vp3.getBoolValue() and tfM3.getValue() < 100 and !refuelAction){
-		# M3 ask the other tanks
-		bog = 0;    
-		# Center Tank will only deliver, if his boost pumps on
-		var pC = 0;
-		if(bp4.getValue() or bp5.getValue()){
-			bog += tfC.getValue();
-			var pC = (tfC.getValue() > 0) ? tfC.getValue()/bog : 0;
-		}
-		# Tank 1 will only deliver, if its boost pumps on and crossfeed valve is open
-		var p1 = 0;
-		if((bp0.getValue() or bp1.getValue()) and v1.getValue() and vp1.getValue()){
-			bog += tfM1.getValue();
-			var p1 = (tfM1.getValue() > 0) ? tfM1.getValue()/bog : 0;
-		}
-		# Tank 2 will only deliver, if its boost pumps on and crossfeed valve is open
-		var p2 = 0;
-		if((bp2.getValue() or bp3.getValue()) and v2.getValue() and vp2.getValue()){
-			bog += tfM2.getValue();
-			var p2 = (tfM2.getValue() > 0) ? tfM2.getValue()/bog : 0;
-		}
-		# Tank 4 will only deliver, if its boost pumps on and crossfeed valve is open
-		var p4 = 0;
-		if((bp8.getValue() or bp9.getValue()) and v4.getValue() and vp4.getValue()){
-			bog += tfM4.getValue();
-			var p4 = (tfM4.getValue() > 0) ? tfM4.getValue()/bog : 0;
-		}
-		
-		if(bog > 50){ 
-			bog -= 10;
-			var m1Neu = (p1) ? bog*p1 - (eng1pph/3600 * 4) : tfM1.getValue() - (eng1pph/3600 * 4);
-			var m2Neu = (p2) ? bog*p2 - (eng2pph/3600 * 4) : tfM2.getValue() - (eng2pph/3600 * 4);
-			var cNeu  = (pC) ? bog*pC : tfC.getValue();
-			var m3Neu = tfM3.getValue() - (eng3pph/3600 * 4) + 10;
-			var m4Neu = (p4) ? bog*p4 - (eng4pph/3600 * 4) : tfM4.getValue() - (eng4pph/3600 * 4);
-			
-			interpolate("/consumables/fuel/tank[5]/level-lbs", m1Neu, 4);
-	  		interpolate("/consumables/fuel/tank[4]/level-lbs", m2Neu, 4);		
-	  		interpolate("/consumables/fuel/tank[3]/level-lbs", cNeu, 4);
-	  		interpolate("/consumables/fuel/tank[2]/level-lbs", m3Neu, 4);
-	  		interpolate("/consumables/fuel/tank[1]/level-lbs", m4Neu, 4);
-		}
-	}
-
-	if(pow > 20 and v4.getBoolValue() and vp4.getBoolValue() and tfM4.getValue() < 100 and !refuelAction){
-		# M4 ask the other tanks
-		bog = 0;    
-		# Center Tank will only deliver, if his boost pumps on
-		var pC = 0;
-		if(bp4.getValue() or bp5.getValue()){
-			bog += tfC.getValue();
-			var pC = (tfC.getValue() > 0) ? tfC.getValue()/bog : 0;
-		}
-		# Tank 1 will only deliver, if its boost pumps on and crossfeed valve is open
-		var p1 = 0;
-		if((bp0.getValue() or bp1.getValue()) and v1.getValue() and vp1.getValue()){
-			bog += tfM1.getValue();
-			var p1 = (tfM1.getValue() > 0) ? tfM1.getValue()/bog : 0;
-		}
-		# Tank 2 will only deliver, if its boost pumps on and crossfeed valve is open
-		var p2 = 0;
-		if((bp2.getValue() or bp3.getValue()) and v2.getValue() and vp2.getValue()){
-			bog += tfM2.getValue();
-			var p2 = (tfM2.getValue() > 0) ? tfM2.getValue()/bog : 0;
-		}
-		# Tank 3 will only deliver, if its boost pumps on and crossfeed valve is open
-		var p3 = 0;
-		if((bp6.getValue() or bp7.getValue()) and v3.getValue() and vp3.getValue()){
-			bog += tfM3.getValue();
-			var p3 = (tfM3.getValue() > 0) ? tfM3.getValue()/bog : 0;
-		}
-		
-		if(bog > 50){ 
-			bog -= 10;
-			var m1Neu = (p1) ? bog*p1 - (eng1pph/3600 * 4) : tfM1.getValue() - (eng1pph/3600 * 4);
-			var m2Neu = (p2) ? bog*p2 - (eng2pph/3600 * 4) : tfM2.getValue() - (eng2pph/3600 * 4);
-			var cNeu  = (pC) ? bog*pC : tfC.getValue();
-			var m3Neu = (p3) ? bog*p3 - (eng3pph/3600 * 4) : tfM3.getValue() - (eng3pph/3600 * 4);
-			var m4Neu = tfM4.getValue() - (eng4pph/3600 * 4) + 10;
-			
-			interpolate("/consumables/fuel/tank[5]/level-lbs", m1Neu, 4);
-	  		interpolate("/consumables/fuel/tank[4]/level-lbs", m2Neu, 4);		
-	  		interpolate("/consumables/fuel/tank[3]/level-lbs", cNeu, 4);
-	  		interpolate("/consumables/fuel/tank[2]/level-lbs", m3Neu, 4);
-	  		interpolate("/consumables/fuel/tank[1]/level-lbs", m4Neu, 4);
-		}
-	}
-
 	if(pow > 20 and v5.getBoolValue() and vp5.getBoolValue() and tfR4.getValue() and !refuelAction){
-	  # R1 flow into M1
+	  # R4 flow into M4
 	  diff = 15564 - tfM4.getValue(); #15564 is the capaticy of the Main Tank 1 and 4
 	  
 	  if(tfR4.getValue() >= 50 and diff >= 50){
@@ -1163,29 +1014,132 @@ var crossfeed_action = func {
 	    interpolate("/consumables/fuel/tank[1]/level-lbs", mNeu, 4);
 	}
 	
+	####### test the status of the tanks
+
+	# crossfeed valve for tank Nr.1
+	if(pow > 20 and !refuelAction){
+		
+		var tankgivefuel = std.Vector.new();
+		var tankgetfuel = std.Vector.new();
+		var tankgivefuelquantity = 0;
+		var cfcv = 0;
+
+		# Main Tank 1
+		if(v1.getBoolValue() and vp1.getBoolValue()){
+			cfcv = crossfeed_control_valves(5,bp0.getValue(),bp1.getValue());
+			if(cfcv == 1) tankgetfuel.append('5');
+			if(cfcv == 2) tankgivefuel.append('5');	
+		}
+		
+		# Main Tank 2
+		if(v2.getBoolValue() and vp2.getBoolValue()){
+			cfcv = crossfeed_control_valves(4,bp2.getValue(),bp3.getValue());
+			if(cfcv == 1) tankgetfuel.append('4');
+			if(cfcv == 2) tankgivefuel.append('4');
+		}
+		
+		# Center Tank
+		cfcv = crossfeed_control_valves(3,bp4.getValue(),bp5.getValue());
+		if(cfcv == 1) tankgetfuel.append('3');
+		if(cfcv == 2) tankgivefuel.append('3');
+		
+		# Main Tank 3
+		if(v3.getBoolValue() and vp3.getBoolValue()){
+			cfcv = crossfeed_control_valves(2,bp6.getValue(),bp7.getValue());
+			if(cfcv == 1) tankgetfuel.append('2');
+			if(cfcv == 2) tankgivefuel.append('2');	
+		}
+		
+		# Main Tank 4
+		if(v4.getBoolValue() and vp4.getBoolValue()){
+			cfcv = crossfeed_control_valves(1,bp8.getValue(),bp9.getValue());
+			if(cfcv == 1) tankgetfuel.append('1');
+			if(cfcv == 2) tankgivefuel.append('1');
+		}
+		
+		
+		# if a crossfeed action is possible 
+		if(tankgetfuel.size() > 0 and tankgivefuel.size() > 0){
+
+			foreach (var item; tankgivefuel.vector) {
+			
+				var f = 0;
+			
+				# consider the consumption in 4 sec
+				if(item == 1){
+					f = getprop("/consumables/fuel/tank["~item~"]/level-lbs")-10-getprop("/engines/engine[3]/fuel-flow_pph")/3600*4;
+					interpolate("/consumables/fuel/tank["~item~"]/level-lbs", f, 4);
+				}
+				if(item == 2){
+					f = getprop("/consumables/fuel/tank["~item~"]/level-lbs")-10-getprop("/engines/engine[2]/fuel-flow_pph")/3600*4;
+					interpolate("/consumables/fuel/tank["~item~"]/level-lbs", f, 4);
+				}
+				if(item == 3){
+					f = getprop("/consumables/fuel/tank["~item~"]/level-lbs")-10;
+					interpolate("/consumables/fuel/tank["~item~"]/level-lbs", f, 4);
+				}		
+				if(item == 4){
+					f = getprop("/consumables/fuel/tank["~item~"]/level-lbs")-10-getprop("/engines/engine[1]/fuel-flow_pph")/3600*4;
+					interpolate("/consumables/fuel/tank["~item~"]/level-lbs", f, 4);
+				}
+				if(item == 5){
+					f = getprop("/consumables/fuel/tank["~item~"]/level-lbs")-10-getprop("/engines/engine[0]/fuel-flow_pph")/3600*4;
+					interpolate("/consumables/fuel/tank["~item~"]/level-lbs", f, 4);
+				}
+				
+				tankgivefuelquantity += 10;
+			}
+			
+			tankgivefuelquantity = tankgivefuelquantity/tankgetfuel.size();
+			
+			foreach (var item; tankgetfuel.vector) {
+			
+				if(item == 1){
+					f = getprop("/consumables/fuel/tank["~item~"]/level-lbs") + tankgivefuelquantity - getprop("/engines/engine[3]/fuel-flow_pph")/3600*4;
+					interpolate("/consumables/fuel/tank["~item~"]/level-lbs", f, 4);
+				}
+				if(item == 2){
+					f = getprop("/consumables/fuel/tank["~item~"]/level-lbs") + tankgivefuelquantity - getprop("/engines/engine[2]/fuel-flow_pph")/3600*4;
+					interpolate("/consumables/fuel/tank["~item~"]/level-lbs", f, 4);
+				}
+				if(item == 3){
+					f = getprop("/consumables/fuel/tank["~item~"]/level-lbs") + tankgivefuelquantity;
+					interpolate("/consumables/fuel/tank["~item~"]/level-lbs", f, 4);
+				}		
+				if(item == 4){
+					f = getprop("/consumables/fuel/tank["~item~"]/level-lbs") + tankgivefuelquantity - getprop("/engines/engine[1]/fuel-flow_pph")/3600*4;
+					interpolate("/consumables/fuel/tank["~item~"]/level-lbs", f, 4);
+				}
+				if(item == 5){
+					f = getprop("/consumables/fuel/tank["~item~"]/level-lbs") + tankgivefuelquantity - getprop("/engines/engine[0]/fuel-flow_pph")/3600*4;
+					interpolate("/consumables/fuel/tank["~item~"]/level-lbs", f, 4);
+				}
+			}
+		}
+	}	
 		
 	# the test knob
 	var testKnob = getprop("/b707/fuel/quantity-test") or 0;
 	if(testKnob){
-			# the actual tank level
-			var ttempR4 = tfR4.getValue();
-			var ttempM4 = tfM4.getValue();
-			var ttempM3 = tfM3.getValue();
-			var ttempC  = tfC.getValue();
-			var ttempM2 = tfM2.getValue();
-			var ttempM1 = tfM1.getValue();
-			var ttempR1 = tfR1.getValue();
+		# the actual tank level
+		var ttempR4 = tfR4.getValue();
+		var ttempM4 = tfM4.getValue();
+		var ttempM3 = tfM3.getValue();
+		var ttempC  = tfC.getValue();
+		var ttempM2 = tfM2.getValue();
+		var ttempM1 = tfM1.getValue();
+		var ttempR1 = tfR1.getValue();
 			
-			setprop("/consumables/fuel/tank[6]/level-lbs", 0);
-			setprop("/consumables/fuel/tank[5]/level-lbs", 0);
+		setprop("/consumables/fuel/tank[6]/level-lbs", 0);
+		setprop("/consumables/fuel/tank[5]/level-lbs", 0);
 	  	setprop("/consumables/fuel/tank[4]/level-lbs", 0);		
 	  	setprop("/consumables/fuel/tank[3]/level-lbs", 0);
 	  	setprop("/consumables/fuel/tank[2]/level-lbs", 0);
 	  	setprop("/consumables/fuel/tank[1]/level-lbs", 0);
 	  	setprop("/consumables/fuel/total-fuel-lbs",0);
 
-			interpolate("/consumables/fuel/tank[6]/level-lbs", ttempR1, 1);
-			interpolate("/consumables/fuel/tank[5]/level-lbs", ttempM1, 1);
+		interpolate("/consumables/fuel/tank[6]/level-lbs", ttempR1, 1);
+		interpolate("/consumables/fuel/tank[5]/level-lbs", ttempM1, 1);
 	  	interpolate("/consumables/fuel/tank[4]/level-lbs", ttempM2, 1);		
 	  	interpolate("/consumables/fuel/tank[3]/level-lbs", ttempC, 1);
 	  	interpolate("/consumables/fuel/tank[2]/level-lbs", ttempM3, 1);

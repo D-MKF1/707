@@ -139,9 +139,9 @@
     <path>Aircraft/707/Sounds/crash_ground.wav</path>
      <condition>			
      	<and>
-				<property>sim/multiplay/generic/int[19]</property>
-        <property>sim/multiplay/generic/float[2]</property>
-		   </and>
+			<property>sim/multiplay/generic/int[19]</property>
+        	<property>sim/multiplay/generic/float[2]</property>
+		 </and>
      </condition>
       <volume>
         <property>sim/multiplay/generic/float[2]</property>
