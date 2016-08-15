@@ -950,8 +950,7 @@ var crossfeed_control_valves = func(tanknr, bp1state, bp2state){
 				return 0;				
 			}
 			
-		}else{
-		
+		}else{	
 			# is there space for fuel
 			if(fln < 1){
 			
@@ -962,11 +961,8 @@ var crossfeed_control_valves = func(tanknr, bp1state, bp2state){
 				#print("Tank Nr."~tanknr~" ist voll!");
 				return 0;				
 			}		
-		}
-	
+		}	
 }
-
-
 var crossfeed_action = func {
 
 	#screen.log.write("AIRCRAFT IS GROUNDET! Only Fuel-Test-System 2016-08-14!", 1, 0, 0);
