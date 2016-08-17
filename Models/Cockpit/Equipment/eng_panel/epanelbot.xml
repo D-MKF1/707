@@ -475,7 +475,7 @@
 	
 	<model>
 		<name>fuelPress3</name>
-		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/fuelPress/fuelPress3.xml</path>
+		<path>Aircraft/707/Models/Cockpit/Equipment/eng_panel/fuelPress/fuelPress4.xml</path>
 		<offsets>
 		  <x-m> 0.01</x-m>
 		  <y-m>-0.002</y-m>

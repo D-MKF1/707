@@ -38,6 +38,12 @@ var bp7 = props.globals.initNode("/b707/fuel/valves/boost-pump[7]",0,"BOOL");
 var bp8 = props.globals.initNode("/b707/fuel/valves/boost-pump[8]",0,"BOOL");
 var bp9 = props.globals.initNode("/b707/fuel/valves/boost-pump[9]",0,"BOOL");
 
+var fp0 = props.globals.initNode("/b707/fuel/fuel-pressure[0]",0,"DOUBLE");
+var fp1 = props.globals.initNode("/b707/fuel/fuel-pressure[1]",0,"DOUBLE");
+var fp2 = props.globals.initNode("/b707/fuel/fuel-pressure[2]",0,"DOUBLE");
+var fp3 = props.globals.initNode("/b707/fuel/fuel-pressure[3]",0,"DOUBLE");
+var fpsystem = props.globals.initNode("/b707/fuel/fuel-pressure-system",0,"DOUBLE");
+
 var so0 = props.globals.initNode("/b707/fuel/valves/fuel-shutoff[0]",0,"BOOL");
 var so1 = props.globals.initNode("/b707/fuel/valves/fuel-shutoff[1]",0,"BOOL");
 var so2 = props.globals.initNode("/b707/fuel/valves/fuel-shutoff[2]",0,"BOOL");
@@ -754,6 +760,8 @@ var engines_alive = func {
 		  var b1  = 0;
 		  var b2  = 0;
 		  var cfv = 0; #simulate the crossfeed valve
+		  var fp = 0;
+		  var newfp = 0;
 		  
 		  ## SHUTOFF VALVE ## 
 		  if(n2 >= 50 and !s) {
@@ -795,10 +803,21 @@ var engines_alive = func {
 		     		setprop("/b707/air-conditioning/compressor-start[2]", 0);
 						interpolate("/b707/air-conditioning/compressor-rpm[2]", 0, 5);
 		     }
-		  }		  
+		  }	
+		 
+		  # fuel pressure calculation
+		  if (cfv) fp = fpsystem.getValue()*39;
+		  if (b1 and !b2) fp = 80;
+		  if (!b1 and b2) fp = 75;
+		  if (b1 and b2) fp = 100;
+		  if (!s) fp = 0;
+		  
+		  newfp = (fp*1000-n2*200+600)/1000;
+		  
+	  	  interpolate("/b707/fuel/fuel-pressure["~e.getIndex()~"]", newfp, 4);	  
 		  
 		  ## BOOST-PUMPS ## are both closed and the crossfeed valve is closed too
-		  if(n2 >= 50 and !b1 and !b2 and !cfv) {
+		  if(n2 >= 50 and fp == 0) {
 		      #print("Engine "~e.getIndex()~" without fuel - boost-pumps out!");
 		      c.setBoolValue(1);
 		  } 
@@ -922,7 +941,7 @@ setlistener("/b707/oil/oil-test", func(pos){
 	}
 },1,0);
 
-############################################# CROSSFEED ANIMATION ##############################
+#################################### CROSSFEED ANIMATION ############################################
 
 var crossfeed_control_valves = func(tanknr, bp1state, bp2state){
 
@@ -954,8 +973,6 @@ var crossfeed_control_valves = func(tanknr, bp1state, bp2state){
 		}	
 }
 var crossfeed_action = func {
-
-	#screen.log.write("AIRCRAFT IS GROUNDET! Only Fuel-Test-System 2016-08-14!", 1, 0, 0);
 
     var refuelAction = getprop("/b707/ground-service/fuel-truck/connect") or 0;
 
@@ -1009,39 +1026,57 @@ var crossfeed_action = func {
 		var tankgetfuel = std.Vector.new();
 		var tankgivefuelquantity = 0;
 		var cfcv = 0;
+		var system_fuel_pressure = 0;
 
 		# Main Tank 1
 		if(v1.getBoolValue() and vp1.getBoolValue()){
 			cfcv = crossfeed_control_valves(5,bp0.getValue(),bp1.getValue());
 			if(cfcv == 1) tankgetfuel.append('5');
-			if(cfcv == 2) tankgivefuel.append('5');	
+			if(cfcv == 2){
+				tankgivefuel.append('5');
+				if(system_fuel_pressure < 1) system_fuel_pressure = bp0.getValue() + bp1.getValue();
+			}	
 		}
 		
 		# Main Tank 2
 		if(v2.getBoolValue() and vp2.getBoolValue()){
 			cfcv = crossfeed_control_valves(4,bp2.getValue(),bp3.getValue());
 			if(cfcv == 1) tankgetfuel.append('4');
-			if(cfcv == 2) tankgivefuel.append('4');
+			if(cfcv == 2){
+				tankgivefuel.append('4');
+				if(system_fuel_pressure < 1) system_fuel_pressure = bp2.getValue() + bp3.getValue();
+			}
 		}
 		
 		# Center Tank
 		cfcv = crossfeed_control_valves(3,bp4.getValue(),bp5.getValue());
 		if(cfcv == 1) tankgetfuel.append('3');
-		if(cfcv == 2) tankgivefuel.append('3');
+		if(cfcv == 2) {
+				tankgivefuel.append('3');
+				if(system_fuel_pressure < 1) system_fuel_pressure = bp4.getValue() + bp5.getValue();
+			}
 		
 		# Main Tank 3
 		if(v3.getBoolValue() and vp3.getBoolValue()){
 			cfcv = crossfeed_control_valves(2,bp6.getValue(),bp7.getValue());
 			if(cfcv == 1) tankgetfuel.append('2');
-			if(cfcv == 2) tankgivefuel.append('2');	
+			if(cfcv == 2){
+				tankgivefuel.append('2');
+				if(system_fuel_pressure < 1) system_fuel_pressure = bp6.getValue() + bp7.getValue();
+			}
 		}
 		
 		# Main Tank 4
 		if(v4.getBoolValue() and vp4.getBoolValue()){
 			cfcv = crossfeed_control_valves(1,bp8.getValue(),bp9.getValue());
 			if(cfcv == 1) tankgetfuel.append('1');
-			if(cfcv == 2) tankgivefuel.append('1');
+			if(cfcv == 2){
+				tankgivefuel.append('1');
+				if(system_fuel_pressure < 1) system_fuel_pressure = bp8.getValue() + bp9.getValue();
+			}
 		}
+		
+		fpsystem.setValue(system_fuel_pressure);
 		
 		
 		# if a crossfeed action is possible 

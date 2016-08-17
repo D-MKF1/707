@@ -58,11 +58,10 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>needle</object-name>		
-		<property>/engines/engine[0]/oil-pressure-psi</property>
+		<property>/b707/fuel/fuel-pressure[0]</property>
 		<interpolation>
-		  <entry><ind>    0.0</ind><dep>   0.0</dep></entry>
-		  <entry><ind>   37.0</ind><dep> 214.0</dep></entry>
-		  <entry><ind>   62.0</ind><dep> 113.0</dep></entry>
+		  <entry><ind>  0.0</ind><dep>  0.0</dep></entry>
+		  <entry><ind>100.0</ind><dep>250.0</dep></entry>
 		</interpolation>
 		<axis>
 		  <x>0</x>
