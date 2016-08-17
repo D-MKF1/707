@@ -354,9 +354,7 @@
 		  <property>/b707/fuel/valves/dump-retract[0]</property>
 			<interpolation>
 				<entry><ind> 0.0</ind><dep> 0.0</dep></entry>
-				<entry><ind> 1.0</ind><dep> 0.0</dep></entry>
-				<entry><ind> 2.0</ind><dep>-60.0</dep></entry>
-				<entry><ind> 3.0</ind><dep> 60.0</dep></entry>
+				<entry><ind> 1.0</ind><dep>-60.0</dep></entry>
 			</interpolation>
 		  <axis>
 		   <x>1</x>
@@ -378,18 +376,14 @@
 		    <button>0</button>
 		    <repeatable>false</repeatable>	
 		    <binding>
-						<condition>		
-							<property>/b707/fuel/valves/dump-cover[0]</property>
-							<property>/b707/fuel/valves/dump-cover[1]</property>
-						</condition>
-		        <command>nasal</command>
-		        <script>b707.dump_chute_switch(0);</script>
-		    </binding>           
+		        <command>property-toggle</command>
+		        <property>/b707/fuel/valves/dump-retract[0]</property>
+		    </binding>          
 		    <binding>
-						<condition>		
-							<property>/b707/fuel/valves/dump-cover[0]</property>
-							<property>/b707/fuel/valves/dump-cover[1]</property>
-						</condition>
+				<condition>		
+					<property>/b707/fuel/valves/dump-cover[0]</property>
+					<property>/b707/fuel/valves/dump-cover[1]</property>
+				</condition>
 		      <command>property-toggle</command>
 		      <property>/sim/sound/switch2</property>
 		    </binding>
@@ -403,9 +397,7 @@
 		  <property>/b707/fuel/valves/dump-retract[1]</property>
 			<interpolation>
 				<entry><ind> 0.0</ind><dep> 0.0</dep></entry>
-				<entry><ind> 1.0</ind><dep> 0.0</dep></entry>
-				<entry><ind> 2.0</ind><dep>-60.0</dep></entry>
-				<entry><ind> 3.0</ind><dep> 60.0</dep></entry>
+				<entry><ind> 1.0</ind><dep>-60.0</dep></entry>
 			</interpolation>
 		  <axis>
 		   <x>1</x>
@@ -426,14 +418,10 @@
 		  <action>
 		    <button>0</button>
 		    <repeatable>false</repeatable>
-		    <binding>	
-						<condition>		
-							<property>/b707/fuel/valves/dump-cover[0]</property>
-							<property>/b707/fuel/valves/dump-cover[1]</property>
-						</condition>
-		        <command>nasal</command>
-		        <script>b707.dump_chute_switch(1);</script>
-		    </binding>           
+		    <binding>
+		        <command>property-toggle</command>
+		        <property>/b707/fuel/valves/dump-retract[1]</property>
+		    </binding>   
 		    <binding>
 						<condition>		
 							<property>/b707/fuel/valves/dump-cover[0]</property>
