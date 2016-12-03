@@ -62,7 +62,7 @@
 	<object-name>support</object-name>
   <object-name>ball</object-name>
   <object-name>needle</object-name>
-  <property>b707/ess-buss</property>
+  <property>b707/ess-bus</property>
 	<interpolation>
 		<entry><ind>0   </ind><dep>  0.0</dep></entry>
 		<entry><ind>0.2 </ind><dep> -3.0</dep></entry>
@@ -85,7 +85,7 @@
 <animation>
   <type>rotate</type>
 	<object-name>fix</object-name>
-  <property>b707/ess-buss</property>
+  <property>b707/ess-bus</property>
 	<interpolation>
 		<entry><ind>0 	</ind><dep>  0.0</dep></entry>
 		<entry><ind>0.2 </ind><dep> 50.0</dep></entry>
