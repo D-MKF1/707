@@ -756,7 +756,7 @@ var engines_alive = func {
 		  var s = getprop("/b707/fuel/valves/fuel-shutoff["~e.getIndex()~"]") or 0;
 		  var c = props.globals.getNode("/controls/engines/engine["~e.getIndex()~"]/cutoff");
 		  var f = props.globals.initNode("/controls/engines/engine["~e.getIndex()~"]/fire",0,"BOOL");
-		  var w = props.globals.getNode("/b707/warning/enabled");
+		  var w = props.globals.getNode("b707/warning/enabled");
 		  var b1  = 0;
 		  var b2  = 0;
 		  var cfv = 0; #simulate the crossfeed valve
@@ -927,7 +927,7 @@ var engines_alive = func {
 
 setlistener("/b707/oil/oil-test", func(pos){
 	var pos = pos.getValue();
-	var pwr = getprop("/b707/ess-bus") or 0;
+	var pwr = getprop("b707/ess-bus") or 0;
 	if(pos and pwr > 24) {
 		interpolate("/b707/oil/quantity[0]", 0, 1);
 		interpolate("/b707/oil/quantity[1]", 0, 1);
@@ -976,7 +976,7 @@ var crossfeed_action = func {
 
     var refuelAction = getprop("/b707/ground-service/fuel-truck/connect") or 0;
 
-	var pow = getprop("/b707/ess-bus") or 0;
+	var pow = getprop("b707/ess-bus") or 0;
 	var diff = 0;
 
 	###### drain reserve Tanks to Main Tank 1 and 4 by grafity
@@ -1177,19 +1177,19 @@ var crossfeed_action = func {
 
 setlistener("/b707/fuel/valves/dump-retract[0]", func(pos){
 	var pos = pos.getValue();
-	var pwr = getprop("/b707/ess-bus") or 0;
+	var pwr = getprop("b707/ess-bus") or 0;
 	if(pos and pwr > 24) dump_loop_l();
 },1,0);
 
 setlistener("/b707/fuel/valves/dump-retract[1]", func(pos){
 	var pos = pos.getValue();
-	var pwr = getprop("/b707/ess-bus") or 0;
+	var pwr = getprop("b707/ess-bus") or 0;
 	if(pos and pwr > 24) dump_loop_r();
 },1,0);
 
 var dump_loop_l = func{
   var is  = getprop("sim/multiplay/generic/int[15]") or 0; # the int[15] is the fuel dust on wings
-	var pwr = getprop("/b707/ess-bus") or 0;
+	var pwr = getprop("b707/ess-bus") or 0;
 	
 	if(v0.getBoolValue() or v1.getBoolValue() or v2.getBoolValue()){
 		screen.log.write("Close crossfeed valves Res1, Main 1 and Main 2 before dumping!", 1, 0, 0);
@@ -1244,7 +1244,7 @@ var dump_loop_l = func{
 
 var dump_loop_r = func{
   var is  = getprop("sim/multiplay/generic/int[15]") or 0;
-	var pwr = getprop("/b707/ess-bus") or 0;
+	var pwr = getprop("b707/ess-bus") or 0;
 	
 	if(v3.getBoolValue() or v4.getBoolValue() or v5.getBoolValue()){
 		screen.log.write("Close crossfeed valves Main 3 and Main 4 and Res4 before dumping!", 1, 0, 0);

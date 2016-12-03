@@ -53,7 +53,7 @@
     <object-name>needle3</object-name>
     <object-name>vitre</object-name>
 		<condition>
-			<property>/b707/compass-pos</property>
+			<property>b707/ess-bus</property>
 		</condition>
 		<property>/instrumentation/slip-skid-ball/indicated-slip-skid</property>
     <interpolation>
@@ -89,7 +89,7 @@
     <object-name>needle3</object-name>
     <object-name>vitre</object-name>
 		<condition>
-			<not><property>/b707/compass-pos</property></not>
+			<not><property>b707/ess-bus</property></not>
 		</condition>
 		<property>/instrumentation/slip-skid-ball/indicated-slip-skid</property>
     <interpolation>

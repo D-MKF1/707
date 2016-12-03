@@ -79,11 +79,11 @@
 		<object-name>LampAmberON</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
-		  	<not><property>/b707/generator/gen-drive[0]</property></not>
+		  	<not><property>b707/generator/gen-drive[0]</property></not>
 		  	<less-than>
 		    	<property>/engines/engine[0]/oil-pressure-psi</property>
 		    	<value>37</value>
@@ -99,7 +99,7 @@
 		<object-name>needle</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		</condition>
@@ -125,7 +125,7 @@
   <animation>
     <type>rotate</type>
     <object-name>cover</object-name>
-    <property>/b707/generator/gen-drive-cover[0]</property>
+    <property>b707/generator/gen-drive-cover[0]</property>
     <interpolation> 
             <entry>
                 <ind>0</ind>
@@ -156,7 +156,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/generator/gen-drive-cover[0]</property>
+		        <property>b707/generator/gen-drive-cover[0]</property>
 		    </binding>
 		    <binding>
 		      <command>property-toggle</command>
@@ -168,7 +168,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch</object-name>
-		  <property>/b707/generator/gen-drive[0]</property>
+		  <property>b707/generator/gen-drive[0]</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -191,7 +191,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/generator/gen-drive[0]</property>
+		        <property>b707/generator/gen-drive[0]</property>
 		    </binding>          
 		    <binding>
           <command>nasal</command>

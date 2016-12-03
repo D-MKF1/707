@@ -101,7 +101,7 @@
   <object-name>LampGreenON</object-name>
   <condition>
 		<greater-than>
-			<property>/b707/ess-bus</property>
+			<property>b707/ess-bus</property>
 			<value>20</value>
 		</greater-than>
     <or>
@@ -122,7 +122,7 @@
   <object-name>LampAmberON</object-name>
   <condition>
 	<greater-than>
-		<property>/b707/ess-bus</property>
+		<property>b707/ess-bus</property>
 		<value>20</value>
 	</greater-than>
 	  <or>

@@ -92,7 +92,7 @@
 		<type>select</type>
 		<object-name>exitON</object-name>
 		<condition>
-			<property>/b707/emergency/exit-lights</property>
+			<property>b707/emergency/exit-lights</property>
 		</condition>
 	</animation>	
 		  
@@ -139,38 +139,38 @@
 		<object-name>LightVolume2</object-name>
 		<condition>
 				<greater-than>
-					<property>/b707/ess-bus</property>
+					<property>b707/ess-bus</property>
 					<value>20</value>
 				</greater-than>
 				<property>/sim/rendering/rembrandt/enabled</property>
 				<or>
 					<property>/controls/test/warn-knob</property>
 					<and>
-						<property>/b707/warning/state</property>
+						<property>b707/warning/state</property>
 						<property>/controls/engines/engine[0]/fire</property>
 					</and>
 					<and>
-						<property>/b707/warning/state</property>
+						<property>b707/warning/state</property>
 						<property>/controls/engines/engine[1]/fire</property>
 					</and>
 					<and>
-						<property>/b707/warning/state</property>
+						<property>b707/warning/state</property>
 						<property>/controls/engines/engine[2]/fire</property>
 					</and>
 					<and>
-						<property>/b707/warning/state</property>
+						<property>b707/warning/state</property>
 						<property>/controls/engines/engine[3]/fire</property>
 					</and>
 					<greater-than>
-						<property>/b707/pressurization/cabin-altitude</property>
+						<property>b707/pressurization/cabin-altitude</property>
 						<value>8500</value>
 					</greater-than>
 					<and>
 						<greater-than>
-							<property>/b707/pressurization/cabin-altitude</property>
+							<property>b707/pressurization/cabin-altitude</property>
 							<value>4000</value>
 						</greater-than>
-						<not><property>/b707/pressurization/safety-valve</property></not>
+						<not><property>b707/pressurization/safety-valve</property></not>
 					</and>
 				</or>
 		</condition>

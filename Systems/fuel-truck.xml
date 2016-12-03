@@ -44,7 +44,7 @@
 		<input>
             <row>1</row>
             <col>1</col>
-            <property>/b707/ground-service/fuel-truck/request-kg</property>
+            <property>b707/ground-service/fuel-truck/request-kg</property>
             <live>true</live>
             <binding>
                 <command>dialog-apply</command>
@@ -57,7 +57,7 @@
 		
 			<checkbox>
 				<label>Enable Fuel Truck</label>
-				<property>/b707/ground-service/fuel-truck/enable</property>
+				<property>b707/ground-service/fuel-truck/enable</property>
 				<binding>
 					<command>dialog-apply</command>
 				</binding>
@@ -66,7 +66,7 @@
 			
 			<checkbox>
 				<label>Connect pipe to Aircraft</label>
-				<property>/b707/ground-service/fuel-truck/connect</property>
+				<property>b707/ground-service/fuel-truck/connect</property>
 				<binding>
 					<command>dialog-apply</command>
 				</binding>
@@ -84,12 +84,12 @@
 				<binding>
 					<command>nasal</command>
 					<script>
-						if ((getprop("/b707/ground-service/fuel-truck/enable") == 1) and (getprop("/b707/ground-service/fuel-truck/connect") == 1)) {
-							if(getprop("/b707/ground-service/fuel-truck/transfer") == nil or getprop("/b707/ground-service/fuel-truck/transfer") == 0){
-								setprop("/b707/ground-service/fuel-truck/transfer", 1);
+						if ((getprop("b707/ground-service/fuel-truck/enable") == 1) and (getprop("b707/ground-service/fuel-truck/connect") == 1)) {
+							if(getprop("b707/ground-service/fuel-truck/transfer") == nil or getprop("b707/ground-service/fuel-truck/transfer") == 0){
+								setprop("b707/ground-service/fuel-truck/transfer", 1);
 								screen.log.write("Re-fueling process started...", 0.0, 0.9, 0.0);
 							}else{
-								setprop("/b707/ground-service/fuel-truck/transfer", 0);
+								setprop("b707/ground-service/fuel-truck/transfer", 0);
 								screen.log.write("Stoped Re-fueling process!", 0.0, 0.9, 0.0);
 							}
 						} else {
@@ -105,16 +105,16 @@
 				<binding>
 					<command>nasal</command>
 					<script>
-						if ((getprop("/b707/ground-service/fuel-truck/enable") == 1) and (getprop("/b707/ground-service/fuel-truck/connect") == 1)) {
+						if ((getprop("b707/ground-service/fuel-truck/enable") == 1) and (getprop("b707/ground-service/fuel-truck/connect") == 1)) {
 						
-							if (getprop("/b707/ground-service/fuel-truck/transfer") == 1)
+							if (getprop("b707/ground-service/fuel-truck/transfer") == 1)
 								screen.log.write("You can't clean the tanks while loading fuel!'", 1, 0, 0);
 							else {
-								if(getprop("/b707/ground-service/fuel-truck/clean") == nil or getprop("/b707/ground-service/fuel-truck/clean") == 0){
-									setprop("/b707/ground-service/fuel-truck/clean", 1);
+								if(getprop("b707/ground-service/fuel-truck/clean") == nil or getprop("b707/ground-service/fuel-truck/clean") == 0){
+									setprop("b707/ground-service/fuel-truck/clean", 1);
 									screen.log.write("Cleaning Fuel Tanks...", 0.0, 0.9, 0.0);
 								}else{
-									setprop("/b707/ground-service/fuel-truck/clean", 0);
+									setprop("b707/ground-service/fuel-truck/clean", 0);
 									screen.log.write("Stoped cleaning Fuel Tanks!", 0.0, 0.9, 0.0);
 								}
 							}

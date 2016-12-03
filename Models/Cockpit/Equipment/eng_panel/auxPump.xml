@@ -62,13 +62,13 @@
 		<object-name>LampAmberON</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
-		  	<not><property>/b707/hydraulic/ac-aux-pump[0]</property></not>
+		  	<not><property>b707/hydraulic/ac-aux-pump[0]</property></not>
 		  	<less-than>
-		    	<property>/b707/hydraulic/rudder</property>
+		    	<property>b707/hydraulic/rudder</property>
 		    	<value>2800</value>
 		    </less-than>
 		    <property>/controls/test/warn-knob</property>
@@ -81,13 +81,13 @@
 		<object-name>LampAmberON.001</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
-		  	<not><property>/b707/hydraulic/ac-aux-pump[1]</property></not>
+		  	<not><property>b707/hydraulic/ac-aux-pump[1]</property></not>
 		  	<less-than>
-		    	<property>/b707/hydraulic/rudder</property>
+		    	<property>b707/hydraulic/rudder</property>
 		    	<value>2800</value>
 		    </less-than>
 		    <property>/controls/test/warn-knob</property>
@@ -100,14 +100,14 @@
 		<object-name>LampAmberON.002</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
-		  	<not><property>/b707/hydraulic/hyd-fluid-pump[0]</property></not>
-		  	<not><property>/b707/hydraulic/hyd-fluid-shutoff[0]</property></not>
+		  	<not><property>b707/hydraulic/hyd-fluid-pump[0]</property></not>
+		  	<not><property>b707/hydraulic/hyd-fluid-shutoff[0]</property></not>
 		  	<less-than>
-		    	<property>/b707/hydraulic/system</property>
+		    	<property>b707/hydraulic/system</property>
 		    	<value>2100</value>
 		    </less-than>
 		    <property>/controls/test/warn-knob</property>
@@ -120,14 +120,14 @@
 		<object-name>LampAmberON.003</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
-		  	<not><property>/b707/hydraulic/hyd-fluid-pump[1]</property></not>
-		  	<not><property>/b707/hydraulic/hyd-fluid-shutoff[1]</property></not>
+		  	<not><property>b707/hydraulic/hyd-fluid-pump[1]</property></not>
+		  	<not><property>b707/hydraulic/hyd-fluid-shutoff[1]</property></not>
 		  	<less-than>
-		    	<property>/b707/hydraulic/system</property>
+		    	<property>b707/hydraulic/system</property>
 		    	<value>2100</value>
 		    </less-than>
 		    <property>/controls/test/warn-knob</property>
@@ -139,7 +139,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch</object-name>
-		  <property>/b707/vibrations/vib-test</property>
+		  <property>b707/vibrations/vib-test</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>0</x>
@@ -162,12 +162,12 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		  			<property>/b707/vibrations/vib-test</property>
+		  			<property>b707/vibrations/vib-test</property>
 		    </binding>
         <mod-up>
           <binding>
 		        <command>property-toggle</command>
-		  			<property>/b707/vibrations/vib-test</property>
+		  			<property>b707/vibrations/vib-test</property>
           </binding>
           <binding>
 		        <command>nasal</command>
@@ -185,7 +185,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.001</object-name>
-		  <property>/b707/hydraulic/ac-aux-pump[0]</property>
+		  <property>b707/hydraulic/ac-aux-pump[0]</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -208,7 +208,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/hydraulic/ac-aux-pump[0]</property>
+		        <property>b707/hydraulic/ac-aux-pump[0]</property>
 		    </binding>          
 		    <binding>
 		      <command>property-toggle</command>
@@ -220,7 +220,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.002</object-name>
-		  <property>/b707/hydraulic/ac-aux-pump[1]</property>
+		  <property>b707/hydraulic/ac-aux-pump[1]</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -243,7 +243,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/hydraulic/ac-aux-pump[1]</property>
+		        <property>b707/hydraulic/ac-aux-pump[1]</property>
 		    </binding>          
 		    <binding>
 		      <command>property-toggle</command>
@@ -256,7 +256,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.003</object-name>
-		  <property>/b707/hydraulic/brake-valve</property>
+		  <property>b707/hydraulic/brake-valve</property>
 		 	<interpolation>
 				<entry><ind>  1.0</ind><dep> -50.0</dep></entry>
 				<entry><ind>  0.0</ind><dep>   0.0</dep></entry>
@@ -284,18 +284,18 @@
         <binding>
             <command>nasal</command>
             <script>
-            	var bt = getprop("/b707/hydraulic/brake-valve") or 0;
+            	var bt = getprop("b707/hydraulic/brake-valve") or 0;
             	if(bt > 0){
-            		setprop("/b707/hydraulic/brake-valve", 0);
+            		setprop("b707/hydraulic/brake-valve", 0);
             	}else{
-            		setprop("/b707/hydraulic/brake-valve", 1);
+            		setprop("b707/hydraulic/brake-valve", 1);
             		<!-- fall back, if ac aux pumps or ess-bus to low -->
-            		var acaux1 = getprop("/b707/hydraulic/ac-aux-pump[0]") or 0;
-            		var acaux2 = getprop("/b707/hydraulic/ac-aux-pump[1]") or 0;
+            		var acaux1 = getprop("b707/hydraulic/ac-aux-pump[0]") or 0;
+            		var acaux2 = getprop("b707/hydraulic/ac-aux-pump[1]") or 0;
             		
-            		if((getprop("/b707/ess-bus") != nil and getprop("/b707/ess-bus") &lt; 20.0) or !acaux1 or !acaux2){
+            		if((getprop("b707/ess-bus") != nil and getprop("b707/ess-bus") &lt; 20.0) or !acaux1 or !acaux2){
             			settimer(func{
-            				setprop("/b707/hydraulic/brake-valve", 0);
+            				setprop("b707/hydraulic/brake-valve", 0);
 									}, 0.5);
 								 	if(getprop("/sim/sound/switch2") == 1){
 										 setprop("/sim/sound/switch2", 0); 
@@ -323,18 +323,18 @@
         <binding>
             <command>nasal</command>
             <script>
-            	var bt = getprop("/b707/hydraulic/brake-valve") or 0;
+            	var bt = getprop("b707/hydraulic/brake-valve") or 0;
             	if(bt > 0){
-            		setprop("/b707/hydraulic/brake-valve", 0);
+            		setprop("b707/hydraulic/brake-valve", 0);
             	}else{
-            		setprop("/b707/hydraulic/brake-valve", 2);
+            		setprop("b707/hydraulic/brake-valve", 2);
             		<!-- fall back, if ac aux pumps or ess-bus to low -->
-            		var acaux1 = getprop("/b707/hydraulic/ac-aux-pump[0]") or 0;
-            		var acaux2 = getprop("/b707/hydraulic/ac-aux-pump[1]") or 0;
+            		var acaux1 = getprop("b707/hydraulic/ac-aux-pump[0]") or 0;
+            		var acaux2 = getprop("b707/hydraulic/ac-aux-pump[1]") or 0;
             		
-            		if((getprop("/b707/ess-bus") != nil and getprop("/b707/ess-bus") &lt; 20.0) or !acaux1 or !acaux2){
+            		if((getprop("b707/ess-bus") != nil and getprop("b707/ess-bus") &lt; 20.0) or !acaux1 or !acaux2){
             			settimer(func{
-            				setprop("/b707/hydraulic/brake-valve", 0);
+            				setprop("b707/hydraulic/brake-valve", 0);
 									}, 0.5);
 								 	if(getprop("/sim/sound/switch2") == 1){
 										 setprop("/sim/sound/switch2", 0); 
@@ -356,7 +356,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.004</object-name>
-		  <property>/b707/hydraulic/hyd-fluid-pump[0]</property>
+		  <property>b707/hydraulic/hyd-fluid-pump[0]</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -379,7 +379,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/hydraulic/hyd-fluid-pump[0]</property>
+		        <property>b707/hydraulic/hyd-fluid-pump[0]</property>
 		    </binding>          
 		    <binding>
 		      <command>property-toggle</command>
@@ -391,7 +391,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.005</object-name>
-		  <property>/b707/hydraulic/hyd-fluid-pump[1]</property>
+		  <property>b707/hydraulic/hyd-fluid-pump[1]</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -414,7 +414,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/hydraulic/hyd-fluid-pump[1]</property>
+		        <property>b707/hydraulic/hyd-fluid-pump[1]</property>
 		    </binding>          
 		    <binding>
 		      <command>property-toggle</command>
@@ -427,7 +427,7 @@
   <animation>
     <type>rotate</type>
     <object-name>cover</object-name>
-    <property>/b707/hydraulic/hyd-fluid-shutoff-cover[0]</property>
+    <property>b707/hydraulic/hyd-fluid-shutoff-cover[0]</property>
     <interpolation> 
             <entry>
                 <ind>0</ind>
@@ -458,7 +458,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-    				<property>/b707/hydraulic/hyd-fluid-shutoff-cover[0]</property>
+    				<property>b707/hydraulic/hyd-fluid-shutoff-cover[0]</property>
 		    </binding>
 		    <binding>
 		      <command>property-toggle</command>
@@ -470,7 +470,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.006</object-name>
-		  <property>/b707/hydraulic/hyd-fluid-shutoff[0]</property>
+		  <property>b707/hydraulic/hyd-fluid-shutoff[0]</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -493,7 +493,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/hydraulic/hyd-fluid-shutoff[0]</property>
+		        <property>b707/hydraulic/hyd-fluid-shutoff[0]</property>
 		    </binding>          
 		    <binding>
 		      <command>property-toggle</command>
@@ -506,7 +506,7 @@
   <animation>
     <type>rotate</type>
     <object-name>cover.001</object-name>
-    <property>/b707/hydraulic/hyd-fluid-shutoff-cover[1]</property>
+    <property>b707/hydraulic/hyd-fluid-shutoff-cover[1]</property>
     <interpolation> 
             <entry>
                 <ind>0</ind>
@@ -537,7 +537,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-    				<property>/b707/hydraulic/hyd-fluid-shutoff-cover[1]</property>
+    				<property>b707/hydraulic/hyd-fluid-shutoff-cover[1]</property>
 		    </binding>
 		    <binding>
 		      <command>property-toggle</command>
@@ -549,7 +549,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.007</object-name>
-		  <property>/b707/hydraulic/hyd-fluid-shutoff[1]</property>
+		  <property>b707/hydraulic/hyd-fluid-shutoff[1]</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -572,7 +572,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/hydraulic/hyd-fluid-shutoff[1]</property>
+		        <property>b707/hydraulic/hyd-fluid-shutoff[1]</property>
 		    </binding>          
 		    <binding>
 		      <command>property-toggle</command>
@@ -585,7 +585,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>turn</object-name>
-		<property>/b707/vibrations/vib-sel</property>
+		<property>b707/vibrations/vib-sel</property>
 		<interpolation>
 		  <entry><ind> 0</ind><dep>   0</dep></entry>
 		  <entry><ind> 1</ind><dep>  45</dep></entry>
@@ -611,7 +611,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-				<property>/b707/vibrations/vib-sel</property>
+				<property>b707/vibrations/vib-sel</property>
 		    <step>1</step>
 		    <min>0</min>
 		    <max>3</max>
@@ -627,7 +627,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-				<property>/b707/vibrations/vib-sel</property>
+				<property>b707/vibrations/vib-sel</property>
 		    <step>-1</step>
 		    <min>0</min>
 		    <max>3</max>

@@ -193,7 +193,7 @@
         <binding>
             <command>nasal</command>
             <script>
-            	var bt = getprop("/b707/emergency/oxygen-switch") or 0;
+            	var bt = getprop("b707/emergency/oxygen-switch") or 0;
             	if(bt == 2){
             		setprop("b707/emergency/oxygen-switch", 0);
             	}else{
@@ -220,7 +220,7 @@
         <binding>
             <command>nasal</command>
             <script>
-            	var bt = getprop("/b707/emergency/oxygen-switch") or 0;
+            	var bt = getprop("b707/emergency/oxygen-switch") or 0;
             	if(bt == 1){
             		setprop("b707/emergency/oxygen-switch", 0);
             	}else{
@@ -655,7 +655,7 @@
         <binding>
             <command>nasal</command>
             <script>
-            	var bt = getprop("/b707/emergency/emer-flap-inbd") or 0;
+            	var bt = getprop("b707/emergency/emer-flap-inbd") or 0;
             	if(bt == 2){
             		setprop("b707/emergency/emer-flap-inbd", 0);
             	}else{
@@ -680,7 +680,7 @@
         <binding>
             <command>nasal</command>
             <script>
-            	var bt = getprop("/b707/emergency/emer-flap-inbd") or 0;
+            	var bt = getprop("b707/emergency/emer-flap-inbd") or 0;
             	if(bt == 1){
             		setprop("b707/emergency/emer-flap-inbd", 0);
             	}else{
@@ -728,7 +728,7 @@
         <binding>
             <command>nasal</command>
             <script>
-            	var bt = getprop("/b707/emergency/emer-flap-outbd") or 0;
+            	var bt = getprop("b707/emergency/emer-flap-outbd") or 0;
             	if(bt == 2){
             		setprop("b707/emergency/emer-flap-outbd", 0);
             	}else{
@@ -753,7 +753,7 @@
         <binding>
             <command>nasal</command>
             <script>
-            	var bt = getprop("/b707/emergency/emer-flap-outbd") or 0;
+            	var bt = getprop("b707/emergency/emer-flap-outbd") or 0;
             	if(bt == 1){
             		setprop("b707/emergency/emer-flap-outbd", 0);
             	}else{

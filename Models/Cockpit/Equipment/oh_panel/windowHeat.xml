@@ -137,13 +137,13 @@
         <binding>
             <command>nasal</command>
             <script>
-            	var bt = getprop("/b707/anti-ice/window-heat-cap-switch") or 0;
+            	var bt = getprop("b707/anti-ice/window-heat-cap-switch") or 0;
             	if(bt == 2){
-            		setprop("/b707/anti-ice/window-heat-cap-switch", 0);
+            		setprop("b707/anti-ice/window-heat-cap-switch", 0);
             	}else{
-            		setprop("/b707/anti-ice/window-heat-cap-switch", 2);
-		    				setprop("/b707/anti-ice/window-cap-control", 1);
-		    				settimer(func{setprop("/b707/anti-ice/window-cap-control", 0)}, 0.5);
+            		setprop("b707/anti-ice/window-heat-cap-switch", 2);
+		    				setprop("b707/anti-ice/window-cap-control", 1);
+		    				settimer(func{setprop("b707/anti-ice/window-cap-control", 0)}, 0.5);
             	}
             </script>
         </binding>
@@ -164,13 +164,13 @@
         <binding>
             <command>nasal</command>
             <script>
-            	var bt = getprop("/b707/anti-ice/window-heat-cap-switch") or 0;
+            	var bt = getprop("b707/anti-ice/window-heat-cap-switch") or 0;
             	if(bt == 1){
-            		setprop("/b707/anti-ice/window-heat-cap-switch", 0);
+            		setprop("b707/anti-ice/window-heat-cap-switch", 0);
             	}else{
-            		setprop("/b707/anti-ice/window-heat-cap-switch", 1);
-		    				setprop("/b707/anti-ice/window-cap-control", 1);
-		    				settimer(func{setprop("/b707/anti-ice/window-cap-control", 0)}, 0.5);
+            		setprop("b707/anti-ice/window-heat-cap-switch", 1);
+		    				setprop("b707/anti-ice/window-cap-control", 1);
+		    				settimer(func{setprop("b707/anti-ice/window-cap-control", 0)}, 0.5);
             	}
             </script>
         </binding>
@@ -213,13 +213,13 @@
         <binding>
             <command>nasal</command>
             <script>
-            	var bt = getprop("/b707/anti-ice/window-heat-fo-switch") or 0;
+            	var bt = getprop("b707/anti-ice/window-heat-fo-switch") or 0;
             	if(bt == 2){
-            		setprop("/b707/anti-ice/window-heat-fo-switch", 0);
+            		setprop("b707/anti-ice/window-heat-fo-switch", 0);
             	}else{
-            		setprop("/b707/anti-ice/window-heat-fo-switch", 2);
-		    				setprop("/b707/anti-ice/window-fo-control", 1);
-		    				settimer(func{setprop("/b707/anti-ice/window-fo-control", 0)}, 0.5);
+            		setprop("b707/anti-ice/window-heat-fo-switch", 2);
+		    				setprop("b707/anti-ice/window-fo-control", 1);
+		    				settimer(func{setprop("b707/anti-ice/window-fo-control", 0)}, 0.5);
             	}
             </script>
         </binding>
@@ -240,13 +240,13 @@
         <binding>
             <command>nasal</command>
             <script>
-            	var bt = getprop("/b707/anti-ice/window-heat-fo-switch") or 0;
+            	var bt = getprop("b707/anti-ice/window-heat-fo-switch") or 0;
             	if(bt == 1){
-            		setprop("/b707/anti-ice/window-heat-fo-switch", 0);
+            		setprop("b707/anti-ice/window-heat-fo-switch", 0);
             	}else{
-            		setprop("/b707/anti-ice/window-heat-fo-switch", 1);
-		    				setprop("/b707/anti-ice/window-fo-control", 1);
-		    				settimer(func{setprop("/b707/anti-ice/window-fo-control", 0)}, 0.5);
+            		setprop("b707/anti-ice/window-heat-fo-switch", 1);
+		    				setprop("b707/anti-ice/window-fo-control", 1);
+		    				settimer(func{setprop("b707/anti-ice/window-fo-control", 0)}, 0.5);
             	}
             </script>
         </binding>

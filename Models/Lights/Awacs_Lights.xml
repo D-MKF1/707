@@ -213,7 +213,7 @@
 	<object-name>CabinWindows</object-name>
 	<condition>
 		<equals>
-			<property>/b707/ess-bus</property>
+			<property>b707/ess-bus</property>
 			<value>-99</value>
 		</equals>
 	</condition>

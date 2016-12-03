@@ -193,7 +193,7 @@
             		setprop("/tanker", 0);
             	}
           		<!-- fall back, if there is no essential power -->
-          		if(getprop("/b707/ess-bus") == nil or getprop("/b707/ess-bus") &lt; 20.0){
+          		if(getprop("b707/ess-bus") == nil or getprop("b707/ess-bus") &lt; 20.0){
 		      			settimer(func{
 		      				setprop("/tanker", 0);
 								}, 0.5);

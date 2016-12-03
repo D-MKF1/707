@@ -760,7 +760,7 @@
        <product>
            <property>aero/qbar-psf</property>
            <property>metrics/Sw-sqft</property>
- 		   <property>/b707/stabilizer/cutout</property> <!-- stabilization nose up down with different weights -->
+ 		   <property>b707/stabilizer/cutout</property> <!-- stabilization nose up down with different weights -->
            <value>0.2</value>
        </product>
     </function>

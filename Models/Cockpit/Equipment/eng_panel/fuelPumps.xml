@@ -139,11 +139,11 @@
 		<object-name>LampBlueON</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
-		  	<not><property>/b707/fuel/valves/valve-pos[0]</property></not>
+		  	<not><property>b707/fuel/valves/valve-pos[0]</property></not>
 		    <property>/controls/test/warn-knob</property>
 		  </or>
 		</condition>
@@ -154,11 +154,11 @@
 		<object-name>LampBlueON.001</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
-		  	<not><property>/b707/fuel/valves/valve-pos[1]</property></not>
+		  	<not><property>b707/fuel/valves/valve-pos[1]</property></not>
 		    <property>/controls/test/warn-knob</property>
 		  </or>
 		</condition>
@@ -169,11 +169,11 @@
 		<object-name>LampBlueON.002</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
-		  	<not><property>/b707/fuel/valves/valve-pos[2]</property></not>
+		  	<not><property>b707/fuel/valves/valve-pos[2]</property></not>
 		    <property>/controls/test/warn-knob</property>
 		  </or>
 		</condition>
@@ -184,11 +184,11 @@
 		<object-name>LampBlueON.003</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
-		  	<not><property>/b707/fuel/valves/valve-pos[3]</property></not>
+		  	<not><property>b707/fuel/valves/valve-pos[3]</property></not>
 		    <property>/controls/test/warn-knob</property>
 		  </or>
 		</condition>
@@ -199,11 +199,11 @@
 		<object-name>LampBlueON.004</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
-		  	<not><property>/b707/fuel/valves/valve-pos[4]</property></not>
+		  	<not><property>b707/fuel/valves/valve-pos[4]</property></not>
 		    <property>/controls/test/warn-knob</property>
 		  </or>
 		</condition>
@@ -214,11 +214,11 @@
 		<object-name>LampBlueON.005</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
-		  	<not><property>/b707/fuel/valves/valve-pos[5]</property></not>
+		  	<not><property>b707/fuel/valves/valve-pos[5]</property></not>
 		    <property>/controls/test/warn-knob</property>
 		  </or>
 		</condition>
@@ -229,11 +229,11 @@
 		<object-name>LampBlueON.006</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
-		  	<not><property>/b707/fuel/valves/fuel-shutoff-pos[0]</property></not>
+		  	<not><property>b707/fuel/valves/fuel-shutoff-pos[0]</property></not>
 		    <property>/controls/test/warn-knob</property>
 		  </or>
 		</condition>
@@ -244,11 +244,11 @@
 		<object-name>LampBlueON.007</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
-		  	<not><property>/b707/fuel/valves/fuel-shutoff-pos[1]</property></not>
+		  	<not><property>b707/fuel/valves/fuel-shutoff-pos[1]</property></not>
 		    <property>/controls/test/warn-knob</property>
 		  </or>
 		</condition>
@@ -259,11 +259,11 @@
 		<object-name>LampBlueON.008</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
-		  	<not><property>/b707/fuel/valves/fuel-shutoff-pos[2]</property></not>
+		  	<not><property>b707/fuel/valves/fuel-shutoff-pos[2]</property></not>
 		    <property>/controls/test/warn-knob</property>
 		  </or>
 		</condition>
@@ -274,11 +274,11 @@
 		<object-name>LampBlueON.009</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
-		  	<not><property>/b707/fuel/valves/fuel-shutoff-pos[3]</property></not>
+		  	<not><property>b707/fuel/valves/fuel-shutoff-pos[3]</property></not>
 		    <property>/controls/test/warn-knob</property>
 		  </or>
 		</condition>
@@ -288,7 +288,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>cross.000</object-name>
-		  <property>/b707/fuel/valves/valve[0]</property>
+		  <property>b707/fuel/valves/valve[0]</property>
       <factor>95</factor>
 		  <axis>
 		   <x>0</x>
@@ -310,7 +310,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/fuel/valves/valve[0]</property>
+		        <property>b707/fuel/valves/valve[0]</property>
 		    </binding> 
         <binding>
             <command>nasal</command>
@@ -327,7 +327,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>cross.001</object-name>
-		  <property>/b707/fuel/valves/valve[1]</property>
+		  <property>b707/fuel/valves/valve[1]</property>
       <factor>90</factor>
 		  <axis>
 		   <x>0</x>
@@ -349,7 +349,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/fuel/valves/valve[1]</property>
+		        <property>b707/fuel/valves/valve[1]</property>
 		    </binding>
         <binding>
             <command>nasal</command>
@@ -366,7 +366,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>cross.002</object-name>
-		  <property>/b707/fuel/valves/valve[2]</property>
+		  <property>b707/fuel/valves/valve[2]</property>
       <factor>90</factor>
 		  <axis>
 		   <x>0</x>
@@ -388,7 +388,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/fuel/valves/valve[2]</property>
+		        <property>b707/fuel/valves/valve[2]</property>
 		    </binding>
         <binding>
             <command>nasal</command>
@@ -405,7 +405,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>cross.003</object-name>
-		  <property>/b707/fuel/valves/valve[3]</property>
+		  <property>b707/fuel/valves/valve[3]</property>
       <factor>90</factor>
 		  <axis>
 		   <x>0</x>
@@ -427,7 +427,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/fuel/valves/valve[3]</property>
+		        <property>b707/fuel/valves/valve[3]</property>
 		    </binding>
         <binding>
             <command>nasal</command>
@@ -444,7 +444,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>cross.004</object-name>
-		  <property>/b707/fuel/valves/valve[4]</property>
+		  <property>b707/fuel/valves/valve[4]</property>
       <factor>90</factor>
 		  <axis>
 		   <x>0</x>
@@ -466,7 +466,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/fuel/valves/valve[4]</property>
+		        <property>b707/fuel/valves/valve[4]</property>
 		    </binding> 
         <binding>
             <command>nasal</command>
@@ -483,7 +483,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>cross.005</object-name>
-		  <property>/b707/fuel/valves/valve[5]</property>
+		  <property>b707/fuel/valves/valve[5]</property>
       <factor>85</factor>
 		  <axis>
 		   <x>0</x>
@@ -505,7 +505,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/fuel/valves/valve[5]</property>
+		        <property>b707/fuel/valves/valve[5]</property>
 		    </binding> 
         <binding>
             <command>nasal</command>
@@ -522,7 +522,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.011</object-name>
-		  <property>/b707/fuel/valves/fuel-shutoff[0]</property>
+		  <property>b707/fuel/valves/fuel-shutoff[0]</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -545,7 +545,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/fuel/valves/fuel-shutoff[0]</property>
+		        <property>b707/fuel/valves/fuel-shutoff[0]</property>
 		    </binding>          
         <binding>
             <command>nasal</command>
@@ -562,7 +562,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.012</object-name>
-		  <property>/b707/fuel/valves/fuel-shutoff[1]</property>
+		  <property>b707/fuel/valves/fuel-shutoff[1]</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -585,7 +585,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/fuel/valves/fuel-shutoff[1]</property>
+		        <property>b707/fuel/valves/fuel-shutoff[1]</property>
 		    </binding>          
         <binding>
             <command>nasal</command>
@@ -602,7 +602,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.013</object-name>
-		  <property>/b707/fuel/valves/fuel-shutoff[2]</property>
+		  <property>b707/fuel/valves/fuel-shutoff[2]</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -625,7 +625,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/fuel/valves/fuel-shutoff[2]</property>
+		        <property>b707/fuel/valves/fuel-shutoff[2]</property>
 		    </binding>          
         <binding>
             <command>nasal</command>
@@ -642,7 +642,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.014</object-name>
-		  <property>/b707/fuel/valves/fuel-shutoff[3]</property>
+		  <property>b707/fuel/valves/fuel-shutoff[3]</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -665,7 +665,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/fuel/valves/fuel-shutoff[3]</property>
+		        <property>b707/fuel/valves/fuel-shutoff[3]</property>
 		    </binding>          
         <binding>
             <command>nasal</command>
@@ -682,7 +682,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.001</object-name>
-		  <property>/b707/fuel/valves/boost-pump[0]</property>
+		  <property>b707/fuel/valves/boost-pump[0]</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -705,7 +705,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/fuel/valves/boost-pump[0]</property>
+		        <property>b707/fuel/valves/boost-pump[0]</property>
 		    </binding>            
 		    <binding>
 		      <command>property-toggle</command>
@@ -717,7 +717,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.002</object-name>
-		  <property>/b707/fuel/valves/boost-pump[1]</property>
+		  <property>b707/fuel/valves/boost-pump[1]</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -740,7 +740,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/fuel/valves/boost-pump[1]</property>
+		        <property>b707/fuel/valves/boost-pump[1]</property>
 		    </binding>            
 		    <binding>
 		      <command>property-toggle</command>
@@ -753,7 +753,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.007</object-name>
-		  <property>/b707/fuel/valves/boost-pump[2]</property>
+		  <property>b707/fuel/valves/boost-pump[2]</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -776,7 +776,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/fuel/valves/boost-pump[2]</property>
+		        <property>b707/fuel/valves/boost-pump[2]</property>
 		    </binding>            
 		    <binding>
 		      <command>property-toggle</command>
@@ -788,7 +788,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.008</object-name>
-		  <property>/b707/fuel/valves/boost-pump[3]</property>
+		  <property>b707/fuel/valves/boost-pump[3]</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -811,7 +811,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/fuel/valves/boost-pump[3]</property>
+		        <property>b707/fuel/valves/boost-pump[3]</property>
 		    </binding>            
 		    <binding>
 		      <command>property-toggle</command>
@@ -824,7 +824,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.003</object-name>
-		  <property>/b707/fuel/valves/boost-pump[4]</property>
+		  <property>b707/fuel/valves/boost-pump[4]</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -847,7 +847,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/fuel/valves/boost-pump[4]</property>
+		        <property>b707/fuel/valves/boost-pump[4]</property>
 		    </binding>            
 		    <binding>
 		      <command>property-toggle</command>
@@ -859,7 +859,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.004</object-name>
-		  <property>/b707/fuel/valves/boost-pump[5]</property>
+		  <property>b707/fuel/valves/boost-pump[5]</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -882,7 +882,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/fuel/valves/boost-pump[5]</property>
+		        <property>b707/fuel/valves/boost-pump[5]</property>
 		    </binding>            
 		    <binding>
 		      <command>property-toggle</command>
@@ -895,7 +895,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.009</object-name>
-		  <property>/b707/fuel/valves/boost-pump[6]</property>
+		  <property>b707/fuel/valves/boost-pump[6]</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -918,7 +918,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/fuel/valves/boost-pump[6]</property>
+		        <property>b707/fuel/valves/boost-pump[6]</property>
 		    </binding>            
 		    <binding>
 		      <command>property-toggle</command>
@@ -930,7 +930,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.010</object-name>
-		  <property>/b707/fuel/valves/boost-pump[7]</property>
+		  <property>b707/fuel/valves/boost-pump[7]</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -953,7 +953,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/fuel/valves/boost-pump[7]</property>
+		        <property>b707/fuel/valves/boost-pump[7]</property>
 		    </binding>            
 		    <binding>
 		      <command>property-toggle</command>
@@ -966,7 +966,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.005</object-name>
-		  <property>/b707/fuel/valves/boost-pump[8]</property>
+		  <property>b707/fuel/valves/boost-pump[8]</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -989,7 +989,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/fuel/valves/boost-pump[8]</property>
+		        <property>b707/fuel/valves/boost-pump[8]</property>
 		    </binding>            
 		    <binding>
 		      <command>property-toggle</command>
@@ -1001,7 +1001,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.006</object-name>
-		  <property>/b707/fuel/valves/boost-pump[9]</property>
+		  <property>b707/fuel/valves/boost-pump[9]</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -1024,7 +1024,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/fuel/valves/boost-pump[9]</property>
+		        <property>b707/fuel/valves/boost-pump[9]</property>
 		    </binding>            
 		    <binding>
 		      <command>property-toggle</command>
@@ -1040,11 +1040,11 @@
 		<object-name>LampAmberON</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
-		  	<not><property>/b707/fuel/valves/boost-pump[0]</property></not>
+		  	<not><property>b707/fuel/valves/boost-pump[0]</property></not>
 		    <property>/controls/test/warn-knob</property>
 		  </or>
 		</condition>
@@ -1055,11 +1055,11 @@
 		<object-name>LampAmberON.001</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
-		  	<not><property>/b707/fuel/valves/boost-pump[1]</property></not>
+		  	<not><property>b707/fuel/valves/boost-pump[1]</property></not>
 		    <property>/controls/test/warn-knob</property>
 		  </or>
 		</condition>
@@ -1070,11 +1070,11 @@
 		<object-name>LampAmberON.002</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
-		  	<not><property>/b707/fuel/valves/boost-pump[2]</property></not>
+		  	<not><property>b707/fuel/valves/boost-pump[2]</property></not>
 		    <property>/controls/test/warn-knob</property>
 		  </or>
 		</condition>
@@ -1085,11 +1085,11 @@
 		<object-name>LampAmberON.003</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
-		  	<not><property>/b707/fuel/valves/boost-pump[3]</property></not>
+		  	<not><property>b707/fuel/valves/boost-pump[3]</property></not>
 		    <property>/controls/test/warn-knob</property>
 		  </or>
 		</condition>
@@ -1100,11 +1100,11 @@
 		<object-name>LampAmberON.006</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
-		  	<not><property>/b707/fuel/valves/boost-pump[4]</property></not>
+		  	<not><property>b707/fuel/valves/boost-pump[4]</property></not>
 		    <property>/controls/test/warn-knob</property>
 		  </or>
 		</condition>
@@ -1115,11 +1115,11 @@
 		<object-name>LampAmberON.007</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
-		  	<not><property>/b707/fuel/valves/boost-pump[5]</property></not>
+		  	<not><property>b707/fuel/valves/boost-pump[5]</property></not>
 		    <property>/controls/test/warn-knob</property>
 		  </or>
 		</condition>
@@ -1130,11 +1130,11 @@
 		<object-name>LampAmberON.004</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
-		  	<not><property>/b707/fuel/valves/boost-pump[6]</property></not>
+		  	<not><property>b707/fuel/valves/boost-pump[6]</property></not>
 		    <property>/controls/test/warn-knob</property>
 		  </or>
 		</condition>
@@ -1145,11 +1145,11 @@
 		<object-name>LampAmberON.005</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
-		  	<not><property>/b707/fuel/valves/boost-pump[7]</property></not>
+		  	<not><property>b707/fuel/valves/boost-pump[7]</property></not>
 		    <property>/controls/test/warn-knob</property>
 		  </or>
 		</condition>
@@ -1160,11 +1160,11 @@
 		<object-name>LampAmberON.008</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
-		  	<not><property>/b707/fuel/valves/boost-pump[8]</property></not>
+		  	<not><property>b707/fuel/valves/boost-pump[8]</property></not>
 		    <property>/controls/test/warn-knob</property>
 		  </or>
 		</condition>
@@ -1175,11 +1175,11 @@
 		<object-name>LampAmberON.009</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
-		  	<not><property>/b707/fuel/valves/boost-pump[9]</property></not>
+		  	<not><property>b707/fuel/valves/boost-pump[9]</property></not>
 		    <property>/controls/test/warn-knob</property>
 		  </or>
 		</condition>
@@ -1189,7 +1189,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch</object-name>
-		  <property>/b707/fuel/quantity-test</property>
+		  <property>b707/fuel/quantity-test</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>0</x>
@@ -1212,7 +1212,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/fuel/quantity-test</property>
+		        <property>b707/fuel/quantity-test</property>
 		    </binding>        
 		    <binding>
 		      <command>property-toggle</command>
@@ -1225,7 +1225,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>turn</object-name>
-		<property>/b707/fuel/temperatur-selector</property>
+		<property>b707/fuel/temperatur-selector</property>
 		<interpolation>
 		  <entry><ind> 0</ind><dep>  0</dep></entry>
 		  <entry><ind> 1</ind><dep> 38</dep></entry>
@@ -1253,7 +1253,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-				<property>/b707/fuel/temperatur-selector</property>
+				<property>b707/fuel/temperatur-selector</property>
 		    <step>1</step>
 		    <min>0</min>
 		    <max>5</max>
@@ -1269,7 +1269,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-				<property>/b707/fuel/temperatur-selector</property>
+				<property>b707/fuel/temperatur-selector</property>
 		    <step>-1</step>
 		    <min>0</min>
 		    <max>5</max>

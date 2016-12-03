@@ -120,13 +120,13 @@
 	<object-name>LampAmberON</object-name>
 	<condition>			
 		<greater-than>
-			<property>/b707/ess-bus</property>
+			<property>b707/ess-bus</property>
 			<value>20</value>
 		</greater-than>
 	  <or>
 		<and>
 	  		<not><property>/sim/multiplay/generic/int[12]</property></not>
-			<property>/b707/refuelling/receiving-switch</property>
+			<property>b707/refuelling/receiving-switch</property>
 			<property>/systems/refuel/serviceable</property>
 		</and>
 	    <property>/controls/test/warn-knob</property>
@@ -139,7 +139,7 @@
 	<object-name>LampGreenON.001</object-name>
 	<condition>			
 		<greater-than>
-			<property>/b707/ess-bus</property>
+			<property>b707/ess-bus</property>
 			<value>20</value>
 		</greater-than>
 	  <or>
@@ -148,7 +148,7 @@
 	    		<property>/sim/multiplay/generic/int[12]</property>
 	    		<value>1</value>
 	    	</greater-than>
-			<property>/b707/refuelling/receiving-switch</property>
+			<property>b707/refuelling/receiving-switch</property>
 			<property>/systems/refuel/serviceable</property>
 		</and>
 	    <property>/controls/test/warn-knob</property>
@@ -161,7 +161,7 @@
 	<object-name>LampGreenON</object-name>
 	<condition>			
 		<greater-than>
-			<property>/b707/ess-bus</property>
+			<property>b707/ess-bus</property>
 			<value>20</value>
 		</greater-than>
 	  <or>
@@ -170,7 +170,7 @@
 	    		<property>/sim/multiplay/generic/int[12]</property>
 	    		<value>0</value>
 	    	</greater-than>
-			<property>/b707/refuelling/receiving-switch</property>
+			<property>b707/refuelling/receiving-switch</property>
 			<property>/systems/refuel/serviceable</property>
 		</and>
 	    <property>/controls/test/warn-knob</property>
@@ -181,7 +181,7 @@
 <animation>
 	<type>rotate</type>
 	<object-name>switch</object-name>
-	<property>/b707/refuelling/receiving-switch</property>
+	<property>b707/refuelling/receiving-switch</property>
 	<factor>-60</factor>
 	<axis>
 	  <x>0</x>
@@ -202,21 +202,21 @@
 			<binding>
 				<command>nasal</command>
 				<script>
-					var rfsw = getprop("/b707/refuelling/receiving-switch") or 0;
-					var pwr_ref = getprop("/b707/ess-bus") or 0;
+					var rfsw = getprop("b707/refuelling/receiving-switch") or 0;
+					var pwr_ref = getprop("b707/ess-bus") or 0;
 					if (!rfsw){
 
-						setprop("/b707/refuelling/receiving-switch", 1);
+						setprop("b707/refuelling/receiving-switch", 1);
 						
 						if(pwr_ref &gt; 20){
 							setprop("/systems/refuel/serviceable", 1);
 							b707.doorsystem.refuelexport();
 						}else{
-							settimer(func{setprop("/b707/refuelling/receiving-switch", 0);},0.25);
+							settimer(func{setprop("b707/refuelling/receiving-switch", 0);},0.25);
 						}
 						
 					}else{
-						setprop("/b707/refuelling/receiving-switch", 0);
+						setprop("b707/refuelling/receiving-switch", 0);
 						setprop("/systems/refuel/serviceable", 0);
 						if(pwr_ref &gt; 20){
 							b707.doorsystem.refuelexport();

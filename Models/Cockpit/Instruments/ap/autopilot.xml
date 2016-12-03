@@ -337,7 +337,7 @@
             <command>nasal</command>
             <script>
             	var bt = getprop("/autopilot/Bendix-PB-20/controls/active") or 0;
-            	var bat = getprop("/b707/ess-bus") or 0;
+            	var bat = getprop("b707/ess-bus") or 0;
             	if(bt or bat &lt; 20){
             		setprop("/autopilot/Bendix-PB-20/controls/active", 0);
             		setprop("/autopilot/Bendix-PB-20/controls/alt-active", 0);

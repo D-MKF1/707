@@ -100,11 +100,11 @@
 		<object-name>LampBlueON</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
-		  	<not><property>/b707/fuel/valves/dump-valve-pos[0]</property></not>
+		  	<not><property>b707/fuel/valves/dump-valve-pos[0]</property></not>
 		    <property>/controls/test/warn-knob</property>
 		  </or>
 		</condition>
@@ -115,11 +115,11 @@
 		<object-name>LampBlueON.001</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
-		  	<not><property>/b707/fuel/valves/dump-valve-pos[1]</property></not>
+		  	<not><property>b707/fuel/valves/dump-valve-pos[1]</property></not>
 		    <property>/controls/test/warn-knob</property>
 		  </or>
 		</condition>
@@ -130,11 +130,11 @@
 		<object-name>LampBlueON.002</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
-		  	<not><property>/b707/fuel/valves/dump-valve-pos[2]</property></not>
+		  	<not><property>b707/fuel/valves/dump-valve-pos[2]</property></not>
 		    <property>/controls/test/warn-knob</property>
 		  </or>
 		</condition>
@@ -145,11 +145,11 @@
 		<object-name>LampBlueON.003</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
-		  	<not><property>/b707/fuel/valves/dump-valve-pos[3]</property></not>
+		  	<not><property>b707/fuel/valves/dump-valve-pos[3]</property></not>
 		    <property>/controls/test/warn-knob</property>
 		  </or>
 		</condition>
@@ -160,11 +160,11 @@
 		<object-name>LampBlueON.004</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
-		  	<not><property>/b707/fuel/valves/dump-valve-pos[4]</property></not>
+		  	<not><property>b707/fuel/valves/dump-valve-pos[4]</property></not>
 		    <property>/controls/test/warn-knob</property>
 		  </or>
 		</condition>
@@ -175,11 +175,11 @@
 		<object-name>LampBlueON.005</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
-		  	<not><property>/b707/fuel/valves/dump-valve-pos[5]</property></not>
+		  	<not><property>b707/fuel/valves/dump-valve-pos[5]</property></not>
 		    <property>/controls/test/warn-knob</property>
 		  </or>
 		</condition>
@@ -190,11 +190,11 @@
 		<object-name>LampAmberON</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
-		  	<property>/b707/fuel/valves/dump-retract[0]</property>
+		  	<property>b707/fuel/valves/dump-retract[0]</property>
 		    <property>/controls/test/warn-knob</property>
 		  </or>
 		</condition>
@@ -205,11 +205,11 @@
 		<object-name>LampAmberON.001</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
-		  	<property>/b707/fuel/valves/dump-retract[1]</property>
+		  	<property>b707/fuel/valves/dump-retract[1]</property>
 		    <property>/controls/test/warn-knob</property>
 		  </or>
 		</condition>
@@ -220,7 +220,7 @@
 		  <type>rotate</type>
 		  <object-name>cover</object-name>
 		  <object-name>scharnier</object-name>
-		  <property>/b707/fuel/valves/dump-cover[0]</property>
+		  <property>b707/fuel/valves/dump-cover[0]</property>
       <factor>140</factor>
 		  <axis>
 		   <x>1</x>
@@ -255,7 +255,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>cover.001</object-name>
-		  <property>/b707/fuel/valves/dump-cover[1]</property>
+		  <property>b707/fuel/valves/dump-cover[1]</property>
       <factor>90</factor>
 		  <axis>
 		   <x>0</x>
@@ -272,7 +272,7 @@
   <animation>
       <type>translate</type>
       <object-name>cover.001</object-name>
-      <property>/b707/fuel/valves/dump-cover[1]</property>
+      <property>b707/fuel/valves/dump-cover[1]</property>
 			<interpolation>
 				<entry><ind> 0.0</ind><dep> 0.0</dep></entry>
 				<entry><ind> 0.8</ind><dep> 0.0</dep></entry>
@@ -311,7 +311,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.001</object-name>
-		  <property>/b707/fuel/valves/dump-valve[0]</property>
+		  <property>b707/fuel/valves/dump-valve[0]</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -334,7 +334,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/fuel/valves/dump-valve[0]</property>
+		        <property>b707/fuel/valves/dump-valve[0]</property>
 		    </binding>          
         <binding>
             <command>nasal</command>
@@ -351,7 +351,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.006</object-name>	
-		  <property>/b707/fuel/valves/dump-retract[0]</property>
+		  <property>b707/fuel/valves/dump-retract[0]</property>
 			<interpolation>
 				<entry><ind> 0.0</ind><dep> 0.0</dep></entry>
 				<entry><ind> 1.0</ind><dep>-60.0</dep></entry>
@@ -377,12 +377,12 @@
 		    <repeatable>false</repeatable>	
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/fuel/valves/dump-retract[0]</property>
+		        <property>b707/fuel/valves/dump-retract[0]</property>
 		    </binding>          
 		    <binding>
 				<condition>		
-					<property>/b707/fuel/valves/dump-cover[0]</property>
-					<property>/b707/fuel/valves/dump-cover[1]</property>
+					<property>b707/fuel/valves/dump-cover[0]</property>
+					<property>b707/fuel/valves/dump-cover[1]</property>
 				</condition>
 		      <command>property-toggle</command>
 		      <property>/sim/sound/switch2</property>
@@ -394,7 +394,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.007</object-name>
-		  <property>/b707/fuel/valves/dump-retract[1]</property>
+		  <property>b707/fuel/valves/dump-retract[1]</property>
 			<interpolation>
 				<entry><ind> 0.0</ind><dep> 0.0</dep></entry>
 				<entry><ind> 1.0</ind><dep>-60.0</dep></entry>
@@ -420,12 +420,12 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/fuel/valves/dump-retract[1]</property>
+		        <property>b707/fuel/valves/dump-retract[1]</property>
 		    </binding>   
 		    <binding>
 						<condition>		
-							<property>/b707/fuel/valves/dump-cover[0]</property>
-							<property>/b707/fuel/valves/dump-cover[1]</property>
+							<property>b707/fuel/valves/dump-cover[0]</property>
+							<property>b707/fuel/valves/dump-cover[1]</property>
 						</condition>
 		      <command>property-toggle</command>
 		      <property>/sim/sound/switch2</property>
@@ -437,7 +437,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.000</object-name>
-		  <property>/b707/fuel/valves/dump-valve[1]</property>
+		  <property>b707/fuel/valves/dump-valve[1]</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -460,7 +460,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/fuel/valves/dump-valve[1]</property>
+		        <property>b707/fuel/valves/dump-valve[1]</property>
 		    </binding>          
         <binding>
             <command>nasal</command>
@@ -477,7 +477,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.002</object-name>
-		  <property>/b707/fuel/valves/dump-valve[2]</property>
+		  <property>b707/fuel/valves/dump-valve[2]</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -500,7 +500,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/fuel/valves/dump-valve[2]</property>
+		        <property>b707/fuel/valves/dump-valve[2]</property>
 		    </binding>          
         <binding>
             <command>nasal</command>
@@ -517,7 +517,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.003</object-name>
-		  <property>/b707/fuel/valves/dump-valve[3]</property>
+		  <property>b707/fuel/valves/dump-valve[3]</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -540,7 +540,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/fuel/valves/dump-valve[3]</property>
+		        <property>b707/fuel/valves/dump-valve[3]</property>
 		    </binding>          
         <binding>
             <command>nasal</command>
@@ -557,7 +557,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.004</object-name>
-		  <property>/b707/fuel/valves/dump-valve[4]</property>
+		  <property>b707/fuel/valves/dump-valve[4]</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -580,7 +580,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/fuel/valves/dump-valve[4]</property>
+		        <property>b707/fuel/valves/dump-valve[4]</property>
 		    </binding>          
         <binding>
             <command>nasal</command>
@@ -597,7 +597,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.005</object-name>
-		  <property>/b707/fuel/valves/dump-valve[5]</property>
+		  <property>b707/fuel/valves/dump-valve[5]</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -620,7 +620,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/fuel/valves/dump-valve[5]</property>
+		        <property>b707/fuel/valves/dump-valve[5]</property>
 		    </binding>          
         <binding>
             <command>nasal</command>

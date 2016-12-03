@@ -755,7 +755,7 @@
 				<property>/gear/gear[0]/position-norm</property>
 				<value>0</value>
 			</equals>
-			<not><property>/b707/crashed</property></not>
+			<not><property>b707/crashed</property></not>
 		</condition>
 	</gear>
 	
@@ -769,7 +769,7 @@
 					<property>/velocities/groundspeed-kt</property>
 					<value>2</value>
 				</greater-than>
-				<property>/b707/crashed</property>
+				<property>b707/crashed</property>
 		   </and>
      </condition>
 			<volume>
@@ -949,7 +949,7 @@
 		<condition>
 			<and>
 				<greater-than>
-					<property>/b707/ess-bus</property>
+					<property>b707/ess-bus</property>
 					<value>20</value>
 				</greater-than>
 				<or>
@@ -983,24 +983,24 @@
       <condition>
         <and>
 					<greater-than>
-						<property>/b707/ess-bus</property>
+						<property>b707/ess-bus</property>
 						<value>20</value>
 					</greater-than>
 					<or>
 						<and>
 							<greater-than>
-								<property>/b707/pressurization/cabin-altitude</property>
+								<property>b707/pressurization/cabin-altitude</property>
 								<value>8500</value>
 							</greater-than>
-							<not><property>/b707/pressurization/alt-cutout-horn</property></not>
+							<not><property>b707/pressurization/alt-cutout-horn</property></not>
 						</and>
 						<and>
 							<greater-than>
-								<property>/b707/pressurization/cabin-altitude</property>
+								<property>b707/pressurization/cabin-altitude</property>
 								<value>4000</value>
 							</greater-than>
-							<not><property>/b707/pressurization/safety-valve</property></not>
-							<not><property>/b707/pressurization/alt-cutout-horn</property></not>
+							<not><property>b707/pressurization/safety-valve</property></not>
+							<not><property>b707/pressurization/alt-cutout-horn</property></not>
 						</and>
 						<property>/controls/test/warn-knob</property>
 					</or>
@@ -1018,7 +1018,7 @@
       <condition>
       	<and>
 					<greater-than>
-						<property>/b707/ess-bus</property>
+						<property>b707/ess-bus</property>
 						<value>20</value>
 					</greater-than>
 		    	<or>
@@ -1042,7 +1042,7 @@
       <condition>
         <and>
 					<greater-than>
-						<property>/b707/ess-bus</property>
+						<property>b707/ess-bus</property>
 						<value>20</value>
 					</greater-than>
 				  <property>/instrumentation/aglradar/power-btn</property>
@@ -1061,11 +1061,11 @@
       <condition>
         <and>
 					<greater-than>
-						<property>/b707/ess-bus</property>
+						<property>b707/ess-bus</property>
 						<value>20</value>
 					</greater-than>
-				<property>/b707/warning/ice</property>
-				<not><property>/b707/pressurization/alt-cutout-horn</property></not>
+				<property>b707/warning/ice</property>
+				<not><property>b707/pressurization/alt-cutout-horn</property></not>
 		</and>
       </condition>
 		<volume>
@@ -1080,10 +1080,10 @@
       <condition>
         <and>
 					<greater-than>
-						<property>/b707/ess-bus</property>
+						<property>b707/ess-bus</property>
 						<value>20</value>
 					</greater-than>
-				 	<property>/b707/call/no-smoking</property>
+				 	<property>b707/call/no-smoking</property>
 				</and>
       </condition>
 		<volume>
@@ -1098,10 +1098,10 @@
       <condition>
         <and>
 					<greater-than>
-						<property>/b707/ess-bus</property>
+						<property>b707/ess-bus</property>
 						<value>20</value>
 					</greater-than>
-				  <property>/b707/call/seat-belts</property>
+				  <property>b707/call/seat-belts</property>
 				</and>
       </condition>
 		<volume>
@@ -1116,10 +1116,10 @@
       <condition>
         <and>
 					<greater-than>
-						<property>/b707/ess-bus</property>
+						<property>b707/ess-bus</property>
 						<value>20</value>
 					</greater-than>
-					<property>/b707/call/crew-call</property>
+					<property>b707/call/crew-call</property>
 				</and>
       </condition>
 		<volume>
@@ -1134,10 +1134,10 @@
       <condition>
         <and>
 					<greater-than>
-						<property>/b707/ess-bus</property>
+						<property>b707/ess-bus</property>
 						<value>20</value>
 					</greater-than>
-					<property>/b707/call/cabin-attend</property>
+					<property>b707/call/cabin-attend</property>
 				</and>
       </condition>
 		<volume>
@@ -1152,10 +1152,10 @@
       <condition>
         <and>
 					<greater-than>
-						<property>/b707/ess-bus</property>
+						<property>b707/ess-bus</property>
 						<value>20</value>
 					</greater-than>
-					<property>/b707/call/pers-accom</property>
+					<property>b707/call/pers-accom</property>
 				</and>
       </condition>
 		<volume>
@@ -1324,7 +1324,7 @@
 		<name>ProbeLeft</name>
 		<mode>in-transit</mode>
 		<path>Aircraft/707/Sounds/cargo_door.wav</path>
-		<property>/b707/refuelling/probe-left-lever</property>
+		<property>b707/refuelling/probe-left-lever</property>
 		<pitch>
 			<internal>dt_play</internal>
 			<offset>1.0</offset>
@@ -1336,7 +1336,7 @@
 		<name>ProbeRight</name>
 		<mode>in-transit</mode>
 		<path>Aircraft/707/Sounds/cargo_door.wav</path>
-		<property>/b707/refuelling/probe-right-lever</property>
+		<property>b707/refuelling/probe-right-lever</property>
 		<pitch>
 			<internal>dt_play</internal>
 			<offset>1.0</offset>
@@ -1607,7 +1607,7 @@
 					<value>0.01</value>
 				</greater-than>
 			</or>
-		    <property>/b707/external-power-connected</property>
+		    <property>b707/external-power-connected</property>
 		 </and>
       </condition>
       <volume>
@@ -1632,7 +1632,7 @@
 					<value type="string">Passengers View</value>
 				</equals>
 			</or>
-		    <property>/b707/external-power-connected</property>
+		    <property>b707/external-power-connected</property>
 		 </and>
       </condition>
       <volume>
@@ -1665,18 +1665,18 @@
 					<value>0.01</value>
 				</greater-than>
 			</or>
-			<property>/b707/ground-service/fuel-truck/state</property>
+			<property>b707/ground-service/fuel-truck/state</property>
 		</and>
       </condition>
       <volume>
-		<property>/b707/ground-service/fuel-truck/state</property>
+		<property>b707/ground-service/fuel-truck/state</property>
         <factor>5</factor>
         <offset>0.00</offset>
         <min>0.1</min>
         <max>7</max>
       </volume>
       <pitch>
-		<property>/b707/ground-service/fuel-truck/state</property>
+		<property>b707/ground-service/fuel-truck/state</property>
         <factor>0.5</factor>
         <offset>1.0</offset>
       </pitch>
@@ -1695,18 +1695,18 @@
 					<value type="string">Passengers View</value>
 				</equals>
 			</or>
-			<property>/b707/ground-service/fuel-truck/state</property>
+			<property>b707/ground-service/fuel-truck/state</property>
 		 </and>
       </condition>
       <volume>
-		<property>/b707/ground-service/fuel-truck/state</property>
+		<property>b707/ground-service/fuel-truck/state</property>
         <factor>1.00</factor>
         <offset>0.00</offset>
         <min>0.05</min>
         <max>0.2</max>
       </volume>
       <pitch>
-		<property>/b707/ground-service/fuel-truck/state</property>
+		<property>b707/ground-service/fuel-truck/state</property>
         <factor>0.5</factor>
         <offset>1.0</offset>
       </pitch>
@@ -1837,11 +1837,11 @@
      <condition>			
      	<and>
 				<greater-than>
-					<property>/b707/hydraulic/rudder</property>
+					<property>b707/hydraulic/rudder</property>
 					<value>0.1</value>
 				</greater-than>
 				<less-than>
-					<property>/b707/hydraulic/rudder</property>
+					<property>b707/hydraulic/rudder</property>
 					<value>3009</value>
 				</less-than>
 		   </and>
@@ -1850,7 +1850,7 @@
 				<factor>0.06</factor>
 			</volume>
       <pitch>
-        <property>/b707/hydraulic/rudder</property>
+        <property>b707/hydraulic/rudder</property>
         <factor>0.5</factor>
         <offset>3009</offset>
       </pitch>
@@ -1863,11 +1863,11 @@
      <condition>			
      	<and>
 				<greater-than>
-					<property>/b707/hydraulic/system</property>
+					<property>b707/hydraulic/system</property>
 					<value>0.1</value>
 				</greater-than>
 				<less-than>
-					<property>/b707/hydraulic/system</property>
+					<property>b707/hydraulic/system</property>
 					<value>2205</value>
 				</less-than>
 		   </and>
@@ -1876,7 +1876,7 @@
 				<factor>0.06</factor>
 			</volume>
       <pitch>
-        <property>/b707/hydraulic/system</property>
+        <property>b707/hydraulic/system</property>
         <factor>0.5</factor>
         <offset>2000</offset>
       </pitch>
@@ -1886,7 +1886,7 @@
 			<name>Trim Wheels</name>
 			<mode>in-transit</mode>
 			<path>Aircraft/707/Sounds/trimwheel.wav</path>
-			<property>/b707/trim/elevator-trim-turn</property>
+			<property>b707/trim/elevator-trim-turn</property>
 			<volume>
 				<property>/sim/current-view/internal</property>
 			</volume>

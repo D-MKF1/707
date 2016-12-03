@@ -31,9 +31,9 @@ var EssDCbus_input=[];
 var EssDCbus_output=[];
 var EssDCbus_load=[];
 
-var ACSelector = props.globals.initNode("/b707/ac/ac-para-select",0,"DOUBLE");
-var syncLight1 = props.globals.initNode("/b707/ac/sync1",1,"BOOL");
-var syncLight2 = props.globals.initNode("/b707/ac/sync2",1,"BOOL");
+var ACSelector = props.globals.initNode("b707/ac/ac-para-select",0,"DOUBLE");
+var syncLight1 = props.globals.initNode("b707/ac/sync1",1,"BOOL");
+var syncLight2 = props.globals.initNode("b707/ac/sync2",1,"BOOL");
 var ACSelFreq = props.globals.initNode("b707/ac-sel-para-freq",0,"DOUBLE");
 var ACSelVolts = props.globals.initNode("b707/ac-sel-para-volts",0,"DOUBLE");
 
@@ -608,7 +608,7 @@ var ac_sync = func{
 				}elsif(ACSelector.getValue() == 6 and EssPwr.getValue() == 5 ){
 				  var extGCcon = getprop("/b707/external-power-connected") or 0;
 				  if(extGCcon and ACSelVolts.getValue() != 27.5){
-						interpolate("/b707/ac-sel-para-freq", EssFreq.getValue(), 1.2);
+						interpolate("b707/ac-sel-para-freq", EssFreq.getValue(), 1.2);
 						ACSelVolts.setValue(27.5);
 					}
 					sync_lamp(EssFreq.getValue(),EssFreq.getValue());
@@ -920,14 +920,14 @@ setlistener("/sim/signals/fdm-initialized", func {
 
 # switch back the lights, if there is now power on ess-bus
 setlistener("/controls/lighting/landing-light", func {
-    var bat = getprop("/b707/ess-bus") or 0;
+    var bat = getprop("b707/ess-bus") or 0;
     if(bat < 20) setprop("/controls/lighting/landing-light", 0);
 });
 setlistener("/controls/lighting/landing-light[1]", func {
-    var bat = getprop("/b707/ess-bus") or 0;
+    var bat = getprop("b707/ess-bus") or 0;
     if(bat < 20) setprop("/controls/lighting/landing-light[1]", 0);
 });
 setlistener("/controls/lighting/landing-light[2]", func {
-    var bat = getprop("/b707/ess-bus") or 0;
+    var bat = getprop("b707/ess-bus") or 0;
     if(bat < 20) setprop("/controls/lighting/landing-light[2]", 0);
 });

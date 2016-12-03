@@ -66,7 +66,7 @@
 		<type>rotate</type>
 		<object-name>needle</object-name>	
 		<object-name>sup</object-name>		
-		<property>/b707/start-air-bottle-press[0]</property>
+		<property>b707/start-air-bottle-press[0]</property>
 		<interpolation>
 		  <entry><ind>   0.0</ind><dep>   0.0</dep></entry>
 		  <entry><ind>4000.0</ind><dep> 320.0</dep></entry>
@@ -82,7 +82,7 @@
 		<type>rotate</type>
 		<object-name>needle.001</object-name>	
 		<object-name>sup.001</object-name>	
-		<property>/b707/start-air-bottle-press[1]</property>
+		<property>b707/start-air-bottle-press[1]</property>
 		<interpolation>
 		  <entry><ind>   0.0</ind><dep>   0.0</dep></entry>
 		  <entry><ind>4000.0</ind><dep> 320.0</dep></entry>

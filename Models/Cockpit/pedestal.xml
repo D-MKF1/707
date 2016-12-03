@@ -744,7 +744,7 @@
 		<object-name>ElevatorTab</object-name>   
 		<object-name>ElevatorHelpL</object-name>   
 		<object-name>ElevatorHelpR</object-name>
-		<property>/b707/trim/elevator-trim-turn</property>
+		<property>b707/trim/elevator-trim-turn</property>
 		<factor>-10500</factor>
 		<center>
 		  <x-m>-18.636</x-m>
@@ -760,7 +760,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>ElevatorArrow</object-name>
-		<property>/b707/trim/elevator-trim-turn</property>
+		<property>b707/trim/elevator-trim-turn</property>
 		<factor>-20</factor>
 		<center>
 		  <x-m>-18.6285</x-m>
@@ -1003,7 +1003,7 @@
     <animation>
   		<type>rotate</type>
   		<object-name>ElevatorStabArrow</object-name>
-  		<property>/b707/stabilizer/cutout</property>
+  		<property>b707/stabilizer/cutout</property>
   		<interpolation>
   		  <entry><ind> 4.0</ind><dep>-4.0</dep></entry>
   		  <entry><ind>   0</ind><dep>   0</dep></entry>
@@ -1029,7 +1029,7 @@
   		  <repeatable>false</repeatable>
 		  <binding>
 		    <command>property-assign</command>
-		    <property>/b707/stabilizer/cutout</property>
+		    <property>b707/stabilizer/cutout</property>
 		    <value>0.0</value>
 		  </binding>
   		</action>

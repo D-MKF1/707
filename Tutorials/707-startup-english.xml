@@ -441,11 +441,11 @@
 			<condition>
 				<or>
 					<less-than>
-						<property>/b707/ac/ac-para-select</property>
+						<property>b707/ac/ac-para-select</property>
 						<value>6</value>
 					</less-than>
 					<greater-than>
-						<property>/b707/ac/ac-para-select</property>
+						<property>b707/ac/ac-para-select</property>
 						<value>6</value>
 					</greater-than>
 				</or>
@@ -454,7 +454,7 @@
 		<exit>
 			<condition>
 				<equals>
-					<property>/b707/ac/ac-para-select</property>
+					<property>b707/ac/ac-para-select</property>
 					<value>6</value>
 				</equals>
 			</condition>
@@ -1598,11 +1598,11 @@
 			<condition>
 				<or>
 					<less-than>
-						<property>/b707/ac/ac-para-select</property>
+						<property>b707/ac/ac-para-select</property>
 						<value>1</value>
 					</less-than>
 					<greater-than>
-						<property>/b707/ac/ac-para-select</property>
+						<property>b707/ac/ac-para-select</property>
 						<value>1</value>
 					</greater-than>
 				</or>
@@ -1611,7 +1611,7 @@
 		<exit>
 			<condition>
 				<equals>
-					<property>/b707/ac/ac-para-select</property>
+					<property>b707/ac/ac-para-select</property>
 					<value>1</value>
 				</equals>
 			</condition>
@@ -1711,11 +1711,11 @@
 			<condition>
 				<or>
 					<less-than>
-						<property>/b707/ac/ac-para-select</property>
+						<property>b707/ac/ac-para-select</property>
 						<value>2</value>
 					</less-than>
 					<greater-than>
-						<property>/b707/ac/ac-para-select</property>
+						<property>b707/ac/ac-para-select</property>
 						<value>2</value>
 					</greater-than>
 				</or>
@@ -1724,7 +1724,7 @@
 		<exit>
 			<condition>
 				<equals>
-					<property>/b707/ac/ac-para-select</property>
+					<property>b707/ac/ac-para-select</property>
 					<value>2</value>
 				</equals>
 			</condition>
@@ -1802,11 +1802,11 @@
 			<condition>
 				<or>
 					<less-than>
-						<property>/b707/ac/ac-para-select</property>
+						<property>b707/ac/ac-para-select</property>
 						<value>4</value>
 					</less-than>
 					<greater-than>
-						<property>/b707/ac/ac-para-select</property>
+						<property>b707/ac/ac-para-select</property>
 						<value>4</value>
 					</greater-than>
 				</or>
@@ -1815,7 +1815,7 @@
 		<exit>
 			<condition>
 				<equals>
-					<property>/b707/ac/ac-para-select</property>
+					<property>b707/ac/ac-para-select</property>
 					<value>4</value>
 				</equals>
 			</condition>
@@ -1893,11 +1893,11 @@
 			<condition>
 				<or>
 					<less-than>
-						<property>/b707/ac/ac-para-select</property>
+						<property>b707/ac/ac-para-select</property>
 						<value>5</value>
 					</less-than>
 					<greater-than>
-						<property>/b707/ac/ac-para-select</property>
+						<property>b707/ac/ac-para-select</property>
 						<value>5</value>
 					</greater-than>
 				</or>
@@ -1906,7 +1906,7 @@
 		<exit>
 			<condition>
 				<equals>
-					<property>/b707/ac/ac-para-select</property>
+					<property>b707/ac/ac-para-select</property>
 					<value>5</value>
 				</equals>
 			</condition>
@@ -1984,11 +1984,11 @@
 			<condition>
 				<or>
 					<less-than>
-						<property>/b707/ac/ac-para-select</property>
+						<property>b707/ac/ac-para-select</property>
 						<value>1</value>
 					</less-than>
 					<greater-than>
-						<property>/b707/ac/ac-para-select</property>
+						<property>b707/ac/ac-para-select</property>
 						<value>1</value>
 					</greater-than>
 				</or>
@@ -1997,7 +1997,7 @@
 		<exit>
 			<condition>
 				<equals>
-					<property>/b707/ac/ac-para-select</property>
+					<property>b707/ac/ac-para-select</property>
 					<value>1</value>
 				</equals>
 			</condition>

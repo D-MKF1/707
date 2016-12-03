@@ -120,19 +120,19 @@
         <binding>
             <command>nasal</command>
             <script>
-            	var bt = getprop("/b707/start/ground-start") or 0;
-            	var lsl = getprop("/b707/start/low-start-left") or 0;
-            	var lsr = getprop("/b707/start/low-start-right") or 0;
+            	var bt = getprop("b707/start/ground-start") or 0;
+            	var lsl = getprop("b707/start/low-start-left") or 0;
+            	var lsr = getprop("b707/start/low-start-right") or 0;
             	if(bt > 0){
-            		setprop("/b707/start/ground-start", 0);
-            		setprop("/b707/start/low-start-left", 0);
-            		setprop("/b707/start/low-start-right", 0);
+            		setprop("b707/start/ground-start", 0);
+            		setprop("b707/start/low-start-left", 0);
+            		setprop("b707/start/low-start-right", 0);
             	}else{
             		if(lsl or lsr){
-		          		setprop("/b707/start/ground-start", 1);
+		          		setprop("b707/start/ground-start", 1);
 		          	  b707.short_startup();
 		        			settimer(func{
-		        				setprop("/b707/start/ground-start", 0);
+		        				setprop("b707/start/ground-start", 0);
 									}, 10);
 								 	if(getprop("/sim/sound/switch2") == 1){
 										 setprop("/sim/sound/switch2", 0); 
@@ -140,9 +140,9 @@
 										 setprop("/sim/sound/switch2", 1);
 									}
 								}else{
-		          		setprop("/b707/start/ground-start", 1);
+		          		setprop("b707/start/ground-start", 1);
 		          		settimer(func{
-		        				setprop("/b707/start/ground-start", 0);
+		        				setprop("b707/start/ground-start", 0);
 									}, 0.5);
 									screen.log.write(" No ALTERNATE LOW PRESS START selected in Engineer panel! ", 1, 0, 0);
 								}
@@ -166,14 +166,14 @@
         <binding>
             <command>nasal</command>
             <script>
-            	var bt = getprop("/b707/start/ground-start") or 0;
+            	var bt = getprop("b707/start/ground-start") or 0;
             	if(bt > 0){
-            		setprop("/b707/start/ground-start", 0);
+            		setprop("b707/start/ground-start", 0);
             	}else{
-            		setprop("/b707/start/ground-start", 2);
+            		setprop("b707/start/ground-start", 2);
 		          	b707.short_startup();
           			settimer(func{
-          				setprop("/b707/start/ground-start", 0);
+          				setprop("b707/start/ground-start", 0);
 								}, 10);
 							 	if(getprop("/sim/sound/switch2") == 1){
 									 setprop("/sim/sound/switch2", 0); 

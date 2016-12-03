@@ -15,22 +15,22 @@ var isEC = func {
 
 			if (mpOther[v].getNode("sim/multiplay/generic/int[12]").getValue() != nil){
 				if(mpOther[v].getNode("sim/multiplay/generic/int[12]").getValue() == 1){
-					setprop("/b707/refuelling/contact",1);
+					setprop("b707/refuelling/contact",1);
 					break;
 				}elsif(mpOther[v].getNode("sim/multiplay/generic/int[12]").getValue() == 2){
-					setprop("/b707/refuelling/ready",1);
+					setprop("b707/refuelling/ready",1);
 					break;
 				}else{
-					setprop("/b707/refuelling/contact",0);
-					setprop("/b707/refuelling/ready",0);
+					setprop("b707/refuelling/contact",0);
+					setprop("b707/refuelling/ready",0);
 				}
 			}else{
-				setprop("/b707/refuelling/contact",0);
-				setprop("/b707/refuelling/ready",0);
+				setprop("b707/refuelling/contact",0);
+				setprop("b707/refuelling/ready",0);
 			}
 		}else{
-			setprop("/b707/refuelling/contact",0);
-			setprop("/b707/refuelling/ready",0);
+			setprop("b707/refuelling/contact",0);
+			setprop("b707/refuelling/ready",0);
 		}
     }
 	if(am) settimer( isEC, 0.4);

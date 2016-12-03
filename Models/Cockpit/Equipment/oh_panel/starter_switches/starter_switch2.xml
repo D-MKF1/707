@@ -48,32 +48,32 @@
 		<condition>
 		<and>
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 			<or>
 				<property>/controls/test/warn-knob</property>
 				<and>
-					<property>/b707/external-power-connected</property>
-					<property>/b707/ground-connect</property>	
-					<property>/b707/generator/gen-breaker[1]</property>
-					<property>/b707/generator/gen-bus-tie[1]</property>
-					<property>/b707/generator/gen-control[1]</property>
+					<property>b707/external-power-connected</property>
+					<property>b707/ground-connect</property>	
+					<property>b707/generator/gen-breaker[1]</property>
+					<property>b707/generator/gen-bus-tie[1]</property>
+					<property>b707/generator/gen-control[1]</property>
 					<not><property>/engines/engine[1]/running</property></not> 
 				</and>
 				<and>
 					<greater-than>
-						<property>/b707/ess-bus</property>
+						<property>b707/ess-bus</property>
 						<value>24</value>
 				 </greater-than>
-					<property>/b707/generator/gen-breaker[1]</property>
-					<property>/b707/generator/gen-bus-tie[1]</property>
-					<property>/b707/generator/gen-control[1]</property>
+					<property>b707/generator/gen-breaker[1]</property>
+					<property>b707/generator/gen-bus-tie[1]</property>
+					<property>b707/generator/gen-control[1]</property>
 					<not><property>/engines/engine[1]/running</property></not> 
 				</and>
 				<and>
-					<property>/b707/apu/off-start-run</property>	
-					<property>/b707/generator/gen-drive[4]</property>
+					<property>b707/apu/off-start-run</property>	
+					<property>b707/generator/gen-drive[4]</property>
 					<not><property>/engines/engine[1]/running</property></not> 
 				</and>
 			</or>
@@ -85,7 +85,7 @@
   <animation>
     <type>rotate</type>
     <object-name>cover</object-name>
-    <property>/b707/start/startercover[1]</property>
+    <property>b707/start/startercover[1]</property>
     <interpolation> 
             <entry>
                 <ind>0</ind>
@@ -116,7 +116,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/start/startercover[1]</property>
+		        <property>b707/start/startercover[1]</property>
 		    </binding>
 		    <binding>
 		      <command>property-toggle</command>

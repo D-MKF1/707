@@ -59,7 +59,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>needle</object-name>		
-		<property>/b707/oil/oil-temp[1]</property>
+		<property>b707/oil/oil-temp[1]</property>
 		<interpolation>
 		  <entry><ind>  -40.0</ind><dep> -45.0</dep></entry>
 		  <entry><ind>    0.0</ind><dep>   0.0</dep></entry>

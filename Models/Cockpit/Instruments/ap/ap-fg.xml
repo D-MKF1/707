@@ -125,7 +125,7 @@
         <condition>
           <or>
 						<greater-than>
-							<property>/b707/ess-bus</property>
+							<property>b707/ess-bus</property>
 							<value>20</value>
 						</greater-than>
       			<property>/controls/test/warn-knob</property>
@@ -169,7 +169,7 @@
 				        <command>nasal</command>
 				        <script>
 				        	var bt = getprop("/autopilot/Bendix-PB-20/controls/active") or 0;
-				        	var bat = getprop("/b707/ess-bus") or 0;
+				        	var bat = getprop("b707/ess-bus") or 0;
 				        	if(!bt and bat > 20){
 				        		setprop("/autopilot/Bendix-PB-20/controls/active", 1);
 				        	}
@@ -239,7 +239,7 @@
 						    <command>nasal</command>
 						    <script>
 						    	var apa = getprop("/autopilot/Bendix-PB-20/controls/active") or 0;            	
-						    	var bat = getprop("/b707/ess-bus") or 0;
+						    	var bat = getprop("b707/ess-bus") or 0;
             			if(!apa){
 						    		settimer(func{ setprop("/autopilot/Bendix-PB-20/controls/mode-selector", 2);}, 0.2);
 						    	}
@@ -453,7 +453,7 @@
 						    <command>nasal</command>
 						    <script>
 						    	var apa = getprop("/autopilot/Bendix-PB-20/controls/active") or 0;            	
-						    	var bat = getprop("/b707/ess-bus") or 0;
+						    	var bat = getprop("b707/ess-bus") or 0;
             			if(!apa){
 						    		settimer(func{ setprop("/autopilot/Bendix-PB-20/controls/mode-selector", 2);}, 0.2);
 						    	}
@@ -582,7 +582,7 @@
 						    <command>nasal</command>
 						    <script>
 						    	var apa = getprop("/autopilot/Bendix-PB-20/controls/active") or 0;            	
-						    	var bat = getprop("/b707/ess-bus") or 0;
+						    	var bat = getprop("b707/ess-bus") or 0;
             			if(!apa){
 						    		settimer(func{ setprop("/autopilot/Bendix-PB-20/controls/mode-selector", 2);}, 0.2);
 						    	}
@@ -647,7 +647,7 @@
 						    <command>nasal</command>
 						    <script>
 						    	var apa = getprop("/autopilot/Bendix-PB-20/controls/active") or 0;            	
-						    	var bat = getprop("/b707/ess-bus") or 0;
+						    	var bat = getprop("b707/ess-bus") or 0;
             			if(!apa){
 						    		settimer(func{ setprop("/autopilot/Bendix-PB-20/controls/mode-selector", 2);}, 0.2);
 						    	}

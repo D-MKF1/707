@@ -74,7 +74,7 @@
 		<object-name>LampWhiteON.001</object-name>
 		<condition>
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		</condition>
@@ -89,7 +89,7 @@
   <animation>
       <type>translate</type>
       <object-name>knob.001</object-name>
-      <property>/b707/generator/residual-volts-knob</property>
+      <property>b707/generator/residual-volts-knob</property>
       <factor>0.0028</factor>
       <axis>
           <x> 0.0</x>
@@ -113,13 +113,13 @@
       <repeatable>false</repeatable>
         <binding>
           <command>property-assign</command>
-          <property>/b707/generator/residual-volts-knob</property>  
+          <property>b707/generator/residual-volts-knob</property>  
           <value>1.0</value>
         </binding>
       <mod-up>
         <binding>
           <command>property-assign</command>
-          <property>/b707/generator/residual-volts-knob</property>  
+          <property>b707/generator/residual-volts-knob</property>  
           <value>0.0</value>
         </binding>
       </mod-up>
@@ -130,7 +130,7 @@
   <animation>
       <type>translate</type>
       <object-name>knob</object-name>
-      <property>/b707/generator/powermeter-knob</property>
+      <property>b707/generator/powermeter-knob</property>
       <factor>0.0028</factor>
       <axis>
           <x> 0.0</x>
@@ -154,13 +154,13 @@
       <repeatable>false</repeatable>
         <binding>
           <command>property-assign</command>
-          <property>/b707/generator/powermeter-knob</property>  
+          <property>b707/generator/powermeter-knob</property>  
           <value>1.0</value>
         </binding>
       <mod-up>
         <binding>
           <command>property-assign</command>
-          <property>/b707/generator/powermeter-knob</property>  
+          <property>b707/generator/powermeter-knob</property>  
           <value>0.0</value>
         </binding>
       </mod-up>
@@ -171,7 +171,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>turn</object-name>
-		<property>/b707/ac/ac-para-select</property>
+		<property>b707/ac/ac-para-select</property>
 		<interpolation>
 		  <entry><ind> 0</ind><dep>   0</dep></entry>
 		  <entry><ind> 1</ind><dep>  90</dep></entry>
@@ -201,7 +201,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-				<property>/b707/ac/ac-para-select</property>
+				<property>b707/ac/ac-para-select</property>
 		    <step>1</step>
 		    <min>0</min>
 		    <max>7</max>
@@ -217,7 +217,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-				<property>/b707/ac/ac-para-select</property>
+				<property>b707/ac/ac-para-select</property>
 		    <step>-1</step>
 		    <min>0</min>
 		    <max>7</max>
@@ -237,7 +237,7 @@
 		<condition>
 		  <or>
 		    <and>
-				  <property>/b707/ac/sync1</property>
+				  <property>b707/ac/sync1</property>
 		    	<property>/controls/electric/battery-switch</property>
 				</and>
 		    <property>/controls/test/warn-knob</property>
@@ -251,7 +251,7 @@
 		<condition>
 		  <or>
 		    <and>
-				  <property>/b707/ac/sync2</property>
+				  <property>b707/ac/sync2</property>
 		    	<property>/controls/electric/battery-switch</property>		    
 				</and>
 		    <property>/controls/test/warn-knob</property>
@@ -263,7 +263,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>needle</object-name>
-		<property>/b707/ac-sel-para-freq</property>
+		<property>b707/ac-sel-para-freq</property>
 		<interpolation>
 		  <entry><ind> 300.0</ind><dep>   0.0</dep></entry>
 		  <entry><ind> 380.0</ind><dep>   0.0</dep></entry>
@@ -287,7 +287,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>needle.001</object-name>
-		<property>/b707/ac-sel-para-volts</property>	
+		<property>b707/ac-sel-para-volts</property>	
 		<interpolation>
 		  <entry><ind>   0.0</ind><dep>   0.0</dep></entry>
 		  <entry><ind>  40.0</ind><dep> 115.56</dep></entry>

@@ -258,13 +258,13 @@
 		</marker>
 		<condition>
 		  <equals>
-		    <property>/b707/ac/ac-para-select</property>
+		    <property>b707/ac/ac-para-select</property>
 		    <value>6</value>
 		  </equals>
 		</condition>
 		<binding>
 		  <command>property-assign</command>
-		  <property>/b707/ac/ac-para-select</property>
+		  <property>b707/ac/ac-para-select</property>
 		  <value>6</value>
 		</binding>  
 	    <binding>

@@ -91,13 +91,13 @@
 		<object-name>LampAmberON</object-name>
 		<condition>			
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
-		    <property>/b707/apu/apu-fire-switch</property>
-		  	<property>/b707/apu/apu-fire-test</property>
-		  	<property>/b707/apu/on-fire</property>
+		    <property>b707/apu/apu-fire-switch</property>
+		  	<property>b707/apu/apu-fire-test</property>
+		  	<property>b707/apu/on-fire</property>
 		    <property>/controls/test/warn-knob</property>
 		  </or>
 		</condition>
@@ -107,7 +107,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch</object-name>
-		  <property>/b707/generator/gen-drive[4]</property>
+		  <property>b707/generator/gen-drive[4]</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -143,7 +143,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.001</object-name>
-		  <property>/b707/apu/apu-bleed-valve</property>
+		  <property>b707/apu/apu-bleed-valve</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -166,7 +166,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/apu/apu-bleed-valve</property>
+		        <property>b707/apu/apu-bleed-valve</property>
 		    </binding>
 		    <binding>
 		      <command>property-toggle</command>
@@ -179,7 +179,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.002</object-name>
-		  <property>/b707/apu/apu-fire-test</property>
+		  <property>b707/apu/apu-fire-test</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -202,7 +202,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		  			<property>/b707/apu/apu-fire-test</property>
+		  			<property>b707/apu/apu-fire-test</property>
 		    </binding>
 		    <binding>
 		      <command>property-toggle</command>
@@ -241,7 +241,7 @@
 		    <repeatable>false</repeatable>
         <binding>
 		      <command>property-toggle</command>
-		      <property>/b707/apu/starter</property>
+		      <property>b707/apu/starter</property>
         </binding>
 		    <binding>
 		      <command>property-toggle</command>
@@ -254,7 +254,7 @@
   <animation>
       <type>translate</type>
       <object-name>knob</object-name>
-      <property>/b707/apu/apu-fire-ext</property>
+      <property>b707/apu/apu-fire-ext</property>
       <factor>0.0030</factor>
       <axis>
           <x> 0.0</x>
@@ -278,13 +278,13 @@
       <repeatable>false</repeatable>
         <binding>
           <command>property-assign</command>
-          <property>/b707/apu/apu-fire-ext</property>  
+          <property>b707/apu/apu-fire-ext</property>  
           <value>1.0</value>
         </binding>
       <mod-up>
         <binding>
           <command>property-assign</command>
-          <property>/b707/apu/apu-fire-ext</property>  
+          <property>b707/apu/apu-fire-ext</property>  
           <value>0.0</value>
         </binding>
       </mod-up>
@@ -296,7 +296,7 @@
       <type>translate</type>
       <object-name>knob.001</object-name>
 			<object-name>LampAmberON</object-name>
-      <property>/b707/apu/apu-fire-switch</property>
+      <property>b707/apu/apu-fire-switch</property>
       <factor>0.01</factor>
       <axis>
           <x> 0.0</x>
@@ -320,13 +320,13 @@
       <repeatable>false</repeatable>
         <binding>
           <command>property-assign</command>
-          <property>/b707/apu/apu-fire-switch</property>  
+          <property>b707/apu/apu-fire-switch</property>  
           <value>1.0</value>
         </binding>
       <mod-up>
         <binding>
           <command>property-assign</command>
-          <property>/b707/apu/apu-fire-switch</property>  
+          <property>b707/apu/apu-fire-switch</property>  
           <value>0.0</value>
         </binding>
       </mod-up>
@@ -336,7 +336,7 @@
       <repeatable>false</repeatable>
         <binding>
           <command>property-assign</command>
-          <property>/b707/apu/apu-fire-switch</property>  
+          <property>b707/apu/apu-fire-switch</property>  
           <value>-1.0</value>
         </binding>
     </action>

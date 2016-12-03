@@ -43,86 +43,86 @@
                     <type>bool</type><property type="string">/controls/engines/engine[%i]/fire</property>
                 </signal>
                 <signal>
-                    <type>double</type><property type="string">/b707/generator/gen-breaker[%i]</property>
+                    <type>double</type><property type="string">b707/generator/gen-breaker[%i]</property>
                 </signal>
                 <signal>
-                    <type>bool</type><property type="string">/b707/generator/gen-bus-tie-cover[%i]</property>
+                    <type>bool</type><property type="string">b707/generator/gen-bus-tie-cover[%i]</property>
                 </signal>
                 <signal>
-                    <type>double</type><property type="string">/b707/generator/gen-bus-tie[%i]</property>
+                    <type>double</type><property type="string">b707/generator/gen-bus-tie[%i]</property>
                 </signal>
                 <signal>
-                    <type>double</type><property type="string">/b707/generator/gen-control[%i]</property>
+                    <type>double</type><property type="string">b707/generator/gen-control[%i]</property>
                 </signal>
                 <signal>
-                    <type>bool</type><property type="string">/b707/generator/gen-control-cover[%i]</property>
+                    <type>bool</type><property type="string">b707/generator/gen-control-cover[%i]</property>
                 </signal>
                 <signal>
-                    <type>bool</type><property type="string">/b707/generator/gen-drive[%i]</property>
+                    <type>bool</type><property type="string">b707/generator/gen-drive[%i]</property>
                 </signal>
                 <signal>
-                    <type>bool</type><property type="string">/b707/generator/gen-drive-cover[%i]</property>
+                    <type>bool</type><property type="string">b707/generator/gen-drive-cover[%i]</property>
                 </signal>
                 <signal>
-                    <type>double</type><property type="string">/b707/generator/gen-freq[%i]</property>
+                    <type>double</type><property type="string">b707/generator/gen-freq[%i]</property>
                 </signal>
                 <signal>
-                    <type>double</type><property type="string">/b707/generator/gen-load[%i]</property>
+                    <type>double</type><property type="string">b707/generator/gen-load[%i]</property>
                 </signal>
                 <signal>
-                    <type>bool</type><property type="string">/b707/start/startercover[%i]</property>
+                    <type>bool</type><property type="string">b707/start/startercover[%i]</property>
                 </signal>
             </signals>
             <signal>
-                <type>bool</type><property type="string">/b707/crashed</property>
+                <type>bool</type><property type="string">b707/crashed</property>
             </signal>
             <signal>
-                <type>double</type><property type="string">/b707/apu/apu-bleed-valve</property>
+                <type>double</type><property type="string">b707/apu/apu-bleed-valve</property>
             </signal>
             <signal>
-                <type>double</type><property type="string">/b707/apu/off-start-run</property>
+                <type>double</type><property type="string">b707/apu/off-start-run</property>
             </signal>
             <signal>
-                <type>double</type><property type="string">/b707/ac/ac-para-select</property>
+                <type>double</type><property type="string">b707/ac/ac-para-select</property>
             </signal>
             <signal>
-                <type>bool</type><property type="string">/b707/ac/sync1</property>
+                <type>bool</type><property type="string">b707/ac/sync1</property>
             </signal>
             <signal>
-                <type>bool</type><property type="string">/b707/ac/sync2</property>
+                <type>bool</type><property type="string">b707/ac/sync2</property>
             </signal>
             <signal>
-                <type>double</type><property type="string">/b707/ac-sel-para-freq</property>
+                <type>double</type><property type="string">b707/ac-sel-para-freq</property>
             </signal>
             <signal>
-                <type>double</type><property type="string">/b707/ac-sel-para-volts</property>
+                <type>double</type><property type="string">b707/ac-sel-para-volts</property>
             </signal>
             <signal>
-                <type>bool</type><property type="string">/b707/batt-cover</property>
+                <type>bool</type><property type="string">b707/batt-cover</property>
             </signal>
             <signal>
-                <type>double</type><property type="string">/b707/battery</property>
+                <type>double</type><property type="string">b707/battery</property>
             </signal>
             <signal>
-                <type>bool</type><property type="string">/b707/battery-switch</property>
+                <type>bool</type><property type="string">b707/battery-switch</property>
             </signal>
             <signal>
-                <type>double</type><property type="string">/b707/volt-dc</property>
+                <type>double</type><property type="string">b707/volt-dc</property>
             </signal>
             <signal>
-                <type>double</type><property type="string">/b707/volt-load</property>
+                <type>double</type><property type="string">b707/volt-load</property>
             </signal>
             <signal>
-                <type>bool</type><property type="string">/b707/external-power-connected</property>
+                <type>bool</type><property type="string">b707/external-power-connected</property>
             </signal>
             <signal>
-                <type>double</type><property type="string">/b707/ground-connect</property>
+                <type>double</type><property type="string">b707/ground-connect</property>
             </signal>
             <signal>
-                <type>double</type><property type="string">/b707/shake-effect/shaking</property>
+                <type>double</type><property type="string">b707/shake-effect/shaking</property>
             </signal>
             <signal>
-                <type>bool</type><property type="string">/b707/shake-effect/effect</property>
+                <type>bool</type><property type="string">b707/shake-effect/effect</property>
             </signal>
             <signal>
                 <type>bool</type><property type="string">/controls/lighting/strobe</property>

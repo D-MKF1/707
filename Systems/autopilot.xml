@@ -232,7 +232,7 @@
 	<input>
 		<property>/autopilot/settings/heading-bug-deg</property>
 		<offset>
-			<property>/b707/hsi/indicated-heading-deg</property>
+			<property>b707/hsi/indicated-heading-deg</property>
 			<scale>-1.0</scale>
 		</offset>
 	</input>

@@ -461,11 +461,11 @@
         <binding>
             <command>nasal</command>
             <script>
-            	var bt = getprop("/b707/anti-ice/switch") or 0;
+            	var bt = getprop("b707/anti-ice/switch") or 0;
             	if(bt == 2){
-            		setprop("/b707/anti-ice/switch", 0);
+            		setprop("b707/anti-ice/switch", 0);
             	}else{
-            		setprop("/b707/anti-ice/switch", 2);
+            		setprop("b707/anti-ice/switch", 2);
             	}
             </script>
         </binding>

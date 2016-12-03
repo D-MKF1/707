@@ -45,13 +45,13 @@
 		<object-name>LampAmberON</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
 		    <and>
-				  <property>/b707/ess-source-failure</property>
-				  <property>/b707/battery-switch</property>
+				  <property>b707/ess-source-failure</property>
+				  <property>b707/battery-switch</property>
 		    </and>
 		    <property>/controls/test/warn-knob</property>
 		  </or>
@@ -62,7 +62,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>turn</object-name>
-		<property>/b707/ess-power-switch</property>
+		<property>b707/ess-power-switch</property>
 		<interpolation>
 		  <entry><ind> 0</ind><dep> 180</dep></entry>
 		  <entry><ind> 5</ind><dep> 135</dep></entry>
@@ -91,7 +91,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-				<property>/b707/ess-power-switch</property>
+				<property>b707/ess-power-switch</property>
 		    <step>1</step>
 		    <min>0</min>
 		    <max>6</max>
@@ -111,7 +111,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-				<property>/b707/ess-power-switch</property>
+				<property>b707/ess-power-switch</property>
 		    <step>-1</step>
 		    <min>0</min>
 		    <max>6</max>

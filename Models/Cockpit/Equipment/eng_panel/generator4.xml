@@ -196,11 +196,11 @@
         <binding>
             <command>nasal</command>
             <script>
-            	var bt = getprop("/b707/generator/gen-bus-tie[3]") or 0;
+            	var bt = getprop("b707/generator/gen-bus-tie[3]") or 0;
             	if(bt > 0){
-            		setprop("/b707/generator/gen-bus-tie[3]", 0);
+            		setprop("b707/generator/gen-bus-tie[3]", 0);
             	}else{
-            		setprop("/b707/generator/gen-bus-tie[3]", 2);
+            		setprop("b707/generator/gen-bus-tie[3]", 2);
             	}
             </script>
         </binding>
@@ -208,11 +208,11 @@
           <binding>
             <command>nasal</command>
             <script>
-            	var bt = getprop("/b707/generator/gen-bus-tie[3]") or 0;
+            	var bt = getprop("b707/generator/gen-bus-tie[3]") or 0;
             	if(bt == 2){
-            		setprop("/b707/generator/gen-bus-tie[3]", 1);
+            		setprop("b707/generator/gen-bus-tie[3]", 1);
             	}else{
-            		setprop("/b707/generator/gen-bus-tie[3]", 0);
+            		setprop("b707/generator/gen-bus-tie[3]", 0);
             	}
             </script>
           </binding>
@@ -289,11 +289,11 @@
         <binding>
             <command>nasal</command>
             <script>
-            	var gb = getprop("/b707/generator/gen-breaker[3]") or 0;
+            	var gb = getprop("b707/generator/gen-breaker[3]") or 0;
             	if(gb > 0){
-            		setprop("/b707/generator/gen-breaker[3]", 0);
+            		setprop("b707/generator/gen-breaker[3]", 0);
             	}else{
-            		setprop("/b707/generator/gen-breaker[3]", 2);
+            		setprop("b707/generator/gen-breaker[3]", 2);
             	}
             </script>
         </binding>
@@ -301,11 +301,11 @@
           <binding>
             <command>nasal</command>
             <script>
-            	var gb = getprop("/b707/generator/gen-breaker[3]") or 0;
+            	var gb = getprop("b707/generator/gen-breaker[3]") or 0;
             	if(gb == 2){
-            		setprop("/b707/generator/gen-breaker[3]", 1);
+            		setprop("b707/generator/gen-breaker[3]", 1);
             	}else{
-            		setprop("/b707/generator/gen-breaker[3]", 0);
+            		setprop("b707/generator/gen-breaker[3]", 0);
             	}
             </script>
           </binding>
@@ -425,11 +425,11 @@
         <binding>
             <command>nasal</command>
             <script>
-            	var gc = getprop("/b707/generator/gen-control[3]") or 0;
+            	var gc = getprop("b707/generator/gen-control[3]") or 0;
             	if(gc > 0){
-            		setprop("/b707/generator/gen-control[3]", 0);
+            		setprop("b707/generator/gen-control[3]", 0);
             	}else{
-            		setprop("/b707/generator/gen-control[3]", 2);
+            		setprop("b707/generator/gen-control[3]", 2);
             		b707.ac_sync();
             	}
             </script>
@@ -438,12 +438,12 @@
           <binding>
             <command>nasal</command>
             <script>
-            	var gc = getprop("/b707/generator/gen-control[3]") or 0;
+            	var gc = getprop("b707/generator/gen-control[3]") or 0;
             	if(gc == 2){
-            		setprop("/b707/generator/gen-control[3]", 1);
+            		setprop("b707/generator/gen-control[3]", 1);
             		b707.ac_sync();
             	}else{
-            		setprop("/b707/generator/gen-control[3]", 0);
+            		setprop("b707/generator/gen-control[3]", 0);
             	}
             </script>
           </binding>

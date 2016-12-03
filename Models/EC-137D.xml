@@ -333,11 +333,11 @@
           <binding>
             <command>nasal</command>
             <script><![CDATA[ 
-				setprop("/b707/ground-service/fuel-truck/transfer", 0);
-				setprop("/b707/ground-service/fuel-truck/connect", 0);
-				setprop("/b707/ground-service/fuel-truck/enable", 0);
-				setprop("/b707/ground-service/fuel-truck/clean", 0);
-				setprop("/b707/ground-service/fuel-truck/state", 0);
+				setprop("b707/ground-service/fuel-truck/transfer", 0);
+				setprop("b707/ground-service/fuel-truck/connect", 0);
+				setprop("b707/ground-service/fuel-truck/enable", 0);
+				setprop("b707/ground-service/fuel-truck/clean", 0);
+				setprop("b707/ground-service/fuel-truck/state", 0);
             ]]></script>
           </binding>
 		</action>
@@ -2161,7 +2161,7 @@
      <object-name>cockpit</object-name>
 	 <object-name>registrationCockpitPanel</object-name>
 	 <object-name>radioRoom</object-name>
-     <property>/b707/shake-effect/shaking</property>
+     <property>b707/shake-effect/shaking</property>
      <axis>
    		<x1-m>  0</x1-m>
    		<y1-m>  0</y1-m>
