@@ -25,7 +25,7 @@
     <animation>
   		<type>rotate</type>
   		<object-name>fe-seat</object-name>
-  		<property>/b707/fe-pos</property>
+  		<property>b707/fe-pos</property>
   		<factor>80</factor>
   		<center>
   		  <x-m>-17.535</x-m>
@@ -47,7 +47,7 @@
 		  <repeatable>false</repeatable>
 		  <binding>
 		    <command>property-toggle</command>
-		    <property>/b707/fe-pos</property>
+		    <property>b707/fe-pos</property>
 		  </binding>
 		</action>
 	</animation>

@@ -68,7 +68,7 @@
 					 		<value>108</value>
 					  </less-than>
 				  </and>
-				  <property>/b707/rain/rain-repellent-fo</property>
+				  <property>b707/rain/rain-repellent-fo</property>
 				</or>
 		  </condition>
 		</animation>

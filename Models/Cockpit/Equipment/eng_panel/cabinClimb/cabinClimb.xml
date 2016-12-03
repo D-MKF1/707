@@ -23,7 +23,6 @@
 		  <factor-prop>/systems/electrical/outputs/engineer-dim</factor-prop>
 		</emission>
 	</animation>
-
 	<animation>
 		<type>material</type>
 		<object-name>face</object-name>
@@ -62,7 +61,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>needle</object-name>
-		<property>/b707/pressurization/climb-rate</property>
+		<property>b707/pressurization/climb-rate</property>
 		<min>-1880.0</min>
 		<max>1880.0</max>
 		<scale>1.0</scale>
@@ -83,7 +82,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>rateAngle</object-name>
-		<property>/b707/pressurization/incr-decr-rate</property>
+		<property>b707/pressurization/incr-decr-rate</property>
 		<min>-1900.0</min>
 		<max>1900.0</max>
 		<scale>1.0</scale>
@@ -104,7 +103,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>manualAngle</object-name>
-		<property>/b707/pressurization/manual-control-selector</property>
+		<property>b707/pressurization/manual-control-selector</property>
 		<min>-1900.0</min>
 		<max>1900.0</max>
 		<scale>1.0</scale>

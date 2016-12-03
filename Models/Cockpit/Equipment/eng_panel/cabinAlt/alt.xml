@@ -62,7 +62,7 @@
 <animation>
   <type>rotate</type>
   <object-name>ALT.Needle1</object-name>
-  <property>/b707/pressurization/cabin-altitude</property>
+  <property>b707/pressurization/cabin-altitude</property>
   <factor>0.36</factor>
   <axis>
     <x> 0</x>
@@ -74,7 +74,7 @@
 <animation>
   <type>rotate</type>
   <object-name>ALT.Needle2</object-name>
-  <property>/b707/pressurization/cabin-altitude</property>
+  <property>b707/pressurization/cabin-altitude</property>
   <factor>0.036</factor>
   <axis>
     <x> 0</x>

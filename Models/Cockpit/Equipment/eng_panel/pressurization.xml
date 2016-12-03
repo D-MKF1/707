@@ -99,11 +99,11 @@
 		<object-name>LampAmberON</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
-		  	<not><property>/b707/pressurization/safety-valve-pos</property></not>
+		  	<not><property>b707/pressurization/safety-valve-pos</property></not>
 		    <property>/controls/test/warn-knob</property>
 		  </or>
 		</condition>
@@ -113,7 +113,7 @@
   <animation>
     <type>rotate</type>
     <object-name>cover</object-name>
-    <property>/b707/pressurization/safety-valve-cover</property>
+    <property>b707/pressurization/safety-valve-cover</property>
     <interpolation> 
             <entry>
                 <ind>0</ind>
@@ -144,7 +144,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/pressurization/safety-valve-cover</property>
+		        <property>b707/pressurization/safety-valve-cover</property>
 		    </binding>
 		    <binding>
 		      <command>property-toggle</command>
@@ -157,7 +157,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.004</object-name>
-		  <property>/b707/pressurization/safety-valve</property>
+		  <property>b707/pressurization/safety-valve</property>
       <factor> 85</factor>
 		  <axis>
 		   <x>1</x>
@@ -180,7 +180,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/pressurization/safety-valve</property>
+		        <property>b707/pressurization/safety-valve</property>
 		    </binding>
         <binding>
             <command>nasal</command>
@@ -197,7 +197,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.002</object-name>
-		  <property>/b707/pressurization/air-thrust-valve</property>
+		  <property>b707/pressurization/air-thrust-valve</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -220,7 +220,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/pressurization/air-thrust-valve</property>
+		        <property>b707/pressurization/air-thrust-valve</property>
 		    </binding>
 		    <binding>
 		      <command>property-toggle</command>
@@ -233,7 +233,7 @@
   <animation>
       <type>translate</type>
       <object-name>switch.003</object-name>
-      <property>/b707/pressurization/cabin-alt-warning</property>
+      <property>b707/pressurization/cabin-alt-warning</property>
       <factor>0.0028</factor>
       <axis>
           <x> 0.0</x>
@@ -282,18 +282,18 @@
       <repeatable>false</repeatable>
         <binding>
           <command>property-assign</command>
-          <property>/b707/pressurization/cabin-alt-warning</property>  
+          <property>b707/pressurization/cabin-alt-warning</property>  
           <value>1.0</value>
         </binding>        
         <binding>
           <command>property-assign</command>
-          <property>/b707/pressurization/alt-cutout-horn</property>  
+          <property>b707/pressurization/alt-cutout-horn</property>  
           <value>1.0</value>
         </binding>
       <mod-up>
         <binding>
           <command>property-assign</command>
-          <property>/b707/pressurization/cabin-alt-warning</property>  
+          <property>b707/pressurization/cabin-alt-warning</property>  
           <value>0.0</value>
         </binding>
       </mod-up>
@@ -305,7 +305,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>turn</object-name>
-		<property>/b707/pressurization/cabin-air-temp-selector</property>
+		<property>b707/pressurization/cabin-air-temp-selector</property>
 		<interpolation>
 		  <entry><ind> 0</ind><dep>   0</dep></entry>
 		  <entry><ind> 1</ind><dep>  41</dep></entry>
@@ -332,7 +332,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-				<property>/b707/pressurization/cabin-air-temp-selector</property>
+				<property>b707/pressurization/cabin-air-temp-selector</property>
 		    <step>1</step>
 		    <min>0</min>
 		    <max>4</max>
@@ -348,7 +348,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-				<property>/b707/pressurization/cabin-air-temp-selector</property>
+				<property>b707/pressurization/cabin-air-temp-selector</property>
 		    <step>-1</step>
 		    <min>0</min>
 		    <max>4</max>
@@ -365,7 +365,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch</object-name>
-		  <property>/b707/pressurization/manual-mode-switch</property>
+		  <property>b707/pressurization/manual-mode-switch</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -388,7 +388,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/pressurization/manual-mode-switch</property>
+		        <property>b707/pressurization/manual-mode-switch</property>
 		    </binding>
 		    <binding>
 		      <command>property-toggle</command>
@@ -401,7 +401,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>knob.004</object-name>
-		<property>/b707/pressurization/manual-control-selector</property>
+		<property>b707/pressurization/manual-control-selector</property>
 		<interpolation>
 		  <entry><ind>-1900</ind><dep> -155</dep></entry>
 		  <entry><ind> 0</ind><dep>   0</dep></entry>
@@ -427,7 +427,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-assign</command>
-				<property>/b707/pressurization/manual-control-selector</property>
+				<property>b707/pressurization/manual-control-selector</property>
 		    <value>0</value>
 		  </binding>
 		  <binding>
@@ -440,7 +440,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-				<property>/b707/pressurization/manual-control-selector</property>
+				<property>b707/pressurization/manual-control-selector</property>
 		    <step>100</step>
 		    <min>-1900</min>
 		    <max> 1900</max>
@@ -456,7 +456,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-				<property>/b707/pressurization/manual-control-selector</property>
+				<property>b707/pressurization/manual-control-selector</property>
 		    <step>-100</step>
 		    <min>-1900</min>
 		    <max> 1900</max>
@@ -474,7 +474,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>knob.003</object-name>
-		<property>/b707/pressurization/outflow-valve-balance-control</property>
+		<property>b707/pressurization/outflow-valve-balance-control</property>
 		<factor>90</factor>
 		<axis>
 		 <x>0</x>
@@ -496,7 +496,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-assign</command>
-				<property>/b707/pressurization/outflow-valve-balance-control</property>
+				<property>b707/pressurization/outflow-valve-balance-control</property>
 		    <value>0</value>
 		  </binding>
 		  <binding>
@@ -509,7 +509,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-				<property>/b707/pressurization/outflow-valve-balance-control</property>
+				<property>b707/pressurization/outflow-valve-balance-control</property>
 		    <step>0.05</step>
 		    <min>-1</min>
 		    <max>1</max>
@@ -525,7 +525,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-				<property>/b707/pressurization/outflow-valve-balance-control</property>
+				<property>b707/pressurization/outflow-valve-balance-control</property>
 		    <step>-0.05</step>
 		    <min>-1</min>
 		    <max>1</max>
@@ -542,7 +542,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>needle</object-name>
-		<property>/b707/pressurization/outflow-valve-balance-control</property>
+		<property>b707/pressurization/outflow-valve-balance-control</property>
 		<interpolation>
 		  <entry><ind>-1</ind><dep> -64</dep></entry>
 		  <entry><ind> 0</ind><dep>   0</dep></entry>
@@ -564,7 +564,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>needle.001</object-name>
-		<property>/b707/pressurization/outflow-valve-balance-control</property>
+		<property>b707/pressurization/outflow-valve-balance-control</property>
 		<interpolation>
 		  <entry><ind> 1</ind><dep> -64</dep></entry>
 		  <entry><ind> 0</ind><dep>   0</dep></entry>
@@ -690,7 +690,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>face_psi</object-name>
-		<property>/b707/pressurization/cabin-max</property>
+		<property>b707/pressurization/cabin-max</property>
 		<interpolation>
 		  <entry><ind> -200.0</ind><dep> -2.0</dep></entry>
 		  <entry><ind>    0.0</ind><dep>  0.0</dep></entry>
@@ -714,7 +714,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>knob.001</object-name>
-		<property>/b707/pressurization/cabin-max</property>
+		<property>b707/pressurization/cabin-max</property>
 		<factor>-0.001</factor>
 		<axis>
 		 <x>0</x>
@@ -738,7 +738,7 @@
 	    	<repeatable>true</repeatable>			
 	      <binding>
           <command>property-assign</command>
-          <property>/b707/pressurization/cabin-max</property>
+          <property>b707/pressurization/cabin-max</property>
           <value>0</value>
 				</binding>
 	    </action>
@@ -750,7 +750,7 @@
                 <not><property>devices/status/keyboard/super</property></not>
             </condition>
 		        <command>property-adjust</command>
-		        <property>/b707/pressurization/cabin-max</property>
+		        <property>b707/pressurization/cabin-max</property>
 		        <step>10</step>
 		        <min> 0.0</min>
 		        <max>10000.0</max>
@@ -764,7 +764,7 @@
                </or>
             </condition>
 		        <command>property-adjust</command>
-		        <property>/b707/pressurization/cabin-max</property>
+		        <property>b707/pressurization/cabin-max</property>
 		        <step>100</step>
 		        <min> 0.0</min>
 		        <max>10000.0</max>
@@ -779,7 +779,7 @@
                 <not><property>devices/status/keyboard/super</property></not>
             </condition>
 		        <command>property-adjust</command>
-		        <property>/b707/pressurization/cabin-max</property>
+		        <property>b707/pressurization/cabin-max</property>
 		        <step>-10</step>
 		        <min> 0.0</min>
 		        <max>10000.0</max>
@@ -793,7 +793,7 @@
                </or>
             </condition>
 		        <command>property-adjust</command>
-		        <property>/b707/pressurization/cabin-max</property>
+		        <property>b707/pressurization/cabin-max</property>
 		        <step>-100</step>
 		        <min> 0.0</min>
 		        <max>10000.0</max>
@@ -806,7 +806,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>knob</object-name>
-		<property>/b707/pressurization/incr-decr-rate</property>
+		<property>b707/pressurization/incr-decr-rate</property>
 		<factor>0.1</factor>
 		<axis>
 		 <x>0</x>
@@ -828,7 +828,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-assign</command>
-				<property>/b707/pressurization/incr-decr-rate</property>
+				<property>b707/pressurization/incr-decr-rate</property>
 		    <value>0</value>
 		  </binding>
 		  <binding>
@@ -841,7 +841,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-				<property>/b707/pressurization/incr-decr-rate</property>
+				<property>b707/pressurization/incr-decr-rate</property>
 		    <step>100</step>
 		    <min>-1900</min>
 		    <max> 1900</max>
@@ -857,7 +857,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-				<property>/b707/pressurization/incr-decr-rate</property>
+				<property>b707/pressurization/incr-decr-rate</property>
 		    <step>-100</step>
 		    <min>-1900</min>
 		    <max> 1900</max>
@@ -874,7 +874,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.001</object-name>
-		  <property>/b707/pressurization/mode-switch</property>
+		  <property>b707/pressurization/mode-switch</property>
       <factor>-60</factor>
 		  <axis>
 		   <x>1</x>
@@ -897,7 +897,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/pressurization/mode-switch</property>
+		        <property>b707/pressurization/mode-switch</property>
 		    </binding>
 		    <binding>
 		      <command>property-toggle</command>

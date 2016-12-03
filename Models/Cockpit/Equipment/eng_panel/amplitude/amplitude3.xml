@@ -14,7 +14,7 @@
 		<object-name>bezel</object-name>
 		<condition>		
 			<not><property>/sim/rendering/rembrandt/enabled</property></not>
-		</condition>
+		</condition>b707/
 		<emission>
 		  <red>0.2</red>
 		  <green>0.2</green>
@@ -59,7 +59,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>needle</object-name>		
-		<property>/b707/vibrations/vib[2]</property>
+		<property>b707/vibrations/vib[2]</property>
 		<interpolation>
 		  <entry><ind>    0.0</ind><dep>   0.0</dep></entry>
 		  <entry><ind>    1.0</ind><dep> 226.0</dep></entry>

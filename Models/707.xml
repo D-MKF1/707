@@ -156,6 +156,8 @@
 	<object-name>lhibail</object-name>
 	<object-name>rhobail</object-name>
 	<object-name>lhobail</object-name>
+	<object-name>rhelevator</object-name>
+	<object-name>lhelevator</object-name>
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>707.png</texture>

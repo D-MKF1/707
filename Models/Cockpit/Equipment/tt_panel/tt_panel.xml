@@ -105,14 +105,14 @@
 		<object-name>LampAmberON</object-name>
 		<condition>			
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
 		  	<and>
 		  		<property>/tanker</property>
-		  		<not><property>/b707/refuelling/contact</property></not>
-		  		<not><property>/b707/refuelling/ready</property></not>
+		  		<not><property>b707/refuelling/contact</property></not>
+		  		<not><property>b707/refuelling/ready</property></not>
 		  	</and>
 		    <property>/controls/test/warn-knob</property>
 		  </or>
@@ -124,13 +124,13 @@
 		<object-name>LampGreenON.001</object-name>
 		<condition>			
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
 		  	<and>
 		  		<property>/tanker</property>
-		  		<property>/b707/refuelling/contact</property>
+		  		<property>b707/refuelling/contact</property>
 		  	</and>
 		    <property>/controls/test/warn-knob</property>
 		  </or>
@@ -142,13 +142,13 @@
 		<object-name>LampGreenON</object-name>
 		<condition>			
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
 		  	<and>
 		  		<property>/tanker</property>
-		  		<property>/b707/refuelling/ready</property>
+		  		<property>b707/refuelling/ready</property>
 		  	</and>
 		    <property>/controls/test/warn-knob</property>
 		  </or>
@@ -338,7 +338,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>turn.001</object-name>
-		<property>/b707/refuelling/wing-light-right</property>
+		<property>b707/refuelling/wing-light-right</property>
 		<factor>225</factor>
 		<axis>
 		 <x>-1</x>
@@ -360,7 +360,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/b707/refuelling/wing-light-right</property>
+		    <property>b707/refuelling/wing-light-right</property>
 		    <step>0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -376,7 +376,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/b707/refuelling/wing-light-right</property>
+		    <property>b707/refuelling/wing-light-right</property>
 		    <step>-0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -392,7 +392,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/b707/refuelling/wing-light-right</property>
+		    <property>b707/refuelling/wing-light-right</property>
 		    <step>0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -408,7 +408,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/b707/refuelling/wing-light-right</property>
+		    <property>b707/refuelling/wing-light-right</property>
 		    <step>-0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -425,7 +425,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>turn.002</object-name>
-		<property>/b707/refuelling/wing-light-center</property>
+		<property>b707/refuelling/wing-light-center</property>
 		<factor>225</factor>
 		<axis>
 		 <x>-1</x>
@@ -447,7 +447,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/b707/refuelling/wing-light-center</property>
+		    <property>b707/refuelling/wing-light-center</property>
 		    <step>0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -463,7 +463,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/b707/refuelling/wing-light-center</property>
+		    <property>b707/refuelling/wing-light-center</property>
 		    <step>-0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -479,7 +479,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/b707/refuelling/wing-light-center</property>
+		    <property>b707/refuelling/wing-light-center</property>
 		    <step>0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -495,7 +495,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/b707/refuelling/wing-light-center</property>
+		    <property>b707/refuelling/wing-light-center</property>
 		    <step>-0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -512,7 +512,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>turn.003</object-name>
-		<property>/b707/refuelling/wing-light-left</property>
+		<property>b707/refuelling/wing-light-left</property>
 		<factor>225</factor>
 		<axis>
 		 <x>-1</x>
@@ -534,7 +534,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/b707/refuelling/wing-light-left</property>
+		    <property>b707/refuelling/wing-light-left</property>
 		    <step>0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -550,7 +550,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/b707/refuelling/wing-light-left</property>
+		    <property>b707/refuelling/wing-light-left</property>
 		    <step>-0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -566,7 +566,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/b707/refuelling/wing-light-left</property>
+		    <property>b707/refuelling/wing-light-left</property>
 		    <step>0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -582,7 +582,7 @@
 		  <repeatable>true</repeatable>
 		  <binding>
 		    <command>property-adjust</command>
-		    <property>/b707/refuelling/wing-light-left</property>
+		    <property>b707/refuelling/wing-light-left</property>
 		    <step>-0.1</step>
 		    <min>0</min>
 		    <max>1</max>
@@ -600,7 +600,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>leverDR</object-name>
-		<property>/b707/refuelling/probe-right-lever</property>
+		<property>b707/refuelling/probe-right-lever</property>
 		<factor>22</factor>
 		<center>
 		  <x-m>-0.07</x-m>
@@ -636,7 +636,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>leverDL</object-name>
-		<property>/b707/refuelling/probe-left-lever</property>
+		<property>b707/refuelling/probe-left-lever</property>
 		<factor>22</factor>
 		<center>
 		  <x-m>-0.07</x-m>
@@ -672,7 +672,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>leverL</object-name>
-		<property>/b707/refuelling/boom-telescope-lever</property>
+		<property>b707/refuelling/boom-telescope-lever</property>
 		<factor>1</factor>
 		<center>
 		  <x-m>-0.0052</x-m>
@@ -705,7 +705,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>leverR</object-name>
-		<property>/b707/refuelling/boom-azimuth</property>
+		<property>b707/refuelling/boom-azimuth</property>
 		<factor>1</factor>
 		<center>
 		  <x-m> 0.0</x-m>
@@ -729,7 +729,7 @@
 		    <repeatable>true</repeatable>
         <binding>
             <command>property-assign</command>
-            <property>/b707/refuelling/boom-azimuth</property>
+            <property>b707/refuelling/boom-azimuth</property>
             <value>0.0</value>
         </binding>
 		  </action>
@@ -739,7 +739,7 @@
 		    <repeatable>true</repeatable>
         <binding>
             <command>property-adjust</command>
-            <property>/b707/refuelling/boom-azimuth</property>
+            <property>b707/refuelling/boom-azimuth</property>
             <step>-1.5</step>
             <min>-30</min>
             <max>30</max>
@@ -752,7 +752,7 @@
 		    <repeatable>true</repeatable>
         <binding>
             <command>property-adjust</command>
-            <property>/b707/refuelling/boom-azimuth</property>
+            <property>b707/refuelling/boom-azimuth</property>
             <step>1.5</step>
             <min>-30</min>
             <max>30</max>
@@ -765,7 +765,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>AZI.Needle</object-name>
-		<property>/b707/refuelling/boom-azimuth</property>
+		<property>b707/refuelling/boom-azimuth</property>
 		<min>-30.0</min>
 		<max>30.0</max>
 		<scale>1.0</scale>

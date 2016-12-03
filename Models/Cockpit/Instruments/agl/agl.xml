@@ -125,7 +125,7 @@
 		<object-name>lampOn</object-name>
 		<condition>	
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
@@ -144,7 +144,7 @@
 		<condition>
 			<or>
 				<less-than>
-					<property>/b707/ess-bus</property>
+					<property>b707/ess-bus</property>
 					<value>22</value>
 				</less-than>
 		   	<not><property>/instrumentation/aglradar/power-btn</property></not>
@@ -158,7 +158,7 @@
 		<condition>
 			<or>
 				<less-than>
-					<property>/b707/ess-bus</property>
+					<property>b707/ess-bus</property>
 					<value>22</value>
 				</less-than>
 		   	<not><property>/instrumentation/aglradar/power-btn</property></not>
@@ -172,7 +172,7 @@
 		<condition>
 			<and>
 				<greater-than>
-					<property>/b707/ess-bus</property>
+					<property>b707/ess-bus</property>
 					<value>22</value>
 				</greater-than>
 		   	<property>/instrumentation/aglradar/power-btn</property>			
@@ -190,7 +190,7 @@
 		<condition>
 			<or>
 				<less-than>
-					<property>/b707/ess-bus</property>
+					<property>b707/ess-bus</property>
 					<value>22</value>
 				</less-than>
 		   	<not><property>/instrumentation/aglradar/power-btn</property></not>				
@@ -204,7 +204,7 @@
       <condition>
 				<or>
 					<greater-than>
-						<property>/b707/ess-bus</property>
+						<property>b707/ess-bus</property>
 						<value>22</value>
 					</greater-than>
 				 	<property>/instrumentation/aglradar/power-btn</property>
@@ -230,7 +230,7 @@
       <condition>
 				<and>
 					<greater-than>
-						<property>/b707/ess-bus</property>
+						<property>b707/ess-bus</property>
 						<value>22</value>
 					</greater-than>
 				 	<property>/instrumentation/aglradar/power-btn</property>			

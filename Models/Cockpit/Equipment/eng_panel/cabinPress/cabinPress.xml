@@ -59,7 +59,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>needle</object-name>			
-		<property>/b707/pressurization/cabin-differential-pressure</property>
+		<property>b707/pressurization/cabin-differential-pressure</property>
 		<factor>30</factor>
 		<axis>
 		  <x>0</x>

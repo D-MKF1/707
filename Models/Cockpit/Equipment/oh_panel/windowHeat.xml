@@ -58,23 +58,23 @@
 		<object-name>LampAmberON</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
 		  	<and>
-					<property>/b707/anti-ice/window-heat-cap-switch</property>
+					<property>b707/anti-ice/window-heat-cap-switch</property>
 					<equals>
-						<property>/b707/anti-ice/window-alpha-capt</property>
+						<property>b707/anti-ice/window-alpha-capt</property>
 						<value>1</value>
 					</equals>
 					<greater-than>
-						<property>/b707/anti-ice/total-air-temperature</property>
+						<property>b707/anti-ice/total-air-temperature</property>
 						<value>0</value>
 					</greater-than>
 				</and>
 		    <property>/controls/test/warn-knob</property>
-		    <property>/b707/anti-ice/window-cap-control</property>
+		    <property>b707/anti-ice/window-cap-control</property>
 		  </or>
 		</condition>
 	</animation>
@@ -84,23 +84,23 @@
 		<object-name>LampAmberON.001</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
 		  	<and>
-					<property>/b707/anti-ice/window-heat-fo-switch</property>
+					<property>b707/anti-ice/window-heat-fo-switch</property>
 					<equals>
-						<property>/b707/anti-ice/window-alpha-fo</property>
+						<property>b707/anti-ice/window-alpha-fo</property>
 						<value>1</value>
 					</equals>
 					<greater-than>
-						<property>/b707/anti-ice/total-air-temperature</property>
+						<property>b707/anti-ice/total-air-temperature</property>
 						<value>0</value>
 					</greater-than>
 				</and>
 		    <property>/controls/test/warn-knob</property>
-		    <property>/b707/anti-ice/window-fo-control</property>
+		    <property>b707/anti-ice/window-fo-control</property>
 		  </or>
 		</condition>
 	</animation>
@@ -109,7 +109,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch</object-name>
-		  <property>/b707/anti-ice/window-heat-cap-switch</property>
+		  <property>b707/anti-ice/window-heat-cap-switch</property>
 		 	<interpolation>
 				<entry><ind>  2.0</ind><dep> -50.0</dep></entry>
 				<entry><ind>  0.0</ind><dep>   0.0</dep></entry>
@@ -185,7 +185,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.001</object-name>
-		  <property>/b707/anti-ice/window-heat-fo-switch</property>
+		  <property>b707/anti-ice/window-heat-fo-switch</property>
 		 	<interpolation>
 				<entry><ind>  2.0</ind><dep> -50.0</dep></entry>
 				<entry><ind>  0.0</ind><dep>   0.0</dep></entry>

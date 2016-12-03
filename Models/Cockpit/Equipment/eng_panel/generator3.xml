@@ -94,12 +94,12 @@
 		<object-name>LampAmberON</object-name>
 		<condition>			
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
 		  	<less-than>
-		    	<property>/b707/generator/gen-bus-tie[2]</property>
+		    	<property>b707/generator/gen-bus-tie[2]</property>
 		    	<value>1</value>
 		    </less-than>
 		    <property>/controls/test/warn-knob</property>
@@ -112,12 +112,12 @@
 		<condition>
 		  <or>
 				<less-than>
-					<property>/b707/ess-bus</property>
+					<property>b707/ess-bus</property>
 					<value>20</value>
 				</less-than>
 				<and>
 				  <greater-than>
-				  	<property>/b707/generator/gen-bus-tie[2]</property>
+				  	<property>b707/generator/gen-bus-tie[2]</property>
 				  	<value>0</value>
 				  </greater-than>
 				  <not><property>/controls/test/warn-knob</property></not>
@@ -129,7 +129,7 @@
   <animation>
     <type>rotate</type>
     <object-name>cover</object-name>
-    <property>/b707/generator/gen-bus-tie-cover[2]</property>
+    <property>b707/generator/gen-bus-tie-cover[2]</property>
     <interpolation> 
             <entry>
                 <ind>0</ind>
@@ -160,7 +160,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/generator/gen-bus-tie-cover[2]</property>
+		        <property>b707/generator/gen-bus-tie-cover[2]</property>
 		    </binding>
 		    <binding>
 		      <command>property-toggle</command>
@@ -172,7 +172,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch</object-name>
-		  <property>/b707/generator/gen-bus-tie[2]</property>
+		  <property>b707/generator/gen-bus-tie[2]</property>
       <factor>-40</factor>
 		  <axis>
 		   <x>1</x>
@@ -230,12 +230,12 @@
 		<object-name>LampAmberON.001</object-name>
 		<condition>		
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
 		  	<less-than>
-		    	<property>/b707/generator/gen-breaker[2]</property>
+		    	<property>b707/generator/gen-breaker[2]</property>
 		    	<value>1</value>
 		    </less-than>
 		    <property>/controls/test/warn-knob</property>
@@ -248,12 +248,12 @@
 		<condition>		  
 			<or>
 				<less-than>
-					<property>/b707/ess-bus</property>
+					<property>b707/ess-bus</property>
 					<value>20</value>
 				</less-than>
 				<and>
 				  <greater-than>
-				  	<property>/b707/generator/gen-breaker[2]</property>
+				  	<property>b707/generator/gen-breaker[2]</property>
 				  	<value>0</value>
 				  </greater-than>
 				  <not><property>/controls/test/warn-knob</property></not>
@@ -265,7 +265,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.002</object-name>
-		  <property>/b707/generator/gen-breaker[2]</property>
+		  <property>b707/generator/gen-breaker[2]</property>
       <factor>-40</factor>
 		  <axis>
 		   <x>1</x>
@@ -323,12 +323,12 @@
 		<object-name>LampAmberON.002</object-name>
 		<condition>
 			<greater-than>
-				<property>/b707/ess-bus</property>
+				<property>b707/ess-bus</property>
 				<value>20</value>
 			</greater-than>
 		  <or>
 		  	<less-than>
-		    	<property>/b707/generator/gen-control[2]</property>
+		    	<property>b707/generator/gen-control[2]</property>
 		    	<value>1</value>
 		    </less-than>
 		    <property>/controls/test/warn-knob</property>
@@ -341,12 +341,12 @@
 		<condition>
 			<or>
 				<less-than>
-					<property>/b707/ess-bus</property>
+					<property>b707/ess-bus</property>
 					<value>20</value>
 				</less-than>
 				<and>
 				  <greater-than>
-				  	<property>/b707/generator/gen-control[2]</property>
+				  	<property>b707/generator/gen-control[2]</property>
 				  	<value>0</value>
 				  </greater-than>
 				  <not><property>/controls/test/warn-knob</property></not>
@@ -358,7 +358,7 @@
   <animation>
     <type>rotate</type>
     <object-name>cover.001</object-name>
-    <property>/b707/generator/gen-control-cover[2]</property>
+    <property>b707/generator/gen-control-cover[2]</property>
     <interpolation> 
             <entry>
                 <ind>0</ind>
@@ -389,7 +389,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>/b707/generator/gen-control-cover[2]</property>
+		        <property>b707/generator/gen-control-cover[2]</property>
 		    </binding>
 		    <binding>
 		      <command>property-toggle</command>
@@ -401,7 +401,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>switch.001</object-name>
-		  <property>/b707/generator/gen-control[2]</property>
+		  <property>b707/generator/gen-control[2]</property>
       <factor>-40</factor>
 		  <axis>
 		   <x>1</x>
@@ -481,7 +481,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>freqKnob</object-name>
-		  <property>/b707/generator/gen-freq[2]</property>
+		  <property>b707/generator/gen-freq[2]</property>
 			<interpolation>
 				<entry><ind>  380</ind><dep> 0.0</dep></entry>
 				<entry><ind>  420</ind><dep> 180</dep></entry>
@@ -508,7 +508,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		      <command>property-assign</command>
-		      <property>/b707/generator/gen-freq[2]</property>
+		      <property>b707/generator/gen-freq[2]</property>
 		      <value>380</value>
 		    </binding>          
 		    <binding>
@@ -526,7 +526,7 @@
 		    <repeatable>true</repeatable>
 		    <binding>
 		      <command>property-adjust</command>
-		      <property>/b707/generator/gen-freq[2]</property>
+		      <property>b707/generator/gen-freq[2]</property>
 		      <step>0.5</step>
 		      <min>380</min>
 		      <max>420</max>
@@ -547,7 +547,7 @@
 		    <repeatable>true</repeatable>
 		    <binding>
 		      <command>property-adjust</command>
-		      <property>/b707/generator/gen-freq[2]</property>
+		      <property>b707/generator/gen-freq[2]</property>
 		      <step>-0.5</step>
 		      <min>380</min>
 		      <max>420</max>

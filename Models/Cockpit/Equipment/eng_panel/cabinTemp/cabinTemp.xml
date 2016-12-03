@@ -58,7 +58,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>needle</object-name>		
-		<property>/b707/air-conditioning/cabin-temp</property>
+		<property>b707/air-conditioning/cabin-temp</property>
 		<interpolation>
 		  <entry><ind>  -10.0</ind><dep> -45.0</dep></entry>
 		  <entry><ind>    0.0</ind><dep>   0.0</dep></entry>

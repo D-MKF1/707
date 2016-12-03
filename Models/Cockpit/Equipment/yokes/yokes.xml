@@ -249,7 +249,7 @@
         <interval-sec>0.2</interval-sec>
         <binding>
 		      <command>property-adjust</command>
-		      <property>/b707/stabilizer/cutout</property>
+		      <property>b707/stabilizer/cutout</property>
 		      <step>0.1</step>
 		      <min>-1.0</min>
 		      <max> 4.0</max>
@@ -266,7 +266,7 @@
         <interval-sec>0.2</interval-sec>
         <binding>
 		      <command>property-adjust</command>
-		      <property>/b707/stabilizer/cutout</property>
+		      <property>b707/stabilizer/cutout</property>
 		      <step>-0.1</step>
 		      <min>-1.0</min>
 		      <max> 4.0</max>
@@ -290,7 +290,7 @@
         <interval-sec>0.2</interval-sec>
         <binding>
         <command>property-adjust</command>
-        <property>/b707/stabilizer/cutout</property>
+        <property>b707/stabilizer/cutout</property>
         <step>0.1</step>
         <min>-1.0</min>
         <max> 4.0</max>
@@ -326,7 +326,7 @@
         <interval-sec>0.2</interval-sec>
         <binding>
         <command>property-adjust</command>
-        <property>/b707/stabilizer/cutout</property>
+        <property>b707/stabilizer/cutout</property>
         <step>-0.1</step>
         <min>-1.0</min>
         <max> 4.0</max>
