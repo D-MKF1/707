@@ -24,6 +24,19 @@
 	</animation>
 
 	<animation>
+		<type>material</type>
+		<object-name>marker</object-name>
+		<condition>
+			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+		</condition>
+		<emission>
+			<red>0.1</red>
+			<green>0.5</green>
+			<blue>0.1</blue>
+		</emission>
+	</animation>
+	
+	<animation>
 		<type>billboard</type>
 		<object-name>arrow</object-name>
 	</animation>

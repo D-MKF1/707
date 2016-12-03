@@ -1,6 +1,6 @@
 AC3Db
 MATERIAL "DefaultWhite" rgb 1.0000 1.0000 1.0000  amb 0.2000 0.2000 0.2000  emis 0.0000 0.0000 0.0000  spec 0.5000 0.5000 0.5000  shi 10 trans 0.0000
-MATERIAL "arrow" rgb 0.0960 1.0000 0.0000  amb 0.6667 0.6667 0.6667  emis 0.6667 0.6667 0.6667  spec 0.0000 0.0000 0.0000  shi 50 trans 0.2000
+MATERIAL "arrow" rgb 0.0960 1.0000 0.0000  amb 0.6667 0.6667 0.6667  emis 0.6667 0.6667 0.6667  spec 0.0000 0.0000 0.0000  shi 50 trans 0.1000
 OBJECT world
 name "Blender_export__marker.ac"
 kids 5
