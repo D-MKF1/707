@@ -209,7 +209,7 @@ no. D6-3071-00
     <internal type="bool">true</internal>
     <config>
 			<from-model type="bool">true</from-model>
-			<from-model-idx type="int">true</from-model-idx>
+			<from-model-idx type="int">0</from-model-idx>
 			<!-- x/y/z == right/up/back -->
 			<x-offset-m archive="y"> 0.25</x-offset-m>
 			<y-offset-m archive="y">1.22</y-offset-m>

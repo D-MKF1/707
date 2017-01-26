@@ -48,7 +48,7 @@
   <animation>
     <type>rotate</type>
     <object-name>grdCover</object-name>
-    <property>b707/start/ground-start-cover</property>
+    <property>/b707/start/ground-start-cover</property>
     <interpolation> 
             <entry>
                 <ind>0</ind>
@@ -79,7 +79,7 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		        <command>property-toggle</command>
-		        <property>b707/start/ground-start-cover</property>
+		        <property>/b707/start/ground-start-cover</property>
 		    </binding>
 		    <binding>
 		      <command>property-toggle</command>
@@ -92,7 +92,7 @@
 	<animation>
 		  <type>rotate</type>
 		  <object-name>grdSwitch</object-name>
-		  <property>b707/start/ground-start</property>
+		  <property>/b707/start/ground-start</property>
 		 	<interpolation>
 				<entry><ind>  1.0</ind><dep> -50.0</dep></entry>
 				<entry><ind>  0.0</ind><dep>   0.0</dep></entry>
@@ -120,19 +120,19 @@
         <binding>
             <command>nasal</command>
             <script>
-            	var bt = getprop("b707/start/ground-start") or 0;
-            	var lsl = getprop("b707/start/low-start-left") or 0;
-            	var lsr = getprop("b707/start/low-start-right") or 0;
+            	var bt = getprop("/b707/start/ground-start") or 0;
+            	var lsl = getprop("/b707/start/low-start-left") or 0;
+            	var lsr = getprop("/b707/start/low-start-right") or 0;
             	if(bt > 0){
-            		setprop("b707/start/ground-start", 0);
-            		setprop("b707/start/low-start-left", 0);
-            		setprop("b707/start/low-start-right", 0);
+            		setprop("/b707/start/ground-start", 0);
+            		setprop("/b707/start/low-start-left", 0);
+            		setprop("/b707/start/low-start-right", 0);
             	}else{
             		if(lsl or lsr){
-		          		setprop("b707/start/ground-start", 1);
+		          		setprop("/b707/start/ground-start", 1);
 		          	  b707.short_startup();
 		        			settimer(func{
-		        				setprop("b707/start/ground-start", 0);
+		        				setprop("/b707/start/ground-start", 0);
 									}, 10);
 								 	if(getprop("/sim/sound/switch2") == 1){
 										 setprop("/sim/sound/switch2", 0); 
@@ -140,9 +140,9 @@
 										 setprop("/sim/sound/switch2", 1);
 									}
 								}else{
-		          		setprop("b707/start/ground-start", 1);
+		          		setprop("/b707/start/ground-start", 1);
 		          		settimer(func{
-		        				setprop("b707/start/ground-start", 0);
+		        				setprop("/b707/start/ground-start", 0);
 									}, 0.5);
 									screen.log.write(" No ALTERNATE LOW PRESS START selected in Engineer panel! ", 1, 0, 0);
 								}
@@ -166,14 +166,14 @@
         <binding>
             <command>nasal</command>
             <script>
-            	var bt = getprop("b707/start/ground-start") or 0;
+            	var bt = getprop("/b707/start/ground-start") or 0;
             	if(bt > 0){
-            		setprop("b707/start/ground-start", 0);
+            		setprop("/b707/start/ground-start", 0);
             	}else{
-            		setprop("b707/start/ground-start", 2);
+            		setprop("/b707/start/ground-start", 2);
 		          	b707.short_startup();
           			settimer(func{
-          				setprop("b707/start/ground-start", 0);
+          				setprop("/b707/start/ground-start", 0);
 								}, 10);
 							 	if(getprop("/sim/sound/switch2") == 1){
 									 setprop("/sim/sound/switch2", 0); 
@@ -194,7 +194,7 @@
   <animation>
       <type>translate</type>
       <object-name>knob</object-name>
-      <property>b707/rain/rain-repellent-captain</property>
+      <property>/b707/rain/rain-repellent-captain</property>
       <factor>-0.0030</factor>
       <axis>
           <x> 1.0</x>
@@ -213,13 +213,13 @@
       <repeatable>false</repeatable>
         <binding>
           <command>property-assign</command>
-          <property>b707/rain/rain-repellent-captain</property>  
+          <property>/b707/rain/rain-repellent-captain</property>  
           <value type="double">1</value>
         </binding>
       <mod-up>
         <binding>
           <command>property-assign</command>
-          <property>b707/rain/rain-repellent-captain</property>  
+          <property>/b707/rain/rain-repellent-captain</property>  
           <value type="double">0</value>
         </binding>
       </mod-up>
@@ -229,7 +229,7 @@
   <animation>
       <type>translate</type>
       <object-name>knob.001</object-name>
-      <property>b707/rain/rain-repellent-fo</property>
+      <property>/b707/rain/rain-repellent-fo</property>
       <factor>-0.0030</factor>
       <axis>
           <x> 1.0</x>
@@ -248,13 +248,13 @@
       <repeatable>false</repeatable>
         <binding>
           <command>property-assign</command>
-          <property>b707/rain/rain-repellent-fo</property>  
+          <property>/b707/rain/rain-repellent-fo</property>  
           <value type="double">1</value>
         </binding>
       <mod-up>
         <binding>
           <command>property-assign</command>
-          <property>b707/rain/rain-repellent-fo</property>  
+          <property>/b707/rain/rain-repellent-fo</property>  
           <value type="double">0</value>
         </binding>
       </mod-up>

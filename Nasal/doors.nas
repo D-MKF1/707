@@ -26,7 +26,7 @@ Doors.pilotwinexport = func {
    # if sombody open the cockpit windows in flight
    var speed = getprop("/velocities/groundspeed-kt") or 0;
 	 if(speed > 200){	 	 
-	 	 setprop("b707/pressurization/safety-valve", 0);
+	 	 setprop("/b707/pressurization/safety-valve", 0);
 	 	 b707.safety_valv_pos();
 	 }
 }
@@ -36,7 +36,7 @@ Doors.copilotwinexport = func {
    # if sombody open the cockpit windows in flight
    var speed = getprop("/velocities/groundspeed-kt") or 0;
 	 if(speed > 200){
-	 	 setprop("b707/pressurization/safety-valve", 0);
+	 	 setprop("/b707/pressurization/safety-valve", 0);
 	 	 b707.safety_valv_pos();
 	 }
 }
@@ -97,18 +97,18 @@ Doors.refuelexport = func {
   me.refuel.toggle();
 	var rh = getprop("/instrumentation/doors/refuel-boom/position-norm") or 0;
 	if(rh){
-		setprop("b707/refuelling/boom-telescope-lever",0);
-   	interpolate("b707/refuelling/boom-telescope-lever", -17.0, 0.5);
+		setprop("/b707/refuelling/boom-telescope-lever",0);
+   	interpolate("/b707/refuelling/boom-telescope-lever", -17.0, 0.5);
   }else{
-		setprop("b707/refuelling/boom-telescope-lever",0);
-   	interpolate("b707/refuelling/boom-telescope-lever",  17.0, 0.5);
+		setprop("/b707/refuelling/boom-telescope-lever",0);
+   	interpolate("/b707/refuelling/boom-telescope-lever",  17.0, 0.5);
   }
   
   var the_boom_state = setlistener("/instrumentation/doors/refuel-boom/position-norm", func(bstate)
 	{
 	if (bstate.getValue() < 0.02 or bstate.getValue() > 0.98)
 	 {
-		setprop("b707/refuelling/boom-telescope-lever",0);
+		setprop("/b707/refuelling/boom-telescope-lever",0);
 	 }
 	}, 0, 0);
 

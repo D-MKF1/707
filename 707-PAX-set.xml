@@ -95,7 +95,7 @@
       <enabled type="bool">true</enabled>
       <config>
   			<from-model type="bool">true</from-model>
-  			<from-model-idx type="int">true</from-model-idx>
+  			<from-model-idx type="int">0</from-model-idx>
   			<!-- x/y/z == right/up/back -->
   			<x-offset-m archive="y">-1.36</x-offset-m>
   			<y-offset-m archive="y"> 1.05</y-offset-m>

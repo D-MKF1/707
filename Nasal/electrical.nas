@@ -6,10 +6,10 @@
 # ============================================
 var count = 0;
 var wait = 0;
-var PowermeterKnob = props.globals.initNode("b707/generator/powermeter-knob",0,"BOOL");
-var EssDCbus = props.globals.initNode("b707/ess-bus",0,"DOUBLE");
-var EssFreq = props.globals.initNode("b707/ess-freq",400,"DOUBLE"); #400Hz is standard
-var EssPwr= props.globals.initNode("b707/ess-power-switch",0,"DOUBLE");
+var PowermeterKnob = props.globals.initNode("/b707/generator/powermeter-knob",0,"BOOL");
+var EssDCbus = props.globals.initNode("/b707/ess-bus",0,"DOUBLE");
+var EssFreq = props.globals.initNode("/b707/ess-freq",400,"DOUBLE"); #400Hz is standard
+var EssPwr= props.globals.initNode("/b707/ess-power-switch",0,"DOUBLE");
 var EssSourceFailure = props.globals.initNode("/b707/ess-source-failure",0,"BOOL");
 var CabinDim = props.globals.initNode("systems/electrical/outputs/cabin-dim",0,"DOUBLE");
 var PanelDim = props.globals.initNode("systems/electrical/outputs/panel-dim",0,"DOUBLE");
@@ -24,24 +24,24 @@ var LightBeacon = props.globals.initNode("/controls/lighting/switches/beacon",0,
 var LightStrobe = props.globals.initNode("/controls/lighting/switches/strobe",0,"BOOL");
 var LightLogo = props.globals.initNode("/controls/lighting/switches/logo-lights",0,"BOOL");
 
-var ExternalConnected = props.globals.initNode("b707/external-power-connected",0,"BOOL");
+var ExternalConnected = props.globals.initNode("/b707/external-power-connected",0,"BOOL");
 
 var EssDCbus_volts = 0.0;
 var EssDCbus_input=[];
 var EssDCbus_output=[];
 var EssDCbus_load=[];
 
-var ACSelector = props.globals.initNode("b707/ac/ac-para-select",0,"DOUBLE");
-var syncLight1 = props.globals.initNode("b707/ac/sync1",1,"BOOL");
-var syncLight2 = props.globals.initNode("b707/ac/sync2",1,"BOOL");
-var ACSelFreq = props.globals.initNode("b707/ac-sel-para-freq",0,"DOUBLE");
-var ACSelVolts = props.globals.initNode("b707/ac-sel-para-volts",0,"DOUBLE");
+var ACSelector = props.globals.initNode("/b707/ac/ac-para-select",0,"DOUBLE");
+var syncLight1 = props.globals.initNode("/b707/ac/sync1",1,"BOOL");
+var syncLight2 = props.globals.initNode("/b707/ac/sync2",1,"BOOL");
+var ACSelFreq = props.globals.initNode("/b707/ac-sel-para-freq",0,"DOUBLE");
+var ACSelVolts = props.globals.initNode("/b707/ac-sel-para-volts",0,"DOUBLE");
 
 var strobe_switch = props.globals.getNode("controls/lighting/strobe", 1);
 aircraft.light.new("controls/lighting/strobe-state", [0.05, 1.30], strobe_switch);
 var beacon_switch = props.globals.getNode("controls/lighting/beacon", 1);
 aircraft.light.new("controls/lighting/beacon-state", [0.05, 2.0], beacon_switch);
-aircraft.light.new("b707/warning", [1.0, 0.8]);
+aircraft.light.new("/b707/warning", [1.0, 0.8]);
 
 
 ############## Helper ################
@@ -120,9 +120,9 @@ var Generator = {
         m = { parents : [Generator] };
         m.gen_drive_switch = props.globals.getNode(switch,1);
         m.gen_drive_switch.setBoolValue(0);
-        m.meter = props.globals.getNode("b707/generator/gen-load["~num~"]",1);
+        m.meter = props.globals.getNode("/b707/generator/gen-load["~num~"]",1);
         m.meter.setDoubleValue(0);
-        m.gen_bus_tie = props.globals.getNode("b707/generator/gen-bus-tie["~num~"]",1);
+        m.gen_bus_tie = props.globals.getNode("/b707/generator/gen-bus-tie["~num~"]",1);
         m.gen_bus_tie.setDoubleValue(0);        
         m.gen_output = props.globals.getNode(gen_output,1);
         m.gen_output.setDoubleValue(0);
@@ -131,11 +131,11 @@ var Generator = {
         m.ideal_volts = vlt;
         m.ideal_amps = amp;
         m.condition = my_rand(0.01,0.6);
-        m.frequency = props.globals.getNode("b707/generator/gen-freq["~num~"]",1);
+        m.frequency = props.globals.getNode("/b707/generator/gen-freq["~num~"]",1);
         m.frequency.setDoubleValue(my_rand(386,418));
-        m.gen_control = props.globals.getNode("b707/generator/gen-control["~num~"]",1);
+        m.gen_control = props.globals.getNode("/b707/generator/gen-control["~num~"]",1);
         m.gen_control.setDoubleValue(0);
-        m.gen_breaker = props.globals.getNode("b707/generator/gen-breaker["~num~"]",1);
+        m.gen_breaker = props.globals.getNode("/b707/generator/gen-breaker["~num~"]",1);
         m.gen_breaker.setDoubleValue(0);
         m.gen_index = num;
         return m;
@@ -171,11 +171,11 @@ var Generator = {
 };
 
 var battery = Battery.new("/b707/battery-switch","/b707/battery",24.6,30,34,1.0,7.0);
-var generator1 = Generator.new(0,"b707/generator/gen-drive[0]","/engines/engine[0]/amp-v","/engines/engine[0]/n1",20.0,28.0,60.0);
-var generator2 = Generator.new(1,"b707/generator/gen-drive[1]","/engines/engine[1]/amp-v","/engines/engine[1]/n1",20.0,28.0,60.0);
-var generator3 = Generator.new(2,"b707/generator/gen-drive[2]","/engines/engine[2]/amp-v","/engines/engine[2]/n1",20.0,28.0,60.0);
-var generator4 = Generator.new(3,"b707/generator/gen-drive[3]","/engines/engine[3]/amp-v","/engines/engine[3]/n1",20.0,28.0,60.0);
-var generator5 = Generator.new(4,"b707/generator/gen-drive[4]","/engines/APU/amp-v","/engines/APU/rpm",80.0,26.0,60.0);
+var generator1 = Generator.new(0,"/b707/generator/gen-drive[0]","/engines/engine[0]/amp-v","/engines/engine[0]/n1",20.0,28.0,60.0);
+var generator2 = Generator.new(1,"/b707/generator/gen-drive[1]","/engines/engine[1]/amp-v","/engines/engine[1]/n1",20.0,28.0,60.0);
+var generator3 = Generator.new(2,"/b707/generator/gen-drive[2]","/engines/engine[2]/amp-v","/engines/engine[2]/n1",20.0,28.0,60.0);
+var generator4 = Generator.new(3,"/b707/generator/gen-drive[3]","/engines/engine[3]/amp-v","/engines/engine[3]/n1",20.0,28.0,60.0);
+var generator5 = Generator.new(4,"/b707/generator/gen-drive[4]","/engines/APU/amp-v","/engines/APU/rpm",80.0,26.0,60.0);
 
 #####################################
 
@@ -265,7 +265,7 @@ var update_virtual_bus = func {
 					  if(essdcbus_volts > battery.actual_volts.getValue()){
 					  	battery.actual_volts.setDoubleValue(battery.actual_volts.getValue() + 0.0005);
 					  }		  
-					  if(!getprop("b707/ground-connect")){
+					  if(!getprop("/b707/ground-connect")){
 							if(!generator1.get_output_volts()){
 								generator1.gen_bus_tie.setValue(0);		
 							}
@@ -608,7 +608,7 @@ var ac_sync = func{
 				}elsif(ACSelector.getValue() == 6 and EssPwr.getValue() == 5 ){
 				  var extGCcon = getprop("/b707/external-power-connected") or 0;
 				  if(extGCcon and ACSelVolts.getValue() != 27.5){
-						interpolate("b707/ac-sel-para-freq", EssFreq.getValue(), 1.2);
+						interpolate("/b707/ac-sel-para-freq", EssFreq.getValue(), 1.2);
 						ACSelVolts.setValue(27.5);
 					}
 					sync_lamp(EssFreq.getValue(),EssFreq.getValue());
@@ -621,9 +621,9 @@ var ac_sync = func{
 };
 
 # the control
-setlistener("b707/ac/ac-para-select", func{
+setlistener("/b707/ac/ac-para-select", func{
 	var bat = getprop("/b707/battery-switch") or 0;
-	var src_ext = getprop("b707/ess-power-switch") or 0;
+	var src_ext = getprop("/b707/ess-power-switch") or 0;
 
 	if(bat and src_ext == 0){
 		ACSelFreq.setValue(0);
@@ -647,48 +647,48 @@ setlistener("/b707/generator/residual-volts-knob", func(state){
 ################################## Volt and load Selector ######################################
 
 var vlLoop = func{
-	var esstr = getprop("b707/ess-bus") or 0;
+	var esstr = getprop("/b707/ess-bus") or 0;
 	var tr2 = getprop("engines/engine[1]/amp-v") or 0;
 	var tr3 = getprop("engines/engine[2]/amp-v") or 0;
 	var tr4 = getprop("engines/engine[3]/amp-v") or 0;
-	var bat_load = getprop("b707/battery") or 0;
+	var bat_load = getprop("/b707/battery") or 0;
 	var bat = getprop("/b707/battery-switch") or 0;	
-	var select = getprop("b707/load-volt-selector") or 0;
+	var select = getprop("/b707/load-volt-selector") or 0;
 	
 	if (bat and select == 1){
-			interpolate("b707/volt-dc", esstr, 1.8);
+			interpolate("/b707/volt-dc", esstr, 1.8);
 			esstr = esstr*100/25; # load in percent
-			interpolate("b707/volt-load", esstr, 1.8);
+			interpolate("/b707/volt-load", esstr, 1.8);
 			settimer(vlLoop ,1.8);
 	}elsif (bat and select == 2){
-			interpolate("b707/volt-dc", tr2, 1.8);
+			interpolate("/b707/volt-dc", tr2, 1.8);
 			tr2 = tr2*100/25; # load in percent
-			interpolate("b707/volt-load", tr2, 1.8);
+			interpolate("/b707/volt-load", tr2, 1.8);
 			settimer(vlLoop ,1.8);
 	}elsif (bat and select == 3){
-			interpolate("b707/volt-dc", tr3, 1.8);
+			interpolate("/b707/volt-dc", tr3, 1.8);
 			tr3 = tr3*100/25; # load in percent
-			interpolate("b707/volt-load", tr3, 1.8);
+			interpolate("/b707/volt-load", tr3, 1.8);
 			settimer(vlLoop ,1.8);
 	}elsif (bat and select == 4){
-			interpolate("b707/volt-dc", tr4, 1.8);
+			interpolate("/b707/volt-dc", tr4, 1.8);
 			tr4 = tr4*100/25; # load in percent
-			interpolate("b707/volt-load", tr4, 1.8);
+			interpolate("/b707/volt-load", tr4, 1.8);
 			settimer(vlLoop ,1.8);
 	}elsif (bat and select == 5){
-			interpolate("b707/volt-dc", bat_load, 1.8);
+			interpolate("/b707/volt-dc", bat_load, 1.8);
 			bat_load = bat_load*100/25; # load in percent
-			interpolate("b707/volt-load", bat_load, 1.8);
+			interpolate("/b707/volt-load", bat_load, 1.8);
 			settimer(vlLoop ,1.8);
 	}else{
-			interpolate("b707/volt-load", 0, 1.8);
-			interpolate("b707/volt-dc", 0, 1.2);
+			interpolate("/b707/volt-load", 0, 1.8);
+			interpolate("/b707/volt-dc", 0, 1.2);
 	}
 
 };
 
 # the control
-setlistener("b707/load-volt-selector", func{
+setlistener("/b707/load-volt-selector", func{
 		vlLoop();
 		settimer(ac_sync,0);
 },1,0);
@@ -746,10 +746,10 @@ var gen_kw = func{
 
 
 ################ the ground connect switch fall back ###################
-setlistener("b707/external-power-connected", func(state){
+setlistener("/b707/external-power-connected", func(state){
   var state = state.getBoolValue();
   if(state)	setprop("/b707/ground-service/enabled", 1); #iluminate the lights of VW Bus
-	var src_ext = getprop("b707/ess-power-switch") or 0;
+	var src_ext = getprop("/b707/ess-power-switch") or 0;
 	# if external power connected when apu is operating, apu shutdown
 	setprop("/b707/apu/off-start-run", 0);
 	generator5.gen_drive_switch.setValue(0);
@@ -776,7 +776,7 @@ setlistener("b707/external-power-connected", func(state){
 ################################# APU loop function #####################################
 # the APU helper for smooth view on Amperemeter
 var apu_gen_switch = func {
-		var bt = props.globals.getNode("b707/generator/gen-drive[4]", 1);
+		var bt = props.globals.getNode("/b707/generator/gen-drive[4]", 1);
   	if(bt.getBoolValue()){
   		interpolate("engines/APU/amp-needle",0,2);
   		bt.setBoolValue(0);
@@ -802,8 +802,8 @@ var apuLoop = func{
 		setprop("engines/APU/serviceable",0);
 	}
 
-	var setting = getprop("b707/apu/off-start-run") or 0;
-	var generator = getprop("b707/generator/gen-drive[4]") or 0;
+	var setting = getprop("/b707/apu/off-start-run") or 0;
+	var generator = getprop("/b707/generator/gen-drive[4]") or 0;
 
  	# rpm and running
  	if (setting != 0){
@@ -812,7 +812,7 @@ var apuLoop = func{
 		 rpm += getprop("sim/time/delta-realtime-sec") * 7;
 		 if (rpm >= 101.7){
 		  	rpm = 101.7;
-				setprop("b707/apu/off-start-run",2); # automatic spring for the apu-master-switch
+				setprop("/b707/apu/off-start-run",2); # automatic spring for the apu-master-switch
 				if(getprop("/sim/sound/switch2") == 1){
 					 setprop("/sim/sound/switch2", 0); 
 				}else{
@@ -879,7 +879,7 @@ setlistener("/b707/apu/starter", func (state){
   	if(state == 1){
   		setprop("/b707/apu/off-start-run", 1);
   		# fall back, if external power source is connected or ess-bus to low
-  		var ext_con = getprop("b707/external-power-connected") or 0;
+  		var ext_con = getprop("/b707/external-power-connected") or 0;
   		
   		if(ext_con){
   			settimer(func{
@@ -909,7 +909,7 @@ setlistener("/sim/signals/fdm-initialized", func {
     settimer(update_electrical,5);
     settimer(gen_kw,5);
     settimer(ac_sync,5);
-    settimer(func{ setprop("b707/fuel/temperature", getprop("/environment/temperature-degc")) } , 5);
+    settimer(func{ setprop("/b707/fuel/temperature", getprop("/environment/temperature-degc")) } , 5);
     
     print("Electrical System ... Initialized");
     
@@ -920,14 +920,14 @@ setlistener("/sim/signals/fdm-initialized", func {
 
 # switch back the lights, if there is now power on ess-bus
 setlistener("/controls/lighting/landing-light", func {
-    var bat = getprop("b707/ess-bus") or 0;
+    var bat = getprop("/b707/ess-bus") or 0;
     if(bat < 20) setprop("/controls/lighting/landing-light", 0);
 });
 setlistener("/controls/lighting/landing-light[1]", func {
-    var bat = getprop("b707/ess-bus") or 0;
+    var bat = getprop("/b707/ess-bus") or 0;
     if(bat < 20) setprop("/controls/lighting/landing-light[1]", 0);
 });
 setlistener("/controls/lighting/landing-light[2]", func {
-    var bat = getprop("b707/ess-bus") or 0;
+    var bat = getprop("/b707/ess-bus") or 0;
     if(bat < 20) setprop("/controls/lighting/landing-light[2]", 0);
 });

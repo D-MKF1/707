@@ -5,8 +5,8 @@
 #######################################################################################
 
 ############################ roll out and shake effect ##################################
-var shakeEffect707 = props.globals.initNode("b707/shake-effect/effect",0,"BOOL");
-var shake707	   = props.globals.initNode("b707/shake-effect/shaking",0,"DOUBLE");
+var shakeEffect707 = props.globals.initNode("/b707/shake-effect/effect",0,"BOOL");
+var shake707	   = props.globals.initNode("/b707/shake-effect/shaking",0,"DOUBLE");
 var rSpeed = 0;
 var sf = 0;
 var ge_a_r  = 0;
@@ -18,21 +18,21 @@ var theShakeEffect = func{
 		# print("sf .... : " ~ sf);
 	    
 		if(shakeEffect707.getBoolValue() and ge_a_r > 0){
-		  interpolate("b707/shake-effect/shaking", sf, 0.03);
+		  interpolate("/b707/shake-effect/shaking", sf, 0.03);
 		  settimer(func{
-		  	 interpolate("b707/shake-effect/shaking", -sf*2, 0.03); 
+		  	 interpolate("/b707/shake-effect/shaking", -sf*2, 0.03); 
 		  }, 0.03);
 		  settimer(func{
-		  	interpolate("b707/shake-effect/shaking", sf, 0.03);
+		  	interpolate("/b707/shake-effect/shaking", sf, 0.03);
 		  }, 0.06);
 			settimer(theShakeEffect, 0.09);	
 		}else{
-		  	setprop("b707/shake-effect/shaking", 0);	
-			setprop("b707/shake-effect/effect",0);		
+		  	setprop("/b707/shake-effect/shaking", 0);	
+			setprop("/b707/shake-effect/effect",0);		
 		}	    
 }
 # INFORMATION: script will be startet in brakesystem.nas line 81 dependend the groundspeed ############
-setlistener("b707/shake-effect/effect", func(state){
+setlistener("/b707/shake-effect/effect", func(state){
 	if(state.getBoolValue()){
 		theShakeEffect();
 	}
