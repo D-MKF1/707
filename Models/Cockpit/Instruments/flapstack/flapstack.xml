@@ -19,13 +19,13 @@
 		<object-name>Slats.needle</object-name>
 		<object-name>Slats.needle.001</object-name>
 		<condition>
-			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+			<less-than><property>systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
 		</condition>
 		<emission>
 			<red>0.6</red>
 			<green>0.4</green>
 			<blue>0.3</blue>
-			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+			<factor-prop>systems/electrical/outputs/panel-dim</factor-prop>
 		</emission>
 	</animation>
 
@@ -39,13 +39,13 @@
 		<object-name>Slats.needle.001</object-name>
 		<condition>
 			<not><property>/sim/rendering/rembrandt/enabled</property></not>
-			<property>/systems/electrical/outputs/cabin-dim</property>
+			<property>systems/electrical/outputs/cabin-dim</property>
 		</condition>
 		<emission>
 			<red>0.8</red>
 			<green>0.8</green>
 			<blue>0.8</blue>
-			<factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+			<factor-prop>systems/electrical/outputs/cabin-dim</factor-prop>
 		</emission>
 	</animation>
 
@@ -56,13 +56,13 @@
 		<object-name>Flap.bezel</object-name>
 		<object-name>Flap.bezel.001</object-name>
 		<condition>
-			<not><property>/systems/electrical/outputs/cabin-dim</property></not>
+			<not><property>systems/electrical/outputs/cabin-dim</property></not>
 		</condition>
 		<emission>
 			<red>0.05</red>
 			<green>0.05</green>
 			<blue>0.05</blue>
-			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+			<factor-prop>systems/electrical/outputs/panel-dim</factor-prop>
 		</emission>
 	</animation>
 	
@@ -74,13 +74,13 @@
 		<object-name>Flap.bezel.001</object-name>
 		<condition>
 			<not><property>/sim/rendering/rembrandt/enabled</property></not>
-			<property>/systems/electrical/outputs/cabin-dim</property>
+			<property>systems/electrical/outputs/cabin-dim</property>
 		</condition>
 		<emission>
 		  <red>0.3</red>
 		  <green>0.3</green>
 		  <blue>0.3</blue>
-		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		  <factor-prop>systems/electrical/outputs/cabin-dim</factor-prop>
 		</emission>
 	</animation>
 	
@@ -90,13 +90,13 @@
 		<object-name>switch</object-name>
 		<object-name>sockle</object-name>
 		<condition>
-			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+			<less-than><property>systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
 		</condition>
 		<emission>
 			<red>0.15</red>
 			<green>0.15</green>
 			<blue>0.15</blue>
-			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+			<factor-prop>systems/electrical/outputs/panel-dim</factor-prop>
 		</emission>
 	</animation>
 
@@ -107,13 +107,13 @@
 		<object-name>sockle</object-name>
 		<condition>
 			<not><property>/sim/rendering/rembrandt/enabled</property></not>
-			<property>/systems/electrical/outputs/cabin-dim</property>
+			<property>systems/electrical/outputs/cabin-dim</property>
 		</condition>
 		<emission>
 			<red>0.25</red>
 			<green>0.25</green>
 			<blue>0.25</blue>
-			<factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+			<factor-prop>systems/electrical/outputs/cabin-dim</factor-prop>
 		</emission>
 	</animation>	
 	
@@ -137,13 +137,13 @@
 			</greater-than>
 		  <or>
 		    <and>
-		    	<property>/controls/special/slats-switch</property>
+		    	<property>controls/special/slats-switch</property>
 				<greater-than>
 		    		<property>surface-positions/wing-fold-pos-norm</property>
 					<value>0.9</value>
 				</greater-than>
 		    </and>
-		    <property>/controls/test/warn-knob</property>
+		    <property>controls/test/warn-knob</property>
 		  </or>
 		</condition>
 	</animation>
@@ -151,7 +151,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>switch</object-name>
-		<property>/controls/special/slats-switch</property>
+		<property>controls/special/slats-switch</property>
 		<factor>-60</factor>
 		<center>
 		  <x-m>0.0063</x-m>
@@ -176,11 +176,11 @@
 		    <repeatable>true</repeatable>
 				<binding>
 					 <command>property-toggle</command>
-					 <property>/controls/special/slats-switch</property>
+					 <property>controls/special/slats-switch</property>
 				</binding>
         <binding>
           <command>property-toggle</command>
-          <property>/sim/sound/switch2</property>
+          <property>sim/sound/switch2</property>
         </binding>
 		  </action>
 	</animation>
@@ -240,7 +240,7 @@
 		    <property>sim/multiplay/generic/float[6]</property>
 		    <property>sim/multiplay/generic/float[7]</property>
 		    <property>sim/multiplay/generic/float[12]</property>
-		    <property>/controls/test/warn-knob</property>
+		    <property>controls/test/warn-knob</property>
 		  </or>
 		</condition>
 	</animation>
@@ -269,7 +269,7 @@
 						<value>0</value>
 					</greater-than>
 				</and>
-		    <property>/controls/test/warn-knob</property>
+		    <property>controls/test/warn-knob</property>
 		  </or>
 		</condition>
 	</animation>
@@ -288,7 +288,7 @@
 						<property>gear/gear[0]/position-norm</property>
 						<value>1</value>
 				</equals>
-		    <property>/controls/test/warn-knob</property>
+		    <property>controls/test/warn-knob</property>
 		  </or>
 		</condition>
 	</animation>
@@ -322,7 +322,7 @@
       <button>0</button>
       <binding>
         <command>property-toggle</command>
-        <property>/controls/gear/gear-down</property>
+        <property>controls/gear/gear-down</property>
       </binding>
     </action>
   </animation>

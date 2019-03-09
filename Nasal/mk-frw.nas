@@ -1,10 +1,30 @@
-# Lake of Constance Hangar :: M.Kraus
-# Avril 2013
-# This file is licenced under the terms of the GNU General Public Licence V2 or later
+#################################################################################
+#		Lake of Constance Hangar												#
+#		Boeing 707 for Flightgear												#
+#		Copyright (C) 2013 M.Kraus												#	
+#																				#
+#		This program is free software: you can redistribute it and/or modify	#
+#		it under the terms of the GNU General Public License as published by	#
+#		the Free Software Foundation, either version 3 of the License, or		#
+#		(at your option) any later version.										#
+#																				#
+#		This program is distributed in the hope that it will be useful,			#
+#		but WITHOUT ANY WARRANTY; without even the implied warranty of			#
+#		MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the			#
+#		GNU General Public License for more details.							#
+#																				#
+#		You should have received a copy of the GNU General Public License		#
+#		along with this program.  If not, see <http://www.gnu.org/licenses/>.	#
+#																				#
+#		Every software has a developer, also free software. 					#
+#		As a gesture of courtesy and respect, I would be delighted 				#		
+#		if you contacted me before making any changes to this software. 		#
+#		<info (at) marc-kraus.de> April, 2017									#
+#################################################################################
 # ============================================
 # The analog watch for the flightgear - rallye 
 # ============================================
-var p = "/instrumentation/frw/";
+var p = "instrumentation/frw/";
 
 
 #============================== only stopwatch actions ================================
@@ -82,10 +102,10 @@ var frw_mode = func {
 var frw_control = func {
   var frw_mode = props.globals.getNode(p~"btn-mode");
   if(frw_mode.getBoolValue()){
-    var frw_agl  = getprop("/position/altitude-agl-ft") - 6;
-    var airspeed = getprop("/instrumentation/airspeed-indicator/indicated-speed-kt");
+    var frw_agl  = getprop("position/altitude-agl-ft") - 6;
+    var airspeed = getprop("instrumentation/airspeed-indicator/indicated-speed-kt");
     var running  = props.globals.getNode(p~"running");
-    var crashed  = props.globals.getNode("/sim/crashed");
+    var crashed  = props.globals.getNode("sim/crashed");
 
       if(frw_agl > 4 and !running.getBoolValue() and !crashed.getBoolValue()){
         frw_start_stop();

@@ -1,10 +1,27 @@
-<?xml version="1.0"?>
-<!--###################################################################################
-		Lake of Constance Hangar :: M.Kraus
-		Boeing 707 for Flightgear Septemper 2013
-		This file is licenced under the terms of the GNU General Public Licence V2 or later
-		###################################################################################
--->
+<?xml version="1.0" encoding="UTF-8"?>
+<!--####################################################################
+Lake of Constance Hangar
+Boeing 707 for Flightgear
+Copyright (C) 2013 M.Kraus
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Every software has a developer, also free software. 
+As a gesture of courtesy and respect, I would be delighted 
+if you contacted me before making any changes to this software. 
+<info (at) marc-kraus.de> April, 2017
+########################################################################-->
 <?xml-stylesheet type="text/xsl" href="http://jsbsim.sourceforge.net/JSBSim.xsl"?>
 <fdm_config name="707" version="2.0" release="ALPHA"
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -13,7 +30,7 @@
  <fileheader>
   <author>M.Kraus :: Lake of Constance Hangar</author>
   <filecreationdate>2014-02-24</filecreationdate>
-  <version>2.2.5</version>
+  <version>2.2.7</version>
   <description>Boeing 707 with Rolls Royce Conway RCo12/MK508 engines or Pratt and Whitney JT4</description>
  </fileheader>
 
@@ -683,9 +700,9 @@
                   <tableData>
                       0.0000	0.000	
                       2.0000	0.040	
-                      4.0000	0.150	
-                      6.0000	0.200	
-                     10.0000	0.400	
+                      4.0000	0.080	
+                      6.0000	0.100	
+                     10.0000	0.200	
                   </tableData>
               </table>
         </product>
@@ -708,8 +725,9 @@
          <product>
            <property>aero/qbar-psf</property>
            <property>metrics/Sw-sqft</property>
- 						<property>fcs/wing-fold-pos-norm</property>
-						<value>0.2</value>
+			<property>fcs/wing-fold-pos-norm</property>
+			<!--<value>0.2</value>-->
+			<value>0.1</value>
          </product>
     </function>
 

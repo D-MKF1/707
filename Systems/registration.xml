@@ -15,9 +15,7 @@
  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  General Public License for more details.
 -->
-
 <PropertyList>
-
   <name>A/C Registration</name>
   <layout>vbox</layout>
   <modal>false</modal>
@@ -33,7 +31,7 @@
   <group>
     <layout>hbox</layout>
     <input>
-      <property>/sim/multiplay/generic/string[0]</property>
+      <property>sim/multiplay/generic/string[0]</property>
       <type>STRING</type>
       <width>100</width>
     </input>
@@ -54,4 +52,3 @@
   </group>
 
 </PropertyList>
-

@@ -14,12 +14,32 @@
 #
 # These are read by the RMI instrument animations.
 #
-#
 # Wolfram Gottfried aka 'Yakko'
 # Gary Neely aka 'Buckaroo'
 # with little changes by Lake of Constance Hangar :: M.Kraus
-# Avril 2013
-# This file is licenced under the terms of the GNU General Public Licence V2 or later
+#################################################################################
+#		Lake of Constance Hangar												#
+#		Boeing 707 for Flightgear												#
+#		Copyright (C) 2013 M.Kraus												#	
+#																				#
+#		This program is free software: you can redistribute it and/or modify	#
+#		it under the terms of the GNU General Public License as published by	#
+#		the Free Software Foundation, either version 3 of the License, or		#
+#		(at your option) any later version.										#
+#																				#
+#		This program is distributed in the hope that it will be useful,			#
+#		but WITHOUT ANY WARRANTY; without even the implied warranty of			#
+#		MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the			#
+#		GNU General Public License for more details.							#
+#																				#
+#		You should have received a copy of the GNU General Public License		#
+#		along with this program.  If not, see <http://www.gnu.org/licenses/>.	#
+#																				#
+#		Every software has a developer, also free software. 					#
+#		As a gesture of courtesy and respect, I would be delighted 				#		
+#		if you contacted me before making any changes to this software. 		#
+#		<info (at) marc-kraus.de> April, 2017									#
+#################################################################################
 
 
 var updateRMI = func {
@@ -32,35 +52,35 @@ var updateRMI = func {
 
 # If RMI 1 set to ADF (mode 1):
 
-  if (getprop("/instrumentation/rmi/rmi-needle[0]/switch")) {
-    if (getprop("/instrumentation/adf[0]/in-range")) {
-      needle1 = getprop("/instrumentation/adf[0]/indicated-bearing-deg");
+  if (getprop("instrumentation/rmi/rmi-needle[0]/switch")) {
+    if (getprop("instrumentation/adf[0]/in-range")) {
+      needle1 = getprop("instrumentation/adf[0]/indicated-bearing-deg");
     }
   }
 
 # RMI 1 set to VOR (mode 0):
 
   else {
-    if (getprop("/instrumentation/nav[0]/in-range")) {
+    if (getprop("instrumentation/nav[0]/in-range")) {
       # Needle actual = needle bearing
-      needle1 = indiBearingDeg(getprop("/instrumentation/nav[0]/heading-deg"),getprop("/orientation/heading-magnetic-deg")); 
+      needle1 = indiBearingDeg(getprop("instrumentation/nav[0]/heading-deg"),getprop("/orientation/heading-magnetic-deg")); 
     }
   }
 
 # If RMI 2 set to ADF (mode 1):
 
-  if (getprop("/instrumentation/rmi/rmi-needle[1]/switch")) {
-    if (getprop("/instrumentation/adf[1]/in-range")) {
-      needle2 = getprop("/instrumentation/adf[1]/indicated-bearing-deg");
+  if (getprop("instrumentation/rmi/rmi-needle[1]/switch")) {
+    if (getprop("instrumentation/adf[1]/in-range")) {
+      needle2 = getprop("instrumentation/adf[1]/indicated-bearing-deg");
     }
   }
 
 # RMI 2 set to VOR (mode 0):
 
   else {
-    if (getprop("/instrumentation/nav[1]/in-range")) {
+    if (getprop("instrumentation/nav[1]/in-range")) {
       # Needle actual = needle bearing
-      needle2 = indiBearingDeg(getprop("/instrumentation/nav[1]/heading-deg"),getprop("/orientation/heading-magnetic-deg")); 
+      needle2 = indiBearingDeg(getprop("instrumentation/nav[1]/heading-deg"),getprop("/orientation/heading-magnetic-deg")); 
     }
   }
   
@@ -71,8 +91,8 @@ var updateRMI = func {
   #screen.log.write("needle2 " ~needle2, 1.0, 0.1, 0.1);
   
 # Save Needle settings
-  interpolate("/instrumentation/rmi/rmi-needle[0]/value", needle1, 1);
-  interpolate("/instrumentation/rmi/rmi-needle[1]/value", needle2, 1);
+  interpolate("instrumentation/rmi/rmi-needle[0]/value", needle1, 1);
+  interpolate("instrumentation/rmi/rmi-needle[1]/value", needle2, 1);
 
 # RMI updated 1 times / sec
 
@@ -81,8 +101,8 @@ var updateRMI = func {
 
 
 var adf_false_tick = func {
-  setprop("/instrumentation/adf[0]/in-range", 0);
-  setprop("/instrumentation/adf[1]/in-range", 0);
+  setprop("instrumentation/adf[0]/in-range", 0);
+  setprop("instrumentation/adf[1]/in-range", 0);
   settimer(adf_false_tick, 6);
 }
 
@@ -91,7 +111,7 @@ adf_false_tick();
 
 
 ############### Show the course correction deg ###################################
-var rotation_degree = "/instrumentation/rmi/face-offset";
+var rotation_degree = "instrumentation/rmi/face-offset";
 
 var mymod = func(x,y){
   var res = x/y;
@@ -123,19 +143,19 @@ var rmiNavInfo = func (needle_nr) {
     #var rdfDeg = getprop(rotation_degree)*360;
     var rdfDeg = getprop(rotation_degree);
     
-    var freqSel = getprop("/instrumentation/rmi/rmi-needle["~i~"]/switch"); # 1 = NDB, 0 = VOR or ILS
-    var selected_freq = getprop("/instrumentation/nav["~i~"]/frequencies/selected-mhz") or 0;
+    var freqSel = getprop("instrumentation/rmi/rmi-needle["~i~"]/switch"); # 1 = NDB, 0 = VOR or ILS
+    var selected_freq = getprop("instrumentation/nav["~i~"]/frequencies/selected-mhz") or 0;
     var text2 = "";
     if(freqSel == 1){
-      var controlRange = getprop("/instrumentation/adf["~i~"]/in-range");
-      var text = getprop("/instrumentation/adf["~i~"]/ident");
+      var controlRange = getprop("instrumentation/adf["~i~"]/in-range");
+      var text = getprop("instrumentation/adf["~i~"]/ident");
       if(text == "") text = "ADF "~needle_nr;
     }else{ 
-      var controlRange = getprop("/instrumentation/nav["~i~"]/in-range");
-      var text = getprop("/instrumentation/nav["~i~"]/nav-id");
-      var dmeInRange = getprop("/instrumentation/dme["~i~"]/in-range");
+      var controlRange = getprop("instrumentation/nav["~i~"]/in-range");
+      var text = getprop("instrumentation/nav["~i~"]/nav-id");
+      var dmeInRange = getprop("instrumentation/dme["~i~"]/in-range");
       if(dmeInRange == 1){
-        var dmeDistance = int(getprop("/instrumentation/dme["~i~"]/indicated-distance-nm"));
+        var dmeDistance = int(getprop("instrumentation/dme["~i~"]/indicated-distance-nm"));
         text2 = "Distance "~dmeDistance~"nm";
       }
     }
@@ -151,7 +171,7 @@ var rmiNavInfo = func (needle_nr) {
 			
 			
 			# is the face turn to range between 5 degree + or - of the needle heading?
-			var needleDeg = getprop("/instrumentation/rmi/rmi-needle["~i~"]/value") or 0;
+			var needleDeg = getprop("instrumentation/rmi/rmi-needle["~i~"]/value") or 0;
 			if(needleDeg > 180){
 				needleDeg = abs(360 - needleDeg);
 			}else{
@@ -196,23 +216,23 @@ var rmiNavInfo = func (needle_nr) {
 # a listener to copy the MHz and KHz portions of a freq string to a separate integer values
 # that are used by the animations.
 #
-var nav1sel	= props.globals.getNode("/instrumentation/nav[0]/frequencies/selected-mhz");
-var nav1sby	= props.globals.getNode("/instrumentation/nav[0]/frequencies/standby-mhz");
-var nav1selstr	= props.globals.getNode("/instrumentation/nav[0]/frequencies/selected-mhz-fmt");
-var nav1sbystr	= props.globals.getNode("/instrumentation/nav[0]/frequencies/standby-mhz-fmt");
-var nav1selmhz= props.globals.getNode("/instrumentation/nav[0]/frequencies/display-sel-mhz");
-var nav1selkhz= props.globals.getNode("/instrumentation/nav[0]/frequencies/display-sel-khz");
-var nav1sbymhz= props.globals.getNode("/instrumentation/nav[0]/frequencies/display-sby-mhz");
-var nav1sbykhz= props.globals.getNode("/instrumentation/nav[0]/frequencies/display-sby-khz");
+var nav1sel	= props.globals.getNode("instrumentation/nav[0]/frequencies/selected-mhz");
+var nav1sby	= props.globals.getNode("instrumentation/nav[0]/frequencies/standby-mhz");
+var nav1selstr	= props.globals.getNode("instrumentation/nav[0]/frequencies/selected-mhz-fmt");
+var nav1sbystr	= props.globals.getNode("instrumentation/nav[0]/frequencies/standby-mhz-fmt");
+var nav1selmhz= props.globals.getNode("instrumentation/nav[0]/frequencies/display-sel-mhz");
+var nav1selkhz= props.globals.getNode("instrumentation/nav[0]/frequencies/display-sel-khz");
+var nav1sbymhz= props.globals.getNode("instrumentation/nav[0]/frequencies/display-sby-mhz");
+var nav1sbykhz= props.globals.getNode("instrumentation/nav[0]/frequencies/display-sby-khz");
 
-var nav2sel	= props.globals.getNode("/instrumentation/nav[1]/frequencies/selected-mhz");
-var nav2sby	= props.globals.getNode("/instrumentation/nav[1]/frequencies/standby-mhz");
-var nav2selstr	= props.globals.getNode("/instrumentation/nav[1]/frequencies/selected-mhz-fmt");
-var nav2sbystr	= props.globals.getNode("/instrumentation/nav[1]/frequencies/standby-mhz-fmt");
-var nav2selmhz= props.globals.getNode("/instrumentation/nav[1]/frequencies/display-sel-mhz");
-var nav2selkhz= props.globals.getNode("/instrumentation/nav[1]/frequencies/display-sel-khz");
-var nav2sbymhz= props.globals.getNode("/instrumentation/nav[1]/frequencies/display-sby-mhz");
-var nav2sbykhz= props.globals.getNode("/instrumentation/nav[1]/frequencies/display-sby-khz");
+var nav2sel	= props.globals.getNode("instrumentation/nav[1]/frequencies/selected-mhz");
+var nav2sby	= props.globals.getNode("instrumentation/nav[1]/frequencies/standby-mhz");
+var nav2selstr	= props.globals.getNode("instrumentation/nav[1]/frequencies/selected-mhz-fmt");
+var nav2sbystr	= props.globals.getNode("instrumentation/nav[1]/frequencies/standby-mhz-fmt");
+var nav2selmhz= props.globals.getNode("instrumentation/nav[1]/frequencies/display-sel-mhz");
+var nav2selkhz= props.globals.getNode("instrumentation/nav[1]/frequencies/display-sel-khz");
+var nav2sbymhz= props.globals.getNode("instrumentation/nav[1]/frequencies/display-sby-mhz");
+var nav2sbykhz= props.globals.getNode("instrumentation/nav[1]/frequencies/display-sby-khz");
 
 							# Update support vars on nav change
 setlistener(nav1sel, func {
@@ -241,23 +261,23 @@ setlistener(nav2sby, func {
 });
 
 
-var comm1sel	= props.globals.getNode("/instrumentation/comm[0]/frequencies/selected-mhz");
-var comm1sby	= props.globals.getNode("/instrumentation/comm[0]/frequencies/standby-mhz");
-var comm1selstr	= props.globals.getNode("/instrumentation/comm[0]/frequencies/selected-mhz-fmt");
-var comm1sbystr	= props.globals.getNode("/instrumentation/comm[0]/frequencies/standby-mhz-fmt");
-var comm1selmhz= props.globals.getNode("/instrumentation/comm[0]/frequencies/display-sel-mhz");
-var comm1selkhz= props.globals.getNode("/instrumentation/comm[0]/frequencies/display-sel-khz");
-var comm1sbymhz= props.globals.getNode("/instrumentation/comm[0]/frequencies/display-sby-mhz");
-var comm1sbykhz= props.globals.getNode("/instrumentation/comm[0]/frequencies/display-sby-khz");
+var comm1sel	= props.globals.getNode("instrumentation/comm[0]/frequencies/selected-mhz");
+var comm1sby	= props.globals.getNode("instrumentation/comm[0]/frequencies/standby-mhz");
+var comm1selstr	= props.globals.getNode("instrumentation/comm[0]/frequencies/selected-mhz-fmt");
+var comm1sbystr	= props.globals.getNode("instrumentation/comm[0]/frequencies/standby-mhz-fmt");
+var comm1selmhz= props.globals.getNode("instrumentation/comm[0]/frequencies/display-sel-mhz");
+var comm1selkhz= props.globals.getNode("instrumentation/comm[0]/frequencies/display-sel-khz");
+var comm1sbymhz= props.globals.getNode("instrumentation/comm[0]/frequencies/display-sby-mhz");
+var comm1sbykhz= props.globals.getNode("instrumentation/comm[0]/frequencies/display-sby-khz");
 
-var comm2sel	= props.globals.getNode("/instrumentation/comm[1]/frequencies/selected-mhz");
-var comm2sby	= props.globals.getNode("/instrumentation/comm[1]/frequencies/standby-mhz");
-var comm2selstr	= props.globals.getNode("/instrumentation/comm[1]/frequencies/selected-mhz-fmt");
-var comm2sbystr	= props.globals.getNode("/instrumentation/comm[1]/frequencies/standby-mhz-fmt");
-var comm2selmhz= props.globals.getNode("/instrumentation/comm[1]/frequencies/display-sel-mhz");
-var comm2selkhz= props.globals.getNode("/instrumentation/comm[1]/frequencies/display-sel-khz");
-var comm2sbymhz= props.globals.getNode("/instrumentation/comm[1]/frequencies/display-sby-mhz");
-var comm2sbykhz= props.globals.getNode("/instrumentation/comm[1]/frequencies/display-sby-khz");
+var comm2sel	= props.globals.getNode("instrumentation/comm[1]/frequencies/selected-mhz");
+var comm2sby	= props.globals.getNode("instrumentation/comm[1]/frequencies/standby-mhz");
+var comm2selstr	= props.globals.getNode("instrumentation/comm[1]/frequencies/selected-mhz-fmt");
+var comm2sbystr	= props.globals.getNode("instrumentation/comm[1]/frequencies/standby-mhz-fmt");
+var comm2selmhz= props.globals.getNode("instrumentation/comm[1]/frequencies/display-sel-mhz");
+var comm2selkhz= props.globals.getNode("instrumentation/comm[1]/frequencies/display-sel-khz");
+var comm2sbymhz= props.globals.getNode("instrumentation/comm[1]/frequencies/display-sby-mhz");
+var comm2sbykhz= props.globals.getNode("instrumentation/comm[1]/frequencies/display-sby-khz");
 
 							# Update support vars on comm change
 setlistener(comm1sel, func {

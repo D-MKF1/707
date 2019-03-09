@@ -23,7 +23,7 @@
 		  <red>0.2</red>
 		  <green>0.2</green>
 		  <blue>0.2</blue>
-		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		  <factor-prop>systems/electrical/outputs/cabin-dim</factor-prop>
 		</emission>
 	</animation>
 
@@ -50,8 +50,8 @@
 			<value>20</value>
 		</greater-than>
     <or>
-		  <property>/controls/test/warn-knob</property>
-		  <property>/controls/engines/engine[0]/fire</property>
+		  <property>controls/test/warn-knob</property>
+		  <property>controls/engines/engine[0]/fire</property>
 		</or>
   </condition>
 </animation>
@@ -65,8 +65,8 @@
 			<value>20</value>
 		</greater-than>
     <or>
-		  <property>/controls/test/warn-knob</property>
-		  <property>/controls/engines/engine[1]/fire</property>
+		  <property>controls/test/warn-knob</property>
+		  <property>controls/engines/engine[1]/fire</property>
 		</or>
   </condition>
 </animation>
@@ -80,8 +80,8 @@
 			<value>20</value>
 		</greater-than>
     <or>
-		  <property>/controls/test/warn-knob</property>
-		  <property>/controls/engines/engine[2]/fire</property>
+		  <property>controls/test/warn-knob</property>
+		  <property>controls/engines/engine[2]/fire</property>
 		</or>
   </condition>
 </animation>
@@ -95,8 +95,8 @@
 			<value>20</value>
 		</greater-than>
     <or>
-		  <property>/controls/test/warn-knob</property>
-		  <property>/controls/engines/engine[3]/fire</property>
+		  <property>controls/test/warn-knob</property>
+		  <property>controls/engines/engine[3]/fire</property>
 		</or>
   </condition>
 </animation>

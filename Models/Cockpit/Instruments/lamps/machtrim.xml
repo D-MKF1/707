@@ -16,13 +16,13 @@
   <object-name>switch</object-name>
   <object-name>sockle</object-name>
 	<condition>
-		<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+		<less-than><property>systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
 	</condition>
 	<emission>
 		<red>0.15</red>
 		<green>0.15</green>
 		<blue>0.15</blue>
-		<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		<factor-prop>systems/electrical/outputs/panel-dim</factor-prop>
 	</emission>
 </animation>
 
@@ -35,13 +35,13 @@
   <object-name>shadow</object-name>
 	<condition>
 		<not><property>/sim/rendering/rembrandt/enabled</property></not>
-		<property>/systems/electrical/outputs/cabin-dim</property>
+		<property>systems/electrical/outputs/cabin-dim</property>
 	</condition>
 	<emission>
 	  <red>0.25</red>
 	  <green>0.25</green>
 	  <blue>0.25</blue>
-	  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+	  <factor-prop>systems/electrical/outputs/cabin-dim</factor-prop>
 	</emission>
 </animation>	
 
@@ -76,12 +76,12 @@
 		</greater-than>
     <or>
     	<and>
-      	<property>/controls/special/mach-trim-switch</property>
-      	<not><property>/controls/flight/aileron-trim</property></not>
-      	<not><property>/controls/flight/elevator-trim</property></not>
-      	<not><property>/controls/flight/rudder-trim</property></not>
+      	<property>controls/special/mach-trim-switch</property>
+      	<not><property>controls/flight/aileron-trim</property></not>
+      	<not><property>controls/flight/elevator-trim</property></not>
+      	<not><property>controls/flight/rudder-trim</property></not>
       </and>
-      <property>/controls/test/warn-knob</property>
+      <property>controls/test/warn-knob</property>
     </or>
   </condition>
 </animation>
@@ -89,7 +89,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>switch</object-name>
-		<property>/controls/special/mach-trim-switch</property>
+		<property>controls/special/mach-trim-switch</property>
 		<factor>-60</factor>
 		<axis>
 		  <x>0</x>
@@ -109,11 +109,11 @@
 		    <repeatable>true</repeatable>
 				<binding>
 					 <command>property-toggle</command>
-					 <property>/controls/special/mach-trim-switch</property>
+					 <property>controls/special/mach-trim-switch</property>
 				</binding>
         <binding>
           <command>property-toggle</command>
-          <property>/sim/sound/switch2</property>
+          <property>sim/sound/switch2</property>
         </binding>
 		  </action>
 	</animation>

@@ -29,13 +29,13 @@
 			<object-name>Trim.NeedleRud</object-name>
 			<object-name>Trim.NeedleAil</object-name>
 		<condition>
-			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+			<less-than><property>systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
 		</condition>
 		<emission>
 			<red>0.6</red>
 			<green>0.4</green>
 			<blue>0.3</blue>
-			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+			<factor-prop>systems/electrical/outputs/panel-dim</factor-prop>
 		</emission>
 	</animation>
 	
@@ -48,13 +48,13 @@
 			<object-name>shadow</object-name>
 		<condition>
 			<not><property>/sim/rendering/rembrandt/enabled</property></not>
-			<property>/systems/electrical/outputs/cabin-dim</property>
+			<property>systems/electrical/outputs/cabin-dim</property>
 		</condition>
 		<emission>
 		  <red>0.8</red>
 		  <green>0.8</green>
 		  <blue>0.8</blue>
-		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		  <factor-prop>systems/electrical/outputs/cabin-dim</factor-prop>
 		</emission>
 	</animation>
 
@@ -73,7 +73,7 @@
 <animation>
   <type>translate</type>
   <object-name>Trim.NeedleEl</object-name>
-  <property>/controls/flight/elevator-trim</property>
+  <property>controls/flight/elevator-trim</property>
   <factor>0.0085</factor>
   <axis>
     <x>0</x>
@@ -85,7 +85,7 @@
 <animation>
   <type>translate</type>
   <object-name>Trim.NeedleRud</object-name>
-  <property>/controls/flight/rudder-trim</property>
+  <property>controls/flight/rudder-trim</property>
   <factor>0.0085</factor>
   <axis>
     <x>0</x>
@@ -97,7 +97,7 @@
 <animation>
   <type>rotate</type>
   <object-name>Trim.NeedleAil</object-name>
-  <property>/controls/flight/aileron-trim</property>
+  <property>controls/flight/aileron-trim</property>
   <interpolation>
     <entry><ind>-1</ind><dep>-30</dep></entry>
     <entry><ind> 0</ind><dep>  0</dep></entry>

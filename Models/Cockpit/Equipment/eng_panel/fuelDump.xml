@@ -1,10 +1,27 @@
-<?xml version="1.0"?>
-<!--###################################################################################
-		Lake of Constance Hangar :: M.Kraus
-		Septemper 2013
-		This file is licenced under the terms of the GNU General Public Licence V2 or later
-		###################################################################################
--->
+<?xml version="1.0" encoding="UTF-8"?>
+<!--####################################################################
+Lake of Constance Hangar
+Boeing 707 for Flightgear
+Copyright (C) 2013 M.Kraus
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Every software has a developer, also free software. 
+As a gesture of courtesy and respect, I would be delighted 
+if you contacted me before making any changes to this software. 
+<info (at) marc-kraus.de> April, 2017
+########################################################################-->
 <PropertyList>
  <path>fuelDump.ac</path>
 
@@ -46,7 +63,7 @@
 		  <red>0.2</red>
 		  <green>0.2</green>
 		  <blue>0.2</blue>
-		  <factor-prop>/systems/electrical/outputs/engineer-dim</factor-prop>
+		  <factor-prop>systems/electrical/outputs/engineer-dim</factor-prop>
 		</emission>
 	</animation>
 	
@@ -105,7 +122,7 @@
 			</greater-than>
 		  <or>
 		  	<not><property>b707/fuel/valves/dump-valve-pos[0]</property></not>
-		    <property>/controls/test/warn-knob</property>
+		    <property>controls/test/warn-knob</property>
 		  </or>
 		</condition>
 	</animation>
@@ -120,7 +137,7 @@
 			</greater-than>
 		  <or>
 		  	<not><property>b707/fuel/valves/dump-valve-pos[1]</property></not>
-		    <property>/controls/test/warn-knob</property>
+		    <property>controls/test/warn-knob</property>
 		  </or>
 		</condition>
 	</animation>
@@ -135,7 +152,7 @@
 			</greater-than>
 		  <or>
 		  	<not><property>b707/fuel/valves/dump-valve-pos[2]</property></not>
-		    <property>/controls/test/warn-knob</property>
+		    <property>controls/test/warn-knob</property>
 		  </or>
 		</condition>
 	</animation>
@@ -150,7 +167,7 @@
 			</greater-than>
 		  <or>
 		  	<not><property>b707/fuel/valves/dump-valve-pos[3]</property></not>
-		    <property>/controls/test/warn-knob</property>
+		    <property>controls/test/warn-knob</property>
 		  </or>
 		</condition>
 	</animation>
@@ -165,7 +182,7 @@
 			</greater-than>
 		  <or>
 		  	<not><property>b707/fuel/valves/dump-valve-pos[4]</property></not>
-		    <property>/controls/test/warn-knob</property>
+		    <property>controls/test/warn-knob</property>
 		  </or>
 		</condition>
 	</animation>
@@ -180,7 +197,7 @@
 			</greater-than>
 		  <or>
 		  	<not><property>b707/fuel/valves/dump-valve-pos[5]</property></not>
-		    <property>/controls/test/warn-knob</property>
+		    <property>controls/test/warn-knob</property>
 		  </or>
 		</condition>
 	</animation>
@@ -195,7 +212,7 @@
 			</greater-than>
 		  <or>
 		  	<property>b707/fuel/valves/dump-retract[0]</property>
-		    <property>/controls/test/warn-knob</property>
+		    <property>controls/test/warn-knob</property>
 		  </or>
 		</condition>
 	</animation>
@@ -210,7 +227,7 @@
 			</greater-than>
 		  <or>
 		  	<property>b707/fuel/valves/dump-retract[1]</property>
-		    <property>/controls/test/warn-knob</property>
+		    <property>controls/test/warn-knob</property>
 		  </or>
 		</condition>
 	</animation>
@@ -246,7 +263,7 @@
         </binding>            
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch2</property>
+		      <property>sim/sound/switch2</property>
 		    </binding>
 		  </action>
 	</animation> 
@@ -302,7 +319,7 @@
         </binding>            
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch2</property>
+		      <property>sim/sound/switch2</property>
 		    </binding>
 		  </action>
 	</animation> 
@@ -342,7 +359,7 @@
         </binding>  
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch2</property>
+		      <property>sim/sound/switch2</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -385,7 +402,7 @@
 					<property>b707/fuel/valves/dump-cover[1]</property>
 				</condition>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch2</property>
+		      <property>sim/sound/switch2</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -428,7 +445,7 @@
 							<property>b707/fuel/valves/dump-cover[1]</property>
 						</condition>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch2</property>
+		      <property>sim/sound/switch2</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -468,7 +485,7 @@
         </binding>  
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch2</property>
+		      <property>sim/sound/switch2</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -508,7 +525,7 @@
         </binding>  
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch2</property>
+		      <property>sim/sound/switch2</property>
 		    </binding>
 		  </action>
 	</animation> 
@@ -548,7 +565,7 @@
         </binding>  
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch2</property>
+		      <property>sim/sound/switch2</property>
 		    </binding>
 		  </action>
 	</animation> 
@@ -588,7 +605,7 @@
         </binding>  
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch2</property>
+		      <property>sim/sound/switch2</property>
 		    </binding>
 		  </action>
 	</animation>
@@ -628,7 +645,7 @@
         </binding>  
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/sim/sound/switch2</property>
+		      <property>sim/sound/switch2</property>
 		    </binding>
 		  </action>
 	</animation> 

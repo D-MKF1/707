@@ -1,10 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--###################################################################################
-		Lake of Constance Hangar :: M.Kraus
-		Boeing 707 for Flightgear Septemper 2013
-		This file is licenced under the terms of the GNU General Public Licence V2 or later
-		###################################################################################
--->
+<!--####################################################################
+Lake of Constance Hangar
+Boeing 707 for Flightgear
+Copyright (C) 2013 M.Kraus
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Every software has a developer, also free software. 
+As a gesture of courtesy and respect, I would be delighted 
+if you contacted me before making any changes to this software. 
+<info (at) marc-kraus.de> April, 2017
+########################################################################-->
 <PropertyList> 
     <title>VI. After startup engines</title>
     <item>
@@ -23,13 +40,13 @@
 		</marker>
 		<condition>
 		  <equals>
-		    <property>/b707/external-power-connected</property>
+		    <property>b707/external-power-connected</property>
 		    <value>0</value>
 		  </equals>
 		</condition>
 		<binding>
 		  <command>property-assign</command>
-		  <property>/b707/external-power-connected</property>
+		  <property>b707/external-power-connected</property>
 		  <value>0</value>
 		</binding>
 	</item> 
@@ -45,18 +62,18 @@
 		</marker>
 		<condition>
 		  <equals>
-		    <property>/b707/apu/apu-bleed-valve</property>
+		    <property>b707/apu/apu-bleed-valve</property>
 		    <value>0</value>
 		  </equals>
 		</condition>
 		<binding>
 		  <command>property-assign</command>
-		  <property>/b707/apu/apu-bleed-valve</property>
+		  <property>b707/apu/apu-bleed-valve</property>
 		  <value>0</value>
 		</binding>  
 	    <binding>
 	      <command>property-toggle</command>
-	      <property>/sim/sound/switch1</property>
+	      <property>sim/sound/switch1</property>
 	    </binding>
 	</item>
 	
@@ -71,18 +88,18 @@
 		</marker>
 		<condition>
 		  <equals>
-		    <property>/b707/generator/gen-drive[4]</property>
+		    <property>b707/generator/gen-drive[4]</property>
 		    <value>0</value>
 		  </equals>
 		</condition>
 		<binding>
 		  <command>property-assign</command>
-		  <property>/b707/generator/gen-drive[4]</property>
+		  <property>b707/generator/gen-drive[4]</property>
 		  <value>0</value>
 		</binding>   
 	    <binding>
 	      <command>property-toggle</command>
-	      <property>/sim/sound/switch1</property>
+	      <property>sim/sound/switch1</property>
 	    </binding>
 	</item>
 
@@ -97,18 +114,18 @@
 		</marker>
 		<condition>
 		  <equals>
-		    <property>/b707/apu/off-start-run</property>
+		    <property>b707/apu/off-start-run</property>
 		    <value>0</value>
 		  </equals>
 		</condition>		
 		<binding>
 		  <command>property-assign</command>
-		  <property>/b707/apu/starter</property>
+		  <property>b707/apu/starter</property>
 		  <value>0</value>
 		</binding>    
 	    <binding>
 	      <command>property-toggle</command>
-	      <property>/sim/sound/switch1</property>
+	      <property>sim/sound/switch1</property>
 	    </binding>
 	</item> 
 
@@ -123,18 +140,18 @@
 		</marker>
 		<condition>
 		  <equals>
-		    <property>/b707/generator/hertz-converter</property>
+		    <property>b707/generator/hertz-converter</property>
 		    <value>1</value>
 		  </equals>
 		</condition>		
 		<binding>
 		  <command>property-assign</command>
-		  <property>/b707/generator/hertz-converter</property>
+		  <property>b707/generator/hertz-converter</property>
 		  <value>1</value>
 		</binding>    
 	    <binding>
 	      <command>property-toggle</command>
-	      <property>/sim/sound/switch1</property>
+	      <property>sim/sound/switch1</property>
 	    </binding>
 	</item> 
 
@@ -149,18 +166,18 @@
 		</marker>
 		<condition>
 		  <equals>
-		    <property>/b707/equipment/blower</property>
+		    <property>b707/equipment/blower</property>
 		    <value>1</value>
 		  </equals>
 		</condition>		
 		<binding>
 		  <command>property-assign</command>
-		  <property>/b707/equipment/blower</property>
+		  <property>b707/equipment/blower</property>
 		  <value>1</value>
 		</binding>    
 	    <binding>
 	      <command>property-toggle</command>
-	      <property>/sim/sound/switch1</property>
+	      <property>sim/sound/switch1</property>
 	    </binding>
 	</item> 
 
@@ -175,18 +192,18 @@
 		</marker>
 		<condition>
 		  <equals>
-		    <property>/b707/equipment/ovbd-dump</property>
+		    <property>b707/equipment/ovbd-dump</property>
 		    <value>1</value>
 		  </equals>
 		</condition>		
 		<binding>
 		  <command>property-assign</command>
-		  <property>/b707/equipment/ovbd-dump</property>
+		  <property>b707/equipment/ovbd-dump</property>
 		  <value>1</value>
 		</binding>    
 	    <binding>
 	      <command>property-toggle</command>
-	      <property>/sim/sound/switch1</property>
+	      <property>sim/sound/switch1</property>
 	    </binding>
 	</item>
 
@@ -201,18 +218,18 @@
 		</marker>
 		<condition>
 		  <equals>
-		    <property>/b707/air-conditioning/ram-air-switch</property>
+		    <property>b707/air-conditioning/ram-air-switch</property>
 		    <value>1</value>
 		  </equals>
 		</condition>		
 		<binding>
 		  <command>property-assign</command>
-		  <property>/b707/air-conditioning/ram-air-switch</property>
+		  <property>b707/air-conditioning/ram-air-switch</property>
 		  <value>1</value>
 		</binding>    
 	    <binding>
 	      <command>property-toggle</command>
-	      <property>/sim/sound/switch1</property>
+	      <property>sim/sound/switch1</property>
 	    </binding>
 	</item>
 
@@ -227,7 +244,7 @@
 		</marker>
 		<condition>
 		  <greater-than>
-		    <property>/b707/air-conditioning/compressor-rpm[0]</property>
+		    <property>b707/air-conditioning/compressor-rpm[0]</property>
 		    <value>95</value>
 		  </greater-than>
 		</condition>		
@@ -237,7 +254,7 @@
 		</binding>    
 	    <binding>
 	      <command>property-toggle</command>
-	      <property>/sim/sound/switch1</property>
+	      <property>sim/sound/switch1</property>
 	    </binding>
 	</item>
 
@@ -252,7 +269,7 @@
 		</marker>
 		<condition>
 		  <greater-than>
-		    <property>/b707/air-conditioning/compressor-rpm[1]</property>
+		    <property>b707/air-conditioning/compressor-rpm[1]</property>
 		    <value>95</value>
 		  </greater-than>
 		</condition>		
@@ -262,7 +279,7 @@
 		</binding>    
 	    <binding>
 	      <command>property-toggle</command>
-	      <property>/sim/sound/switch1</property>
+	      <property>sim/sound/switch1</property>
 	    </binding>
 	</item>
 
@@ -277,7 +294,7 @@
 		</marker>
 		<condition>
 		  <greater-than>
-		    <property>/b707/air-conditioning/compressor-rpm[2]</property>
+		    <property>b707/air-conditioning/compressor-rpm[2]</property>
 		    <value>95</value>
 		  </greater-than>
 		</condition>		
@@ -287,7 +304,7 @@
 		</binding>    
 	    <binding>
 	      <command>property-toggle</command>
-	      <property>/sim/sound/switch1</property>
+	      <property>sim/sound/switch1</property>
 	    </binding>
 	</item>
 
@@ -302,18 +319,18 @@
 		</marker>
 		<condition>
 		  <equals>
-		    <property>/b707/air-conditioning/wing-valve[0]</property>
+		    <property>b707/air-conditioning/wing-valve[0]</property>
 		    <value>1</value>
 		  </equals>
 		</condition>		
 		<binding>
 		  <command>property-assign</command>
-		  <property>/b707/air-conditioning/wing-valve[0]</property>
+		  <property>b707/air-conditioning/wing-valve[0]</property>
 		  <value>1</value>
 		</binding>    
 	    <binding>
 	      <command>property-toggle</command>
-	      <property>/sim/sound/switch1</property>
+	      <property>sim/sound/switch1</property>
 	    </binding>
 	</item>
 
@@ -328,18 +345,18 @@
 		</marker>
 		<condition>
 		  <equals>
-		    <property>/b707/air-conditioning/wing-valve[1]</property>
+		    <property>b707/air-conditioning/wing-valve[1]</property>
 		    <value>1</value>
 		  </equals>
 		</condition>		
 		<binding>
 		  <command>property-assign</command>
-		  <property>/b707/air-conditioning/wing-valve[1]</property>
+		  <property>b707/air-conditioning/wing-valve[1]</property>
 		  <value>1</value>
 		</binding>    
 	    <binding>
 	      <command>property-toggle</command>
-	      <property>/sim/sound/switch1</property>
+	      <property>sim/sound/switch1</property>
 	    </binding>
 	</item>
 
@@ -354,18 +371,18 @@
 		</marker>
 		<condition>
 		  <equals>
-		    <property>/b707/air-conditioning/air-cond-unit-left-start</property>
+		    <property>b707/air-conditioning/air-cond-unit-left-start</property>
 		    <value>1</value>
 		  </equals>
 		</condition>		
 		<binding>
 		  <command>property-assign</command>
-		  <property>/b707/air-conditioning/air-cond-unit-left-start</property>
+		  <property>b707/air-conditioning/air-cond-unit-left-start</property>
 		  <value>1</value>
 		</binding>    
 	    <binding>
 	      <command>property-toggle</command>
-	      <property>/sim/sound/switch1</property>
+	      <property>sim/sound/switch1</property>
 	    </binding>
 	</item>
 
@@ -380,18 +397,18 @@
 		</marker>
 		<condition>
 		  <equals>
-		    <property>/b707/air-conditioning/air-cond-unit-right-start</property>
+		    <property>b707/air-conditioning/air-cond-unit-right-start</property>
 		    <value>1</value>
 		  </equals>
 		</condition>		
 		<binding>
 		  <command>property-assign</command>
-		  <property>/b707/air-conditioning/air-cond-unit-right-start</property>
+		  <property>b707/air-conditioning/air-cond-unit-right-start</property>
 		  <value>1</value>
 		</binding>    
 	    <binding>
 	      <command>property-toggle</command>
-	      <property>/sim/sound/switch1</property>
+	      <property>sim/sound/switch1</property>
 	    </binding>
 	</item>
 	
@@ -406,18 +423,18 @@
 		</marker>
 		<condition>
 		  <equals>
-		    <property>/b707/pressurization/safety-valve</property>
+		    <property>b707/pressurization/safety-valve</property>
 		    <value>1</value>
 		  </equals>
 		</condition>
 		<binding>
 		  <command>property-assign</command>
-		  <property>/b707/pressurization/safety-valve</property>
+		  <property>b707/pressurization/safety-valve</property>
 		  <value>1</value>
 		</binding>   
 	    <binding>
 	      <command>property-toggle</command>
-	      <property>/sim/sound/switch1</property>
+	      <property>sim/sound/switch1</property>
 	    </binding>
 	</item>
 	
@@ -432,18 +449,18 @@
 		</marker>
 		<condition>
 		  <equals>
-		    <property>/b707/pressurization/manual-mode-switch</property>
+		    <property>b707/pressurization/manual-mode-switch</property>
 		    <value>1</value>
 		  </equals>
 		</condition>		
 		<binding>
 		  <command>property-assign</command>
-		  <property>/b707/pressurization/manual-mode-switch</property>
+		  <property>b707/pressurization/manual-mode-switch</property>
 		  <value>1</value>
 		</binding>    
 	    <binding>
 	      <command>property-toggle</command>
-	      <property>/sim/sound/switch1</property>
+	      <property>sim/sound/switch1</property>
 	    </binding>
 	</item>
 	
@@ -458,18 +475,18 @@
 		</marker>
 		<condition>
 		  <equals>
-		    <property>/b707/pressurization/mode-switch</property>
+		    <property>b707/pressurization/mode-switch</property>
 		    <value>1</value>
 		  </equals>
 		</condition>		
 		<binding>
 		  <command>property-assign</command>
-		  <property>/b707/pressurization/mode-switch</property>
+		  <property>b707/pressurization/mode-switch</property>
 		  <value>1</value>
 		</binding>    
 	    <binding>
 	      <command>property-toggle</command>
-	      <property>/sim/sound/switch1</property>
+	      <property>sim/sound/switch1</property>
 	    </binding>
 	</item>
 

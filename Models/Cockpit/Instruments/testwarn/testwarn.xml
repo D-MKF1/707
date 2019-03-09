@@ -13,13 +13,13 @@
 		<type>material</type>
 		<object-name>knob</object-name>
 		<condition>
-			<not><property>/systems/electrical/outputs/cabin-dim</property></not>
+			<not><property>systems/electrical/outputs/cabin-dim</property></not>
 		</condition>
 		<emission>
 			<red>0.6</red>
 			<green>0.4</green>
 			<blue>0.3</blue>
-			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+			<factor-prop>systems/electrical/outputs/panel-dim</factor-prop>
 		</emission>
 	</animation>
 	
@@ -30,13 +30,13 @@
 		<object-name>fuse</object-name>
 		<object-name>scrue</object-name>
 		<condition>
-			<not><property>/systems/electrical/outputs/cabin-dim</property></not>
+			<not><property>systems/electrical/outputs/cabin-dim</property></not>
 		</condition>
 		<emission>
 			<red>0.15</red>
 			<green>0.1</green>
 			<blue>0.075</blue>
-			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+			<factor-prop>systems/electrical/outputs/panel-dim</factor-prop>
 		</emission>
 	</animation>
 	
@@ -48,13 +48,13 @@
 		<object-name>scrue</object-name>
 		<condition>
 			<not><property>/sim/rendering/rembrandt/enabled</property></not>
-			<property>/systems/electrical/outputs/cabin-dim</property>
+			<property>systems/electrical/outputs/cabin-dim</property>
 		</condition>
 		<emission>
 		  <red>0.4</red>
 		  <green>0.4</green>
 		  <blue>0.4</blue>
-		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		  <factor-prop>systems/electrical/outputs/cabin-dim</factor-prop>
 		</emission>
 	</animation>	
 
@@ -67,7 +67,7 @@
     <animation>
         <type>translate</type>
         <object-name>knob</object-name>
-        <property>/controls/test/warn-knob</property>
+        <property>controls/test/warn-knob</property>
         <factor>0.003</factor>
         <axis>
             <x>-1.0</x>
@@ -90,13 +90,13 @@
         <repeatable>false</repeatable>
           <binding>
             <command>property-assign</command>
-            <property>/controls/test/warn-knob</property>  
+            <property>controls/test/warn-knob</property>  
             <value>1.0</value>
           </binding>
         <mod-up>
           <binding>
             <command>property-assign</command>
-            <property>/controls/test/warn-knob</property>  
+            <property>controls/test/warn-knob</property>  
             <value>0.0</value>
           </binding>
         </mod-up>

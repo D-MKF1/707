@@ -17,13 +17,13 @@
 		<object-name>TB.Ref</object-name>
 		<object-name>TB.Needle</object-name>
 		<condition>
-			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+			<less-than><property>systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
 		</condition>
 		<emission>
 			<red>0.6</red>
 			<green>0.4</green>
 			<blue>0.3</blue>
-			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+			<factor-prop>systems/electrical/outputs/panel-dim</factor-prop>
 		</emission>
 	</animation>
 	
@@ -36,13 +36,13 @@
 		<object-name>shadow</object-name>
 		<condition>
 			<not><property>/sim/rendering/rembrandt/enabled</property></not>
-			<property>/systems/electrical/outputs/cabin-dim</property>
+			<property>systems/electrical/outputs/cabin-dim</property>
 		</condition>
 		<emission>
 		  <red>0.8</red>
 		  <green>0.8</green>
 		  <blue>0.8</blue>
-		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		  <factor-prop>systems/electrical/outputs/cabin-dim</factor-prop>
 		</emission>
 	</animation>	
 
@@ -59,7 +59,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>TB.Needle</object-name>
-		<property>/instrumentation/turn-indicator/indicated-turn-rate</property>
+		<property>instrumentation/turn-indicator/indicated-turn-rate</property>
 		<interpolation>
 		  <entry><ind>  -5</ind><dep>-30</dep></entry>
 		  <entry><ind>-1.5</ind><dep>-30</dep></entry>
@@ -81,7 +81,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>TB.Ball</object-name>
-		<property>/instrumentation/slip-skid-ball/indicated-slip-skid</property>
+		<property>instrumentation/slip-skid-ball/indicated-slip-skid</property>
 		<min>-2.5</min>
 		<max> 2.5</max>
 		<interpolation>

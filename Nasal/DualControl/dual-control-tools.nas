@@ -6,7 +6,6 @@
 ##  This file is licensed under the GPL license version 2 or later.
 ##
 ###############################################################################
-
 ## MP properties
 var lat_mpp     = "position/latitude-deg";
 var lon_mpp     = "position/longitude-deg";
@@ -499,7 +498,7 @@ copilot_dialog.init = func (copilot_type, x = nil, y = nil) {
     } else {
         me.title = "Copilot selection";
     }
-    me.basenode = props.globals.getNode("/sim/remote", 1);
+    me.basenode = props.globals.getNode("sim/remote", 1);
     me.dialog = nil;
     me.namenode = props.Node.new({"dialog-name" : me.title });
     me.listeners = [];
@@ -624,7 +623,7 @@ copilot_dialog.select_action = func (n) {
 # Return a list containing all nearby copilot players of the right type.
 copilot_dialog.find_copilot_players = func {
     var mpplayers =
-        props.globals.getNode("/ai/models").getChildren("multiplayer");
+        props.globals.getNode("ai/models").getChildren("multiplayer");
 
     var res = [];
     foreach (var pilot; mpplayers) {

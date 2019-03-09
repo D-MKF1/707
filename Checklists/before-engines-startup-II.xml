@@ -1,10 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--###################################################################################
-		Lake of Constance Hangar :: M.Kraus
-		Boeing 707 for Flightgear Septemper 2013
-		This file is licenced under the terms of the GNU General Public Licence V2 or later
-		###################################################################################
--->
+<!--####################################################################
+Lake of Constance Hangar
+Boeing 707 for Flightgear
+Copyright (C) 2013 M.Kraus
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Every software has a developer, also free software. 
+As a gesture of courtesy and respect, I would be delighted 
+if you contacted me before making any changes to this software. 
+<info (at) marc-kraus.de> April, 2017
+########################################################################-->
 <PropertyList> 
     <title>II. Before engines startup</title>
     <item>
@@ -23,18 +40,18 @@
 		</marker>
 		<condition>
 		  <equals>
-		    <property>/b707/fuel/valves/valve-pos[0]</property>
+		    <property>b707/fuel/valves/valve-pos[0]</property>
 		    <value>1</value>
 		  </equals>
 		</condition>		
 		<binding>
 		  <command>property-assign</command>
-		  <property>/b707/fuel/valves/valve-pos[0]</property>
+		  <property>b707/fuel/valves/valve-pos[0]</property>
 		  <value>1</value>
 		</binding>   
 	    <binding>
 	      <command>property-toggle</command>
-	      <property>/sim/sound/switch1</property>
+	      <property>sim/sound/switch1</property>
 	    </binding>
 	</item> 
 	
@@ -49,18 +66,18 @@
 		</marker>
 		<condition>
 		  <equals>
-		    <property>/b707/fuel/valves/valve-pos[1]</property>
+		    <property>b707/fuel/valves/valve-pos[1]</property>
 		    <value>1</value>
 		  </equals>
 		</condition>		
 		<binding>
 		  <command>property-assign</command>
-		  <property>/b707/fuel/valves/valve-pos[1]</property>
+		  <property>b707/fuel/valves/valve-pos[1]</property>
 		  <value>1</value>
 		</binding>   
 	    <binding>
 	      <command>property-toggle</command>
-	      <property>/sim/sound/switch1</property>
+	      <property>sim/sound/switch1</property>
 	    </binding>
 	</item>  
 	
@@ -75,18 +92,18 @@
 		</marker>
 		<condition>
 		  <equals>
-		    <property>/b707/fuel/valves/valve-pos[2]</property>
+		    <property>b707/fuel/valves/valve-pos[2]</property>
 		    <value>1</value>
 		  </equals>
 		</condition>		
 		<binding>
 		  <command>property-assign</command>
-		  <property>/b707/fuel/valves/valve-pos[2]</property>
+		  <property>b707/fuel/valves/valve-pos[2]</property>
 		  <value>1</value>
 		</binding>   
 	    <binding>
 	      <command>property-toggle</command>
-	      <property>/sim/sound/switch1</property>
+	      <property>sim/sound/switch1</property>
 	    </binding>
 	</item>  
 	
@@ -101,18 +118,18 @@
 		</marker>
 		<condition>
 		  <equals>
-		    <property>/b707/fuel/valves/valve-pos[3]</property>
+		    <property>b707/fuel/valves/valve-pos[3]</property>
 		    <value>1</value>
 		  </equals>
 		</condition>		
 		<binding>
 		  <command>property-assign</command>
-		  <property>/b707/fuel/valves/valve-pos[3]</property>
+		  <property>b707/fuel/valves/valve-pos[3]</property>
 		  <value>1</value>
 		</binding>   
 	    <binding>
 	      <command>property-toggle</command>
-	      <property>/sim/sound/switch1</property>
+	      <property>sim/sound/switch1</property>
 	    </binding>
 	</item>  
 	
@@ -127,18 +144,18 @@
 		</marker>
 		<condition>
 		  <equals>
-		    <property>/b707/fuel/valves/valve-pos[4]</property>
+		    <property>b707/fuel/valves/valve-pos[4]</property>
 		    <value>1</value>
 		  </equals>
 		</condition>		
 		<binding>
 		  <command>property-assign</command>
-		  <property>/b707/fuel/valves/valve-pos[4]</property>
+		  <property>b707/fuel/valves/valve-pos[4]</property>
 		  <value>1</value>
 		</binding>   
 	    <binding>
 	      <command>property-toggle</command>
-	      <property>/sim/sound/switch1</property>
+	      <property>sim/sound/switch1</property>
 	    </binding>
 	</item>  
 	
@@ -153,18 +170,18 @@
 		</marker>
 		<condition>
 		  <equals>
-		    <property>/b707/fuel/valves/valve-pos[5]</property>
+		    <property>b707/fuel/valves/valve-pos[5]</property>
 		    <value>1</value>
 		  </equals>
 		</condition>		
 		<binding>
 		  <command>property-assign</command>
-		  <property>/b707/fuel/valves/valve-pos[5]</property>
+		  <property>b707/fuel/valves/valve-pos[5]</property>
 		  <value>1</value>
 		</binding>   
 	    <binding>
 	      <command>property-toggle</command>
-	      <property>/sim/sound/switch1</property>
+	      <property>sim/sound/switch1</property>
 	    </binding>
 	</item> 
 		
@@ -179,18 +196,18 @@
 		</marker>
 		<condition>
 		  <equals>
-		    <property>/b707/fuel/valves/boost-pump[0]</property>
+		    <property>b707/fuel/valves/boost-pump[0]</property>
 		    <value>1</value>
 		  </equals>
 		</condition>
 		<binding>
 		  <command>property-assign</command>
-		  <property>/b707/fuel/valves/boost-pump[0]</property>
+		  <property>b707/fuel/valves/boost-pump[0]</property>
 		  <value>1</value>
 		</binding> 
 	    <binding>
 	      <command>property-toggle</command>
-	      <property>/sim/sound/switch1</property>
+	      <property>sim/sound/switch1</property>
 	    </binding>
 	</item>
 		
@@ -205,18 +222,18 @@
 		</marker>
 		<condition>
 		  <equals>
-		    <property>/b707/fuel/valves/boost-pump[1]</property>
+		    <property>b707/fuel/valves/boost-pump[1]</property>
 		    <value>1</value>
 		  </equals>
 		</condition>
 		<binding>
 		  <command>property-assign</command>
-		  <property>/b707/fuel/valves/boost-pump[1]</property>
+		  <property>b707/fuel/valves/boost-pump[1]</property>
 		  <value>1</value>
 		</binding>  
 	    <binding>
 	      <command>property-toggle</command>
-	      <property>/sim/sound/switch1</property>
+	      <property>sim/sound/switch1</property>
 	    </binding>
 	</item>
 		
@@ -231,18 +248,18 @@
 		</marker>	
 		<condition>
 		  <equals>
-		    <property>/b707/fuel/valves/boost-pump[2]</property>
+		    <property>b707/fuel/valves/boost-pump[2]</property>
 		    <value>1</value>
 		  </equals>
 		</condition>
 		<binding>
 		  <command>property-assign</command>
-		  <property>/b707/fuel/valves/boost-pump[2]</property>
+		  <property>b707/fuel/valves/boost-pump[2]</property>
 		  <value>1</value>
 		</binding> 
 	    <binding>
 	      <command>property-toggle</command>
-	      <property>/sim/sound/switch1</property>
+	      <property>sim/sound/switch1</property>
 	    </binding>
 	</item>
 		
@@ -257,18 +274,18 @@
 		</marker>
 		<condition>
 		  <equals>
-		    <property>/b707/fuel/valves/boost-pump[3]</property>
+		    <property>b707/fuel/valves/boost-pump[3]</property>
 		    <value>1</value>
 		  </equals>
 		</condition>
 		<binding>
 		  <command>property-assign</command>
-		  <property>/b707/fuel/valves/boost-pump[3]</property>
+		  <property>b707/fuel/valves/boost-pump[3]</property>
 		  <value>1</value>
 		</binding>  
 	    <binding>
 	      <command>property-toggle</command>
-	      <property>/sim/sound/switch1</property>
+	      <property>sim/sound/switch1</property>
 	    </binding>
 	</item>
 	
@@ -283,18 +300,18 @@
 		</marker>
 		<condition>
 		  <equals>
-		    <property>/b707/fuel/valves/boost-pump[4]</property>
+		    <property>b707/fuel/valves/boost-pump[4]</property>
 		    <value>1</value>
 		  </equals>
 		</condition>
 		<binding>
 		  <command>property-assign</command>
-		  <property>/b707/fuel/valves/boost-pump[4]</property>
+		  <property>b707/fuel/valves/boost-pump[4]</property>
 		  <value>1</value>
 		</binding> 
 	    <binding>
 	      <command>property-toggle</command>
-	      <property>/sim/sound/switch1</property>
+	      <property>sim/sound/switch1</property>
 	    </binding>
 	</item>
 		
@@ -309,18 +326,18 @@
 		</marker>
 		<condition>
 		  <equals>
-		    <property>/b707/fuel/valves/boost-pump[5]</property>
+		    <property>b707/fuel/valves/boost-pump[5]</property>
 		    <value>1</value>
 		  </equals>
 		</condition>
 		<binding>
 		  <command>property-assign</command>
-		  <property>/b707/fuel/valves/boost-pump[5]</property>
+		  <property>b707/fuel/valves/boost-pump[5]</property>
 		  <value>1</value>
 		</binding>  
 	    <binding>
 	      <command>property-toggle</command>
-	      <property>/sim/sound/switch1</property>
+	      <property>sim/sound/switch1</property>
 	    </binding>
 	</item>
 			
@@ -335,18 +352,18 @@
 		</marker>	
 		<condition>
 		  <equals>
-		    <property>/b707/fuel/valves/boost-pump[6]</property>
+		    <property>b707/fuel/valves/boost-pump[6]</property>
 		    <value>1</value>
 		  </equals>
 		</condition>
 		<binding>
 		  <command>property-assign</command>
-		  <property>/b707/fuel/valves/boost-pump[6]</property>
+		  <property>b707/fuel/valves/boost-pump[6]</property>
 		  <value>1</value>
 		</binding> 
 	    <binding>
 	      <command>property-toggle</command>
-	      <property>/sim/sound/switch1</property>
+	      <property>sim/sound/switch1</property>
 	    </binding>
 	</item>
 		
@@ -361,18 +378,18 @@
 		</marker>
 		<condition>
 		  <equals>
-		    <property>/b707/fuel/valves/boost-pump[7]</property>
+		    <property>b707/fuel/valves/boost-pump[7]</property>
 		    <value>1</value>
 		  </equals>
 		</condition>
 		<binding>
 		  <command>property-assign</command>
-		  <property>/b707/fuel/valves/boost-pump[7]</property>
+		  <property>b707/fuel/valves/boost-pump[7]</property>
 		  <value>1</value>
 		</binding>  
 	    <binding>
 	      <command>property-toggle</command>
-	      <property>/sim/sound/switch1</property>
+	      <property>sim/sound/switch1</property>
 	    </binding>
 	</item>
 	
@@ -388,18 +405,18 @@
 		</marker>
 		<condition>
 		  <equals>
-		    <property>/b707/fuel/valves/boost-pump[8]</property>
+		    <property>b707/fuel/valves/boost-pump[8]</property>
 		    <value>1</value>
 		  </equals>
 		</condition>
 		<binding>
 		  <command>property-assign</command>
-		  <property>/b707/fuel/valves/boost-pump[8]</property>
+		  <property>b707/fuel/valves/boost-pump[8]</property>
 		  <value>1</value>
 		</binding> 
 	    <binding>
 	      <command>property-toggle</command>
-	      <property>/sim/sound/switch1</property>
+	      <property>sim/sound/switch1</property>
 	    </binding>
 	</item>
 		
@@ -414,18 +431,18 @@
 		</marker>	
 		<condition>
 		  <equals>
-		    <property>/b707/fuel/valves/boost-pump[9]</property>
+		    <property>b707/fuel/valves/boost-pump[9]</property>
 		    <value>1</value>
 		  </equals>
 		</condition>
 		<binding>
 		  <command>property-assign</command>
-		  <property>/b707/fuel/valves/boost-pump[9]</property>
+		  <property>b707/fuel/valves/boost-pump[9]</property>
 		  <value>1</value>
 		</binding>  
 	    <binding>
 	      <command>property-toggle</command>
-	      <property>/sim/sound/switch1</property>
+	      <property>sim/sound/switch1</property>
 	    </binding>
 	</item>
 		
@@ -440,13 +457,13 @@
 		</marker>
 		<condition>
 		  <equals>
-		    <property>/b707/fuel/valves/fuel-shutoff[0]</property>
+		    <property>b707/fuel/valves/fuel-shutoff[0]</property>
 		    <value>1</value>
 		  </equals>
 		</condition>
 		<binding>
 		  <command>property-assign</command>
-		  <property>/b707/fuel/valves/fuel-shutoff[0]</property>
+		  <property>b707/fuel/valves/fuel-shutoff[0]</property>
 		  <value>1</value>
 		</binding>        
 		<binding>
@@ -455,7 +472,7 @@
         </binding>  
 	    <binding>
 	      <command>property-toggle</command>
-	      <property>/sim/sound/switch1</property>
+	      <property>sim/sound/switch1</property>
 	    </binding>
 	</item>
 	
@@ -470,13 +487,13 @@
 		</marker>
 		<condition>
 		  <equals>
-		    <property>/b707/fuel/valves/fuel-shutoff[1]</property>
+		    <property>b707/fuel/valves/fuel-shutoff[1]</property>
 		    <value>1</value>
 		  </equals>
 		</condition>
 		<binding>
 		  <command>property-assign</command>
-		  <property>/b707/fuel/valves/fuel-shutoff[1]</property>
+		  <property>b707/fuel/valves/fuel-shutoff[1]</property>
 		  <value>1</value>
 		</binding>      
 		<binding>
@@ -485,7 +502,7 @@
         </binding>   
 	    <binding>
 	      <command>property-toggle</command>
-	      <property>/sim/sound/switch1</property>
+	      <property>sim/sound/switch1</property>
 	    </binding>
 	</item>
 	
@@ -500,13 +517,13 @@
 		</marker>
 		<condition>
 		  <equals>
-		    <property>/b707/fuel/valves/fuel-shutoff[2]</property>
+		    <property>b707/fuel/valves/fuel-shutoff[2]</property>
 		    <value>1</value>
 		  </equals>
 		</condition>
 		<binding>
 		  <command>property-assign</command>
-		  <property>/b707/fuel/valves/fuel-shutoff[2]</property>
+		  <property>b707/fuel/valves/fuel-shutoff[2]</property>
 		  <value>1</value>
 		</binding>      
 		<binding>
@@ -515,7 +532,7 @@
         </binding>  
 	    <binding>
 	      <command>property-toggle</command>
-	      <property>/sim/sound/switch1</property>
+	      <property>sim/sound/switch1</property>
 	    </binding>
 	</item>
 	
@@ -530,13 +547,13 @@
 		</marker>
 		<condition>
 		  <equals>
-		    <property>/b707/fuel/valves/fuel-shutoff[3]</property>
+		    <property>b707/fuel/valves/fuel-shutoff[3]</property>
 		    <value>1</value>
 		  </equals>
 		</condition>
 		<binding>
 		  <command>property-assign</command>
-		  <property>/b707/fuel/valves/fuel-shutoff[3]</property>
+		  <property>b707/fuel/valves/fuel-shutoff[3]</property>
 		  <value>1</value>
 		</binding>      
 		<binding>
@@ -545,7 +562,7 @@
         </binding>  
 	    <binding>
 	      <command>property-toggle</command>
-	      <property>/sim/sound/switch1</property>
+	      <property>sim/sound/switch1</property>
 	    </binding>
 	</item>
 		     

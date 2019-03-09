@@ -1,4 +1,28 @@
-##########################################################################
+#################################################################################
+#		Lake of Constance Hangar												#
+#		Boeing 707 for Flightgear												#
+#		Copyright (C) 2013 M.Kraus												#	
+#																				#
+#		This program is free software: you can redistribute it and/or modify	#
+#		it under the terms of the GNU General Public License as published by	#
+#		the Free Software Foundation, either version 3 of the License, or		#
+#		(at your option) any later version.										#
+#																				#
+#		This program is distributed in the hope that it will be useful,			#
+#		but WITHOUT ANY WARRANTY; without even the implied warranty of			#
+#		MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the			#
+#		GNU General Public License for more details.							#
+#																				#
+#		You should have received a copy of the GNU General Public License		#
+#		along with this program.  If not, see <http://www.gnu.org/licenses/>.	#
+#																				#
+#		Every software has a developer, also free software. 					#
+#		As a gesture of courtesy and respect, I would be delighted 				#		
+#		if you contacted me before making any changes to this software. 		#
+#		<info (at) marc-kraus.de> April, 2017									#
+#################################################################################
+#
+#########################################################################
 # Simple Brake Simulation System
 # 2010, Thorsten Brehm
 #
@@ -36,7 +60,7 @@ var BrakeSystem =
        m.CoolingFactor = 0.007;
        # Scaling divisor. Use this to scale the energy output.
        # Manually tune this value: a total energy output
-       # at "/gear/brake-thermal-energy" > 1.0 means overheated brakes,
+       # at "gear/brake-thermal-energy" > 1.0 means overheated brakes,
        # anything below <= 1.0 means energy absorbed by brakes is OK. 
        m.ScalingDivisor= 400000*450.0;
        
@@ -52,10 +76,10 @@ var BrakeSystem =
     reset : func()
     {
         # Initial thermal energy
-        setprop("/gear/brake-thermal-energy",0.0);
-        setprop("/gear/brake-smoke",0);
+        setprop("gear/brake-thermal-energy",0.0);
+        setprop("gear/brake-smoke",0);
         setprop("sim/animation/fire-services",0); 
-        setprop("/controls/special/tyresmoke",0);
+        setprop("controls/special/tyresmoke",0);
         me.LastSimTime = 0.0;
     },
 
@@ -67,28 +91,28 @@ var BrakeSystem =
 
         if (dt<1.0)
         {
-            var OnGround = getprop("/gear/gear[1]/wow");
-            var ThermalEnergy = getprop("/gear/brake-thermal-energy");
-            if (getprop("/controls/gear/brake-parking"))
+            var OnGround = getprop("gear/gear[1]/wow");
+            var ThermalEnergy = getprop("gear/brake-thermal-energy");
+            if (getprop("controls/gear/brake-parking"))
                 var BrakeLevel=1.0;
             else
-                var BrakeLevel = (getprop("/controls/gear/brake-left")+getprop("/controls/gear/brake-left"))/2;
+                var BrakeLevel = (getprop("controls/gear/brake-left")+getprop("/controls/gear/brake-left"))/2;
                 
             if (OnGround)
             {
                 # absorb more energy
-                var V1 = getprop("/velocities/groundspeed-kt");
+                var V1 = getprop("velocities/groundspeed-kt");
 				
 				if(V1 > 20)
 				{
-					setprop("/b707/shake-effect/effect",1);
+					setprop("b707/shake-effect/effect",1);
 				}else{
-					setprop("/b707/shake-effect/effect",0);
+					setprop("b707/shake-effect/effect",0);
 				}
 				
 	            if (BrakeLevel>0)
 	            {				
-	                var Mass = getprop("/fdm/jsbsim/inertia/weight-lbs")/me.ScalingDivisor;
+	                var Mass = getprop("fdm/jsbsim/inertia/weight-lbs")/me.ScalingDivisor;
 	                # absorb some kinetic energy:
 	                # dE= 1/2 * m * V1^2 - 1/2 * m * V2^2) 
 	                var V2 = V1 - me.BrakeDecel*dt * BrakeLevel;
@@ -97,13 +121,13 @@ var BrakeSystem =
 	                    ThermalEnergy += Mass * (V1*V1 - V2*V2)/2;
 				}
             }else{
-					setprop("/b707/shake-effect/effect",0);
+					setprop("b707/shake-effect/effect",0);
 			}
 
             # cooling effect: reduce thermal energy by factor (1-m.CoolingFactor)^dt
             ThermalEnergy = ThermalEnergy * math.exp(me.LnCoolFactor * dt);
 
-            setprop("/gear/brake-thermal-energy",ThermalEnergy);
+            setprop("gear/brake-thermal-energy",ThermalEnergy);
             
             if ((ThermalEnergy>1)and(!me.SmokeActive))
             {
@@ -121,17 +145,17 @@ var BrakeSystem =
     # smoke processing
     smoke : func()
     {
-        if ((me.SmokeActive)and(getprop("/gear/brake-thermal-energy")>1))
+        if ((me.SmokeActive)and(getprop("gear/brake-thermal-energy")>1))
         {
             # make density of smoke effect depend on energy level  
             var SmokeDelay=0;
-            var ThermalEnergy = getprop("/gear/brake-thermal-energy");
+            var ThermalEnergy = getprop("gear/brake-thermal-energy");
             if (ThermalEnergy < 1.5)
                 SmokeDelay=(1.5-ThermalEnergy);
             else
                 setprop("sim/animation/fire-services",1);
             # No smoke when gear retracted
-            var SmokeValue = (getprop("/gear/gear[1]/position-norm")>0.5);
+            var SmokeValue = (getprop("gear/gear[1]/position-norm")>0.5);
             # toggle smoke to interpolate different densities 
             if (SmokeDelay>0.05)
             {
@@ -141,13 +165,13 @@ var BrakeSystem =
                 else
                     SmokeDelay = 0;
             }
-            setprop("/gear/brake-smoke",SmokeValue);
+            setprop("gear/brake-smoke",SmokeValue);
             settimer(func { BrakeSys.smoke(); },SmokeDelay);
         }
         else
         {
             # stop smoke processing
-            setprop("/gear/brake-smoke",0);
+            setprop("gear/brake-smoke",0);
             setprop("sim/animation/fire-services",0);
             me.SmokeActive = 0;
         }
@@ -156,7 +180,7 @@ var BrakeSystem =
 
 var BrakeSys = BrakeSystem.new();
 
-setlistener("/sim/signals/fdm-initialized",
+setlistener("sim/signals/fdm-initialized",
             # executed on _every_ FDM reset (but not installing new listeners)
             func(idle) { BrakeSys.reset(); },
             0,0);
@@ -164,5 +188,4 @@ setlistener("/sim/signals/fdm-initialized",
 settimer(func()
          {
            BrakeSys.update();
-           print("Brake System... OK");
          }, 5);

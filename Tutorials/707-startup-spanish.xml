@@ -1,241 +1,258 @@
 <?xml version="1.0"?>
-<!--###################################################################################
-		Lake of Constance Hangar :: M.Kraus
-		Boeing 707 for Flightgear Septemper 2013
-		This file is licenced under the terms of the GNU General Public Licence V2 or later
-		###################################################################################
--->
+<!--####################################################################
+Lake of Constance Hangar
+Boeing 707 for Flightgear
+Copyright (C) 2013 M.Kraus
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Every software has a developer, also free software. 
+As a gesture of courtesy and respect, I would be delighted 
+if you contacted me before making any changes to this software. 
+<info (at) marc-kraus.de> April, 2017
+########################################################################-->
 <PropertyList>
 	<name>Engines: Start-up [spanish]</name>
 	<description>Arranque de motores con unidad de alimentacion externa.</description>
 
 	<init>
 		<set>
-			<property>/sim/current-view/view-number</property>
+			<property>sim/current-view/view-number</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/controls/gear/brake-parking</property>
+			<property>controls/gear/brake-parking</property>
 			<value>1</value>
 		</set>
 		<set>
-			<property>/controls/flight/flaps</property>
+			<property>controls/flight/flaps</property>
 			<value>0.0</value>
 		</set>
 		<set>
-			<property>/b707/generator/gen-bus-tie[0]</property>
+			<property>b707/generator/gen-bus-tie[0]</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/generator/gen-breaker[0]</property>
+			<property>b707/generator/gen-breaker[0]</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/generator/gen-control[0]</property>
+			<property>b707/generator/gen-control[0]</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/generator/gen-drive[0]</property>
+			<property>b707/generator/gen-drive[0]</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/generator/gen-bus-tie[1]</property>
+			<property>b707/generator/gen-bus-tie[1]</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/generator/gen-breaker[1]</property>
+			<property>b707/generator/gen-breaker[1]</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/generator/gen-control[1]</property>
+			<property>b707/generator/gen-control[1]</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/generator/gen-drive[1]</property>
+			<property>b707/generator/gen-drive[1]</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/generator/gen-bus-tie[2]</property>
+			<property>b707/generator/gen-bus-tie[2]</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/generator/gen-breaker[2]</property>
+			<property>b707/generator/gen-breaker[2]</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/generator/gen-control[2]</property>
+			<property>b707/generator/gen-control[2]</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/generator/gen-drive[2]</property>
+			<property>b707/generator/gen-drive[2]</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/controls/electric/engine[2]/generator</property>
+			<property>controls/electric/engine[2]/generator</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/generator/gen-bus-tie[3]</property>
+			<property>b707/generator/gen-bus-tie[3]</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/generator/gen-breaker[3]</property>
+			<property>b707/generator/gen-breaker[3]</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/generator/gen-control[3]</property>
+			<property>b707/generator/gen-control[3]</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/generator/gen-drive[3]</property>
+			<property>b707/generator/gen-drive[3]</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/controls/engines/engine[0]/cutoff</property>
+			<property>controls/engines/engine[0]/cutoff</property>
 			<value>1</value>
 		</set>
 		<set>
-			<property>/controls/engines/engine[1]/cutoff</property>
+			<property>controls/engines/engine[1]/cutoff</property>
 			<value>1</value>
 		</set>
 		<set>
-			<property>/controls/engines/engine[2]/cutoff</property>
+			<property>controls/engines/engine[2]/cutoff</property>
 			<value>1</value>
 		</set>
 		<set>
-			<property>/controls/engines/engine[3]/cutoff</property>
+			<property>controls/engines/engine[3]/cutoff</property>
 			<value>1</value>
 		</set>
 		<set>
-			<property>/b707/fuel/valves/valve-pos[0]</property>
+			<property>b707/fuel/valves/valve-pos[0]</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/fuel/valves/valve-pos[1]</property>
+			<property>b707/fuel/valves/valve-pos[1]</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/fuel/valves/valve-pos[2]</property>
+			<property>b707/fuel/valves/valve-pos[2]</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/fuel/valves/valve-pos[3]</property>
+			<property>b707/fuel/valves/valve-pos[3]</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/fuel/valves/valve-pos[4]</property>
+			<property>b707/fuel/valves/valve-pos[4]</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/fuel/valves/valve-pos[5]</property>
+			<property>b707/fuel/valves/valve-pos[5]</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/fuel/valves/boost-pump[0]</property>
+			<property>b707/fuel/valves/boost-pump[0]</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/fuel/valves/boost-pump[1]</property>
+			<property>b707/fuel/valves/boost-pump[1]</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/fuel/valves/boost-pump[3]</property>
+			<property>b707/fuel/valves/boost-pump[3]</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/fuel/valves/boost-pump[4]</property>
+			<property>b707/fuel/valves/boost-pump[4]</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/fuel/valves/boost-pump[5]</property>
+			<property>b707/fuel/valves/boost-pump[5]</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/fuel/valves/boost-pump[6]</property>
+			<property>b707/fuel/valves/boost-pump[6]</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/fuel/valves/boost-pump[7]</property>
+			<property>b707/fuel/valves/boost-pump[7]</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/fuel/valves/boost-pump[8]</property>
+			<property>b707/fuel/valves/boost-pump[8]</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/fuel/valves/boost-pump[9]</property>
+			<property>b707/fuel/valves/boost-pump[9]</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/fuel/valves/fuel-shutoff[0]</property>
+			<property>b707/fuel/valves/fuel-shutoff[0]</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/fuel/valves/fuel-shutoff[1]</property>
+			<property>b707/fuel/valves/fuel-shutoff[1]</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/fuel/valves/fuel-shutoff[2]</property>
+			<property>b707/fuel/valves/fuel-shutoff[2]</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/fuel/valves/fuel-shutoff[3]</property>
+			<property>b707/fuel/valves/fuel-shutoff[3]</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/load-volt-selector</property>
+			<property>b707/load-volt-selector</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/external-power-connected</property>
+			<property>b707/external-power-connected</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/battery-switch</property>
+			<property>b707/battery-switch</property>
 			<value>0</value>
 		</set>		
 		<set>
-			<property>/b707/hydraulic/rudder</property>
+			<property>b707/hydraulic/rudder</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/hydraulic/system</property>
+			<property>b707/hydraulic/system</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/hydraulic/brake-valve</property>
+			<property>b707/hydraulic/brake-valve</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/hydraulic/ac-aux-pump[0]</property>
+			<property>b707/hydraulic/ac-aux-pump[0]</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/hydraulic/ac-aux-pump[1]</property>
+			<property>b707/hydraulic/ac-aux-pump[1]</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/hydraulic/hyd-fluid-shutoff-cover[0]</property>
+			<property>b707/hydraulic/hyd-fluid-shutoff-cover[0]</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/hydraulic/hyd-fluid-shutoff-cover[1]</property>
+			<property>b707/hydraulic/hyd-fluid-shutoff-cover[1]</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/hydraulic/hyd-fluid-shutoff[0]</property>
+			<property>b707/hydraulic/hyd-fluid-shutoff[0]</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/hydraulic/hyd-fluid-shutoff[1]</property>
+			<property>b707/hydraulic/hyd-fluid-shutoff[1]</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/hydraulic/hyd-fluid-pump[0]</property>
+			<property>b707/hydraulic/hyd-fluid-pump[0]</property>
 			<value>0</value>
 		</set>
 		<set>
-			<property>/b707/hydraulic/hyd-fluid-pump[1]</property>
+			<property>b707/hydraulic/hyd-fluid-pump[1]</property>
 			<value>0</value>
 		</set>
 
@@ -265,7 +282,7 @@
 
 		<exit>
 			<condition>
-				<property>/b707/external-power-connected</property>
+				<property>b707/external-power-connected</property>
 			</condition>
 		</exit>
 	</step>
@@ -286,7 +303,7 @@
 		</view>
 		<exit>
 			<condition>
-				<property>/b707/external-power-connected</property>
+				<property>b707/external-power-connected</property>
 			</condition>
 		</exit>
 	</step>
@@ -315,12 +332,12 @@
 		<error>
 			<message>Abra la tapa y encienda la bateria.</message>
 			<condition>
-				<not><property>/b707/battery-switch</property></not>
+				<not><property>b707/battery-switch</property></not>
 			</condition>
 		</error>
 		<exit>
 			<condition>
-				<property>/b707/battery-switch</property>
+				<property>b707/battery-switch</property>
 			</condition>
 		</exit>
 	</step>
@@ -350,11 +367,11 @@
 			<condition>
 				<or>
 					<less-than>
-						<property>/b707/load-volt-selector</property>
+						<property>b707/load-volt-selector</property>
 						<value>1</value>
 					</less-than>
 					<greater-than>
-						<property>/b707/load-volt-selector</property>
+						<property>b707/load-volt-selector</property>
 						<value>1</value>
 					</greater-than>
 				</or>
@@ -363,7 +380,7 @@
 		<exit>
 			<condition>
 				<equals>
-					<property>/b707/load-volt-selector</property>
+					<property>b707/load-volt-selector</property>
 					<value>1</value>
 				</equals>
 			</condition>
@@ -395,11 +412,11 @@
 			<condition>
 				<or>
 					<less-than>
-						<property>/b707/ess-power-switch</property>
+						<property>b707/ess-power-switch</property>
 						<value>5</value>
 					</less-than>
 					<greater-than>
-						<property>/b707/ess-power-switch</property>
+						<property>b707/ess-power-switch</property>
 						<value>5</value>
 					</greater-than>
 				</or>
@@ -408,7 +425,7 @@
 		<exit>
 			<condition>
 				<equals>
-					<property>/b707/ess-power-switch</property>
+					<property>b707/ess-power-switch</property>
 					<value>5</value>
 				</equals>
 			</condition>
@@ -487,10 +504,10 @@
 			<message>Activar ambos y esperar hasta ALCANZAR 3000 PSI de PRESION HIDRAULICA DEL TIMON.</message>
 			<condition>
 				<or>
-					<not><property>/b707/hydraulic/ac-aux-pump[0]</property></not>
-					<not><property>/b707/hydraulic/ac-aux-pump[1]</property></not>
+					<not><property>b707/hydraulic/ac-aux-pump[0]</property></not>
+					<not><property>b707/hydraulic/ac-aux-pump[1]</property></not>
 					<less-than>
-						<property>/b707/hydraulic/rudder</property>
+						<property>b707/hydraulic/rudder</property>
 						<value>2900</value>
 					</less-than>
 				</or>
@@ -499,10 +516,10 @@
 		<exit>
 			<condition>
 			 <and>
-				<property>/b707/hydraulic/ac-aux-pump[0]</property>
-				<property>/b707/hydraulic/ac-aux-pump[1]</property>
+				<property>b707/hydraulic/ac-aux-pump[0]</property>
+				<property>b707/hydraulic/ac-aux-pump[1]</property>
 				<greater-than>
-					<property>/b707/hydraulic/rudder</property>
+					<property>b707/hydraulic/rudder</property>
 					<value>2900</value>
 				</greater-than>
 			 </and>
@@ -578,16 +595,16 @@
 			<message>Abra las tapas y active las palancas.</message>
 			<condition>
 				<or>
-					<not><property>/b707/hydraulic/hyd-fluid-shutoff[0]</property></not>
-					<not><property>/b707/hydraulic/hyd-fluid-shutoff[1]</property></not>
+					<not><property>b707/hydraulic/hyd-fluid-shutoff[0]</property></not>
+					<not><property>b707/hydraulic/hyd-fluid-shutoff[1]</property></not>
 				</or>
 			</condition>
 		</error>
 		<exit>
 			<condition>
 				<and>
-					<property>/b707/hydraulic/hyd-fluid-shutoff[0]</property>
-					<property>/b707/hydraulic/hyd-fluid-shutoff[1]</property>
+					<property>b707/hydraulic/hyd-fluid-shutoff[0]</property>
+					<property>b707/hydraulic/hyd-fluid-shutoff[1]</property>
 				</and>
 			</condition>
 		</exit>
@@ -619,10 +636,10 @@
 			<message>Activar ambos y esperar hasta ALCANZAR 2200 PSI de PRESION HIDRAULICA DEL SISTEMA</message>
 			<condition>
 				<or>
-					<not><property>/b707/hydraulic/hyd-fluid-pump[0]</property></not>
-					<not><property>/b707/hydraulic/hyd-fluid-pump[1]</property></not>					
+					<not><property>b707/hydraulic/hyd-fluid-pump[0]</property></not>
+					<not><property>b707/hydraulic/hyd-fluid-pump[1]</property></not>					
 					<less-than>
-						<property>/b707/hydraulic/system</property>
+						<property>b707/hydraulic/system</property>
 						<value>2000</value>
 					</less-than>
 				</or>
@@ -631,10 +648,10 @@
 		<exit>
 			<condition>
 				<and>
-					<property>/b707/hydraulic/hyd-fluid-pump[0]</property>
-					<property>/b707/hydraulic/hyd-fluid-pump[1]</property>
+					<property>b707/hydraulic/hyd-fluid-pump[0]</property>
+					<property>b707/hydraulic/hyd-fluid-pump[1]</property>
 					<greater-than>
-						<property>/b707/hydraulic/system</property>
+						<property>b707/hydraulic/system</property>
 						<value>2000</value>
 					</greater-than>
 				</and>
@@ -667,12 +684,12 @@
 				Activelo
 			</message>
 			<condition>
-				<not><property>/b707/ground-connect</property></not>
+				<not><property>b707/ground-connect</property></not>
 			</condition>
 		</error>
 		<exit>
 			<condition>
-				<property>/b707/ground-connect</property>
+				<property>b707/ground-connect</property>
 			</condition>
 		</exit>
 	</step>
@@ -705,22 +722,22 @@
 				Es imposible reconectarlas en vuelo.
 			</message>
 			<condition>
-				<not><property>/b707/generator/gen-drive[0]</property></not>
-				<not><property>/b707/generator/gen-drive[1]</property></not>
-				<not><property>/b707/generator/gen-drive[2]</property></not>
-				<not><property>/b707/generator/gen-drive[3]</property></not>
-				<property>/b707/generator/gen-drive-cover[0]</property>
-				<property>/b707/generator/gen-drive-cover[1]</property>
-				<property>/b707/generator/gen-drive-cover[2]</property>
-				<property>/b707/generator/gen-drive-cover[3]</property>
+				<not><property>b707/generator/gen-drive[0]</property></not>
+				<not><property>b707/generator/gen-drive[1]</property></not>
+				<not><property>b707/generator/gen-drive[2]</property></not>
+				<not><property>b707/generator/gen-drive[3]</property></not>
+				<property>b707/generator/gen-drive-cover[0]</property>
+				<property>b707/generator/gen-drive-cover[1]</property>
+				<property>b707/generator/gen-drive-cover[2]</property>
+				<property>b707/generator/gen-drive-cover[3]</property>
 			</condition>
 		</error>		
 		<exit>
 			<condition>
-				<property>/b707/generator/gen-drive[0]</property>
-				<property>/b707/generator/gen-drive[1]</property>
-				<property>/b707/generator/gen-drive[2]</property>
-				<property>/b707/generator/gen-drive[3]</property>
+				<property>b707/generator/gen-drive[0]</property>
+				<property>b707/generator/gen-drive[1]</property>
+				<property>b707/generator/gen-drive[2]</property>
+				<property>b707/generator/gen-drive[3]</property>
 			</condition>
 		</exit>
 	</step>
@@ -752,22 +769,22 @@
 				Encienda todos los buses y cierre todas las tapas!
 			</message>
 			<condition>
-				<not><property>/b707/generator/gen-bus-tie[0]</property></not>
-				<not><property>/b707/generator/gen-bus-tie[1]</property></not>
-				<not><property>/b707/generator/gen-bus-tie[2]</property></not>
-				<not><property>/b707/generator/gen-bus-tie[3]</property></not>
-				<property>/b707/generator/gen-bus-tie-cover[0]</property>
-				<property>/b707/generator/gen-bus-tie-cover[1]</property>
-				<property>/b707/generator/gen-bus-tie-cover[2]</property>
-				<property>/b707/generator/gen-bus-tie-cover[3]</property>
+				<not><property>b707/generator/gen-bus-tie[0]</property></not>
+				<not><property>b707/generator/gen-bus-tie[1]</property></not>
+				<not><property>b707/generator/gen-bus-tie[2]</property></not>
+				<not><property>b707/generator/gen-bus-tie[3]</property></not>
+				<property>b707/generator/gen-bus-tie-cover[0]</property>
+				<property>b707/generator/gen-bus-tie-cover[1]</property>
+				<property>b707/generator/gen-bus-tie-cover[2]</property>
+				<property>b707/generator/gen-bus-tie-cover[3]</property>
 			</condition>
 		</error>
 		<exit>
 			<condition>
-				<property>/b707/generator/gen-bus-tie[0]</property>
-				<property>/b707/generator/gen-bus-tie[1]</property>
-				<property>/b707/generator/gen-bus-tie[2]</property>
-				<property>/b707/generator/gen-bus-tie[3]</property>
+				<property>b707/generator/gen-bus-tie[0]</property>
+				<property>b707/generator/gen-bus-tie[1]</property>
+				<property>b707/generator/gen-bus-tie[2]</property>
+				<property>b707/generator/gen-bus-tie[3]</property>
 			</condition>
 		</exit>
 	</step>	
@@ -799,22 +816,22 @@
 				Encienda todos los controladores y cierre las tapas!
 			</message>
 			<condition>
-				<not><property>/b707/generator/gen-control[0]</property></not>
-				<not><property>/b707/generator/gen-control[1]</property></not>
-				<not><property>/b707/generator/gen-control[2]</property></not>
-				<not><property>/b707/generator/gen-control[3]</property></not>
-				<property>/b707/generator/gen-control-cover[0]</property>
-				<property>/b707/generator/gen-control-cover[1]</property>
-				<property>/b707/generator/gen-control-cover[2]</property>
-				<property>/b707/generator/gen-control-cover[3]</property>
+				<not><property>b707/generator/gen-control[0]</property></not>
+				<not><property>b707/generator/gen-control[1]</property></not>
+				<not><property>b707/generator/gen-control[2]</property></not>
+				<not><property>b707/generator/gen-control[3]</property></not>
+				<property>b707/generator/gen-control-cover[0]</property>
+				<property>b707/generator/gen-control-cover[1]</property>
+				<property>b707/generator/gen-control-cover[2]</property>
+				<property>b707/generator/gen-control-cover[3]</property>
 			</condition>
 		</error>	
 		<exit>
 			<condition>
-				<property>/b707/generator/gen-control[0]</property>
-				<property>/b707/generator/gen-control[1]</property>
-				<property>/b707/generator/gen-control[2]</property>
-				<property>/b707/generator/gen-control[3]</property>
+				<property>b707/generator/gen-control[0]</property>
+				<property>b707/generator/gen-control[1]</property>
+				<property>b707/generator/gen-control[2]</property>
+				<property>b707/generator/gen-control[3]</property>
 			</condition>
 		</exit>
 	</step>
@@ -845,18 +862,18 @@
 				Cierre todos los circuitos del REGULADOR AUTOMATICO DEL GENERADOR, ahora!
 			</message>
 			<condition>
-				<not><property>/b707/generator/gen-breaker[0]</property></not>
-				<not><property>/b707/generator/gen-breaker[1]</property></not>
-				<not><property>/b707/generator/gen-breaker[2]</property></not>
-				<not><property>/b707/generator/gen-breaker[3]</property></not>
+				<not><property>b707/generator/gen-breaker[0]</property></not>
+				<not><property>b707/generator/gen-breaker[1]</property></not>
+				<not><property>b707/generator/gen-breaker[2]</property></not>
+				<not><property>b707/generator/gen-breaker[3]</property></not>
 			</condition>
 		</error>
 		<exit>
 			<condition>
-				<property>/b707/generator/gen-breaker[0]</property>
-				<property>/b707/generator/gen-breaker[1]</property>
-				<property>/b707/generator/gen-breaker[2]</property>
-				<property>/b707/generator/gen-breaker[3]</property>
+				<property>b707/generator/gen-breaker[0]</property>
+				<property>b707/generator/gen-breaker[1]</property>
+				<property>b707/generator/gen-breaker[2]</property>
+				<property>b707/generator/gen-breaker[3]</property>
 			</condition>
 		</exit>
 	</step>
@@ -888,22 +905,22 @@
 				!Abra y cierre las Valvulas de Alimentacion Cruzada - una vez!
 			</message>
 			<condition>
-				<not><property>/b707/fuel/valves/valve-pos[0]</property></not>
-				<not><property>/b707/fuel/valves/valve-pos[1]</property></not>
-				<not><property>/b707/fuel/valves/valve-pos[2]</property></not>
-				<not><property>/b707/fuel/valves/valve-pos[3]</property></not>
-				<not><property>/b707/fuel/valves/valve-pos[4]</property></not>
-				<not><property>/b707/fuel/valves/valve-pos[5]</property></not>
+				<not><property>b707/fuel/valves/valve-pos[0]</property></not>
+				<not><property>b707/fuel/valves/valve-pos[1]</property></not>
+				<not><property>b707/fuel/valves/valve-pos[2]</property></not>
+				<not><property>b707/fuel/valves/valve-pos[3]</property></not>
+				<not><property>b707/fuel/valves/valve-pos[4]</property></not>
+				<not><property>b707/fuel/valves/valve-pos[5]</property></not>
 			</condition>
 		</error>
 		<exit>
 			<condition>
-				<property>/b707/fuel/valves/valve-pos[0]</property>
-				<property>/b707/fuel/valves/valve-pos[1]</property>
-				<property>/b707/fuel/valves/valve-pos[2]</property>
-				<property>/b707/fuel/valves/valve-pos[3]</property>
-				<property>/b707/fuel/valves/valve-pos[4]</property>
-				<property>/b707/fuel/valves/valve-pos[5]</property>
+				<property>b707/fuel/valves/valve-pos[0]</property>
+				<property>b707/fuel/valves/valve-pos[1]</property>
+				<property>b707/fuel/valves/valve-pos[2]</property>
+				<property>b707/fuel/valves/valve-pos[3]</property>
+				<property>b707/fuel/valves/valve-pos[4]</property>
+				<property>b707/fuel/valves/valve-pos[5]</property>
 			</condition>
 		</exit>
 	</step>
@@ -934,30 +951,30 @@
 				Encienda TODAS LAS BOMBAS DEL ALIMENTADOR DE PRESION
 			</message>
 			<condition>
-				<not><property>/b707/fuel/valves/boost-pump[0]</property></not>
-				<not><property>/b707/fuel/valves/boost-pump[1]</property></not>
-				<not><property>/b707/fuel/valves/boost-pump[2]</property></not>
-				<not><property>/b707/fuel/valves/boost-pump[3]</property></not>
-				<not><property>/b707/fuel/valves/boost-pump[4]</property></not>
-				<not><property>/b707/fuel/valves/boost-pump[5]</property></not>
-				<not><property>/b707/fuel/valves/boost-pump[6]</property></not>
-				<not><property>/b707/fuel/valves/boost-pump[7]</property></not>
-				<not><property>/b707/fuel/valves/boost-pump[8]</property></not>
-				<not><property>/b707/fuel/valves/boost-pump[9]</property></not>
+				<not><property>b707/fuel/valves/boost-pump[0]</property></not>
+				<not><property>b707/fuel/valves/boost-pump[1]</property></not>
+				<not><property>b707/fuel/valves/boost-pump[2]</property></not>
+				<not><property>b707/fuel/valves/boost-pump[3]</property></not>
+				<not><property>b707/fuel/valves/boost-pump[4]</property></not>
+				<not><property>b707/fuel/valves/boost-pump[5]</property></not>
+				<not><property>b707/fuel/valves/boost-pump[6]</property></not>
+				<not><property>b707/fuel/valves/boost-pump[7]</property></not>
+				<not><property>b707/fuel/valves/boost-pump[8]</property></not>
+				<not><property>b707/fuel/valves/boost-pump[9]</property></not>
 			</condition>
 		</error>
 		<exit>
 			<condition>
-				<property>/b707/fuel/valves/boost-pump[0]</property>
-				<property>/b707/fuel/valves/boost-pump[1]</property>
-				<property>/b707/fuel/valves/boost-pump[2]</property>
-				<property>/b707/fuel/valves/boost-pump[3]</property>
-				<property>/b707/fuel/valves/boost-pump[4]</property>
-				<property>/b707/fuel/valves/boost-pump[5]</property>
-				<property>/b707/fuel/valves/boost-pump[6]</property>
-				<property>/b707/fuel/valves/boost-pump[7]</property>
-				<property>/b707/fuel/valves/boost-pump[8]</property>
-				<property>/b707/fuel/valves/boost-pump[9]</property>
+				<property>b707/fuel/valves/boost-pump[0]</property>
+				<property>b707/fuel/valves/boost-pump[1]</property>
+				<property>b707/fuel/valves/boost-pump[2]</property>
+				<property>b707/fuel/valves/boost-pump[3]</property>
+				<property>b707/fuel/valves/boost-pump[4]</property>
+				<property>b707/fuel/valves/boost-pump[5]</property>
+				<property>b707/fuel/valves/boost-pump[6]</property>
+				<property>b707/fuel/valves/boost-pump[7]</property>
+				<property>b707/fuel/valves/boost-pump[8]</property>
+				<property>b707/fuel/valves/boost-pump[9]</property>
 			</condition>
 		</exit>
 	</step>
@@ -988,18 +1005,18 @@
 				TODAS LAS VALVULAS DE PARADA DE MOTOR deben estar encendidas!
 			</message>
 			<condition>
-				<not><property>/b707/fuel/valves/fuel-shutoff[0]</property></not>
-				<not><property>/b707/fuel/valves/fuel-shutoff[1]</property></not>
-				<not><property>/b707/fuel/valves/fuel-shutoff[2]</property></not>
-				<not><property>/b707/fuel/valves/fuel-shutoff[3]</property></not>
+				<not><property>b707/fuel/valves/fuel-shutoff[0]</property></not>
+				<not><property>b707/fuel/valves/fuel-shutoff[1]</property></not>
+				<not><property>b707/fuel/valves/fuel-shutoff[2]</property></not>
+				<not><property>b707/fuel/valves/fuel-shutoff[3]</property></not>
 			</condition>
 		</error>
 		<exit>
 			<condition>
-				<property>/b707/fuel/valves/fuel-shutoff[0]</property>
-				<property>/b707/fuel/valves/fuel-shutoff[1]</property>
-				<property>/b707/fuel/valves/fuel-shutoff[2]</property>
-				<property>/b707/fuel/valves/fuel-shutoff[3]</property>
+				<property>b707/fuel/valves/fuel-shutoff[0]</property>
+				<property>b707/fuel/valves/fuel-shutoff[1]</property>
+				<property>b707/fuel/valves/fuel-shutoff[2]</property>
+				<property>b707/fuel/valves/fuel-shutoff[3]</property>
 			</condition>
 		</exit>
 	</step>
@@ -1023,7 +1040,7 @@
 		</marker>
 		<exit>
 			<condition>
-					<property>/b707/start/startercover[2]</property>
+					<property>b707/start/startercover[2]</property>
 			</condition>
 		</exit>
 	</step>
@@ -1156,7 +1173,7 @@
 		<exit>
 			<condition>
 				<property>engines/engine[2]/running</property>
-				<property>/b707/start/startercover[3]</property>
+				<property>b707/start/startercover[3]</property>
 			</condition>
 		</exit>
 	</step>
@@ -1282,7 +1299,7 @@
 		<exit>
 			<condition>
 				<property>engines/engine[3]/running</property>
-				<property>/b707/start/startercover[1]</property>
+				<property>b707/start/startercover[1]</property>
 			</condition>
 		</exit>
 	</step>
@@ -1408,7 +1425,7 @@
 		<exit>
 			<condition>
 				<property>engines/engine[1]/running</property>
-				<property>/b707/start/startercover[0]</property>
+				<property>b707/start/startercover[0]</property>
 			</condition>
 		</exit>
 	</step>
@@ -1533,7 +1550,7 @@
 		</view>
 		<exit>
 			<condition>
-				<not><property>/b707/start/startercover[0]</property></not>
+				<not><property>b707/start/startercover[0]</property></not>
 			</condition>
 		</exit>
 	</step>
@@ -1666,11 +1683,11 @@
 			<condition>
 				<or>
 					<less-than>
-						<property>/b707/generator/gen-freq[0]</property>
+						<property>b707/generator/gen-freq[0]</property>
 						<value>400</value>
 					</less-than>
 					<greater-than>
-						<property>/b707/generator/gen-freq[0]</property>
+						<property>b707/generator/gen-freq[0]</property>
 						<value>400</value>
 					</greater-than>
 				</or>
@@ -1679,7 +1696,7 @@
 		<exit>
 			<condition>
 				<equals>
-					<property>/b707/generator/gen-freq[0]</property>
+					<property>b707/generator/gen-freq[0]</property>
 					<value>400</value>
 				</equals>
 			</condition>
@@ -1757,11 +1774,11 @@
 			<condition>
 				<or>
 					<less-than>
-						<property>/b707/generator/gen-freq[1]</property>
+						<property>b707/generator/gen-freq[1]</property>
 						<value>400</value>
 					</less-than>
 					<greater-than>
-						<property>/b707/generator/gen-freq[1]</property>
+						<property>b707/generator/gen-freq[1]</property>
 						<value>400</value>
 					</greater-than>
 				</or>
@@ -1770,7 +1787,7 @@
 		<exit>
 			<condition>
 				<equals>
-					<property>/b707/generator/gen-freq[1]</property>
+					<property>b707/generator/gen-freq[1]</property>
 					<value>400</value>
 				</equals>
 			</condition>
@@ -1848,11 +1865,11 @@
 			<condition>
 				<or>
 					<less-than>
-						<property>/b707/generator/gen-freq[2]</property>
+						<property>b707/generator/gen-freq[2]</property>
 						<value>400</value>
 					</less-than>
 					<greater-than>
-						<property>/b707/generator/gen-freq[2]</property>
+						<property>b707/generator/gen-freq[2]</property>
 						<value>400</value>
 					</greater-than>
 				</or>
@@ -1861,7 +1878,7 @@
 		<exit>
 			<condition>
 				<equals>
-					<property>/b707/generator/gen-freq[2]</property>
+					<property>b707/generator/gen-freq[2]</property>
 					<value>400</value>
 				</equals>
 			</condition>
@@ -1939,11 +1956,11 @@
 			<condition>
 				<or>
 					<less-than>
-						<property>/b707/generator/gen-freq[3]</property>
+						<property>b707/generator/gen-freq[3]</property>
 						<value>400</value>
 					</less-than>
 					<greater-than>
-						<property>/b707/generator/gen-freq[3]</property>
+						<property>b707/generator/gen-freq[3]</property>
 						<value>400</value>
 					</greater-than>
 				</or>
@@ -1952,7 +1969,7 @@
 		<exit>
 			<condition>
 				<equals>
-					<property>/b707/generator/gen-freq[3]</property>
+					<property>b707/generator/gen-freq[3]</property>
 					<value>400</value>
 				</equals>
 			</condition>
@@ -2030,18 +2047,18 @@
 				cierre todos los buses!
 			</message>
 			<condition>
-				<not><property>/b707/generator/gen-bus-tie[0]</property></not>
-				<not><property>/b707/generator/gen-bus-tie[1]</property></not>
-				<not><property>/b707/generator/gen-bus-tie[2]</property></not>
-				<not><property>/b707/generator/gen-bus-tie[3]</property></not>
+				<not><property>b707/generator/gen-bus-tie[0]</property></not>
+				<not><property>b707/generator/gen-bus-tie[1]</property></not>
+				<not><property>b707/generator/gen-bus-tie[2]</property></not>
+				<not><property>b707/generator/gen-bus-tie[3]</property></not>
 			</condition>
 		</error>
 		<exit>
 			<condition>
-				<property>/b707/generator/gen-bus-tie[0]</property>
-				<property>/b707/generator/gen-bus-tie[1]</property>
-				<property>/b707/generator/gen-bus-tie[2]</property>
-				<property>/b707/generator/gen-bus-tie[3]</property>
+				<property>b707/generator/gen-bus-tie[0]</property>
+				<property>b707/generator/gen-bus-tie[1]</property>
+				<property>b707/generator/gen-bus-tie[2]</property>
+				<property>b707/generator/gen-bus-tie[3]</property>
 			</condition>
 		</exit>
 	</step>
@@ -2072,11 +2089,11 @@
 			<condition>
 				<or>
 					<less-than>
-						<property>/b707/ess-power-switch</property>
+						<property>b707/ess-power-switch</property>
 						<value>1</value>
 					</less-than>
 					<greater-than>
-						<property>/b707/ess-power-switch</property>
+						<property>b707/ess-power-switch</property>
 						<value>1</value>
 					</greater-than>
 				</or>
@@ -2085,7 +2102,7 @@
 		<exit>
 			<condition>
 				<equals>
-					<property>/b707/ess-power-switch</property>
+					<property>b707/ess-power-switch</property>
 					<value>1</value>
 				</equals>
 			</condition>
@@ -2117,12 +2134,12 @@
 				seleccione OFF, para cortarla
 			</message>
 			<condition>
-				<property>/b707/ground-connect</property>
+				<property>b707/ground-connect</property>
 			</condition>
 		</error>
 		<exit>
 			<condition>
-				<not><property>/b707/ground-connect</property></not>
+				<not><property>b707/ground-connect</property></not>
 			</condition>
 		</exit>
 	</step>
@@ -2151,7 +2168,7 @@
 
 		<exit>
 			<condition>
-				<not><property>/b707/external-power-connected</property></not>
+				<not><property>b707/external-power-connected</property></not>
 			</condition>
 		</exit>
 	</step>
@@ -2172,7 +2189,7 @@
 		</view>
 		<exit>
 			<condition>
-				<not><property>/b707/external-power-connected</property></not>
+				<not><property>b707/external-power-connected</property></not>
 			</condition>
 		</exit>
 	</step>
@@ -2203,12 +2220,12 @@
 				Switch to ON.
 			</message>
 			<condition>
-				<not><property>/b707/generator/hertz-converter</property></not>
+				<not><property>b707/generator/hertz-converter</property></not>
 			</condition>
 		</error>
 		<exit>
 			<condition>
-				<property>/b707/generator/hertz-converter</property>
+				<property>b707/generator/hertz-converter</property>
 			</condition>
 		</exit>
 	</step>
@@ -2239,14 +2256,14 @@
 				Ponga ambos interruptores en posicion ON.
 			</message>
 			<condition>
-				<not><property>/b707/equipment/ovbd-dump</property></not>
-				<not><property>/b707/equipment/blower</property></not>
+				<not><property>b707/equipment/ovbd-dump</property></not>
+				<not><property>b707/equipment/blower</property></not>
 			</condition>
 		</error>
 		<exit>
 			<condition>
-				<property>/b707/equipment/ovbd-dump</property>
-				<property>/b707/equipment/blower</property>
+				<property>b707/equipment/ovbd-dump</property>
+				<property>b707/equipment/blower</property>
 			</condition>
 		</exit>
 	</step>
@@ -2277,12 +2294,12 @@
 				Coloque el selector en la posicion OPEN.
 			</message>
 			<condition>
-				<not><property>/b707/air-conditioning/ram-air-switch</property></not>
+				<not><property>b707/air-conditioning/ram-air-switch</property></not>
 			</condition>
 		</error>
 		<exit>
 			<condition>
-				<property>/b707/air-conditioning/ram-air-switch</property>
+				<property>b707/air-conditioning/ram-air-switch</property>
 			</condition>
 		</exit>
 	</step>	
@@ -2312,22 +2329,22 @@
 				Pongalo en posicion START. Si el regimen de RPM sobrepasa el 115% reinicie el compresor.
 			</message>
 			<condition>
-				<not><property>/b707/air-conditioning/compressor-start[0]</property></not>
+				<not><property>b707/air-conditioning/compressor-start[0]</property></not>
 				<greater-than>
-					<property>/b707/air-conditioning/compressor-rpm[0]</property>
+					<property>b707/air-conditioning/compressor-rpm[0]</property>
 					<value>115</value>
 				</greater-than>
 			</condition>
 		</error>
 		<exit>
 			<condition>
-				<property>/b707/air-conditioning/compressor-start[0]</property>
+				<property>b707/air-conditioning/compressor-start[0]</property>
 				<less-than>
-					<property>/b707/air-conditioning/compressor-rpm[0]</property>
+					<property>b707/air-conditioning/compressor-rpm[0]</property>
 					<value>115</value>
 				</less-than>
 				<greater-than>
-					<property>/b707/air-conditioning/compressor-rpm[0]</property>
+					<property>b707/air-conditioning/compressor-rpm[0]</property>
 					<value>90</value>
 				</greater-than>	
 			</condition>
@@ -2360,14 +2377,14 @@
 				Tambien tenga cuidado con las luces ambar del compresor 1. Si es necesario reinicie la primera.
 			</message>
 			<condition>
-				<not><property>/b707/air-conditioning/compressor-start[1]</property></not>
+				<not><property>b707/air-conditioning/compressor-start[1]</property></not>
 				<or>			
 					<greater-than>
-						<property>/b707/air-conditioning/compressor-rpm[1]</property>
+						<property>b707/air-conditioning/compressor-rpm[1]</property>
 						<value>115</value>
 					</greater-than>				
 					<greater-than>
-						<property>/b707/air-conditioning/compressor-rpm[0]</property>
+						<property>b707/air-conditioning/compressor-rpm[0]</property>
 						<value>115</value>
 					</greater-than>
 				</or>
@@ -2375,13 +2392,13 @@
 		</error>
 		<exit>
 			<condition>
-				<property>/b707/air-conditioning/compressor-start[1]</property>
+				<property>b707/air-conditioning/compressor-start[1]</property>
 				<less-than>
-					<property>/b707/air-conditioning/compressor-rpm[1]</property>
+					<property>b707/air-conditioning/compressor-rpm[1]</property>
 					<value>115</value>
 				</less-than>
 				<greater-than>
-					<property>/b707/air-conditioning/compressor-rpm[1]</property>
+					<property>b707/air-conditioning/compressor-rpm[1]</property>
 					<value>90</value>
 				</greater-than>	
 			</condition>
@@ -2414,18 +2431,18 @@
 				Tambien tenga cuidado con las luces ambar de los compresores 1 y 2. Si es necesario reinicielos.
 			</message>
 			<condition>
-				<not><property>/b707/air-conditioning/compressor-start[2]</property></not>
+				<not><property>b707/air-conditioning/compressor-start[2]</property></not>
 				<or>
 					<greater-than>
-						<property>/b707/air-conditioning/compressor-rpm[2]</property>
+						<property>b707/air-conditioning/compressor-rpm[2]</property>
 						<value>115</value>
 					</greater-than>				
 					<greater-than>
-						<property>/b707/air-conditioning/compressor-rpm[1]</property>
+						<property>b707/air-conditioning/compressor-rpm[1]</property>
 						<value>115</value>
 					</greater-than>				
 					<greater-than>
-						<property>/b707/air-conditioning/compressor-rpm[0]</property>
+						<property>b707/air-conditioning/compressor-rpm[0]</property>
 						<value>115</value>
 					</greater-than>
 				</or>
@@ -2433,13 +2450,13 @@
 		</error>
 		<exit>
 			<condition>
-				<property>/b707/air-conditioning/compressor-start[2]</property>
+				<property>b707/air-conditioning/compressor-start[2]</property>
 				<less-than>
-					<property>/b707/air-conditioning/compressor-rpm[2]</property>
+					<property>b707/air-conditioning/compressor-rpm[2]</property>
 					<value>115</value>
 				</less-than>
 				<greater-than>
-					<property>/b707/air-conditioning/compressor-rpm[2]</property>
+					<property>b707/air-conditioning/compressor-rpm[2]</property>
 					<value>90</value>
 				</greater-than>	
 			</condition>
@@ -2471,14 +2488,14 @@
 				Abra el conducto cruzado, L y R para ABRIR.
 			</message>
 			<condition>
-				<not><property>/b707/air-conditioning/wing-valve[0]</property></not>
-				<not><property>/b707/air-conditioning/wing-valve[1]</property></not>
+				<not><property>b707/air-conditioning/wing-valve[0]</property></not>
+				<not><property>b707/air-conditioning/wing-valve[1]</property></not>
 			</condition>
 		</error>
 		<exit>
 			<condition>
-				<property>/b707/air-conditioning/wing-valve[0]</property>
-				<property>/b707/air-conditioning/wing-valve[1]</property>
+				<property>b707/air-conditioning/wing-valve[0]</property>
+				<property>b707/air-conditioning/wing-valve[1]</property>
 			</condition>
 		</exit>
 	</step>
@@ -2508,14 +2525,14 @@
 				Abra las dos unidades de aire acondicionado. Coloquelas en la posicion ON.
 			</message>
 			<condition>
-				<not><property>/b707/air-conditioning/air-cond-unit-left-start</property></not>
-				<not><property>/b707/air-conditioning/air-cond-unit-right-start</property></not>
+				<not><property>b707/air-conditioning/air-cond-unit-left-start</property></not>
+				<not><property>b707/air-conditioning/air-cond-unit-right-start</property></not>
 			</condition>
 		</error>
 		<exit>
 			<condition>
-				<property>/b707/air-conditioning/air-cond-unit-left-start</property>
-				<property>/b707/air-conditioning/air-cond-unit-right-start</property>
+				<property>b707/air-conditioning/air-cond-unit-left-start</property>
+				<property>b707/air-conditioning/air-cond-unit-right-start</property>
 			</condition>
 		</exit>
 	</step>	
@@ -2547,12 +2564,12 @@
 				Baje la palanca para cerrar la valvula de seguridad, la luz ambar se apagara.
 			</message>
 			<condition>
-				<not><property>/b707/pressurization/safety-valve</property></not>
+				<not><property>b707/pressurization/safety-valve</property></not>
 			</condition>
 		</error>
 		<exit>
 			<condition>
-				<property>/b707/pressurization/safety-valve</property>
+				<property>b707/pressurization/safety-valve</property>
 			</condition>
 		</exit>
 	</step>		
@@ -2582,12 +2599,12 @@
 				Coloquelo en la posicion ON.
 			</message>
 			<condition>
-				<not><property>/b707/pressurization/manual-mode-switch</property></not>
+				<not><property>b707/pressurization/manual-mode-switch</property></not>
 			</condition>
 		</error>
 		<exit>
 			<condition>
-				<property>/b707/pressurization/manual-mode-switch</property>
+				<property>b707/pressurization/manual-mode-switch</property>
 			</condition>
 		</exit>
 	</step>	
@@ -2617,12 +2634,12 @@
 				Coloquelo en la posicion ON.
 			</message>
 			<condition>
-				<not><property>/b707/pressurization/mode-switch</property></not>
+				<not><property>b707/pressurization/mode-switch</property></not>
 			</condition>
 		</error>
 		<exit>
 			<condition>
-				<property>/b707/pressurization/mode-switch</property>
+				<property>b707/pressurization/mode-switch</property>
 			</condition>
 		</exit>
 	</step>	

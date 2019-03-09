@@ -1,11 +1,27 @@
-<?xml version="1.0"?>
-<!--###################################################################################
-		Lake of Constance Hangar :: M.Kraus
-		Boeing 707 for Flightgear Septemper 2013
-		This file is licenced under the terms of the GNU General Public Licence V2 or later
-		###################################################################################
--->
- 
+<?xml version="1.0" encoding="UTF-8"?>
+<!--####################################################################
+Lake of Constance Hangar
+Boeing 707 for Flightgear
+Copyright (C) 2013 M.Kraus
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Every software has a developer, also free software. 
+As a gesture of courtesy and respect, I would be delighted 
+if you contacted me before making any changes to this software. 
+<info (at) marc-kraus.de> April, 2017
+########################################################################-->
 <PropertyList>
 
  <fx>
@@ -15,37 +31,37 @@
  		<path>Sounds/whine.wav</path>
 		<mode>looped</mode>
 		<condition>
-			<property>/engines/engine[0]/n1</property>
+			<property>engines/engine[0]/n1</property>
 			<or>
 				<and>
-					<not><property>/sim/current-view/internal</property></not>
+					<not><property>sim/current-view/internal</property></not>
 					<not>
 						<equals>
-							<property>/sim/current-view/name</property>
+							<property>sim/current-view/name</property>
 							<value type="string">Passengers View</value>
 						</equals>
 					</not>					
 					<not>
 						<equals>
-							<property>/sim/current-view/view-number</property>
+							<property>sim/current-view/view-number</property>
 							<value>12</value>	
 						</equals>
 					</not>
 				</and>
 				<greater-than>
-					<property>/instrumentation/doors/pilotwin/position-norm</property>
+					<property>instrumentation/doors/pilotwin/position-norm</property>
 					<value>0.01</value>
 				</greater-than>
 			</or>
 		</condition>			    
 		<volume>
-			<property>/engines/engine[0]/n1</property>
+			<property>engines/engine[0]/n1</property>
 			<type>ln</type>
 			<factor>0.18</factor>
 			<offset>0.05</offset>
 		</volume>
 		<pitch>
-			<property>/engines/engine[0]/n1</property>
+			<property>engines/engine[0]/n1</property>
 			<type>log</type>
 			<factor>1.2</factor>
 			<offset>0.10</offset>
@@ -71,37 +87,37 @@
  		<path>Sounds/whine.wav</path>
 		<mode>looped</mode>
 		<condition>
-			<property>/engines/engine[1]/n1</property>
+			<property>engines/engine[1]/n1</property>
 			<or>
 				<and>
-					<not><property>/sim/current-view/internal</property></not>
+					<not><property>sim/current-view/internal</property></not>
 					<not>
 						<equals>
-							<property>/sim/current-view/name</property>
+							<property>sim/current-view/name</property>
 							<value type="string">Passengers View</value>
 						</equals>
 					</not>
 					<not>
 						<equals>
-							<property>/sim/current-view/view-number</property>
+							<property>sim/current-view/view-number</property>
 							<value>12</value>	
 						</equals>
 					</not>
 				</and>
 				<greater-than>
-					<property>/instrumentation/doors/pilotwin/position-norm</property>
+					<property>instrumentation/doors/pilotwin/position-norm</property>
 					<value>0.01</value>
 				</greater-than>
 			</or>
 		</condition>	   
 		<volume>
-			<property>/engines/engine[1]/n1</property>
+			<property>engines/engine[1]/n1</property>
 			<type>ln</type>
 			<factor>0.18</factor>
 			<offset>0.05</offset>
 		</volume>
 		<pitch>
-			<property>/engines/engine[1]/n1</property>
+			<property>engines/engine[1]/n1</property>
 			<type>log</type>
 			<factor>1.2</factor>
 			<offset>0.10</offset>
@@ -127,37 +143,37 @@
  		<path>Sounds/whine.wav</path>
 		<mode>looped</mode>
 		<condition>
-			<property>/engines/engine[2]/n1</property>
+			<property>engines/engine[2]/n1</property>
 			<or>
 				<and>
-					<not><property>/sim/current-view/internal</property></not>
+					<not><property>sim/current-view/internal</property></not>
 					<not>
 						<equals>
-							<property>/sim/current-view/name</property>
+							<property>sim/current-view/name</property>
 							<value type="string">Passengers View</value>
 						</equals>
 					</not>
 					<not>
 						<equals>
-							<property>/sim/current-view/view-number</property>
+							<property>sim/current-view/view-number</property>
 							<value>12</value>	
 						</equals>
 					</not>
 				</and>
 				<greater-than>
-					<property>/instrumentation/doors/copilotwin/position-norm</property>
+					<property>instrumentation/doors/copilotwin/position-norm</property>
 					<value>0.01</value>
 				</greater-than>
 			</or>
 		</condition>	    
 		<volume>
-			<property>/engines/engine[2]/n1</property>
+			<property>engines/engine[2]/n1</property>
 			<type>ln</type>
 			<factor>0.18</factor>
 			<offset>0.05</offset>
 		</volume>
 		<pitch>
-			<property>/engines/engine[2]/n1</property>
+			<property>engines/engine[2]/n1</property>
 			<type>log</type>
 			<factor>1.2</factor>
 			<offset>0.10</offset>
@@ -183,37 +199,37 @@
  		<path>Sounds/whine.wav</path>
 		<mode>looped</mode>
 		<condition>
-			<property>/engines/engine[3]/n1</property>
+			<property>engines/engine[3]/n1</property>
 			<or>
 				<and>
-					<not><property>/sim/current-view/internal</property></not>
+					<not><property>sim/current-view/internal</property></not>
 					<not>
 						<equals>
-							<property>/sim/current-view/name</property>
+							<property>sim/current-view/name</property>
 							<value type="string">Passengers View</value>
 						</equals>
 					</not>
 					<not>
 						<equals>
-							<property>/sim/current-view/view-number</property>
+							<property>sim/current-view/view-number</property>
 							<value>12</value>	
 						</equals>
 					</not>
 				</and>
 				<greater-than>
-					<property>/instrumentation/doors/copilotwin/position-norm</property>
+					<property>instrumentation/doors/copilotwin/position-norm</property>
 					<value>0.01</value>
 				</greater-than>
 			</or>
 		</condition>	   
 		<volume>
-			<property>/engines/engine[3]/n1</property>
+			<property>engines/engine[3]/n1</property>
 			<type>ln</type>
 			<factor>0.18</factor>
 			<offset>0.05</offset>
 		</volume>
 		<pitch>
-			<property>/engines/engine[3]/n1</property>
+			<property>engines/engine[3]/n1</property>
 			<type>log</type>
 			<factor>1.2</factor>
 			<offset>0.10</offset>
@@ -240,23 +256,23 @@
  		<path>Sounds/whine.wav</path>
 		<mode>looped</mode>
 		<condition>
-			<property>/engines/engine[0]/n1</property>
+			<property>engines/engine[0]/n1</property>
 			<or>
-				<property>/sim/current-view/internal</property>
+				<property>sim/current-view/internal</property>
 				<equals>
-					<property>/sim/current-view/name</property>
+					<property>sim/current-view/name</property>
 					<value type="string">Passengers View</value>
 				</equals>
 			</or>
 		</condition>	   
 		<volume>
-			<property>/engines/engine[0]/n1</property>
+			<property>engines/engine[0]/n1</property>
 			<type>ln</type>
 			<factor>0.008</factor>
 			<offset>0.07</offset>
 		</volume>
 		<pitch>
-			<property>/engines/engine[0]/n1</property>
+			<property>engines/engine[0]/n1</property>
 			<type>log</type>
 			<factor>1.2</factor>
 			<offset>0.10</offset>
@@ -282,23 +298,23 @@
  		<path>Sounds/whine.wav</path>
 		<mode>looped</mode>
 		<condition>
-			<property>/engines/engine[1]/n1</property>			
+			<property>engines/engine[1]/n1</property>			
 			<or>
-				<property>/sim/current-view/internal</property>
+				<property>sim/current-view/internal</property>
 				<equals>
-					<property>/sim/current-view/name</property>
+					<property>sim/current-view/name</property>
 					<value type="string">Passengers View</value>
 				</equals>
 			</or>
 		</condition>	   
 		<volume>
-			<property>/engines/engine[1]/n1</property>
+			<property>engines/engine[1]/n1</property>
 			<type>ln</type>
 			<factor>0.008</factor>
 			<offset>0.07</offset>
 		</volume>
 		<pitch>
-			<property>/engines/engine[1]/n1</property>
+			<property>engines/engine[1]/n1</property>
 			<type>log</type>
 			<factor>1.2</factor>
 			<offset>0.10</offset>
@@ -324,23 +340,23 @@
  		<path>Sounds/whine.wav</path>
 		<mode>looped</mode>
 		<condition>
-			<property>/engines/engine[2]/n1</property>			
+			<property>engines/engine[2]/n1</property>			
 			<or>
-				<property>/sim/current-view/internal</property>
+				<property>sim/current-view/internal</property>
 				<equals>
-					<property>/sim/current-view/name</property>
+					<property>sim/current-view/name</property>
 					<value type="string">Passengers View</value>
 				</equals>
 			</or>
 		</condition>	   
 		<volume>
-			<property>/engines/engine[2]/n1</property>
+			<property>engines/engine[2]/n1</property>
 			<type>ln</type>
 			<factor>0.008</factor>
 			<offset>0.07</offset>
 		</volume>
 		<pitch>
-			<property>/engines/engine[2]/n1</property>
+			<property>engines/engine[2]/n1</property>
 			<type>log</type>
 			<factor>1.2</factor>
 			<offset>0.10</offset>
@@ -366,23 +382,23 @@
  		<path>Sounds/whine.wav</path>
 		<mode>looped</mode>
 		<condition>
-			<property>/engines/engine[3]/n1</property>			
+			<property>engines/engine[3]/n1</property>			
 			<or>
-				<property>/sim/current-view/internal</property>
+				<property>sim/current-view/internal</property>
 				<equals>
-					<property>/sim/current-view/name</property>
+					<property>sim/current-view/name</property>
 					<value type="string">Passengers View</value>
 				</equals>
 			</or>
 		</condition>	   
 		<volume>
-			<property>/engines/engine[3]/n1</property>
+			<property>engines/engine[3]/n1</property>
 			<type>ln</type>
 			<factor>0.008</factor>
 			<offset>0.07</offset>
 		</volume>
 		<pitch>
-			<property>/engines/engine[3]/n1</property>
+			<property>engines/engine[3]/n1</property>
 			<type>log</type>
 			<factor>1.2</factor>
 			<offset>0.10</offset>
@@ -411,37 +427,37 @@
 		<mode>looped</mode>
 		<condition>	
 			<and>
-				<not><property>/sim/current-view/internal</property></not>
+				<not><property>sim/current-view/internal</property></not>
 				<not>
 					<equals>
-						<property>/sim/current-view/name</property>
+						<property>sim/current-view/name</property>
 						<value type="string">Passengers View</value>
 					</equals>
 				</not>
 			</and>
 			<or>
 				<and>
-					<property>/engines/engine[0]/running</property>
+					<property>engines/engine[0]/running</property>
 					<greater-than>
-						<property>/engines/engine[0]/n1</property>
+						<property>engines/engine[0]/n1</property>
 						<value>30</value>
 					</greater-than>
 				</and>
 				<and>
-					<property>/engines/engine[1]/running</property>
+					<property>engines/engine[1]/running</property>
 					<greater-than>
-						<property>/engines/engine[1]/n1</property>
+						<property>engines/engine[1]/n1</property>
 						<value>30</value>
 					</greater-than>
 				</and>     
 			</or>
 		</condition>
 		<volume>
-			<property>/engines/engine[0]/n1</property>
+			<property>engines/engine[0]/n1</property>
 			<factor>0.015</factor>
 		</volume>
 		<volume>
-			<property>/engines/engine[1]/n1</property>
+			<property>engines/engine[1]/n1</property>
 			<factor>0.015</factor>
 		</volume>
 		<position>
@@ -457,35 +473,35 @@
 		<mode>looped</mode>
 		<condition>			
 			<or>
-				<property>/sim/current-view/internal</property>
+				<property>sim/current-view/internal</property>
 				<equals>
-					<property>/sim/current-view/name</property>
+					<property>sim/current-view/name</property>
 					<value type="string">Passengers View</value>
 				</equals>
 			</or>
 			<or>
 				<and>
-					<property>/engines/engine[0]/running</property>
+					<property>engines/engine[0]/running</property>
 					<greater-than>
-						<property>/engines/engine[0]/n1</property>
+						<property>engines/engine[0]/n1</property>
 						<value>30</value>
 					</greater-than>
 				</and>
 				<and>
-					<property>/engines/engine[1]/running</property>
+					<property>engines/engine[1]/running</property>
 					<greater-than>
-						<property>/engines/engine[1]/n1</property>
+						<property>engines/engine[1]/n1</property>
 						<value>30</value>
 					</greater-than>
 				</and>     
 			</or>
 		</condition>
 		<volume>
-			<property>/engines/engine[0]/n1</property>
+			<property>engines/engine[0]/n1</property>
 			<factor>0.015</factor>
 		</volume>
 		<volume>
-			<property>/engines/engine[1]/n1</property>
+			<property>engines/engine[1]/n1</property>
 			<factor>0.015</factor>
 		</volume>
 		<position>
@@ -501,37 +517,37 @@
 		<mode>looped</mode>
 		<condition>			
 			<and>
-				<not><property>/sim/current-view/internal</property></not>
+				<not><property>sim/current-view/internal</property></not>
 				<not>
 					<equals>
-						<property>/sim/current-view/name</property>
+						<property>sim/current-view/name</property>
 						<value type="string">Passengers View</value>
 					</equals>
 				</not>
 			</and>
 			<or>
 				<and>
-					<property>/engines/engine[0]/running</property>
+					<property>engines/engine[0]/running</property>
 					<greater-than>
-						<property>/engines/engine[0]/n1</property>
+						<property>engines/engine[0]/n1</property>
 						<value>30</value>
 					</greater-than>
 				</and>
 				<and>
-					<property>/engines/engine[1]/running</property>
+					<property>engines/engine[1]/running</property>
 					<greater-than>
-						<property>/engines/engine[1]/n1</property>
+						<property>engines/engine[1]/n1</property>
 						<value>30</value>
 					</greater-than>
 				</and>     
 			</or>
 		</condition>
 		<volume>
-			<property>/engines/engine[0]/n1</property>
+			<property>engines/engine[0]/n1</property>
 			<factor>0.015</factor>
 		</volume>
 		<volume>
-			<property>/engines/engine[1]/n1</property>
+			<property>engines/engine[1]/n1</property>
 			<factor>0.015</factor>
 		</volume>
 		<position>
@@ -547,37 +563,37 @@
 		<mode>looped</mode>
 		<condition>		
 			<and>
-				<not><property>/sim/current-view/internal</property></not>
+				<not><property>sim/current-view/internal</property></not>
 				<not>
 					<equals>
-						<property>/sim/current-view/name</property>
+						<property>sim/current-view/name</property>
 						<value type="string">Passengers View</value>
 					</equals>
 				</not>
 			</and>
 			<or>
 				<and>
-					<property>/engines/engine[2]/running</property>
+					<property>engines/engine[2]/running</property>
 					<greater-than>
-						<property>/engines/engine[2]/n1</property>
+						<property>engines/engine[2]/n1</property>
 						<value>30</value>
 					</greater-than>
 				</and>
 				<and>
-					<property>/engines/engine[3]/running</property>
+					<property>engines/engine[3]/running</property>
 					<greater-than>
-						<property>/engines/engine[3]/n1</property>
+						<property>engines/engine[3]/n1</property>
 						<value>30</value>
 					</greater-than>
 				</and>     
 			</or>
 		</condition>
 		<volume>
-			<property>/engines/engine[2]/n1</property>
+			<property>engines/engine[2]/n1</property>
 			<factor>0.015</factor>
 		</volume>
 		<volume>
-			<property>/engines/engine[3]/n1</property>
+			<property>engines/engine[3]/n1</property>
 			<factor>0.015</factor>
 		</volume>
 		<position>
@@ -593,35 +609,35 @@
 		<mode>looped</mode>
 		<condition>			
 			<or>
-				<property>/sim/current-view/internal</property>
+				<property>sim/current-view/internal</property>
 				<equals>
-					<property>/sim/current-view/name</property>
+					<property>sim/current-view/name</property>
 					<value type="string">Passengers View</value>
 				</equals>
 			</or>
 			<or>
 				<and>
-					<property>/engines/engine[2]/running</property>
+					<property>engines/engine[2]/running</property>
 					<greater-than>
-						<property>/engines/engine[2]/n1</property>
+						<property>engines/engine[2]/n1</property>
 						<value>30</value>
 					</greater-than>
 				</and>
 				<and>
-					<property>/engines/engine[3]/running</property>
+					<property>engines/engine[3]/running</property>
 					<greater-than>
-						<property>/engines/engine[3]/n1</property>
+						<property>engines/engine[3]/n1</property>
 						<value>30</value>
 					</greater-than>
 				</and>     
 			</or>
 		</condition>
 		<volume>
-			<property>/engines/engine[2]/n1</property>
+			<property>engines/engine[2]/n1</property>
 			<factor>0.015</factor>
 		</volume>
 		<volume>
-			<property>/engines/engine[3]/n1</property>
+			<property>engines/engine[3]/n1</property>
 			<factor>0.015</factor>
 		</volume>
 		<position>
@@ -637,37 +653,37 @@
 		<mode>looped</mode>
 		<condition>			
 			<and>
-				<not><property>/sim/current-view/internal</property></not>
+				<not><property>sim/current-view/internal</property></not>
 				<not>
 					<equals>
-						<property>/sim/current-view/name</property>
+						<property>sim/current-view/name</property>
 						<value type="string">Passengers View</value>
 					</equals>
 				</not>
 			</and>
 			<or>
 				<and>
-					<property>/engines/engine[2]/running</property>
+					<property>engines/engine[2]/running</property>
 					<greater-than>
-						<property>/engines/engine[2]/n1</property>
+						<property>engines/engine[2]/n1</property>
 						<value>30</value>
 					</greater-than>
 				</and>
 				<and>
-					<property>/engines/engine[3]/running</property>
+					<property>engines/engine[3]/running</property>
 					<greater-than>
-						<property>/engines/engine[3]/n1</property>
+						<property>engines/engine[3]/n1</property>
 						<value>30</value>
 					</greater-than>
 				</and>     
 			</or>
 		</condition>
 		<volume>
-			<property>/engines/engine[2]/n1</property>
+			<property>engines/engine[2]/n1</property>
 			<factor>0.015</factor>
 		</volume>
 		<volume>
-			<property>/engines/engine[3]/n1</property>
+			<property>engines/engine[3]/n1</property>
 			<factor>0.015</factor>
 		</volume>
 		<position>
@@ -683,24 +699,24 @@
 		<path>Aircraft/707/Sounds/thrust.wav</path>
 		<condition>			
 			<or>
-				<property>/sim/current-view/internal</property>
+				<property>sim/current-view/internal</property>
 				<equals>
-					<property>/sim/current-view/name</property>
+					<property>sim/current-view/name</property>
 					<value type="string">Passengers View</value>
 				</equals>
 			</or>
 			<or>
-				<property>/gear/gear[0]/wow</property>
-				<property>/gear/gear[1]/wow</property>
-				<property>/gear/gear[2]/wow</property>
+				<property>gear/gear[0]/wow</property>
+				<property>gear/gear[1]/wow</property>
+				<property>gear/gear[2]/wow</property>
 			</or>
 		</condition>
 		<volume>
-			<property>/velocities/groundspeed-kt</property>
+			<property>velocities/groundspeed-kt</property>
 			<factor>1.5</factor>
 		</volume>
 		<pitch>
-			<property>/velocities/groundspeed-kt</property>
+			<property>velocities/groundspeed-kt</property>
 			<factor>0.005</factor>
 			<offset>0.5</offset>
 		</pitch>
@@ -712,24 +728,24 @@
 		<path>Aircraft/707/Sounds/rumblingOnGround.wav</path>
 		<condition>			
 			<or>
-				<property>/sim/current-view/internal</property>
+				<property>sim/current-view/internal</property>
 				<equals>
-					<property>/sim/current-view/name</property>
+					<property>sim/current-view/name</property>
 					<value type="string">Passengers View</value>
 				</equals>
 			</or>
 			<or>
-				<property>/gear/gear[0]/wow</property>
-				<property>/gear/gear[1]/wow</property>
-				<property>/gear/gear[2]/wow</property>
+				<property>gear/gear[0]/wow</property>
+				<property>gear/gear[1]/wow</property>
+				<property>gear/gear[2]/wow</property>
 			</or>
 		</condition>
 		<volume>
-			<property>/velocities/groundspeed-kt</property>
+			<property>velocities/groundspeed-kt</property>
 			<factor>2.0</factor>
 		</volume>
 		<pitch>
-			<property>/velocities/groundspeed-kt</property>
+			<property>velocities/groundspeed-kt</property>
 			<factor>0.001</factor>
 			<offset>0.5</offset>
 		</pitch>
@@ -739,7 +755,7 @@
 		<name>gear</name>
 		<mode>in-transit</mode>
 		<path>Sounds/gear.wav</path>
-		<property>/gear/gear[0]/position-norm</property>
+		<property>gear/gear[0]/position-norm</property>
 		<pitch>
 			<internal>dt_play</internal>
 			<offset>1.0</offset>
@@ -752,7 +768,7 @@
 		<path>Sounds/gear-lck.wav</path>
 		<condition>
 			<equals>
-				<property>/gear/gear[0]/position-norm</property>
+				<property>gear/gear[0]/position-norm</property>
 				<value>0</value>
 			</equals>
 			<not><property>b707/crashed</property></not>
@@ -766,18 +782,18 @@
      <condition>			
      	<and>
 				<greater-than>
-					<property>/velocities/groundspeed-kt</property>
+					<property>velocities/groundspeed-kt</property>
 					<value>2</value>
 				</greater-than>
 				<property>b707/crashed</property>
 		   </and>
      </condition>
 			<volume>
-				<property>/velocities/groundspeed-kt</property>
+				<property>velocities/groundspeed-kt</property>
 				<factor>2.0</factor>
 			</volume>
 			<pitch>
-				<property>/velocities/groundspeed-kt</property>
+				<property>velocities/groundspeed-kt</property>
 				<factor>0.001</factor>
 				<offset>0.5</offset>
 			</pitch>
@@ -808,7 +824,7 @@
 		<name>flaps</name>
 		<mode>in-transit</mode>
 		<path>Sounds/flaps.wav</path>
-		<property>/surface-positions/flap-pos-norm</property>
+		<property>surface-positions/flap-pos-norm</property>
 		<volume>
 			<factor>0.45</factor>
 		</volume>
@@ -818,12 +834,12 @@
 		<name>speedbrake</name>	
 		<mode>in-transit</mode>
 		<path>Sounds/flaps.wav</path>
-		<property>/surface-positions/speedbrake-pos-norm</property>
+		<property>surface-positions/speedbrake-pos-norm</property>
 		<volume>
 			<factor>1.0</factor>
 		</volume>
 		<pitch>
-			<property>/surface-positions/speedbrake-pos-norm</property>
+			<property>surface-positions/speedbrake-pos-norm</property>
 			<factor>0.4</factor>
 		</pitch>
 	</speedbrake>
@@ -834,15 +850,15 @@
 		<path>Aircraft/707/Sounds/reverser.wav</path>
 		<condition>			
 			<or>
-				<property>/engines/engine[0]/running</property>
-				<property>/engines/engine[1]/running</property>
-				<property>/engines/engine[2]/running</property>
-				<property>/engines/engine[3]/running</property>     
+				<property>engines/engine[0]/running</property>
+				<property>engines/engine[1]/running</property>
+				<property>engines/engine[2]/running</property>
+				<property>engines/engine[3]/running</property>     
 			</or>
-			<property>/engines/engine[0]/reversed</property>
+			<property>engines/engine[0]/reversed</property>
 		</condition>
 		<volume>
-			<property>/controls/engines/engine[0]/throttle</property>
+			<property>controls/engines/engine[0]/throttle</property>
 			<factor>1</factor>
 		</volume>
 	</reverser>	
@@ -851,22 +867,22 @@
 		<name>wind</name>
 		<mode>looped</mode>
 		<path>Sounds/wind-8khz.wav</path>
-		<property>/velocities/airspeed-kt</property>
+		<property>velocities/airspeed-kt</property>
 		<volume>
-			<property>/position/altitude-ft</property>
+			<property>position/altitude-ft</property>
 			<factor>-0.000015</factor>
 			<offset>1.0</offset>
 			<min>0.1</min>
 			<max>1.0</max>
 		</volume>
 		<volume>
-			<property>/velocities/airspeed-kt</property>
+			<property>velocities/airspeed-kt</property>
 			<factor>0.0015</factor>
 			<min>0.03</min>
 			<max>0.25</max>
 		</volume>
 		<pitch>
-			<property>/velocities/airspeed-kt</property>
+			<property>velocities/airspeed-kt</property>
 			<factor>0.01</factor>
 			<offset>1.25</offset>
 		</pitch>
@@ -953,19 +969,19 @@
 					<value>20</value>
 				</greater-than>
 				<or>
-					<property>/controls/test/warn-knob</property>
+					<property>controls/test/warn-knob</property>
 					<and>
 						<less-than>
-							<property>/velocities/airspeed-kt</property>
+							<property>velocities/airspeed-kt</property>
 							<value>120.0</value>
 						</less-than>
 						<greater-than>
-							<property>/position/altitude-agl-ft</property>
+							<property>position/altitude-agl-ft</property>
 							<value>600.0</value>					
 						</greater-than>
 					</and>
 					<greater-than>
-						<property>/velocities/mach</property>
+						<property>velocities/mach</property>
 						<value>0.9</value>
 					</greater-than>
 				</or>
@@ -1002,7 +1018,7 @@
 							<not><property>b707/pressurization/safety-valve</property></not>
 							<not><property>b707/pressurization/alt-cutout-horn</property></not>
 						</and>
-						<property>/controls/test/warn-knob</property>
+						<property>controls/test/warn-knob</property>
 					</or>
 				</and>
       </condition>
@@ -1022,11 +1038,11 @@
 						<value>20</value>
 					</greater-than>
 		    	<or>
-						<property>/controls/test/warn-knob</property>
-						<property>/controls/engines/engine[0]/fire</property>
-						<property>/controls/engines/engine[1]/fire</property>
-						<property>/controls/engines/engine[2]/fire</property>
-						<property>/controls/engines/engine[3]/fire</property>
+						<property>controls/test/warn-knob</property>
+						<property>controls/engines/engine[0]/fire</property>
+						<property>controls/engines/engine[1]/fire</property>
+						<property>controls/engines/engine[2]/fire</property>
+						<property>controls/engines/engine[3]/fire</property>
 					</or>
 				</and>
       </condition>
@@ -1045,8 +1061,8 @@
 						<property>b707/ess-bus</property>
 						<value>20</value>
 					</greater-than>
-				  <property>/instrumentation/aglradar/power-btn</property>
-				  <property>/instrumentation/aglradar/mda-lamp</property>
+				  <property>instrumentation/aglradar/power-btn</property>
+				  <property>instrumentation/aglradar/mda-lamp</property>
 				</and>
       </condition>
 		<volume>
@@ -1169,19 +1185,19 @@
       <path>Aircraft/707/Sounds/rain.wav</path>
       <condition>
         <greater-than>
-          <property>/environment/metar/rain-norm</property>
+          <property>environment/metar/rain-norm</property>
           <value>0.2</value>
         </greater-than>
       </condition>
       <volume>
-        <property>/environment/metar/rain-norm</property>
+        <property>environment/metar/rain-norm</property>
         <factor>1.00</factor>
         <offset>0.00</offset>
         <min>0.4</min>
         <max>0.9</max>
       </volume>
       <pitch>
-        <property>/velocities/airspeed-kt</property>
+        <property>velocities/airspeed-kt</property>
         <factor>0.001</factor>
         <offset>1.0</offset>
       </pitch>
@@ -1192,7 +1208,7 @@
 		<mode>once</mode>
 		<path>Aircraft/707/Sounds/pneumaticlose.wav</path>
       <condition>
-				 <property>/controls/gear/brake-parking</property>
+				 <property>controls/gear/brake-parking</property>
       </condition>
 		<volume>
 			<factor>1</factor>
@@ -1204,7 +1220,7 @@
 		<mode>once</mode>
 		<path>Aircraft/707/Sounds/pneumatic.wav</path>
       <condition>
-				 <not><property>/controls/gear/brake-parking</property></not>
+				 <not><property>controls/gear/brake-parking</property></not>
       </condition>
 		<volume>
 			<factor>1</factor>
@@ -1216,7 +1232,7 @@
    <path>Sounds/door_close.wav</path>
    <condition>
       <equals>
-       <property>/instrumentation/doors/pasfront/position-norm</property>
+       <property>instrumentation/doors/pasfront/position-norm</property>
        <value>0.0</value>
       </equals>
    </condition>
@@ -1230,7 +1246,7 @@
    <path>Sounds/door_close.wav</path>
    <condition>
       <equals>
-       <property>/instrumentation/doors/pasrear/position-norm</property>
+       <property>instrumentation/doors/pasrear/position-norm</property>
        <value>0.0</value>
       </equals>
    </condition>
@@ -1244,7 +1260,7 @@
    <path>Sounds/door_close.wav</path>
    <condition>
       <equals>
-       <property>/instrumentation/doors/nose/position-norm</property>
+       <property>instrumentation/doors/nose/position-norm</property>
        <value>0.0</value>
       </equals>
    </condition>
@@ -1258,7 +1274,7 @@
    <path>Sounds/door_close.wav</path>
    <condition>
       <equals>
-       <property>/instrumentation/doors/cargo/position-norm</property>
+       <property>instrumentation/doors/cargo/position-norm</property>
        <value>0.0</value>
       </equals>
    </condition>
@@ -1272,7 +1288,7 @@
    <path>Sounds/door_close.wav</path>
    <condition>
       <equals>
-       <property>/instrumentation/doors/belly/position-norm</property>
+       <property>instrumentation/doors/belly/position-norm</property>
        <value>0.0</value>
       </equals>
    </condition>
@@ -1286,7 +1302,7 @@
 		<name>cargoDoor</name>
 		<mode>in-transit</mode>
 		<path>Aircraft/707/Sounds/cargo_door.wav</path>
-		<property>/instrumentation/doors/cargo/position-norm</property>
+		<property>instrumentation/doors/cargo/position-norm</property>
 		<pitch>
 			<internal>dt_play</internal>
 			<offset>1.0</offset>
@@ -1299,7 +1315,7 @@
 		<name>bellyDoor</name>
 		<mode>in-transit</mode>
 		<path>Aircraft/707/Sounds/cargo_door.wav</path>
-		<property>/instrumentation/doors/belly/position-norm</property>
+		<property>instrumentation/doors/belly/position-norm</property>
 		<pitch>
 			<internal>dt_play</internal>
 			<offset>1.0</offset>
@@ -1312,7 +1328,7 @@
 		<name>refuelBoom</name>
 		<mode>in-transit</mode>
 		<path>Aircraft/707/Sounds/cargo_door.wav</path>
-		<property>/instrumentation/doors/refuel-boom/position-norm</property>
+		<property>instrumentation/doors/refuel-boom/position-norm</property>
 		<pitch>
 			<internal>dt_play</internal>
 			<offset>1.0</offset>
@@ -1348,7 +1364,7 @@
    <name>click on</name>
    <path>Aircraft/707/Sounds/click.wav</path>
    <condition>
-    <property>/instrumentation/generic/click</property>
+    <property>instrumentation/generic/click</property>
    </condition>
    <volume>
     <max>0.2</max>
@@ -1360,7 +1376,7 @@
    <path>Aircraft/707/Sounds/click.wav</path>
    <condition>
     <not>
-     <property>/instrumentation/generic/click</property>
+     <property>instrumentation/generic/click</property>
     </not>
    </condition>
    <volume>
@@ -1373,7 +1389,7 @@
     <mode>once</mode>
     <path>Aircraft/707/Sounds/click.wav</path>
     <condition>
-      <property>/sim/sound/switch1</property>
+      <property>sim/sound/switch1</property>
     </condition>
     <volume>
       <offset> 1 </offset>
@@ -1386,7 +1402,7 @@
     <path>Aircraft/707/Sounds/click.wav</path>
     <condition>
       <not>
-        <property>/sim/sound/switch1</property>
+        <property>sim/sound/switch1</property>
       </not>
     </condition>
     <volume>
@@ -1399,7 +1415,7 @@
     <mode>once</mode>
     <path>Aircraft/707/Sounds/click2.wav</path>
     <condition>
-      <property>/sim/sound/switch2</property>
+      <property>sim/sound/switch2</property>
     </condition>
     <volume>
       <offset> 1 </offset>
@@ -1412,7 +1428,7 @@
     <path>Aircraft/707/Sounds/click2.wav</path>
     <condition>
       <not>
-        <property>/sim/sound/switch2</property>
+        <property>sim/sound/switch2</property>
       </not>
     </condition>
     <volume>
@@ -1425,7 +1441,7 @@
     <mode>once</mode>
     <path>Aircraft/707/Sounds/click3.wav</path>
     <condition>
-      <property>/sim/sound/switch3</property>
+      <property>sim/sound/switch3</property>
     </condition>
     <volume>
       <offset> 0.5 </offset>
@@ -1438,7 +1454,7 @@
     <path>Aircraft/707/Sounds/click3.wav</path>
     <condition>
       <not>
-        <property>/sim/sound/switch3</property>
+        <property>sim/sound/switch3</property>
       </not>
     </condition>
     <volume>
@@ -1451,7 +1467,7 @@
     <mode>once</mode>
     <path>Aircraft/707/Sounds/click4.wav</path>
     <condition>
-      <property>/sim/sound/switch4</property>
+      <property>sim/sound/switch4</property>
     </condition>
     <volume>
       <offset> 1 </offset>
@@ -1464,7 +1480,7 @@
     <path>Aircraft/707/Sounds/click4.wav</path>
     <condition>
       <not>
-        <property>/sim/sound/switch4</property>
+        <property>sim/sound/switch4</property>
       </not>
     </condition>
     <volume>
@@ -1478,19 +1494,19 @@
       <path>Aircraft/707/Sounds/hu.wav</path>
       <condition>
         <less-than>
-      		<property>/controls/special/wiper-deg</property>
+      		<property>controls/special/wiper-deg</property>
           <value>109</value>
         </less-than>
       </condition>
       <volume>
-        <property>/environment/metar/rain-norm</property>
+        <property>environment/metar/rain-norm</property>
         <factor>1.00</factor>
         <offset>0.00</offset>
         <min>0.3</min>
         <max>0.8</max>
       </volume>
       <pitch>
-        <property>/velocities/airspeed-kt</property>
+        <property>velocities/airspeed-kt</property>
         <factor>0.01</factor>
         <offset>1.0</offset>
       </pitch>
@@ -1502,19 +1518,19 @@
       <path>Aircraft/707/Sounds/ho.wav</path>
       <condition>
         <greater-than>
-      		<property>/controls/special/wiper-deg</property>
+      		<property>controls/special/wiper-deg</property>
           <value>1</value>
         </greater-than>
       </condition>
       <volume>
-        <property>/environment/metar/rain-norm</property>
+        <property>environment/metar/rain-norm</property>
         <factor>1.00</factor>
         <offset>0.00</offset>
         <min>0.3</min>
         <max>0.8</max>
       </volume>
       <pitch>
-        <property>/velocities/airspeed-kt</property>
+        <property>velocities/airspeed-kt</property>
         <factor>0.01</factor>
         <offset>1.0</offset>
       </pitch>
@@ -1528,30 +1544,30 @@
       	<and>
 					<or>
 						<and>
-							<not><property>/sim/current-view/internal</property></not>
+							<not><property>sim/current-view/internal</property></not>
 							<not>
 								<equals>
-									<property>/sim/current-view/name</property>
+									<property>sim/current-view/name</property>
 									<value type="string">Passengers View</value>
 								</equals>
 							</not>
 						</and>
 						<greater-than>
-							<property>/instrumentation/doors/copilotwin/position-norm</property>
+							<property>instrumentation/doors/copilotwin/position-norm</property>
 							<value>0.01</value>
 						</greater-than>
 						<greater-than>
-							<property>/instrumentation/doors/pilotwin/position-norm</property>
+							<property>instrumentation/doors/pilotwin/position-norm</property>
 							<value>0.01</value>
 						</greater-than>
 					</or>
 					<or>
-		      			<property>/sim/model/pushback/enabled</property>
+		      			<property>sim/model/pushback/enabled</property>
 					</or>
 		    </and>
       </condition>
       <volume>
-        <property>/sim/model/pushback/position-norm</property>
+        <property>sim/model/pushback/position-norm</property>
         <factor>1.00</factor>
         <offset>0.00</offset>
         <min>0.3</min>
@@ -1566,19 +1582,19 @@
       <condition>
       	<and>
 			<or>
-				<property>/sim/current-view/internal</property>								
+				<property>sim/current-view/internal</property>								
 				<equals>
-					<property>/sim/current-view/name</property>
+					<property>sim/current-view/name</property>
 					<value type="string">Passengers View</value>
 				</equals>
 			</or>
 			<or>
-      			<property>/sim/model/pushback/enabled</property>
+      			<property>sim/model/pushback/enabled</property>
 			</or>
 	    </and>
       </condition>
       <volume>
-        <property>/sim/model/pushback/position-norm</property>
+        <property>sim/model/pushback/position-norm</property>
         <factor>1.00</factor>
         <offset>0.00</offset>
         <min>0.2</min>
@@ -1594,16 +1610,16 @@
       	<and>
 			<or>
 				<and>
-					<not><property>/sim/current-view/internal</property></not>
+					<not><property>sim/current-view/internal</property></not>
 					<not>
 						<equals>
-							<property>/sim/current-view/name</property>
+							<property>sim/current-view/name</property>
 							<value type="string">Passengers View</value>
 						</equals>
 					</not>
 				</and>
 				<greater-than>
-					<property>/instrumentation/doors/copilotwin/position-norm</property>
+					<property>instrumentation/doors/copilotwin/position-norm</property>
 					<value>0.01</value>
 				</greater-than>
 			</or>
@@ -1626,9 +1642,9 @@
       <condition>
       	<and>			
 			<or>
-				<property>/sim/current-view/internal</property>
+				<property>sim/current-view/internal</property>
 				<equals>
-					<property>/sim/current-view/name</property>
+					<property>sim/current-view/name</property>
 					<value type="string">Passengers View</value>
 				</equals>
 			</or>
@@ -1652,16 +1668,16 @@
 		<and>
 			<or>
 				<and>
-					<not><property>/sim/current-view/internal</property></not>
+					<not><property>sim/current-view/internal</property></not>
 					<not>
 						<equals>
-							<property>/sim/current-view/name</property>
+							<property>sim/current-view/name</property>
 							<value type="string">Passengers View</value>
 						</equals>
 					</not>
 				</and>
 				<greater-than>
-					<property>/instrumentation/doors/copilotwin/position-norm</property>
+					<property>instrumentation/doors/copilotwin/position-norm</property>
 					<value>0.01</value>
 				</greater-than>
 			</or>
@@ -1689,9 +1705,9 @@
       <condition>
       	<and>			
 			<or>
-				<property>/sim/current-view/internal</property>
+				<property>sim/current-view/internal</property>
 				<equals>
-					<property>/sim/current-view/name</property>
+					<property>sim/current-view/name</property>
 					<value type="string">Passengers View</value>
 				</equals>
 			</or>
@@ -1718,23 +1734,23 @@
 			<mode>looped</mode>
 			<condition>			
 				<or>
-					<property>/sim/current-view/internal</property>
+					<property>sim/current-view/internal</property>
 					<equals>
-						<property>/sim/current-view/name</property>
+						<property>sim/current-view/name</property>
 						<value type="string">Passengers View</value>
 					</equals>
 				</or>
 				<greater-than>
-					<property>/engines/APU/rpm</property>
+					<property>engines/APU/rpm</property>
 					<value>5</value>
 				</greater-than>
 			</condition>
 			<volume>
-				<property>/engines/APU/rpm</property>
+				<property>engines/APU/rpm</property>
 				<factor>0.0015</factor>
 			</volume>
       <pitch>
-        <property>/engines/APU/rpm</property>
+        <property>engines/APU/rpm</property>
         <factor>0.01</factor>
         <offset>1.0</offset>
       </pitch>
@@ -1744,24 +1760,24 @@
 			<path>Aircraft/707/Sounds/apu.wav</path>
 			<mode>looped</mode>
 			<condition>			
-				<not><property>/sim/current-view/internal</property></not>			
+				<not><property>sim/current-view/internal</property></not>			
 				<not>
 					<equals>
-						<property>/sim/current-view/name</property>
+						<property>sim/current-view/name</property>
 						<value type="string">Passengers View</value>
 					</equals>
 				</not>
 				<greater-than>
-					<property>/engines/APU/rpm</property>
+					<property>engines/APU/rpm</property>
 					<value>5</value>
 				</greater-than>
 			</condition>
 			<volume>
-				<property>/engines/APU/rpm</property>
+				<property>engines/APU/rpm</property>
 				<factor>0.01</factor>
 			</volume>
       <pitch>
-        <property>/engines/APU/rpm</property>
+        <property>engines/APU/rpm</property>
         <factor>0.01</factor>
         <offset>1.0</offset>
       </pitch>
@@ -1774,11 +1790,11 @@
      <condition>
      		<and>
 		     <greater-than>
-		       <property>/instrumentation/comm[1]/frequencies/standby-mhz</property>
+		       <property>instrumentation/comm[1]/frequencies/standby-mhz</property>
 		       <value>132.98</value>
 		     </greater-than>
 		     <less-than>
-		       <property>/instrumentation/comm[1]/frequencies/standby-mhz</property>
+		       <property>instrumentation/comm[1]/frequencies/standby-mhz</property>
 		       <value>133.02</value>
 		     </less-than>
 		    </and>
@@ -1795,11 +1811,11 @@
      <condition>
      		<and>
 		     <greater-than>
-		       <property>/instrumentation/comm[1]/frequencies/standby-mhz</property>
+		       <property>instrumentation/comm[1]/frequencies/standby-mhz</property>
 		       <value>133.98</value>
 		     </greater-than>
 		     <less-than>
-		       <property>/instrumentation/comm[1]/frequencies/standby-mhz</property>
+		       <property>instrumentation/comm[1]/frequencies/standby-mhz</property>
 		       <value>134.02</value>
 		     </less-than>
 		    </and>
@@ -1816,11 +1832,11 @@
      <condition>
      		<and>
 		     <greater-than>
-		       <property>/instrumentation/comm[1]/frequencies/standby-mhz</property>
+		       <property>instrumentation/comm[1]/frequencies/standby-mhz</property>
 		       <value>134.98</value>
 		     </greater-than>
 		     <less-than>
-		       <property>/instrumentation/comm[1]/frequencies/standby-mhz</property>
+		       <property>instrumentation/comm[1]/frequencies/standby-mhz</property>
 		       <value>135.02</value>
 		     </less-than>
 		    </and>
@@ -1888,7 +1904,7 @@
 			<path>Aircraft/707/Sounds/trimwheel.wav</path>
 			<property>b707/trim/elevator-trim-turn</property>
 			<volume>
-				<property>/sim/current-view/internal</property>
+				<property>sim/current-view/internal</property>
 			</volume>
 		</trim-wheels>
 		

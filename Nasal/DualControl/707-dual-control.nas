@@ -5,7 +5,6 @@
 ##  This file is licensed under the GPL license version 2 or later.
 ##
 ##  For the CS 1, written in January 2012 by Marc Kraus
-##
 ###############################################################################
 
 ## Renaming (almost :)

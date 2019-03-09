@@ -55,7 +55,7 @@
 		<condition>
 			<property>b707/ess-bus</property>
 		</condition>
-		<property>/instrumentation/slip-skid-ball/indicated-slip-skid</property>
+		<property>instrumentation/slip-skid-ball/indicated-slip-skid</property>
     <interpolation>
       <entry><ind>  4.0</ind><dep>-50.0</dep></entry>
       <entry><ind>  0.0</ind><dep>  0.0</dep></entry>
@@ -91,7 +91,7 @@
 		<condition>
 			<not><property>b707/ess-bus</property></not>
 		</condition>
-		<property>/instrumentation/slip-skid-ball/indicated-slip-skid</property>
+		<property>instrumentation/slip-skid-ball/indicated-slip-skid</property>
     <interpolation>
       <entry><ind> 	 4.0</ind><dep>-50.0</dep></entry>
       <entry><ind>   0.0</ind><dep>  0.0</dep></entry>
@@ -124,7 +124,7 @@
     <object-name>needle2</object-name>
     <object-name>needle3</object-name>
     <object-name>vitre</object-name>
-    <property>/orientation/pitch-deg</property>
+    <property>orientation/pitch-deg</property>
     <interpolation>
       <entry><ind> -10.0</ind><dep>  -10.0</dep></entry>
       <entry><ind>   0.0</ind><dep>    0.0</dep></entry>
@@ -152,13 +152,13 @@
 		  <object-name>needle2</object-name>
 		  <object-name>needle3</object-name>
 		<condition>
-			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.6</value></less-than>
+			<less-than><property>systems/electrical/outputs/cabin-dim</property><value>0.6</value></less-than>
 		</condition>
 		<emission>
 			<red>0.6</red>
 			<green>0.4</green>
 			<blue>0.3</blue>
-			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+			<factor-prop>systems/electrical/outputs/panel-dim</factor-prop>
 		</emission>
 	</animation>
 	
@@ -172,13 +172,13 @@
 		  <object-name>needle3</object-name>
 		<condition>
 			<not><property>/sim/rendering/rembrandt/enabled</property></not>
-			<property>/systems/electrical/outputs/cabin-dim</property>
+			<property>systems/electrical/outputs/cabin-dim</property>
 		</condition>
 		<emission>
 		  <red>0.8</red>
 		  <green>0.8</green>
 		  <blue>0.8</blue>
-		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		  <factor-prop>systems/electrical/outputs/cabin-dim</factor-prop>
 		</emission>
 	</animation>
 
@@ -190,13 +190,13 @@
     <object-name>btnReset</object-name>
     <object-name>btnMode</object-name>
 		<condition>
-			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.6</value></less-than>
+			<less-than><property>systems/electrical/outputs/cabin-dim</property><value>0.6</value></less-than>
 		</condition>
 		<emission>
 			<red>0.3</red>
 			<green>0.3</green>
 			<blue>0.3</blue>
-			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+			<factor-prop>systems/electrical/outputs/panel-dim</factor-prop>
 		</emission>
 	</animation>
 	
@@ -209,20 +209,20 @@
     <object-name>btnMode</object-name>
 		<condition>
 			<not><property>/sim/rendering/rembrandt/enabled</property></not>
-			<property>/systems/electrical/outputs/cabin-dim</property>
+			<property>systems/electrical/outputs/cabin-dim</property>
 		</condition>
 		<emission>
 		  <red>0.5</red>
 		  <green>0.5</green>
 		  <blue>0.5</blue>
-		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		  <factor-prop>systems/electrical/outputs/cabin-dim</factor-prop>
 		</emission>
 	</animation> 
 
   <animation> 
     <type>rotate</type>
     <object-name>needle1</object-name>
-    <property>/instrumentation/frw/flight-time/minutes</property>
+    <property>instrumentation/frw/flight-time/minutes</property>
     <interpolation>
       <entry><ind> 0</ind><dep> 0 </dep></entry>
       <entry><ind>60</ind><dep>360</dep></entry>
@@ -242,7 +242,7 @@
   <animation> 
     <type>rotate</type>
     <object-name>needle2</object-name>
-    <property>/instrumentation/frw/flight-time/hours</property>
+    <property>instrumentation/frw/flight-time/hours</property>
     <interpolation>
       <entry><ind> 0</ind><dep> 0 </dep></entry>
       <entry><ind>60</ind><dep>360</dep></entry>
@@ -262,7 +262,7 @@
   <animation> 
     <type>rotate</type>
     <object-name>needle3</object-name>
-    <property>/instrumentation/frw/flight-time/seconds</property>
+    <property>instrumentation/frw/flight-time/seconds</property>
     <interpolation>
       <entry><ind> 0</ind><dep> 0 </dep></entry>
       <entry><ind>60</ind><dep>360</dep></entry>
@@ -284,7 +284,7 @@
       <object-name>btnStartStop</object-name>
       <condition>
         <not-equals>
-          <property>/instrumentation/frw/btn-mode</property>
+          <property>instrumentation/frw/btn-mode</property>
           <value>1</value>
         </not-equals>
       </condition>
@@ -293,7 +293,7 @@
    <animation>
     <type>translate</type>
     <object-name>btnStartStop</object-name>
-    <property>/instrumentation/frw/btn-start-stop</property>
+    <property>instrumentation/frw/btn-start-stop</property>
     <factor>0.002</factor>
     <axis>
      <x>0</x>
@@ -311,12 +311,12 @@
         <repeatable>false</repeatable>
         <binding>
           <command>property-toggle</command>
-          <property>/instrumentation/frw/btn-start-stop</property>
+          <property>instrumentation/frw/btn-start-stop</property>
         </binding>
         <mod-up>
           <binding>
             <command>property-toggle</command>
-            <property>/instrumentation/frw/btn-start-stop</property>
+            <property>instrumentation/frw/btn-start-stop</property>
           </binding>
         </mod-up>
         <binding>
@@ -325,7 +325,7 @@
         </binding>
         <binding>
           <command>property-toggle</command>
-          <property>/sim/sound/switch2</property>
+          <property>sim/sound/switch2</property>
         </binding>
       </action>
     </animation>
@@ -335,7 +335,7 @@
       <object-name>btnReset</object-name>
       <condition>
         <not-equals>
-          <property>/instrumentation/frw/btn-mode</property>
+          <property>instrumentation/frw/btn-mode</property>
           <value>1</value>
         </not-equals>
       </condition>
@@ -344,7 +344,7 @@
    <animation>
     <type>translate</type>
     <object-name>btnReset</object-name>
-    <property>/instrumentation/frw/btn-reset</property>
+    <property>instrumentation/frw/btn-reset</property>
     <factor>0.002</factor>
     <axis>
      <x>0</x>
@@ -362,12 +362,12 @@
         <repeatable>false</repeatable>
         <binding>
           <command>property-toggle</command>
-          <property>/instrumentation/frw/btn-reset</property>
+          <property>instrumentation/frw/btn-reset</property>
         </binding>
         <mod-up>
           <binding>
             <command>property-toggle</command>
-            <property>/instrumentation/frw/btn-reset</property>
+            <property>instrumentation/frw/btn-reset</property>
           </binding>
         </mod-up>
         <binding>
@@ -376,7 +376,7 @@
         </binding>
         <binding>
           <command>property-toggle</command>
-          <property>/sim/sound/switch2</property>
+          <property>sim/sound/switch2</property>
         </binding>
       </action>
     </animation>
@@ -385,7 +385,7 @@
    <animation>
     <type>translate</type>
     <object-name>btnMode</object-name>
-    <property>/instrumentation/frw/btn-mode</property>
+    <property>instrumentation/frw/btn-mode</property>
     <factor>0.002</factor>
     <axis>
      <x>0</x>
@@ -399,7 +399,7 @@
       <object-name>activeMode</object-name>
       <condition>
         <equals>
-          <property>/instrumentation/frw/btn-mode</property>
+          <property>instrumentation/frw/btn-mode</property>
           <value>1</value>
         </equals>
       </condition>
@@ -414,7 +414,7 @@
         <repeatable>false</repeatable>
         <binding>
           <command>property-toggle</command>
-          <property>/instrumentation/frw/btn-mode</property>
+          <property>instrumentation/frw/btn-mode</property>
         </binding>
 			  <binding>
 				  <command>nasal</command>
@@ -422,7 +422,7 @@
 			  </binding>
         <binding>
           <command>property-toggle</command>
-          <property>/sim/sound/switch2</property>
+          <property>sim/sound/switch2</property>
         </binding>
       </action>
     </animation>
@@ -433,7 +433,7 @@
       <object-name>btnStartStopOut</object-name>
       <condition>
         <equals>
-          <property>/instrumentation/frw/btn-mode</property>
+          <property>instrumentation/frw/btn-mode</property>
           <value>1</value>
         </equals>
       </condition>
@@ -444,7 +444,7 @@
       <object-name>btnResetOut</object-name>
       <condition>
         <equals>
-          <property>/instrumentation/frw/btn-mode</property>
+          <property>instrumentation/frw/btn-mode</property>
           <value>1</value>
         </equals>
       </condition>

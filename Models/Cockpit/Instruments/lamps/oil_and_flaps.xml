@@ -17,13 +17,13 @@
   <object-name>LampAmber.001</object-name>
   <object-name>Sockle</object-name>
 	<condition>
-		<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+		<less-than><property>systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
 	</condition>
 	<emission>
 		<red>0.2</red>
 		<green>0.2</green>
 		<blue>0.2</blue>
-		<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		<factor-prop>systems/electrical/outputs/panel-dim</factor-prop>
 	</emission>
 </animation>
 
@@ -36,13 +36,13 @@
   <object-name>shadow</object-name>
 	<condition>
 		<not><property>/sim/rendering/rembrandt/enabled</property></not>
-		<property>/systems/electrical/outputs/cabin-dim</property>
+		<property>systems/electrical/outputs/cabin-dim</property>
 	</condition>
 	<emission>
 	  <red>0.3</red>
 	  <green>0.3</green>
 	  <blue>0.3</blue>
-	  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+	  <factor-prop>systems/electrical/outputs/cabin-dim</factor-prop>
 	</emission>
 </animation>	
 
@@ -95,7 +95,7 @@
       	<property>surface-positions/flap-pos-norm</property>
       	<value>0.19</value>
       </greater-than>
-      <property>/controls/test/warn-knob</property>
+      <property>controls/test/warn-knob</property>
     </or>
   </condition>
 </animation>
@@ -110,10 +110,10 @@
 		</greater-than>
     <or>
     	<less-than>
-      	<property>/engines/engine[2]/oil-pressure-psi</property>
+      	<property>engines/engine[2]/oil-pressure-psi</property>
       	<value>37</value>
       </less-than>
-      <property>/controls/test/warn-knob</property>
+      <property>controls/test/warn-knob</property>
     </or>
   </condition>
 </animation>
@@ -128,10 +128,10 @@
 		</greater-than>
     <or>
     	<less-than>
-      	<property>/engines/engine[3]/oil-pressure-psi</property>
+      	<property>engines/engine[3]/oil-pressure-psi</property>
       	<value>37</value>
       </less-than>
-      <property>/controls/test/warn-knob</property>
+      <property>controls/test/warn-knob</property>
     </or>
   </condition>
 </animation>

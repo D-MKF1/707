@@ -1,11 +1,27 @@
-<?xml version="1.0"?>
-<!--###################################################################################
-		Lake of Constance Hangar :: M.Kraus
-		Septemper 2013
-		This file is licenced under the terms of the GNU General Public Licence V2 or later
-		###################################################################################
--->
+<?xml version="1.0" encoding="UTF-8"?>
+<!--####################################################################
+Lake of Constance Hangar
+Boeing 707 for Flightgear
+Copyright (C) 2013 M.Kraus
 
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Every software has a developer, also free software. 
+As a gesture of courtesy and respect, I would be delighted 
+if you contacted me before making any changes to this software. 
+<info (at) marc-kraus.de> April, 2017
+########################################################################-->
 <PropertyList>
  <path>dme.ac</path>
  
@@ -35,13 +51,13 @@
       <object-name>NoDME</object-name>
       <object-name>DME.Face</object-name>
 		<condition>
-			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+			<less-than><property>systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
 		</condition>
 		<emission>
 			<red>0.6</red>
 			<green>0.4</green>
 			<blue>0.3</blue>
-			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+			<factor-prop>systems/electrical/outputs/panel-dim</factor-prop>
 		</emission>
 	</animation>
 	
@@ -73,13 +89,13 @@
 			<object-name>shadow</object-name>
 		<condition>
 			<not><property>/sim/rendering/rembrandt/enabled</property></not>
-			<property>/systems/electrical/outputs/cabin-dim</property>
+			<property>systems/electrical/outputs/cabin-dim</property>
 		</condition>
 		<emission>
 		  <red>0.8</red>
 		  <green>0.8</green>
 		  <blue>0.8</blue>
-		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		  <factor-prop>systems/electrical/outputs/cabin-dim</factor-prop>
 		</emission>
 	</animation>
 
@@ -89,13 +105,13 @@
 		<object-name>sockle</object-name>
 		<object-name>switchsup</object-name>
 		<condition>
-			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.6</value></less-than>
+			<less-than><property>systems/electrical/outputs/cabin-dim</property><value>0.6</value></less-than>
 		</condition>
 		<emission>
 			<red>0.15</red>
 			<green>0.15</green>
 			<blue>0.15</blue>
-			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+			<factor-prop>systems/electrical/outputs/panel-dim</factor-prop>
 		</emission>
 	</animation>
 
@@ -106,13 +122,13 @@
 			<object-name>switchsup</object-name>
 		<condition>
 			<not><property>/sim/rendering/rembrandt/enabled</property></not>
-			<property>/systems/electrical/outputs/cabin-dim</property>
+			<property>systems/electrical/outputs/cabin-dim</property>
 		</condition>
 		<emission>
 		  <red>0.3</red>
 		  <green>0.3</green>
 		  <blue>0.3</blue>
-		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		  <factor-prop>systems/electrical/outputs/cabin-dim</factor-prop>
 		</emission>
 	</animation>
 
@@ -131,7 +147,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>switch</object-name>
-		<property>/controls/switches/dme</property>
+		<property>controls/switches/dme</property>
 		<interpolation>
 			<entry><ind> 0</ind><dep> -70.0</dep></entry>
 		  <entry><ind> 1</ind><dep>  0.0		 </dep></entry>
@@ -151,7 +167,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>switch.001</object-name>
-		<property>/controls/switches/dme-gps-slave</property>
+		<property>controls/switches/dme-gps-slave</property>
 		<interpolation>
 			<entry><ind> 0</ind><dep> -70.0</dep></entry>
 		  <entry><ind> 1</ind><dep>  0.0		 </dep></entry>
@@ -180,11 +196,11 @@
 		    <repeatable>true</repeatable>
 				<binding>
 					 <command>property-toggle</command>
-					 <property>/controls/switches/dme</property>
+					 <property>controls/switches/dme</property>
 				</binding>
         <binding>
           <command>property-toggle</command>
-          <property>/sim/sound/switch2</property>
+          <property>sim/sound/switch2</property>
         </binding>
 		  </action>
 	</animation>
@@ -202,11 +218,11 @@
 		    <repeatable>true</repeatable>
 				<binding>
 					 <command>property-toggle</command>
-					 <property>/controls/switches/dme-gps-slave</property>
+					 <property>controls/switches/dme-gps-slave</property>
 				</binding>
         <binding>
           <command>property-toggle</command>
-          <property>/sim/sound/switch2</property>
+          <property>sim/sound/switch2</property>
         </binding>
 		  </action>
 	</animation>
@@ -219,7 +235,7 @@
 		<object-name>Dme.1000</object-name>
 		<condition>
 		  <equals>
-		    <property>/controls/switches/dme</property>
+		    <property>controls/switches/dme</property>
 		    <value>0</value>
 		  </equals>
 		</condition>
@@ -233,7 +249,7 @@
 		<object-name>Dme.1000.1</object-name>
 		<condition>
 		  <equals>
-		    <property>/controls/switches/dme</property>
+		    <property>controls/switches/dme</property>
 		    <value>1</value>
 		  </equals>
 		</condition>
@@ -246,8 +262,8 @@
 		<object-name>Dme.100.2</object-name>
 		<object-name>Dme.1000.2</object-name>
 		<condition>
-		    <property>/controls/switches/dme-gps-slave</property>
-		    <not><property>/controls/switches/dme</property></not>
+		    <property>controls/switches/dme-gps-slave</property>
+		    <not><property>controls/switches/dme</property></not>
 		</condition>
 	</animation>
 	
@@ -258,8 +274,8 @@
 		<object-name>Dme.100.3</object-name>
 		<object-name>Dme.1000.3</object-name>
 		<condition>
-		    <property>/controls/switches/dme-gps-slave</property>
-		    <property>/controls/switches/dme</property>
+		    <property>controls/switches/dme-gps-slave</property>
+		    <property>controls/switches/dme</property>
 		</condition>
 	</animation>
 
@@ -271,7 +287,7 @@
 		<object-name>Tacan.1000</object-name>
 		<condition>
 		  <equals>
-		    <property>/controls/switches/dme</property>
+		    <property>controls/switches/dme</property>
 		    <value>2</value>
 		  </equals>
 		</condition>
@@ -283,16 +299,16 @@
 		<condition>
 			<or>
 				<and>
-				  <property>/controls/switches/dme-gps-slave</property>
-				  <not><property>/autopilot/route-manager/active</property></not>
+				  <property>controls/switches/dme-gps-slave</property>
+				  <not><property>autopilot/route-manager/active</property></not>
 				</and>			
 				<and>
-					<not><property>/controls/switches/dme</property></not>
-					<not><property>/instrumentation/dme[0]/in-range</property></not>
+					<not><property>controls/switches/dme</property></not>
+					<not><property>instrumentation/dme[0]/in-range</property></not>
 				</and>
 				<and>
-					<property>/controls/switches/dme</property>
-					<not><property>/instrumentation/dme[1]/in-range</property></not>
+					<property>controls/switches/dme</property>
+					<not><property>instrumentation/dme[1]/in-range</property></not>
 				</and>	
 			</or>
 		</condition>
@@ -301,7 +317,7 @@
     <animation>
         <type>textranslate</type>
         <object-name>Dme.1000</object-name>
-        <property>/instrumentation/dme/indicated-distance-nm</property>
+        <property>instrumentation/dme/indicated-distance-nm</property>
 		    <factor>0.001</factor>
 		    <step>100</step>
         <axis>
@@ -314,7 +330,7 @@
     <animation>
         <type>textranslate</type>
         <object-name>Dme.100</object-name>
-        <property>/instrumentation/dme/indicated-distance-nm</property>
+        <property>instrumentation/dme/indicated-distance-nm</property>
 		    <factor>0.01</factor>
 		    <step>10</step>
         <axis>
@@ -327,7 +343,7 @@
     <animation>
         <type>textranslate</type>
         <object-name>Dme.10</object-name>
-        <property>/instrumentation/dme/indicated-distance-nm</property>
+        <property>instrumentation/dme/indicated-distance-nm</property>
         <factor>0.1</factor>
         <step>1</step>
         <axis>
@@ -340,7 +356,7 @@
     <animation>
         <type>textranslate</type>
         <object-name>Dme.1</object-name>
-        <property>/instrumentation/dme/indicated-distance-nm</property>
+        <property>instrumentation/dme/indicated-distance-nm</property>
         <factor>1</factor>
         <axis>
             <x>0</x>
@@ -352,7 +368,7 @@
     <animation>
         <type>textranslate</type>
         <object-name>Dme.1000.1</object-name>
-        <property>/instrumentation/dme[1]/indicated-distance-nm</property>
+        <property>instrumentation/dme[1]/indicated-distance-nm</property>
 		    <factor>0.001</factor>
 		    <step>100</step>
         <axis>
@@ -365,7 +381,7 @@
     <animation>
         <type>textranslate</type>
         <object-name>Dme.100.1</object-name>
-        <property>/instrumentation/dme[1]/indicated-distance-nm</property>
+        <property>instrumentation/dme[1]/indicated-distance-nm</property>
 		    <factor>0.01</factor>
 		    <step>10</step>
         <axis>
@@ -378,7 +394,7 @@
     <animation>
         <type>textranslate</type>
         <object-name>Dme.10.1</object-name>
-        <property>/instrumentation/dme[1]/indicated-distance-nm</property>
+        <property>instrumentation/dme[1]/indicated-distance-nm</property>
         <factor>0.1</factor>
         <step>1</step>
         <axis>
@@ -391,7 +407,7 @@
     <animation>
         <type>textranslate</type>
         <object-name>Dme.1.1</object-name>
-        <property>/instrumentation/dme[1]/indicated-distance-nm</property>
+        <property>instrumentation/dme[1]/indicated-distance-nm</property>
         <factor>1</factor>
         <axis>
             <x>0</x>
@@ -404,7 +420,7 @@
     <animation>
         <type>textranslate</type>
         <object-name>Dme.1000.2</object-name>
-        <property>/autopilot/route-manager/wp/dist</property>
+        <property>autopilot/route-manager/wp/dist</property>
 		    <factor>0.001</factor>
 		    <step>100</step>
         <axis>
@@ -417,7 +433,7 @@
     <animation>
         <type>textranslate</type>
         <object-name>Dme.100.2</object-name>
-        <property>/autopilot/route-manager/wp/dist</property>
+        <property>autopilot/route-manager/wp/dist</property>
 		    <factor>0.01</factor>
 		    <step>10</step>
         <axis>
@@ -430,7 +446,7 @@
     <animation>
         <type>textranslate</type>
         <object-name>Dme.10.2</object-name>
-        <property>/autopilot/route-manager/wp/dist</property>
+        <property>autopilot/route-manager/wp/dist</property>
         <factor>0.1</factor>
         <step>1</step>
         <axis>
@@ -443,7 +459,7 @@
     <animation>
         <type>textranslate</type>
         <object-name>Dme.1.2</object-name>
-        <property>/autopilot/route-manager/wp/dist</property>
+        <property>autopilot/route-manager/wp/dist</property>
         <factor>1</factor>
         <axis>
             <x>0</x>
@@ -455,7 +471,7 @@
     <animation>
         <type>textranslate</type>
         <object-name>Dme.1000.3</object-name>
-        <property>/autopilot/route-manager/wp-last/dist</property>
+        <property>autopilot/route-manager/wp-last/dist</property>
 		    <factor>0.001</factor>
 		    <step>100</step>
         <axis>
@@ -468,7 +484,7 @@
     <animation>
         <type>textranslate</type>
         <object-name>Dme.100.3</object-name>
-        <property>/autopilot/route-manager/wp-last/dist</property>
+        <property>autopilot/route-manager/wp-last/dist</property>
 		    <factor>0.01</factor>
 		    <step>10</step>
         <axis>
@@ -481,7 +497,7 @@
     <animation>
         <type>textranslate</type>
         <object-name>Dme.10.3</object-name>
-        <property>/autopilot/route-manager/wp-last/dist</property>
+        <property>autopilot/route-manager/wp-last/dist</property>
         <factor>0.1</factor>
         <step>1</step>
         <axis>
@@ -494,7 +510,7 @@
     <animation>
         <type>textranslate</type>
         <object-name>Dme.1.3</object-name>
-        <property>/autopilot/route-manager/wp-last/dist</property>
+        <property>autopilot/route-manager/wp-last/dist</property>
         <factor>1</factor>
         <axis>
             <x>0</x>
@@ -506,7 +522,7 @@
     <animation>
         <type>textranslate</type>
         <object-name>Tacan.1000</object-name>
-        <property>/instrumentation/tacan/indicated-distance-nm</property>
+        <property>instrumentation/tacan/indicated-distance-nm</property>
         <factor>0.001</factor>
         <step>100</step>
 		    <bias>0.005</bias>
@@ -520,7 +536,7 @@
     <animation>
         <type>textranslate</type>
         <object-name>Tacan.100</object-name>
-        <property>/instrumentation/tacan/indicated-distance-nm</property>
+        <property>instrumentation/tacan/indicated-distance-nm</property>
         <factor>0.01</factor>
         <step>10</step>
 		    <bias>0.005</bias>
@@ -534,7 +550,7 @@
     <animation>
         <type>textranslate</type>
         <object-name>Tacan.10</object-name>
-        <property>/instrumentation/tacan/indicated-distance-nm</property>
+        <property>instrumentation/tacan/indicated-distance-nm</property>
         <factor>0.1</factor>
         <step>1</step>
 		    <bias>0.005</bias>
@@ -548,7 +564,7 @@
     <animation>
         <type>textranslate</type>
         <object-name>Tacan.1</object-name>
-        <property>/instrumentation/tacan/indicated-distance-nm</property>
+        <property>instrumentation/tacan/indicated-distance-nm</property>
         <factor>1</factor>
         <axis>
             <x>0</x>

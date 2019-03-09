@@ -1,13 +1,27 @@
-<?xml version="1.0"?>
-<!--###################################################################################
-		Lake of Constance Hangar :: M.Kraus
-		Septemper 2013
-		This file is licenced under the terms of the GNU General Public Licence V2 or later
-		###################################################################################
--->
+<?xml version="1.0" encoding="UTF-8"?>
+<!--####################################################################
+Lake of Constance Hangar
+Boeing 707 for Flightgear
+Copyright (C) 2013 M.Kraus
 
-<!-- Lake of Constance Hangar :: M. Kraus, Avril 2013  -->
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
 
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Every software has a developer, also free software. 
+As a gesture of courtesy and respect, I would be delighted 
+if you contacted me before making any changes to this software. 
+<info (at) marc-kraus.de> April, 2017
+########################################################################-->
 <PropertyList>
 
 <path>rmi.ac</path>
@@ -20,13 +34,13 @@
 		<object-name>needle2</object-name>
 		<object-name>ring</object-name>
 		<condition>
-			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+			<less-than><property>systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
 		</condition>
 		<emission>
 			<red>0.6</red>
 			<green>0.4</green>
 			<blue>0.3</blue>
-			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+			<factor-prop>systems/electrical/outputs/panel-dim</factor-prop>
 		</emission>
 	</animation>
 	
@@ -40,13 +54,13 @@
 			<object-name>shadow</object-name>
 		<condition>
 			<not><property>/sim/rendering/rembrandt/enabled</property></not>
-			<property>/systems/electrical/outputs/cabin-dim</property>
+			<property>systems/electrical/outputs/cabin-dim</property>
 		</condition>
 		<emission>
 		  <red>0.8</red>
 		  <green>0.8</green>
 		  <blue>0.8</blue>
-		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		  <factor-prop>systems/electrical/outputs/cabin-dim</factor-prop>
 		</emission>
 	</animation>
 
@@ -57,13 +71,13 @@
 		<object-name>needle2-knob</object-name>
 		<object-name>reset-knob</object-name>
 		<condition>
-			<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+			<less-than><property>systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
 		</condition>
 		<emission>
 			<red>0.2</red>
 			<green>0.2</green>
 			<blue>0.2</blue>
-			<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+			<factor-prop>systems/electrical/outputs/panel-dim</factor-prop>
 		</emission>
 	</animation>
 	
@@ -75,13 +89,13 @@
 		<object-name>reset-knob</object-name>
 		<condition>
 			<not><property>/sim/rendering/rembrandt/enabled</property></not>
-			<property>/systems/electrical/outputs/cabin-dim</property>
+			<property>systems/electrical/outputs/cabin-dim</property>
 		</condition>
 		<emission>
 		  <red>0.3</red>
 		  <green>0.3</green>
 		  <blue>0.3</blue>
-		  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+		  <factor-prop>systems/electrical/outputs/cabin-dim</factor-prop>
 		</emission>
 	</animation>
 
@@ -99,7 +113,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>needle1</object-name>
-		<property>/instrumentation/rmi/rmi-needle[0]/value</property>
+		<property>instrumentation/rmi/rmi-needle[0]/value</property>
 		<axis>
 		  <x>-1</x>
 		  <y>0</y>
@@ -111,7 +125,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>needle2</object-name>
-		<property>/instrumentation/rmi/rmi-needle[1]/value</property>
+		<property>instrumentation/rmi/rmi-needle[1]/value</property>
 		<axis>
 		  <x>-1</x>
 		  <y>0</y>
@@ -123,7 +137,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>face</object-name>
-		<property>/instrumentation/rmi/face-offset</property>
+		<property>instrumentation/rmi/face-offset</property>
 		<factor>-1</factor>
 		<axis>
 		  <x>-1</x>
@@ -135,7 +149,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>hdg-knob</object-name>
-		<property>/instrumentation/rmi/face-offset</property>
+		<property>instrumentation/rmi/face-offset</property>
 		<factor>-1</factor>
 		<axis>
 		  <x>-1</x>
@@ -179,7 +193,7 @@
                 <not><property>devices/status/keyboard/super</property></not>
 		          </condition>
 		          <command>property-adjust</command>
-		          <property>/instrumentation/rmi/face-offset</property>
+		          <property>instrumentation/rmi/face-offset</property>
 		          <step>1</step>
 		          <min>0</min>
 		          <max>359</max>
@@ -193,7 +207,7 @@
                </or>
 		          </condition>
 		          <command>property-adjust</command>
-		          <property>/instrumentation/rmi/face-offset</property>
+		          <property>instrumentation/rmi/face-offset</property>
 		          <step>5</step>
 		          <min>0</min>
 		          <max>359</max>
@@ -208,7 +222,7 @@
                 <not><property>devices/status/keyboard/super</property></not>
 		          </condition>
 		          <command>property-adjust</command>
-		          <property>/instrumentation/rmi/face-offset</property>
+		          <property>instrumentation/rmi/face-offset</property>
 		          <step>-1</step>
 		          <min>0</min>
 		          <max>359</max>
@@ -222,7 +236,7 @@
                </or>
 		          </condition>
 		          <command>property-adjust</command>
-		          <property>/instrumentation/rmi/face-offset</property>
+		          <property>instrumentation/rmi/face-offset</property>
 		          <step>-5</step>
 		          <min>0</min>
 		          <max>359</max>
@@ -234,7 +248,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>needle1-knob</object-name>
-		<property>/instrumentation/rmi/rmi-needle[0]/switch</property>
+		<property>instrumentation/rmi/rmi-needle[0]/switch</property>
 		<interpolation>
 		  <entry><ind> 0</ind><dep> 0</dep></entry>
 		  <entry><ind> 1</ind><dep>90</dep></entry>
@@ -254,7 +268,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>needle2-knob</object-name>
-		<property>/instrumentation/rmi/rmi-needle[1]/switch</property>
+		<property>instrumentation/rmi/rmi-needle[1]/switch</property>
 		<interpolation>
 		  <entry><ind> 0</ind><dep> 0</dep></entry>
 		  <entry><ind> 1</ind><dep>-90</dep></entry>
@@ -274,7 +288,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>reset-knob</object-name>
-		<property>/instrumentation/rmi/face-offset</property>
+		<property>instrumentation/rmi/face-offset</property>
 		<interpolation>
 			<entry><ind>-0.1</ind><dep>-13</dep></entry>
 		  <entry><ind> 0</ind><dep> 0</dep></entry>
@@ -299,11 +313,11 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/instrumentation/rmi/rmi-needle[0]/switch</property>
+		      <property>instrumentation/rmi/rmi-needle[0]/switch</property>
 		    </binding>
 				<binding>
 					<command>property-toggle</command>
-					<property>/sim/sound/switch3</property>
+					<property>sim/sound/switch3</property>
 				</binding>
 	  </action>
 	</animation>
@@ -317,11 +331,11 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		      <command>property-toggle</command>
-		      <property>/instrumentation/rmi/rmi-needle[1]/switch</property>
+		      <property>instrumentation/rmi/rmi-needle[1]/switch</property>
 		    </binding>
 				<binding>
 					<command>property-toggle</command>
-					<property>/sim/sound/switch3</property>
+					<property>sim/sound/switch3</property>
 				</binding>
 	  </action>
 	</animation>
@@ -335,12 +349,12 @@
 		    <repeatable>false</repeatable>
 		    <binding>
 		      <command>property-assign</command>
-		      <property>/instrumentation/rmi/face-offset</property>
+		      <property>instrumentation/rmi/face-offset</property>
 		      <value>0</value>
 		    </binding>
 				<binding>
 					<command>property-toggle</command>
-					<property>/sim/sound/switch3</property>
+					<property>sim/sound/switch3</property>
 				</binding>
 	  </action>
 	</animation>

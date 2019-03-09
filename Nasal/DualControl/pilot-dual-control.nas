@@ -7,7 +7,6 @@
 ##  This file is licensed under the GPL license version 2 or later.
 ##
 ###############################################################################
-
 # Renaming (almost :)
 var DCT = dual_control_tools;
 var ADC = aircraft_dual_control;
@@ -30,7 +29,7 @@ var connect = func (copilot) {
   process_data = ADC.pilot_connect_copilot(copilot);
 
   print("Dual control ... copilot connected.");
-  setprop("/sim/messages/copilot", "Hi.");
+  setprop("sim/messages/copilot", "Hi.");
 }
 
 ######################################################################
@@ -39,7 +38,7 @@ var main = {
   init : func {
     me.loopid = 0;
     me.active = 0;
-    setlistener("/ai/models/model-added", func {
+    setlistener("ai/models/model-added", func {
       settimer(func { me.activate(); }, 2);
     });
     settimer(func { me.activate(); }, 5);
@@ -61,8 +60,8 @@ var main = {
   },
   update : func {
     var mpplayers =
-      props.globals.getNode("/ai/models").getChildren("multiplayer");
-    var r_callsign = getprop("/sim/remote/pilot-callsign");
+      props.globals.getNode("ai/models").getChildren("multiplayer");
+    var r_callsign = getprop("sim/remote/pilot-callsign");
 
     foreach (var copilot; mpplayers) {
       if ((copilot.getChild("valid").getValue()) and
@@ -111,6 +110,6 @@ var main = {
 
 ######################################################################
 # Initialization.
-setlistener("/sim/signals/fdm-initialized", func {
+setlistener("sim/signals/fdm-initialized", func {
   main.init();
 });

@@ -7,7 +7,6 @@
 ##  This file is licensed under the GPL license version 2 or later.
 ##
 ###############################################################################
-
 # Renaming (almost :)
 var DCT = dual_control_tools;
 var ADC = aircraft_dual_control;
@@ -24,16 +23,16 @@ if (!contains(ADC, "copilot_view")) {
 }
 
 # Properties for position and orientation of local aircraft.
-var l_lat     = "/position/latitude-deg";
-var l_lon     = "/position/longitude-deg";
-var l_alt     = "/position/altitude-ft";
-var l_heading = "/orientation/heading-deg";
-var l_pitch   = "/orientation/pitch-deg";
-var l_roll    = "/orientation/roll-deg";
+var l_lat     = "position/latitude-deg";
+var l_lon     = "position/longitude-deg";
+var l_alt     = "position/altitude-ft";
+var l_heading = "orientation/heading-deg";
+var l_pitch   = "orientation/pitch-deg";
+var l_roll    = "orientation/roll-deg";
 
 # Replicate remote state.
 var r_airspeed  = "velocities/true-airspeed-kt";
-var l_airspeed  = "/velocities/airspeed-kt";
+var l_airspeed  = "velocities/airspeed-kt";
 var vertspeed   = "velocities/vertical-speed-fps";
 
 # Default external views to slave to the MP pilot.
@@ -51,39 +50,39 @@ var process_data = 0;
 var connect = func (pilot) {
   # Set external view eye and target paths.
   foreach (var vn; keys(views)) {
-    var view_cfg = "/sim/view[" ~ view.indexof(vn) ~ "]/config";
-    setprop(view_cfg ~ "/at-model", 0);
+    var view_cfg = "sim/view[" ~ view.indexof(vn) ~ "]/config/";
+    setprop(view_cfg ~ "at-model", 0);
 
     if (views[vn] > 0) {
-      setprop(view_cfg ~ "/eye-lat-deg-path",
+      setprop(view_cfg ~ "eye-lat-deg-path",
               pilot.getNode(DCT.lat_mpp).getPath());
-      setprop(view_cfg ~ "/eye-lon-deg-path",
+      setprop(view_cfg ~ "eye-lon-deg-path",
               pilot.getNode(DCT.lon_mpp).getPath());
-      setprop(view_cfg ~ "/eye-alt-ft-path",
+      setprop(view_cfg ~ "eye-alt-ft-path",
               pilot.getNode(DCT.alt_mpp).getPath());
     }
     if (views[vn] > 1) {
-      setprop(view_cfg ~ "/eye-heading-deg-path",
+      setprop(view_cfg ~ "eye-heading-deg-path",
               pilot.getNode(DCT.heading_mpp).getPath());
     }
     if (views[vn] > 2) {
-      setprop(view_cfg ~ "/eye-pitch-deg-path",
+      setprop(view_cfg ~ "eye-pitch-deg-path",
               pilot.getNode(DCT.pitch_mpp).getPath());
-      setprop(view_cfg ~ "/eye-roll-deg-path",
+      setprop(view_cfg ~ "eye-roll-deg-path",
               pilot.getNode(DCT.roll_mpp).getPath());
     }
 
-    setprop(view_cfg ~ "/target-lat-deg-path",
+    setprop(view_cfg ~ "target-lat-deg-path",
             pilot.getNode(DCT.lat_mpp).getPath());
-    setprop(view_cfg ~ "/target-lon-deg-path",
+    setprop(view_cfg ~ "target-lon-deg-path",
             pilot.getNode(DCT.lon_mpp).getPath());
-    setprop(view_cfg ~ "/target-alt-ft-path",
+    setprop(view_cfg ~ "target-alt-ft-path",
             pilot.getNode(DCT.alt_mpp).getPath());
-    setprop(view_cfg ~ "/target-heading-deg-path",
+    setprop(view_cfg ~ "target-heading-deg-path",
             pilot.getNode(DCT.heading_mpp).getPath());
-    setprop(view_cfg ~ "/target-pitch-deg-path",
+    setprop(view_cfg ~ "target-pitch-deg-path",
             pilot.getNode(DCT.pitch_mpp).getPath());
-    setprop(view_cfg ~ "/target-roll-deg-path",
+    setprop(view_cfg ~ "target-roll-deg-path",
             pilot.getNode(DCT.roll_mpp).getPath());
   }
 
@@ -123,44 +122,44 @@ var connect = func (pilot) {
     ] ~ ADC.copilot_connect_pilot(pilot);
 
   print("Dual control ... connected to pilot.");
-  setprop("/sim/messages/copilot", "Welcome aboard.");
+  setprop("sim/messages/copilot", "Welcome aboard.");
 }
 
 var disconnect = func {
   # Reset external view eye and target paths.
   foreach (var vn; keys(views)) {
-    var view_cfg = "/sim/view[" ~ view.indexof(vn) ~ "]/config";
+    var view_cfg = "sim/view[" ~ view.indexof(vn) ~ "]/config";
     
     if (views[vn] > 0) {
-      setprop(view_cfg ~ "/eye-lat-deg-path",
-              "/position/latitude-deg");
-      setprop(view_cfg ~ "/eye-lon-deg-path",
-              "/position/longitude-deg");
-      setprop(view_cfg ~ "/eye-alt-ft-path",
-              "/position/altitude-ft");
+      setprop(view_cfg ~ "eye-lat-deg-path",
+              "position/latitude-deg");
+      setprop(view_cfg ~ "eye-lon-deg-path",
+              "position/longitude-deg");
+      setprop(view_cfg ~ "eye-alt-ft-path",
+              "position/altitude-ft");
     }
     if (views[vn] > 1) {
-      setprop(view_cfg ~ "/eye-heading-deg-path",
-              "/orientation/heading-deg");
+      setprop(view_cfg ~ "eye-heading-deg-path",
+              "orientation/heading-deg");
     }
     if (views[vn] > 2) {
-      setprop(view_cfg ~ "/eye-pitch-deg-path",
-              "/orientation/pitch-deg");
-      setprop(view_cfg ~ "/eye-roll-deg-path",
-              "/orientation/roll-deg");
+      setprop(view_cfg ~ "eye-pitch-deg-path",
+              "orientation/pitch-deg");
+      setprop(view_cfg ~ "eye-roll-deg-path",
+              "orientation/roll-deg");
     }
-    setprop(view_cfg ~ "/target-lat-deg-path",
-            "/sim/viewer/target/latitude-deg");
-    setprop(view_cfg ~ "/target-lon-deg-path",
-            "/sim/viewer/target/longitude-deg");
-    setprop(view_cfg ~ "/target-alt-ft-path",
-            "/sim/viewer/target/altitude-ft");
-    setprop(view_cfg ~ "/target-heading-deg-path",
-            "/sim/viewer/target/heading-deg");
-    setprop(view_cfg ~ "/target-pitch-deg-path",
-            "/sim/viewer/target/pitch-deg");
-    setprop(view_cfg ~ "/target-roll-deg-path",
-            "/sim/viewer/target/roll-deg");
+    setprop(view_cfg ~ "target-lat-deg-path",
+            "sim/viewer/target/latitude-deg");
+    setprop(view_cfg ~ "target-lon-deg-path",
+            "sim/viewer/target/longitude-deg");
+    setprop(view_cfg ~ "target-alt-ft-path",
+            "sim/viewer/target/altitude-ft");
+    setprop(view_cfg ~ "target-heading-deg-path",
+            "sim/viewer/target/heading-deg");
+    setprop(view_cfg ~ "target-pitch-deg-path",
+            "sim/viewer/target/pitch-deg");
+    setprop(view_cfg ~ "target-roll-deg-path",
+            "sim/viewer/target/roll-deg");
   }
 }
 
@@ -171,7 +170,7 @@ var main = {
   init : func {
     me.loopid = 0;
     me.active = 0;
-    setlistener("/ai/models/model-added", func {
+    setlistener("ai/models/model-added", func {
       settimer(func { me.activate(); }, 2);
     });
     print("Copilot dual control ... initialized");
@@ -194,8 +193,8 @@ var main = {
   },
   update : func {
     var mpplayers =
-      props.globals.getNode("/ai/models").getChildren("multiplayer");
-    var r_callsign = getprop("/sim/remote/pilot-callsign");
+      props.globals.getNode("ai/models").getChildren("multiplayer");
+    var r_callsign = getprop("sim/remote/pilot-callsign");
 
     foreach (var pilot; mpplayers) {
       if ((pilot.getChild("valid").getValue()) and
@@ -249,7 +248,7 @@ var main = {
 
 var last_view = 0;
 
-setlistener("/sim/signals/fdm-initialized", func {
+setlistener("sim/signals/fdm-initialized", func {
   main.init();
 });
 

@@ -15,13 +15,13 @@
   <object-name>LampAmber.006</object-name>
   <object-name>LampAmber.007</object-name>
 	<condition>
-		<less-than><property>/systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
+		<less-than><property>systems/electrical/outputs/cabin-dim</property><value>0.8</value></less-than>
 	</condition>
 	<emission>
 		<red>0.2</red>
 		<green>0.2</green>
 		<blue>0.2</blue>
-		<factor-prop>/systems/electrical/outputs/panel-dim</factor-prop>
+		<factor-prop>systems/electrical/outputs/panel-dim</factor-prop>
 	</emission>
 </animation>
 
@@ -38,13 +38,13 @@
   <object-name>shadow</object-name>
 	<condition>
 		<not><property>/sim/rendering/rembrandt/enabled</property></not>
-		<property>/systems/electrical/outputs/cabin-dim</property>
+		<property>systems/electrical/outputs/cabin-dim</property>
 	</condition>
 	<emission>
 	  <red>0.3</red>
 	  <green>0.3</green>
 	  <blue>0.3</blue>
-	  <factor-prop>/systems/electrical/outputs/cabin-dim</factor-prop>
+	  <factor-prop>systems/electrical/outputs/cabin-dim</factor-prop>
 	</emission>
 </animation>	
 
@@ -100,8 +100,8 @@
 			<value>20</value>
 		</greater-than>
     <or>
-    	<property>/engines/engine[3]/reversed</property>
-      <property>/controls/test/warn-knob</property>
+    	<property>engines/engine[3]/reversed</property>
+      <property>controls/test/warn-knob</property>
     </or>
   </condition>
 </animation>
@@ -116,8 +116,8 @@
 			<value>20</value>
 		</greater-than>
     <or>
-    	<property>/engines/engine[2]/reversed</property>
-      <property>/controls/test/warn-knob</property>
+    	<property>engines/engine[2]/reversed</property>
+      <property>controls/test/warn-knob</property>
     </or>
   </condition>
 </animation>
@@ -132,8 +132,8 @@
 			<value>20</value>
 		</greater-than>
     <or>
-    	<property>/engines/engine[1]/reversed</property>
-      <property>/controls/test/warn-knob</property>
+    	<property>engines/engine[1]/reversed</property>
+      <property>controls/test/warn-knob</property>
     </or>
   </condition>
 </animation>
@@ -148,8 +148,8 @@
 			<value>20</value>
 		</greater-than>
     <or>
-    	<property>/engines/engine[0]/reversed</property>
-      <property>/controls/test/warn-knob</property>
+    	<property>engines/engine[0]/reversed</property>
+      <property>controls/test/warn-knob</property>
     </or>
   </condition>
 </animation>

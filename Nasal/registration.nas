@@ -14,18 +14,17 @@
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
 # General Public License for more details.
 #############################################################################
-
 # ===========================
 # Immatriculation by Zakharov
 # Tuned by Torsten Dreyer
 # ===========================
-var registrationDialog = gui.Dialog.new("/sim/gui/dialogs/b707/status/dialog",
+var registrationDialog = gui.Dialog.new("sim/gui/dialogs/b707/status/dialog",
 				  "Aircraft/707/Systems/registration.xml");
 
-var l = setlistener("/sim/signals/fdm-initialized", func {
-  var callsign = props.globals.getNode("/sim/multiplay/callsign",1).getValue();
+var l = setlistener("sim/signals/fdm-initialized", func {
+  var callsign = props.globals.getNode("sim/multiplay/callsign",1).getValue();
   if( callsign == nil or callsign == "callsign" )
     callsign = "D-ABOF";
-  props.globals.initNode( "/sim/multiplay/generic/string[0]", callsign, "STRING" );
+  props.globals.initNode( "sim/multiplay/generic/string[0]", callsign, "STRING" );
   removelistener(l);
 });
